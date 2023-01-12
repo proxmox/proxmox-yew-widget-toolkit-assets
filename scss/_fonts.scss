@@ -1,0 +1,61 @@
+$font-size-small: $font-size-base * 0.875 !default;
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
+
+@each $name, $value in $font-sizes {
+    .pwt-fs-#{$name} {
+	font-size: $value !important;
+    }
+}
+
+p {
+    line-height: normal;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h1, .h1 {
+    font-size: $h1-font-size;
+}
+
+h2, .h2 {
+    font-size: $h2-font-size;
+}
+
+h3, .h3 {
+    font-size: $h3-font-size;
+}
+
+h4, .h4 {
+    font-size: $h4-font-size;
+}
+
+h5, .h5 {
+    font-size: $h5-font-size;
+}
+
+h6, .h6 {
+    font-size: $h6-font-size;
+}
+
+small, .small {
+    font-size: $font-size-small !important;
+}

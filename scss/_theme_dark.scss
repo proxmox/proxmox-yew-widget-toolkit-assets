@@ -1,0 +1,60 @@
+$modal-backdrop-bg-color: #00000050;
+
+$color-primary: map-get($palette-primary, 40);
+$color-secondary: map-get($palette-secondary, 40);
+$color-error: map-get($palette-error, 40);
+
+$pwt-box-shadow: #{map-get($palette-neutral, 5)} 0px 0px 15px !important;
+$pwt-dropdown-shadow: #{map-get($palette-neutral, 10)} 0px 0px 5px !important;
+$pwt-tooltip-shadow: #{map-get($palette-neutral, 10)} 0px 0px 6px !important;
+$pwt-navbar-brand-filter: drop-shadow(3px 3px 4px #222);
+
+$pwt-color: (
+    primary: $color-primary,
+    primary-emphase: map-get($palette-primary, 50),
+    primary-pressed: map-get($palette-primary, 60),
+    on-primary: map-get($palette-primary, 99),
+    primary-container: map-get($palette-primary, 20),
+    primary-container-emphase: map-get($palette-primary, 30),
+    primary-container-pressed: map-get($palette-primary, 40),
+    on-primary-container: map-get($palette-primary, 100),
+
+    primary-a20: change-color($color-primary, $alpha: 0.5),
+
+    secondary: $color-secondary,
+    secondary-emphase: map-get($palette-secondary, 50),
+    secondary-pressed: map-get($palette-secondary, 60),
+    on-secondary: map-get($palette-secondary, 99),
+    secondary-container: map-get($palette-secondary, 20),
+    secondary-container-emphase: map-get($palette-secondary, 30),
+    secondary-container-pressed: map-get($palette-secondary, 40),
+    on-secondary-container: map-get($palette-secondary, 90),
+
+    error: $color-error,
+    error-subtle: map-get($palette-error, 30),
+    error-emphase: map-get($palette-error, 50),
+    error-pressed: map-get($palette-error, 60),
+    on-error: map-get($palette-error, 99),
+    error-container: map-get($palette-error, 80),
+    error-container-emphase: map-get($palette-error, 90),
+    error-container-pressed: map-get($palette-error, 95),
+    on-error-container: map-get($palette-error, 0),
+
+    neutral: map-get($palette-neutral, 20),
+    neutral-emphase: map-get($palette-neutral, 30),
+    neutral-pressed: map-get($palette-neutral, 40),
+    on-neutral: map-get($palette-neutral, 90),
+
+    neutral-container: map-get($palette-neutral, 30),
+    neutral-container-emphase: map-get($palette-neutral, 40),
+    neutral-container-pressed: map-get($palette-neutral, 50),
+    on-neutral-container: map-get($palette-neutral, 90),
+
+    neutral-container-alt: map-get($palette-neutral, 15),
+    neutral-container-alt-emphase: map-get($palette-neutral, 20),
+    neutral-container-alt-pressed: map-get($palette-neutral, 30),
+    on-neutral-container-alt: map-get($palette-neutral, 100),
+
+    border: map-get($palette-neutral, 35),
+    table-stripe: #383838,
+);

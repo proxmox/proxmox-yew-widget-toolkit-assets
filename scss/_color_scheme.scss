@@ -1,0 +1,48 @@
+@mixin color-scheme($name, $palette) {
+
+    .pwt-scheme-#{$name} {
+	color: map-get($pwt-color, "on-#{$name}");
+	background-color: map-get($pwt-color, "#{$name}");
+    }
+
+    .pwt-scheme-#{$name}-container {
+	color: map-get($pwt-color, "on-#{$name}-container");
+	background-color: map-get($pwt-color, "#{$name}-container");
+    }
+
+    .pwt-color-#{$name} {
+	color: map-get($pwt-color, "#{$name}");
+    }
+    .pwt-bg-color-#{$name} {
+	background-color: map-get($pwt-color, "#{$name}");
+    }
+    .pwt-color-on-#{$name} {
+	color: map-get($pwt-color, "on-#{$name}");
+    }
+    .pwt-bg-color-#{$name}-container {
+	background-color: map-get($pwt-color, "#{$name}-container");
+    }
+    .pwt-bg-color-#{$name}-emphased {
+	background: map-get($pwt-color, "#{$name}-emphase");
+    }
+
+    .pwt-color-on-#{$name}-container {
+	color: map-get($pwt-color, "on-#{$name}-container");
+    }
+
+    @each $percentage in $color-scheme-values {
+	.pwt-color-#{$name}-#{$percentage} {
+	    color: map-get($palette, $percentage);
+	}
+	.pwt-bg-color-#{$name}-#{$percentage} {
+	    background-color: map-get($palette, $percentage);
+	}
+    }
+}
+
+@include color-scheme("primary", $palette-primary);
+@include color-scheme("secondary", $palette-secondary);
+@include color-scheme("error", $palette-error);
+@include color-scheme("neutral", $palette-neutral);
+@include color-scheme("neutral-container", $palette-neutral);
+@include color-scheme("neutral-container-alt", $palette-neutral);

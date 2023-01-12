@@ -1,0 +1,24 @@
+dialog {
+    padding: 0;
+    background: map-get($pwt-color, "neutral");
+    border-radius: 0.25rem !important;
+    border: 1px solid map-get($pwt-color, "neutral-container-alt-emphase") !important;
+    box-shadow: $pwt-box-shadow;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: $pwt-font-sans-serif;
+    font-size: $font-size-base;
+    font-weight: normal;
+ }
+
+// Note: css var() does not work here
+// see: https://bugs.chromium.org/p/chromium/issues/detail?id=996467
+dialog:not(.pwt-dropdown)::backdrop {
+    background-color: $modal-backdrop-bg-color;
+}
+
+dialog.pwt-dropdown::backdrop {
+    background-color: #ffffff00; // fully transparent
+}

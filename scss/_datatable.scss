@@ -1,0 +1,53 @@
+
+.datatable {
+    border-collapse: collapse;
+    background: map-get($pwt-color, "neutral");
+
+    thead,
+    tbody,
+    tr {
+	display: contents;
+	user-select: none;
+    }
+
+    th {
+	background: map-get($pwt-color, "neutral");
+	border-right: 1px solid map-get($pwt-color, "border");
+	border-bottom: 2px solid map-get($pwt-color, "border");
+	font-weight: 400 !important;
+	cursor: default;
+    }
+
+    &.table-striped > tbody > tr:nth-of-type(even) > *:not(.selected) {
+	background-color: map-get($pwt-color, "table-stripe");
+    }
+
+    td {
+	overflow: hidden;
+	text-overflow: ellipsis; // does not work?!
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+    }
+
+    td.selected {
+	background-color: map-get($pwt-color, "primary-a20");
+    }
+
+    &.table-hover > tbody > tr:hover > *:not(.selected)  {
+	cursor: pointer;
+	background-color: map-get($pwt-color, "neutral-emphase") !important;
+    }
+
+    tbody > * > * {
+	border-bottom: 1px solid map-get($pwt-color, "border");
+    }
+
+    &.table-bordered > * > * > * {
+	border-right: 1px solid map-get($pwt-color, "border");
+    }
+
+    &.table-borderless > tbody > * > * {
+	border-bottom: 0;
+    }
+}

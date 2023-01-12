@@ -1,0 +1,33 @@
+
+.pwt-form-grid-col2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: map-get($spacers, 2);
+    align-items: baseline;
+}
+
+.pwt-form-grid-col4 {
+    display: grid;
+    grid-template-columns: auto auto minmax(100px,auto) auto;
+    grid-gap: map-get($spacers, 2);
+    align-items: baseline;
+}
+
+.pwt-single-grid-row {
+    grid-column-start: 1;
+    grid-column-end: -1
+}
+
+.pwt-fill-grid-row {
+    grid-column-start: 2;
+    grid-column-end: -1;
+}
+
+.pwt-grid-column-1 {
+    grid-column-start: 1;
+}
+
+.pwt-grid-column-3 {
+    grid-column-start: 3;
+}
+

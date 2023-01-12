@@ -1,0 +1,16 @@
+// zindex: use same values as bootstrap
+$zindex-dropdown:  1000;
+$zindex-modal:     1055;
+$zindex-tooltip:   1080;
+
+$spacer: $font-size-base;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+) !default;
+
+$pwt-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$pwt-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

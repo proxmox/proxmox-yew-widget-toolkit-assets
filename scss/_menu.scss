@@ -1,0 +1,110 @@
+.pwt-submenu {
+    position: absolute;
+    z-index: $zindex-dropdown;
+}
+
+// MenuBar
+ul.pwt-menubar {
+    background: map-get($pwt-color, "neutral");
+    display: flex;
+    align-items: stretch;
+
+
+    & > li.active:focus-within {
+	background-color: map-get($pwt-color, "primary-a20");
+    }
+
+    & > li:hover {
+	background-color: map-get($pwt-color, "primary-a20");
+    }
+
+    .pwt-menubar-item {
+	cursor: pointer;
+	outline: 0;
+	padding: map-get($spacers, 2);
+	border: 0;
+	white-space: nowrap;
+	user-select: none;
+    }
+
+    .pwt-menubar-item:focus-visible {
+	outline: 1px solid map-get($pwt-color, "on-neutral");
+        outline-offset: -2px;
+    }
+
+    .pwt-menubar-item[disabled] {
+	cursor: auto;
+	opacity: 0.5;
+    }
+
+    .pwt-menubar-item-icon {
+	padding-right: map-get($spacers, 1);
+    }
+
+    .pwt-menubar-item-arrow {
+	display: none;
+    }
+}
+
+// Menu
+ul.pwt-menu {
+    background: map-get($pwt-color, "neutral");
+    border-radius: 0.2rem;
+    box-shadow: $pwt-dropdown-shadow;
+    overflow: auto;
+    max-height: 100vh;
+    max-width: 100vw;
+
+    & > li {
+	position: relative;
+	outline: 0;
+    }
+
+//    li:focus-within {
+//        outline: 1px solid map-get($pwt-color, "on-neutral");
+//        outline-offset: -2px;
+//    }
+
+    & > li.active:focus-within {
+	background-color: map-get($pwt-color, "primary-a20");
+    }
+
+    .pwt-menu-item {
+	cursor: pointer;
+	outline: 0;
+	padding: map-get($spacers, 2);
+	border: 0;
+	white-space: nowrap;
+	user-select: none;
+    }
+
+    .pwt-menu-item[disabled] {
+	cursor: auto;
+	opacity: 0.5;
+    }
+
+    .pwt-menu-item:focus-visible {
+	outline: 1px solid map-get($pwt-color, "on-neutral");
+        outline-offset: -2px;
+    }
+
+    .pwt-menu-item-indent {
+	margin-left: calc(#{map-get($spacers, 2)*2} + 1em);
+    }
+
+    .pwt-menu-submenu-indent {
+	margin-left: calc(#{map-get($spacers, 2)*2} + 1em);
+	margin-right: calc(#{map-get($spacers, 2)*2} + 1em);
+    }
+
+    .pwt-menu-item-icon {
+	position: absolute;
+	left: map-get($spacers, 2);
+
+    }
+
+    .pwt-menu-item-arrow {
+	position: absolute;
+	right: map-get($spacers, 2);
+    }
+}

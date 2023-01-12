@@ -1,0 +1,94 @@
+
+.pwt-nav-link {
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap !important;
+  outline: 0;
+}
+
+
+// Pills
+.pwt-nav-pills {
+
+    .pwt-nav-link {
+	padding: map-get($spacers, 2);
+	background: none;
+	border: 0;
+	border-radius: 0.2rem;
+
+	&:focus-visible {
+            outline: 1px solid map-get($pwt-color, "on-neutral");
+            outline-offset: -2px;
+	}
+
+	&:hover {
+	    background-color: map-get($pwt-color, "primary-a20");
+	}
+    }
+
+    .pwt-nav-link.active {
+	color: map-get($pwt-color, "on-primary");
+	background-color: map-get($pwt-color, "primary");
+
+	&:focus-visible {
+            outline: 1px solid map-get($pwt-color, "on-primary");
+            outline-offset: -2px;
+	}
+    }
+
+    a {
+	text-decoration: none !important;
+	text-shadow: none !important;
+	color: map-get($pwt-color, "on-neutral");
+    }
+}
+
+// Menu
+.pwt-nav-menu {
+    background: map-get($pwt-color, "neutral-container-alt");
+
+    .pwt-nav-link {
+	background: none;
+	padding: map-get($spacers, 2);
+	border: 0;
+
+	&.pwt-nav-menu {
+	    padding-right: 0;
+	}
+
+	&:focus-visible {
+            outline: 1px solid map-get($pwt-color, "on-neutral-alt");
+            outline-offset: -2px;
+	}
+
+	&:hover {
+	    background-color: map-get($pwt-color, "primary-a20");
+	}
+    }
+
+    .pwt-nav-link.active {
+	color: map-get($pwt-color, "on-primary");
+	background-color: map-get($pwt-color, "primary");
+
+	&:focus-visible {
+            outline: 1px solid map-get($pwt-color, "on-primary");
+            outline-offset: -2px;
+	}
+    }
+
+    a {
+	text-decoration: none !important;
+	text-shadow: none !important;
+	color: map-get($pwt-color, "on-neutral-container-alt");
+    }
+}
+
+.pwt-nav-menu-expander {
+    padding-left: 1em;
+    transition-duration: 100ms;
+}
+
+.pwt-nav-menu-expander.expanded {
+    transform: rotate(90deg) translate(-0.25em, -0.25em);
+}

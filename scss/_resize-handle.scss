@@ -1,0 +1,25 @@
+.resize-handle {
+    position: relative;
+    background: black;
+    margin-left: 3px;
+    opacity: 0;
+    width: 0px;
+    //cursor: col-resize;
+    flex-shrink: 0;
+}
+
+.resize-handle:hover {
+    opacity: 0.5;
+}
+
+.resize-handle::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    margin-left: -10px;
+    background-color: transparent;
+    cursor: col-resize;
+}

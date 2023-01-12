@@ -1,0 +1,50 @@
+.tooltip {
+    display: none;
+    box-shadow: $pwt-tooltip-shadow;
+
+    background-color: map-get($pwt-color, "primary-container");
+    color: map-get($pwt-color, "on-primary-container");
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    // border looks strange when using arrows
+    //border: 1px solid var($pwt-border-color) !important;
+    border-radius: 0.2rem;
+    z-index: $zindex-tooltip;
+}
+
+.tooltip[data-popper-placement^='top'] > .tooltip-arrow {
+    bottom: -4px;
+}
+
+.tooltip[data-popper-placement^='bottom'] > .tooltip-arrow {
+    top: -4px;
+}
+
+.tooltip[data-popper-placement^='left'] > .tooltip-arrow {
+    right: -4px;
+}
+
+.tooltip[data-popper-placement^='right'] > .tooltip-arrow {
+    left: -4px;
+}
+
+.tooltip-arrow,
+.tooltip-arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: inherit;
+}
+
+.tooltip-arrow {
+  visibility: hidden;
+}
+
+.tooltip-arrow::before {
+  visibility: visible;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.tooltip[data-show] {
+    display: block;
+}

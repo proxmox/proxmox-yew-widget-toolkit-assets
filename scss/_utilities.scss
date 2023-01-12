@@ -1,0 +1,202 @@
+
+
+@each $name, $value in $spacers {
+    .pwt-p-#{$name} {
+	padding: $value !important;
+    }
+    .pwt-ps-#{$name} {
+	padding-left: $value !important;
+    }
+    .pwt-pe-#{$name} {
+	padding-right: $value !important;
+    }
+    .pwt-pt-#{$name} {
+	padding-top: $value !important;
+    }
+    .pwt-pb-#{$name} {
+	padding-bottom: $value !important;
+    }
+    .pwt-px-#{$name} {
+	padding-left: $value !important;
+	padding-right: $value !important;
+    }
+    .pwt-py-#{$name} {
+	padding-top: $value !important;
+	padding-bottom: $value !important;
+    }
+
+    .pwt-m-#{$name} {
+	margin: $value !important;
+    }
+    .pwt-ms-#{$name} {
+	margin-left: $value !important;
+    }
+    .pwt-me-#{$name} {
+	margin-right: $value !important;
+    }
+    .pwt-mt-#{$name} {
+	margin-top: $value !important;
+    }
+    .pwt-mb-#{$name} {
+	margin-bottom: $value !important;
+    }
+    .pwt-mx-#{$name} {
+	margin-left: $value !important;
+	margin-right: $value !important;
+    }
+    .pwt-my-#{$name} {
+	margin-top: $value !important;
+	margin-bottom: $value !important;
+    }
+
+    .pwt-gap-#{$name} {
+	gap: $value !important;
+    }
+    .pwt-column-gap-#{$name} {
+	column-gap: $value !important;
+    }
+    .pwt-row-gap-#{$name} {
+	row-gap: $value !important;
+    }
+}
+
+.pwt-nowrap {
+    white-space: nowrap !important;
+}
+
+.pwt-text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+$user-select-values: (auto, none, text, all);
+@each $value in $user-select-values {
+    .pwt-user-select-#{$value} {
+	user-select: $value !important;
+    }
+}
+
+$text-align-values: (
+    start: left,
+    end: right,
+    center: center,
+);
+@each $name, $value in $text-align-values {
+    .pwt-text-#{$name} {
+	text-align: $value !important;
+    }
+}
+
+$height-width-values: (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+);
+@each $name, $value in $height-width-values {
+    .pwt-h-#{$name} {
+	height: $value !important;
+	box-sizing: border-box;
+    }
+    .pwt-w-#{$name} {
+	width: $value !important;
+	box-sizing: border-box;
+    }
+}
+
+.pwt-fit {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: auto !important;
+    box-sizing: border-box;
+}
+
+.pwt-viewport {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: auto !important;
+    box-sizing: border-box;
+}
+
+$display-values: inline inline-block block grid table table-row table-cell flex inline-flex none;
+
+@each $name in $display-values {
+    .pwt-d-#{$name} {
+	display: $name !important;
+    }
+}
+
+.pwt-flex-fill {
+    flex: 1 1 auto !important;
+}
+
+$flex-direction-values: row column row-reverse column-reverse;
+@each $name in $flex-direction-values {
+    .pwt-flex-#{$name} {
+	flex-direction: $name !important;
+    }
+}
+
+$flex-wrap-values: wrap nowrap wrap-reverse;
+@each $name in $flex-wrap-values {
+    .pwt-flex-#{$name} {
+	flex-wrap: $name;
+    }
+}
+
+$justify-content-values: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around,
+    evenly: space-evenly,
+);
+
+@each $class, $value in $justify-content-values {
+    .pwt-justify-content-#{$class} {
+	justify-content: $value !important;
+    }
+}
+
+$align-items-values: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    baseline: baseline,
+    stretch: stretch,
+);
+
+@each $class, $value in $align-items-values {
+    .pwt-align-items-#{$class} {
+	align-items: $value !important;
+    }
+    .pwt-align-self-#{$class} {
+	align-self: $value !important;
+    }
+}
+
+$overflow-values: auto hidden visible scroll;
+
+@each $value in $overflow-values {
+    .pwt-overflow-#{$value} {
+	overflow: $value !important;
+    }
+    .pwt-overflow-x-#{$value} {
+	overflow-x: $value !important;
+    }
+    .pwt-overflow-y-#{$value} {
+	overflow-y: $value !important;
+    }
+}
+
+.pwt-shape-circle {
+    border-radius: 50%;
+    line-height: 1em;
+}

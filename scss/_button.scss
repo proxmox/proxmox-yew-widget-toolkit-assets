@@ -1,0 +1,184 @@
+.pwt-action-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: 0;
+
+    &.disabled {
+	cursor: auto;
+	opacity: 0.5;
+    }
+
+    &:focus:not(.disabled),
+    &:hover:not(.disabled) {
+	text-shadow: 0px 0px 0.5em map-get($pwt-color, "primary");
+	text-decoration: underline solid;
+    }
+
+    &:hover:not(.disabled) {
+	font-weight: 800;
+    }
+}
+
+.pwt-button {
+    --pwt-button-bg-color: #{map-get($pwt-color, "neutral-container")};
+    --pwt-button-color: #{map-get($pwt-color, "on-neutral-container")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-container-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-container-pressed")};
+    display: inline-block;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap !important;
+    user-select: none;
+    border: 1px solid map-get($pwt-color, "border") !important;
+    border-radius: 0.2rem;
+    font-size: $font-size-small;
+
+    color:  var(--pwt-button-color);
+    background-color: var(--pwt-button-bg-color);
+
+    &:active:not(:disabled) {
+	background-color: var(--pwt-button-pressed-color);
+    }
+
+    &:hover:not(:disabled):not(:active):not(.pressed) {
+	background-color: var(--pwt-button-emphase-color);
+    }
+
+    &:focus {
+        outline: 1px solid var(--pwt-button-color);
+        outline-offset: -2px;
+    }
+
+    &:disabled {
+	cursor: auto;
+	opacity: 0.5;
+    }
+
+    &.pressed {
+	background-color: var(--pwt-button-pressed-color);
+    }
+}
+
+.pwt-segmented-button {
+    white-space: nowrap;
+}
+
+.pwt-segmented-button > .pwt-button {
+    &:focus {
+        outline: 1px solid var(--pwt-button-color);
+        outline-offset: -1px;
+    }
+
+    border-radius: 0px;
+    border-left: 0px ! important;
+}
+
+.pwt-segmented-button > .pwt-button:first-child {
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    border-left: 1px solid map-get($pwt-color, "border") ! important;
+}
+
+.pwt-segmented-button > .pwt-button:last-child {
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+
+.pwt-button.rounded  {
+    border-radius: 10rem !important;
+}
+
+.pwt-segmented-button > .pwt-button.rounded  {
+    border-radius: 0px !important;
+}
+
+.pwt-segmented-button > .pwt-button.rounded:first-child,
+.pwt-segmented-button.rounded > .pwt-button:first-child,
+{
+    border-top-left-radius: 10rem !important;
+    border-bottom-left-radius: 10rem !important;
+}
+
+.pwt-segmented-button > .pwt-button.rounded:last-child,
+.pwt-segmented-button.rounded > .pwt-button:last-child,
+{
+    border-top-right-radius: 10rem !important;
+    border-bottom-right-radius: 10rem !important;
+}
+
+.pwt-button.neutral,
+.pwt-segmented-button.neutral > .pwt-button,
+.pwt-segmented-button > .pwt-button.neutral,
+{
+    --pwt-button-bg-color: #{map-get($pwt-color, "neutral")};
+    --pwt-button-color: #{map-get($pwt-color, "on-neutral")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-pressed")};
+}
+
+.pwt-button.neutral-container,
+.pwt-segmented-button.neutral-container > .pwt-button,
+.pwt-segmented-button > .pwt-button.neutral-container,
+{
+    --pwt-button-bg-color: #{map-get($pwt-color, "neutral-container")};
+    --pwt-button-color: #{map-get($pwt-color, "on-neutral-container")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-container-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-container-pressed")};
+}
+
+.pwt-button.primary,
+.pwt-segmented-button.primary > .pwt-button,
+.pwt-segmented-button > .pwt-button.primary {
+    --pwt-button-bg-color: #{map-get($pwt-color, "primary")};
+    --pwt-button-color: #{map-get($pwt-color, "on-primary")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "primary-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "primary-pressed")};
+}
+
+.pwt-button.primary-container,
+.pwt-segmented-button.primary-container > .pwt-button,
+.pwt-segmented-button > .pwt-button.primary-container {
+    --pwt-button-bg-color: #{map-get($pwt-color, "primary-container")};
+    --pwt-button-color: #{map-get($pwt-color, "on-primary-container")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "primary-container-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "primary-container-pressed")};
+}
+
+.pwt-button.secondary,
+.pwt-segmented-button.secondary > .pwt-button,
+.pwt-segmented-button > .pwt-button.secondary {
+    --pwt-button-bg-color: #{map-get($pwt-color, "secondary")};
+    --pwt-button-color: #{map-get($pwt-color, "on-secondary")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "secondary-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "secondary-pressed")};
+}
+
+.pwt-button.secondary-container,
+.pwt-segmented-button.secondary-container > .pwt-button,
+.pwt-segmented-button > .pwt-button.secondary-container {
+    --pwt-button-bg-color: #{map-get($pwt-color, "secondary-container")};
+    --pwt-button-color: #{map-get($pwt-color, "on-secondary-container")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "secondary-container-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "secondary-container-pressed")};
+}
+
+.pwt-button.error,
+.pwt-segmented-button.error > .pwt-button,
+.pwt-segmented-button > .pwt-button.error {
+    --pwt-button-bg-color: #{map-get($pwt-color, "error")};
+    --pwt-button-color: #{map-get($pwt-color, "on-error")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "error-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "error-pressed")};
+}
+
+.pwt-button.error-container,
+.pwt-segmented-button.error-container > .pwt-button,
+.pwt-segmented-button > .pwt-button.error-container {
+    --pwt-button-bg-color: #{map-get($pwt-color, "error-container")};
+    --pwt-button-color: #{map-get($pwt-color, "on-error-container")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "error-container-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "error-container-pressed")};
+}
