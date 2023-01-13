@@ -1,10 +1,29 @@
+/* Visible resize handle (vertical) */
+.row-split-handle {
+    position: relative;
+    background: black;
+    width: map-get($spacers, 2);
+    cursor: col-resize;
+    background: map-get($pwt-color, "neutral-container");
+}
+
+/* Visible resize handle (horizontal) */
+.column-split-handle {
+    position: relative;
+    background: black;
+    height: map-get($spacers, 2);
+    cursor: row-resize;
+    background: map-get($pwt-color, "neutral-container");
+}
+
+/* Invisible resize handle */
 .resize-handle {
     position: relative;
     background: black;
     margin-left: 3px;
     opacity: 0;
     width: 0px;
-    //cursor: col-resize;
+    /* cursor: col-resize; */
     flex-shrink: 0;
 }
 
