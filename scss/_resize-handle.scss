@@ -5,6 +5,11 @@
     width: map-get($spacers, 2);
     cursor: col-resize;
     background: map-get($pwt-color, "neutral-container");
+    outline: 0;
+}
+
+.row-split-handle:focus-visible {
+    outline: 1px solid map-get($pwt-color, "primary");
 }
 
 /* Visible resize handle (horizontal) */
@@ -14,6 +19,10 @@
     height: map-get($spacers, 2);
     cursor: row-resize;
     background: map-get($pwt-color, "neutral-container");
+}
+
+.column-split-handle:focus-visible {
+    outline: 1px solid map-get($pwt-color, "primary");
 }
 
 /* Invisible resize handle */
