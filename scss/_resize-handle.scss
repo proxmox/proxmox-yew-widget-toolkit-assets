@@ -9,6 +9,7 @@
 }
 
 .row-split-handle:focus-visible {
+    outline-offset: -1px;
     outline: 1px solid map-get($pwt-color, "primary");
 }
 
@@ -22,6 +23,7 @@
 }
 
 .column-split-handle:focus-visible {
+    outline-offset: -1px;
     outline: 1px solid map-get($pwt-color, "primary");
 }
 
