@@ -1,7 +1,6 @@
 /* Visible resize handle (vertical) */
 .row-split-handle {
     position: relative;
-    background: black;
     width: map-get($spacers, 2);
     cursor: col-resize;
     background: map-get($pwt-color, "neutral-container-alt");
@@ -16,7 +15,6 @@
 /* Visible resize handle (horizontal) */
 .column-split-handle {
     position: relative;
-    background: black;
     height: map-get($spacers, 2);
     cursor: row-resize;
     background: map-get($pwt-color, "neutral-container-alt");
