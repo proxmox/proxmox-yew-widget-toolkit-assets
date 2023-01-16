@@ -149,26 +149,6 @@ a:focus {
     text-decoration: underline solid;
 }
 
-// scrollbar styling
-
-::-webkit-scrollbar {
-    // height: 0.75rem;
-    // width: 0.75rem;
-    background: map-get($pwt-color, "neutral-container");
-}
-
-::-webkit-scrollbar-thumb {
-    background: map-get($pwt-color, "border");
-}
-
-::-webkit-scrollbar-corner {
-    background: map-get($pwt-color, "neutral-emphase");
-}
-
-* {
-    scrollbar-color: map-get($pwt-color, "border") map-get($pwt-color, "neutral-container");
-}
-
 // text selection colors
 
 ::-moz-selection {
