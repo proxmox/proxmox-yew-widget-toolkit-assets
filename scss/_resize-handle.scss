@@ -4,7 +4,7 @@
     background: black;
     width: map-get($spacers, 2);
     cursor: col-resize;
-    background: map-get($pwt-color, "neutral-container");
+    background: map-get($pwt-color, "neutral-container-alt");
     outline: 0;
 }
 
@@ -19,7 +19,7 @@
     background: black;
     height: map-get($spacers, 2);
     cursor: row-resize;
-    background: map-get($pwt-color, "neutral-container");
+    background: map-get($pwt-color, "neutral-container-alt");
 }
 
 .column-split-handle:focus-visible {
