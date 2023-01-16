@@ -58,3 +58,7 @@ $pwt-color: (
     border: map-get($palette-neutral, 35),
     table-stripe: #383838,
 );
+
+:root {
+    color-scheme: dark;
+}
