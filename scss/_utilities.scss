@@ -60,8 +60,11 @@
     }
 }
 
-.pwt-nowrap {
-    white-space: nowrap !important;
+$white-space-values: (normal, nowrap, pre, pre-wrap, pre-line, break-spaces);
+@each $value in $white-space-values {
+    .pwt-white-space-#{$value} {
+	white-space:  $value !important;
+    }
 }
 
 .pwt-text-truncate {
