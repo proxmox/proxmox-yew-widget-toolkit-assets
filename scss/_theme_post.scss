@@ -27,26 +27,6 @@
     border-radius: 0.25rem !important;
 }
 
-.pwt-border {
-    border: 1px solid map-get($pwt-color, "border") !important;
-}
-
-.pwt-border-top {
-  border-top: 1px solid map-get($pwt-color, "border") !important;
-}
-
-.pwt-border-left {
-  border-left: 1px solid map-get($pwt-color, "border") !important;
-}
-
-.pwt-border-right {
-  border-right: 1px solid map-get($pwt-color, "border") !important;
-}
-
-.pwt-border-bottom {
-  border-bottom: 1px solid map-get($pwt-color, "border") !important;
-}
-
 body {
     font-family: $pwt-font-sans-serif;
     font-size: $font-size-base;

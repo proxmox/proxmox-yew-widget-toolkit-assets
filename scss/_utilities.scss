@@ -200,3 +200,43 @@ $overflow-values: auto hidden visible scroll;
     border-radius: 50%;
     line-height: 1em;
 }
+
+.pwt-border {
+    border: 1px solid map-get($pwt-color, "border") !important;
+}
+
+.pwt-no-border {
+    border: 0 !important;
+}
+
+.pwt-border-top {
+    border-top: 1px solid map-get($pwt-color, "border") !important;
+}
+
+.pwt-no-border-top {
+    border-top: 0 !important;
+}
+
+.pwt-border-left {
+    border-left: 1px solid map-get($pwt-color, "border") !important;
+}
+
+.pwt-no-border-left {
+    border-left: 0 !important;
+}
+
+.pwt-border-right {
+    border-right: 1px solid map-get($pwt-color, "border") !important;
+}
+
+.pwt-no-border-right {
+    border-right: 0 !important;
+}
+
+.pwt-border-bottom {
+    border-bottom: 1px solid map-get($pwt-color, "border") !important;
+}
+
+.pwt-no-border-bottom {
+    border-bottom: 0 !important;
+}
