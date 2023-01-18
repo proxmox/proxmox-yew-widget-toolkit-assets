@@ -77,13 +77,10 @@ $user-select-values: (auto, none, text, all);
     }
 }
 
-$text-align-values: (
-    start: left,
-    end: right,
-    center: center,
-);
-@each $name, $value in $text-align-values {
-    .pwt-text-#{$name} {
+$text-align-values: (start, end, left, right, center, justify, justify-all);
+;
+@each $value in $text-align-values {
+    .pwt-text-align-#{$value} {
 	text-align: $value !important;
     }
 }
