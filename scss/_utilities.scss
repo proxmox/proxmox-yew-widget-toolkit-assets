@@ -148,33 +148,55 @@ $flex-wrap-values: wrap nowrap wrap-reverse;
 }
 
 $justify-content-values: (
-    start: flex-start,
-    end: flex-end,
-    center: center,
-    between: space-between,
-    around: space-around,
-    evenly: space-evenly,
+    start,
+    end,
+    flex-start,
+    flex-end,
+    center,
+    left,
+    right,
+    normal,
+    space-between,
+    space-around,
+    space-evenly,
+    stretch,
 );
 
-@each $class, $value in $justify-content-values {
-    .pwt-justify-content-#{$class} {
+@each $value in $justify-content-values {
+    .pwt-justify-content-#{$value} {
 	justify-content: $value !important;
     }
 }
 
 $align-items-values: (
-    start: flex-start,
-    end: flex-end,
-    center: center,
-    baseline: baseline,
-    stretch: stretch,
+    normal,
+    flex-start,
+    flex-end,
+    center,
+    start,
+    end,
+    baseline,
+    stretch,
 );
 
-@each $class, $value in $align-items-values {
-    .pwt-align-items-#{$class} {
+@each $value in $align-items-values {
+    .pwt-align-items-#{$value} {
 	align-items: $value !important;
     }
-    .pwt-align-self-#{$class} {
+}
+
+$align-self-values: (
+    auto,
+    normal,
+    flex-start,
+    flex-end,
+    center,
+    baseline,
+    stretch,
+);
+
+@each $value in $align-self-values {
+    .pwt-align-self-#{$value} {
 	align-self: $value !important;
     }
 }
