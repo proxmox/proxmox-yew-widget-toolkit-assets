@@ -29,7 +29,7 @@
 .resize-handle {
     position: relative;
     background: black;
-    margin-left: 3px;
+    margin-inline-start: 3px;
     opacity: 0;
     width: 0px;
     /* cursor: col-resize; */
@@ -47,7 +47,7 @@
     height: 100%;
     top: 0;
     bottom: 0;
-    margin-left: -10px;
+    margin-inline-start: -10px;
     background-color: transparent;
     cursor: col-resize;
 }
