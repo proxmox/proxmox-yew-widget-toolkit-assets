@@ -73,18 +73,18 @@
     }
 
     border-radius: 0px;
-    border-left: 0px ! important;
+    border-inline-start: 0px ! important;
 }
 
 .pwt-segmented-button > .pwt-button:first-child {
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-    border-left: 1px solid map-get($pwt-color, "border") ! important;
+    border-start-start-radius: 0.2rem;
+    border-end-start-radius: 0.2rem;
+    border-inline-start: 1px solid map-get($pwt-color, "border") ! important;
 }
 
 .pwt-segmented-button > .pwt-button:last-child {
-    border-top-right-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;
+    border-start-end-radius: 0.2rem;
+    border-end-end-radius: 0.2rem;
 }
 
 .pwt-button.rounded  {
@@ -98,15 +98,15 @@
 .pwt-segmented-button > .pwt-button.rounded:first-child,
 .pwt-segmented-button.rounded > .pwt-button:first-child,
 {
-    border-top-left-radius: 10rem !important;
-    border-bottom-left-radius: 10rem !important;
+    border-start-start-radius: 10rem !important;
+    border-end-start-radius: 10rem !important;
 }
 
 .pwt-segmented-button > .pwt-button.rounded:last-child,
 .pwt-segmented-button.rounded > .pwt-button:last-child,
 {
-    border-top-right-radius: 10rem !important;
-    border-bottom-right-radius: 10rem !important;
+    border-start-end-radius: 10rem !important;
+    border-end-end-radius: 10rem !important;
 }
 
 .pwt-button.neutral,
