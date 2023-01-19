@@ -54,7 +54,7 @@
 	border: 0;
 
 	&.pwt-nav-menu {
-	    padding-right: 0;
+	    padding-inline-end: 0;
 	}
 
 	&:focus-visible {
@@ -85,7 +85,7 @@
 }
 
 .pwt-nav-menu-expander {
-    padding-left: 1em;
+    padding-inline-start: 1em;
     transition-duration: 100ms;
 }
 

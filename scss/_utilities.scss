@@ -5,10 +5,10 @@
 	padding: $value !important;
     }
     .pwt-ps-#{$name} {
-	padding-left: $value !important;
+	padding-inline-start: $value !important;
     }
     .pwt-pe-#{$name} {
-	padding-right: $value !important;
+	padding-inline-end: $value !important;
     }
     .pwt-pt-#{$name} {
 	padding-top: $value !important;

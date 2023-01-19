@@ -38,7 +38,7 @@ ul.pwt-menubar {
     }
 
     .pwt-menubar-item-icon {
-	padding-right: map-get($spacers, 1);
+	padding-inline-end: map-get($spacers, 1);
     }
 
     .pwt-menubar-item-arrow {
