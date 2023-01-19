@@ -92,3 +92,15 @@
 .pwt-nav-menu-expander.expanded {
     transform: rotate(90deg) translate(-0.25em, -0.25em);
 }
+
+html[dir="rtl"] {
+    .pwt-nav-menu-expander {
+	padding-inline-start: 1em;
+	transform: rotate(180deg) translateX(0.5em);
+	transition-duration: 100ms;
+    }
+
+    .pwt-nav-menu-expander.expanded {
+	transform: rotate(90deg) translatex(0.5em);
+    }
+}
