@@ -29,10 +29,10 @@
 	margin: $value !important;
     }
     .pwt-ms-#{$name} {
-	margin-left: $value !important;
+	margin-inline-start: $value !important;
     }
     .pwt-me-#{$name} {
-	margin-right: $value !important;
+	margin-inline-end: $value !important;
     }
     .pwt-mt-#{$name} {
 	margin-top: $value !important;
