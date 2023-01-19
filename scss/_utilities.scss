@@ -247,12 +247,28 @@ $overflow-values: auto hidden visible scroll;
     border-left: 0 !important;
 }
 
+.pwt-border-start {
+    border-inline-start: 1px solid map-get($pwt-color, "border") !important;
+}
+
+.pwt-no-border-start {
+    border-inline-start: 0 !important;
+}
+
 .pwt-border-right {
     border-right: 1px solid map-get($pwt-color, "border") !important;
 }
 
 .pwt-no-border-right {
     border-right: 0 !important;
+}
+
+.pwt-border-end {
+    border-inline-end: 1px solid map-get($pwt-color, "border") !important;
+}
+
+.pwt-no-border-end {
+    border-inline-end: 0 !important;
 }
 
 .pwt-border-bottom {
