@@ -103,7 +103,6 @@ ul.pwt-menu {
     }
 
     .pwt-menu-item-arrow {
-	position: absolute;
-	right: map-get($spacers, 2);
+	margin-inline-start: map-get($spacers, 2);
     }
 }
