@@ -105,9 +105,10 @@ ul.pwt-menu {
     .pwt-menu-item-arrow {
 	margin-inline-start: map-get($spacers, 2);
     }
+}
 
-    /* change arrow direction - only works with firefox! */
-    .pwt-menu-item-arrow:dir(rtl) {
-	transform: scaleX(-1);
-    }
+/* change arrow icon direction */
+/* Note: :dir(rtl) only works with firefox, so we cant use that. */
+html[dir="rtl"] .pwt-menu-item-arrow {
+    transform: scaleX(-1);
 }
