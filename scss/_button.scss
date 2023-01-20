@@ -129,6 +129,26 @@
     --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-container-pressed")};
 }
 
+.pwt-button.pwt-scheme-neutral-alt,
+.pwt-segmented-button.pwt-scheme-neutral-alt > .pwt-button,
+.pwt-segmented-button > .pwt-button.pwt-scheme-neutral-alt,
+{
+    --pwt-button-bg-color: #{map-get($pwt-color, "neutral-alt")};
+    --pwt-button-color: #{map-get($pwt-color, "on-neutral-alt")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-alt-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-alt-pressed")};
+}
+
+.pwt-button.pwt-scheme-neutral-alt-container,
+.pwt-segmented-button.pwt-scheme-neutral-alt-container > .pwt-button,
+.pwt-segmented-button > .pwt-button.pwt-scheme-neutral-alt-container,
+{
+    --pwt-button-bg-color: #{map-get($pwt-color, "neutral-alt-container")};
+    --pwt-button-color: #{map-get($pwt-color, "on-neutral-alt-container")};
+    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-alt-container-emphase")};
+    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-alt-container-pressed")};
+}
+
 .pwt-button.pwt-scheme-primary,
 .pwt-segmented-button.pwt-scheme-primary > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-primary {
