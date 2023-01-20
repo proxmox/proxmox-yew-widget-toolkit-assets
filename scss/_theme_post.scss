@@ -8,6 +8,7 @@
 
 @import "modal";
 @import "button";
+@import "panel";
 @import "input";
 @import "menu";
 @import "nav";
@@ -50,14 +51,6 @@ hr,
     margin: 0px;
     height: 0px;
 }
-
-.pwt-panel {
-    display: flex;
-    flex-direction: column;
-    color: map-get($pwt-color, "on-neutral");
-    background: map-get($pwt-color, "neutral");
-}
-
 .pwt-load-mask {
     position: absolute;
     top: 0px;
@@ -78,22 +71,6 @@ hr,
     border-radius: 0.5em;
     padding: 10px;
     background: map-get($pwt-color, "neutral");
-}
-
-.pwt-panel-header-text {
-    color: map-get($pwt-color, "on-neutral-alt-container");
-    margin-top: map-get($spacers, 1);
-    margin-bottom: map-get($spacers, 1);
-    font-size: $h5-font-size;
-}
-
-.pwt-panel-header {
-    padding: map-get($spacers, 2);
-    background: map-get($pwt-color, "neutral-alt-container");
-}
-
-.pwt-panel.pwt-rounded > .pwt-panel-header {
-    border-radius: 0.25rem 0.25rem 0 0 !important;
 }
 
 .pwt-navbar {
