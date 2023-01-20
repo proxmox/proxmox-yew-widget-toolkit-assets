@@ -44,5 +44,4 @@
 @include color-scheme("secondary", $palette-secondary);
 @include color-scheme("error", $palette-error);
 @include color-scheme("neutral", $palette-neutral);
-@include color-scheme("neutral-container", $palette-neutral);
-@include color-scheme("neutral-container-alt", $palette-neutral);
+@include color-scheme("neutral-alt", $palette-neutral);

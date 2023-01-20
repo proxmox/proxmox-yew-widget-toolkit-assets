@@ -49,10 +49,15 @@ $pwt-color: (
     neutral-container-pressed: map-get($palette-neutral, 70),
     on-neutral-container: map-get($palette-neutral, 10),
 
-    neutral-container-alt: map-get($palette-neutral, 95),
-    neutral-container-alt-emphase: map-get($palette-neutral, 80),
-    neutral-container-alt-pressed: map-get($palette-neutral, 70),
-    on-neutral-container-alt: map-get($palette-neutral, 10),
+    /* same a neutral in light mode ? */
+    neutral-alt: map-get($palette-neutral, 100),
+    neutral-alt-emphase: map-get($palette-neutral, 90),
+    neutral-alt-pressed: map-get($palette-neutral, 80),
+    on-neutral-alt: map-get($palette-neutral, 10),
+    neutral-alt-container: map-get($palette-neutral, 95),
+    neutral-alt-container-emphase: map-get($palette-neutral, 80),
+    neutral-alt-container-pressed: map-get($palette-neutral, 70),
+    on-neutral-alt-container: map-get($palette-neutral, 10),
 
     border: map-get($palette-neutral, 80),
     table-stripe:  #f8f8f8,
