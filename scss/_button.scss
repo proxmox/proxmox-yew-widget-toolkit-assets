@@ -106,66 +106,16 @@
     border-end-end-radius: 10rem !important;
 }
 
-.pwt-button.pwt-scheme-neutral,
-.pwt-segmented-button.pwt-scheme-neutral > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-neutral,
-{
-    @include color-scheme-vars("button", "neutral");
+
+@mixin button-color-definitions($scheme) {
+    .pwt-button.pwt-scheme-#{$scheme},
+    .pwt-segmented-button.pwt-scheme-#{$scheme} > .pwt-button,
+    .pwt-segmented-button > .pwt-button.pwt-scheme-#{$scheme},
+    {
+	@include color-scheme-vars("button", $scheme);
+    }
 }
 
-.pwt-button.pwt-scheme-neutral-container,
-.pwt-segmented-button.pwt-scheme-neutral-container > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-neutral-container,
-{
-    @include color-scheme-vars("button", "neutral-container");
-}
-
-.pwt-button.pwt-scheme-neutral-alt,
-.pwt-segmented-button.pwt-scheme-neutral-alt > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-neutral-alt,
-{
-    @include color-scheme-vars("button", "neutral-alt");
-}
-
-.pwt-button.pwt-scheme-neutral-alt-container,
-.pwt-segmented-button.pwt-scheme-neutral-alt-container > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-neutral-alt-container,
-{
-    @include color-scheme-vars("button", "neutral-alt-container");
-}
-
-.pwt-button.pwt-scheme-primary,
-.pwt-segmented-button.pwt-scheme-primary > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-primary {
-    @include color-scheme-vars("button", "primary");
-}
-
-.pwt-button.pwt-scheme-primary-container,
-.pwt-segmented-button.pwt-scheme-primary-container > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-primary-container {
-    @include color-scheme-vars("button", "primary-container");
-}
-
-.pwt-button.pwt-scheme-secondary,
-.pwt-segmented-button.pwt-scheme-secondary > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-secondary {
-    @include color-scheme-vars("button", "secondary");
-}
-
-.pwt-button.pwt-scheme-secondary-container,
-.pwt-segmented-button.pwt-scheme-secondary-container > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-secondary-container {
-    @include color-scheme-vars("button", "secondary-container");
-}
-
-.pwt-button.pwt-scheme-error,
-.pwt-segmented-button.pwt-scheme-error > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-error {
-    @include color-scheme-vars("button", "error");
-}
-
-.pwt-button.pwt-scheme-error-container,
-.pwt-segmented-button.pwt-scheme-error-container > .pwt-button,
-.pwt-segmented-button > .pwt-button.pwt-scheme-error-container {
-    @include color-scheme-vars("button", "error-container");
+@each $scheme-name in $color-scheme-names {
+    @include button-color-definitions($scheme-name);
 }

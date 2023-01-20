@@ -46,6 +46,19 @@
 @include color-scheme("neutral", $palette-neutral);
 @include color-scheme("neutral-alt", $palette-neutral);
 
+$color-scheme-names: (
+    neutral,
+    neutral-container,
+    neutral-alt,
+    neutral-alt-container,
+    primary,
+    primary-container,
+    secondary,
+    secondary-container,
+    error,
+    error-container,
+);
+
 @mixin color-scheme-vars($prefix, $name) {
     --pwt-#{$prefix}-bg-color: #{map-get($pwt-color, "#{$name}")};
     --pwt-#{$prefix}-color: #{map-get($pwt-color, "on-#{$name}")};
