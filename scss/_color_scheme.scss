@@ -45,3 +45,10 @@
 @include color-scheme("error", $palette-error);
 @include color-scheme("neutral", $palette-neutral);
 @include color-scheme("neutral-alt", $palette-neutral);
+
+@mixin color-scheme-vars($prefix, $name) {
+    --pwt-#{$prefix}-bg-color: #{map-get($pwt-color, "#{$name}")};
+    --pwt-#{$prefix}-color: #{map-get($pwt-color, "on-#{$name}")};
+    --pwt-#{$prefix}-emphase-color: #{map-get($pwt-color, "#{$name}-emphase")};
+    --pwt-#{$prefix}-pressed-color: #{map-get($pwt-color, "#{$name}-pressed")};
+}

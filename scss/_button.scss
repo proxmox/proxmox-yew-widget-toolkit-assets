@@ -21,10 +21,7 @@
 }
 
 .pwt-button {
-    --pwt-button-bg-color: #{map-get($pwt-color, "neutral-container")};
-    --pwt-button-color: #{map-get($pwt-color, "on-neutral-container")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-container-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-container-pressed")};
+    @include color-scheme-vars("button", "neutral-container");
     display: inline-block;
     padding: map-get($spacers, 1) map-get($spacers, 2);
     text-align: center;
@@ -113,92 +110,62 @@
 .pwt-segmented-button.pwt-scheme-neutral > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-neutral,
 {
-    --pwt-button-bg-color: #{map-get($pwt-color, "neutral")};
-    --pwt-button-color: #{map-get($pwt-color, "on-neutral")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-pressed")};
+    @include color-scheme-vars("button", "neutral");
 }
 
 .pwt-button.pwt-scheme-neutral-container,
 .pwt-segmented-button.pwt-scheme-neutral-container > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-neutral-container,
 {
-    --pwt-button-bg-color: #{map-get($pwt-color, "neutral-container")};
-    --pwt-button-color: #{map-get($pwt-color, "on-neutral-container")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-container-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-container-pressed")};
+    @include color-scheme-vars("button", "neutral-container");
 }
 
 .pwt-button.pwt-scheme-neutral-alt,
 .pwt-segmented-button.pwt-scheme-neutral-alt > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-neutral-alt,
 {
-    --pwt-button-bg-color: #{map-get($pwt-color, "neutral-alt")};
-    --pwt-button-color: #{map-get($pwt-color, "on-neutral-alt")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-alt-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-alt-pressed")};
+    @include color-scheme-vars("button", "neutral-alt");
 }
 
 .pwt-button.pwt-scheme-neutral-alt-container,
 .pwt-segmented-button.pwt-scheme-neutral-alt-container > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-neutral-alt-container,
 {
-    --pwt-button-bg-color: #{map-get($pwt-color, "neutral-alt-container")};
-    --pwt-button-color: #{map-get($pwt-color, "on-neutral-alt-container")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "neutral-alt-container-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "neutral-alt-container-pressed")};
+    @include color-scheme-vars("button", "neutral-alt-container");
 }
 
 .pwt-button.pwt-scheme-primary,
 .pwt-segmented-button.pwt-scheme-primary > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-primary {
-    --pwt-button-bg-color: #{map-get($pwt-color, "primary")};
-    --pwt-button-color: #{map-get($pwt-color, "on-primary")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "primary-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "primary-pressed")};
+    @include color-scheme-vars("button", "primary");
 }
 
 .pwt-button.pwt-scheme-primary-container,
 .pwt-segmented-button.pwt-scheme-primary-container > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-primary-container {
-    --pwt-button-bg-color: #{map-get($pwt-color, "primary-container")};
-    --pwt-button-color: #{map-get($pwt-color, "on-primary-container")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "primary-container-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "primary-container-pressed")};
+    @include color-scheme-vars("button", "primary-container");
 }
 
 .pwt-button.pwt-scheme-secondary,
 .pwt-segmented-button.pwt-scheme-secondary > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-secondary {
-    --pwt-button-bg-color: #{map-get($pwt-color, "secondary")};
-    --pwt-button-color: #{map-get($pwt-color, "on-secondary")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "secondary-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "secondary-pressed")};
+    @include color-scheme-vars("button", "secondary");
 }
 
 .pwt-button.pwt-scheme-secondary-container,
 .pwt-segmented-button.pwt-scheme-secondary-container > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-secondary-container {
-    --pwt-button-bg-color: #{map-get($pwt-color, "secondary-container")};
-    --pwt-button-color: #{map-get($pwt-color, "on-secondary-container")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "secondary-container-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "secondary-container-pressed")};
+    @include color-scheme-vars("button", "secondary-container");
 }
 
 .pwt-button.pwt-scheme-error,
 .pwt-segmented-button.pwt-scheme-error > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-error {
-    --pwt-button-bg-color: #{map-get($pwt-color, "error")};
-    --pwt-button-color: #{map-get($pwt-color, "on-error")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "error-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "error-pressed")};
+    @include color-scheme-vars("button", "error");
 }
 
 .pwt-button.pwt-scheme-error-container,
 .pwt-segmented-button.pwt-scheme-error-container > .pwt-button,
 .pwt-segmented-button > .pwt-button.pwt-scheme-error-container {
-    --pwt-button-bg-color: #{map-get($pwt-color, "error-container")};
-    --pwt-button-color: #{map-get($pwt-color, "on-error-container")};
-    --pwt-button-emphase-color: #{map-get($pwt-color, "error-container-emphase")};
-    --pwt-button-pressed-color: #{map-get($pwt-color, "error-container-pressed")};
+    @include color-scheme-vars("button", "error-container");
 }
