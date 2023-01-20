@@ -1,4 +1,7 @@
-
+input {
+    font-family: $pwt-font-sans-serif;
+    font-size: $font-size-base;
+}
 
 .pwt-input {
     color: map-get($pwt-color, "on-neutral");
@@ -6,9 +9,15 @@
     padding: map-get($spacers, 1) map-get($spacers, 2);
     border: 1px solid map-get($pwt-color, "border") !important;
     border-radius: 0.2rem;
-    font-size: $font-size-base;
 
-    &:focus {
+    /// disable outline for inputs inside
+    input {
+	color: map-get($pwt-color, "on-neutral");
+	background-color: map-get($pwt-color, "neutral");
+	outline: 0;
+    }
+
+    &:focus-within {
 	border-color: map-get($pwt-color, "primary") !important;
 	border-width: 1px !important;
     	outline: 0;
@@ -21,10 +30,6 @@
 	background-repeat: no-repeat;
 	background-position: right 0.25rem center;
 	background-size: 1rem 1rem;
-
-	&[role=combobox] {
-	    background-position: right 1.25rem center;
-	}
     }
 
     &.disabled,
@@ -47,19 +52,6 @@
 
 .pwt-label-disabled {
     opacity: 0.5;
-}
-
-.pwt-input-trigger-icon {
-    position: absolute;
-    right: 0.5rem;
-    top: 0.33rem;
-    cursor: pointer;
-
-    &.disabled,
-    &:disabled {
-	cursor: auto;
-	opacity: 0.5;
-    }
 }
 
 .pwt-checkbox {
