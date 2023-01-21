@@ -1,13 +1,22 @@
 
+@mixin pwt-panel-color-vars($name) {
+    --pwt-panel-bg-color: #{map-get($pwt-color, "#{$name}-container")};
+    --pwt-panel-color: #{map-get($pwt-color, "on-#{$name}-container")};
+    --pwt-panel-title-bg-color: #{map-get($pwt-color, "#{$name}")};
+    --pwt-panel-title-color: #{map-get($pwt-color, "on-#{$name}")};
+}
+
 .pwt-panel {
+    @include pwt-panel-color-vars("neutral-alt");
+
     display: flex;
     flex-direction: column;
-    color: map-get($pwt-color, "on-neutral");
-    background: map-get($pwt-color, "neutral");
+    color: var(--pwt-panel-color);
+    background: var(--pwt-panel-bg-color);
 }
 
 .pwt-panel-header-text {
-    color: map-get($pwt-color, "on-neutral-alt-container");
+    color: var(--pwt-panel-title-color);
     margin-top: map-get($spacers, 1);
     margin-bottom: map-get($spacers, 1);
     font-size: $h5-font-size;
@@ -15,9 +24,20 @@
 
 .pwt-panel-header {
     padding: map-get($spacers, 2);
-    background: map-get($pwt-color, "neutral-alt-container");
+    background: var(--pwt-panel-title-bg-color);
 }
 
 .pwt-panel.pwt-rounded > .pwt-panel-header {
     border-radius: 0.25rem 0.25rem 0 0 !important;
+}
+
+@mixin panel-color-definitions($scheme) {
+    .pwt-panel.pwt-scheme-#{$scheme}
+    {
+	@include pwt-panel-color-vars($scheme);
+    }
+}
+
+@each $scheme-name in $color-names {
+    @include panel-color-definitions($scheme-name);
 }

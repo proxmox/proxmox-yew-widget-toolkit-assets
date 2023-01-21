@@ -46,7 +46,7 @@
 
 // Menu
 .pwt-nav-menu {
-    background: map-get($pwt-color, "neutral-alt-container");
+    background: map-get($pwt-color, "neutral-alt");
 
     .pwt-nav-link {
 	background: none;
@@ -80,7 +80,7 @@
     a {
 	text-decoration: none !important;
 	text-shadow: none !important;
-	color: map-get($pwt-color, "on-neutral-alt-container");
+	color: map-get($pwt-color, "on-neutral-alt");
     }
 }
 

@@ -116,6 +116,6 @@
     }
 }
 
-@each $scheme-name in $color-scheme-names {
+@each $scheme-name in $color-names {
     @include button-color-definitions($scheme-name);
 }

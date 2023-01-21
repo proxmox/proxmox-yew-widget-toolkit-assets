@@ -46,17 +46,12 @@
 @include color-scheme("neutral", $palette-neutral);
 @include color-scheme("neutral-alt", $palette-neutral);
 
-$color-scheme-names: (
+$color-names: (
     neutral,
-    neutral-container,
     neutral-alt,
-    neutral-alt-container,
     primary,
-    primary-container,
     secondary,
-    secondary-container,
     error,
-    error-container,
 );
 
 @mixin color-scheme-vars($prefix, $name) {
