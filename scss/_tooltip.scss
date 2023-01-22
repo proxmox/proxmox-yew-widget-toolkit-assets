@@ -2,8 +2,9 @@
     display: none;
     box-shadow: $pwt-tooltip-shadow;
 
-    background-color: map-get($pwt-color, "primary-container");
-    color: map-get($pwt-color, "on-primary-container");
+    background-color: var(--pwt-container-emphase-color);
+    color: var(--pwt-container-color);
+
     padding: map-get($spacers, 1) map-get($spacers, 2);
     // border looks strange when using arrows
     //border: 1px solid var($pwt-border-color) !important;
