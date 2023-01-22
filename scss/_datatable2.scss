@@ -1,6 +1,9 @@
+.pwt-datatable2 {
+    color: map-get($pwt-color, "on-neutral");
+    background-color: map-get($pwt-color, "neutral");
+}
 
 .pwt-datatable2-content {
-    background-color: map-get($pwt-color, "neutral");
     border-collapse: collapse;
     user-select: none;
 
