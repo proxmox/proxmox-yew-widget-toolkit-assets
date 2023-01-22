@@ -1,8 +1,7 @@
 
 
 .pwt-toolbar {
-
     &.emphased {
-	background: map-get($pwt-color, "neutral-emphase");
+	background: var(--pwt-container-emphase-color);
     }
 }
