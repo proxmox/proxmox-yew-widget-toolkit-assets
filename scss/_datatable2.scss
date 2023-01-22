@@ -85,7 +85,7 @@
 .pwt-datatable2-header-item:focus {
     --pwt-trigger-opacity: 0.8;
     outline: 1px solid map-get($pwt-color, "primary");
-    background-color: map-get($pwt-color, "primary-container");
+    background-color: map-get($pwt-color, "neutral-alt");
 }
 
 .pwt-datatable2-header-item:hover {

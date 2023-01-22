@@ -4,22 +4,21 @@ input {
 }
 
 .pwt-input {
-    @include color-scheme-vars("input", "neutral-alt-container");
-    color: var(--pwt-input-color);
-    background-color:  var(--pwt-input-bg-color);
+    color: map-get($pwt-color, "on-neutral-alt");
+    background-color: map-get($pwt-color, "neutral-alt");
     padding: map-get($spacers, 1) map-get($spacers, 2);
     border: 1px solid map-get($pwt-color, "border") !important;
     border-radius: 0.2rem;
 
     /// disable outline for inputs inside
     input {
-	color: var(--pwt-input-color);
-	background-color:  var(--pwt-input-bg-color);
+	color: map-get($pwt-color, "on-neutral-alt");
+	background-color: map-get($pwt-color, "neutral-alt");
 	outline: 0;
     }
 
     &:focus-within {
-	border-color:  var(--pwt-input-color) !important;
+	border-color: map-get($pwt-color, "on-neutral-alt") !important;
 	border-width: 1px !important;
     	outline: 0;
     }
@@ -47,7 +46,7 @@ input {
     accent-color: #{map-get($pwt-color, "primary")};
     vertical-align: middle;
     &:focus-visible {
-	outline: 1px solid var(--pwt-input-color);
+	outline: 1px solid map-get($pwt-color, "on-neutral-alt");
     }
 }
 
@@ -56,7 +55,6 @@ input {
 }
 
 .pwt-checkbox {
-    @include color-scheme-vars("input", "neutral-alt-container");
     user-select: none;
     margin: map-get($spacers, 1) 0;
     border-radius: 0.2rem;
@@ -77,7 +75,7 @@ input {
     }
 
     &:focus {
-	border-color: var(--pwt-input-color) !important;
+	border-color: map-get($pwt-color, "on-neutral") !important;
 	border-width: 1px !important;
     }
 
@@ -98,16 +96,4 @@ input::-webkit-inner-spin-button {
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-
-@mixin input-color-definitions($scheme) {
-    .pwt-input.pwt-scheme-#{$scheme},
-    {
-	@include color-scheme-vars("input", "#{$scheme}-container");
-    }
-}
-
-@each $scheme-name in $color-names {
-    @include input-color-definitions($scheme-name);
 }

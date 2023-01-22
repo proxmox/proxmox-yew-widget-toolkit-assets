@@ -1,8 +1,7 @@
 
 .pwt-toolbar {
-    background: var(--pwt-container-bg-color);
-
+    // fixme: ???
     &.emphased {
-	background: var(--pwt-container-emphase-color);
+	background: map-get($pwt-color, "neutral-alt");
     }
 }

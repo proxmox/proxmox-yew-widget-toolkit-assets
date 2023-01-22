@@ -1,7 +1,7 @@
 .pwt-dropdown {
     display: none;
     background-color: map-get($pwt-color, "neutral");
-    color: map-get($pwt-color, "on-primary-container");
+    color: map-get($pwt-color, "on-neutral");
     z-index: $zindex-dropdown;
 
     box-shadow: $pwt-dropdown-shadow;

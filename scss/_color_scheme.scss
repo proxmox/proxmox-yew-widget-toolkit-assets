@@ -8,10 +8,7 @@
 @mixin color-scheme($name, $palette) {
 
     .pwt-scheme-#{$name} {
-	@include color-scheme-vars("container-title", $name);
-	@include color-scheme-vars("container", "#{$name}-container");
-	color: map-get($pwt-color, "on-#{$name}-container");
-	background-color: map-get($pwt-color, "#{$name}-container");
+	@include color-scheme-vars("scheme", $name);
     }
 
     .pwt-color-#{$name} {
@@ -23,15 +20,11 @@
     .pwt-color-on-#{$name} {
 	color: map-get($pwt-color, "on-#{$name}");
     }
-    .pwt-bg-color-#{$name}-container {
-	background-color: map-get($pwt-color, "#{$name}-container");
-    }
     .pwt-bg-color-#{$name}-emphased {
 	background: map-get($pwt-color, "#{$name}-emphase");
     }
-
-    .pwt-color-on-#{$name}-container {
-	color: map-get($pwt-color, "on-#{$name}-container");
+    .pwt-bg-color-#{$name}-pressed {
+	background: map-get($pwt-color, "#{$name}-pressed");
     }
 
     @each $percentage in $color-scheme-values {
@@ -44,12 +37,6 @@
     }
 }
 
-@include color-scheme("primary", $palette-primary);
-@include color-scheme("secondary", $palette-secondary);
-@include color-scheme("error", $palette-error);
-@include color-scheme("neutral", $palette-neutral);
-@include color-scheme("neutral-alt", $palette-neutral);
-
 $color-names: (
     neutral,
     neutral-alt,
@@ -59,6 +46,5 @@ $color-names: (
 );
 
 :root {
-    @include color-scheme-vars("container-title", "neutral-alt");
-    @include color-scheme-vars("container", "neutral-alt-container");
+    @include color-scheme-vars("scheme", "neutral-alt");
 }

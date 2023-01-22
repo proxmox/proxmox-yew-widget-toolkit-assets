@@ -1,8 +1,9 @@
 dialog {
     padding: 0;
+    color: map-get($pwt-color, "on-neutral");
     background: map-get($pwt-color, "neutral");
     border-radius: 0.25rem !important;
-    border: 1px solid map-get($pwt-color, "neutral-alt-container-emphase") !important;
+    border: 1px solid map-get($pwt-color, "border") !important;
     box-shadow: $pwt-box-shadow;
 
     display: flex;

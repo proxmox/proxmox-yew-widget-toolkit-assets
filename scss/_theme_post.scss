@@ -1,6 +1,5 @@
 @import "variables";
 @import "color_scheme";
-@import "utilities";
 @import "fonts";
 
 @import "tooltip";
@@ -117,3 +116,11 @@ a:focus {
     color: map-get($pwt-color, "on-primary");
     background: map-get($pwt-color, "primary");
 }
+
+@include color-scheme("primary", $palette-primary);
+@include color-scheme("secondary", $palette-secondary);
+@include color-scheme("error", $palette-error);
+@include color-scheme("neutral", $palette-neutral);
+@include color-scheme("neutral-alt", $palette-neutral);
+
+@import "utilities";
