@@ -106,3 +106,15 @@
     border-end-end-radius: 10rem !important;
 }
 
+
+@mixin button-color-definitions($scheme) {
+    .pwt-segmented-button.pwt-scheme-#{$scheme} > .pwt-button,
+    .pwt-segmented-button > .pwt-button.pwt-scheme-#{$scheme},
+    {
+	@include color-scheme-vars("scheme", $scheme);
+    }
+}
+
+@each $scheme-name in $color-names {
+    @include button-color-definitions($scheme-name);
+}
