@@ -1,6 +1,7 @@
 
-
 .pwt-toolbar {
+    background: var(--pwt-container-bg-color);
+
     &.emphased {
 	background: var(--pwt-container-emphase-color);
     }
