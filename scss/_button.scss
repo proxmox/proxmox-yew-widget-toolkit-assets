@@ -21,7 +21,7 @@
 }
 
 .pwt-button {
-    @include color-scheme-vars("button", "neutral-alt");
+    @include color-scheme-vars("container", "neutral-alt");
     display: inline-block;
     padding: map-get($spacers, 1) map-get($spacers, 2);
     text-align: center;
@@ -33,19 +33,19 @@
     border-radius: 0.2rem;
     font-size: $font-size-small;
 
-    color:  var(--pwt-button-color);
-    background-color: var(--pwt-button-bg-color);
+    color: var(--pwt-container-color);
+    background-color: var(--pwt-container-bg-color);
 
     &:active:not(:disabled) {
-	background-color: var(--pwt-button-pressed-color);
+	background-color: var(--pwt-container-pressed-color);
     }
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
-	background-color: var(--pwt-button-emphase-color);
+	background-color: var(--pwt-container-emphase-color);
     }
 
     &:focus {
-        outline: 1px solid var(--pwt-button-color);
+        outline: 1px solid var(--pwt-container-color);
         outline-offset: -2px;
     }
 
@@ -55,7 +55,7 @@
     }
 
     &.pressed {
-	background-color: var(--pwt-button-pressed-color);
+	background-color: var(--pwt-container-pressed-color);
     }
 }
 
@@ -65,7 +65,7 @@
 
 .pwt-segmented-button > .pwt-button {
     &:focus {
-        outline: 1px solid var(--pwt-button-color);
+        outline: 1px solid var(--pwt-container-color);
         outline-offset: -1px;
     }
 
@@ -112,7 +112,7 @@
     .pwt-segmented-button.pwt-scheme-#{$scheme} > .pwt-button,
     .pwt-segmented-button > .pwt-button.pwt-scheme-#{$scheme},
     {
-	@include color-scheme-vars("button", $scheme);
+	@include color-scheme-vars("container", $scheme);
     }
 }
 
