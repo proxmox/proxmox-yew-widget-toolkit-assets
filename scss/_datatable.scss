@@ -1,53 +1,129 @@
+.pwt-datatable {
+    color: map-get($pwt-color, "on-neutral");
+    background-color: map-get($pwt-color, "neutral");
+}
 
-.datatable {
+.pwt-datatable-content {
     border-collapse: collapse;
-    background: map-get($pwt-color, "neutral");
-
-    thead,
-    tbody,
-    tr {
-	display: contents;
-	user-select: none;
-    }
-
-    th {
-	background: map-get($pwt-color, "neutral");
-	border-right: 1px solid map-get($pwt-color, "border");
-	border-bottom: 2px solid map-get($pwt-color, "border");
-	font-weight: 400 !important;
-	cursor: default;
-    }
-
-    &.table-striped > tbody > tr:nth-of-type(even) > *:not(.selected) {
-	background-color: map-get($pwt-color, "table-stripe");
-    }
+    user-select: none;
 
     td {
+	outline: 0;
 	overflow: hidden;
-	text-overflow: ellipsis; // does not work?!
+	text-overflow: ellipsis;
 	white-space: nowrap;
-	display: flex;
-	align-items: center;
     }
 
-    td.selected {
+    td.cell-cursor {
+	outline: 1px solid map-get($pwt-color, "on-neutral");
+	outline-offset: -1px;
+    }
+
+    tr {
+	border-bottom: 1px solid map-get($pwt-color, "border");
+    }
+
+    /* disbale row corsor for now (cell cursor is enough)
+    tr.row-cursor {
+	outline: 1px solid map-get($pwt-color, "on-neutral");
+	outline-offset: -2px;
+    }
+   */
+    
+    tr.selected {
 	background-color: map-get($pwt-color, "primary-a20");
     }
 
-    &.table-hover > tbody > tr:hover > *:not(.selected)  {
+    td div {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    }
+
+    &.table-striped > tr:nth-of-type(even):not(.selected) {
+	background-color: map-get($pwt-color, "table-stripe");
+    }
+
+    &.table-hover > tr:hover:not(.selected) {
 	cursor: pointer;
 	background-color: map-get($pwt-color, "neutral-emphase") !important;
     }
 
-    tbody > * > * {
-	border-bottom: 1px solid map-get($pwt-color, "border");
-    }
-
-    &.table-bordered > * > * > * {
+    &.table-bordered td {
 	border-right: 1px solid map-get($pwt-color, "border");
     }
 
-    &.table-borderless > tbody > * > * {
-	border-bottom: 0;
+    &.table-borderless tr {
+	// make the border invisible
+	border-color: map-get($pwt-color, "neutral");
     }
+}
+
+.pwt-datatable-cell {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: map-get($spacers, 2);
+    border-right: 1px solid map-get($pwt-color, "border");
+}
+
+.pwt-datatable-header {
+    border-bottom: 2px solid map-get($pwt-color, "border");
+}
+
+.pwt-datatable-header-item {
+    --pwt-trigger-opacity: 0;
+    position: relative;
+    padding: map-get($spacers, 2);
+    cursor: default;
+    text-align: left;
+    border-right: 1px solid map-get($pwt-color, "border");
+}
+
+.pwt-datatable-group-header-item:focus,
+.pwt-datatable-header-item.focused,
+.pwt-datatable-header-item:focus {
+    --pwt-trigger-opacity: 0.8;
+    outline: 1px solid map-get($pwt-color, "primary");
+    background-color: map-get($pwt-color, "neutral-alt");
+}
+
+.pwt-datatable-header-item:hover {
+    --pwt-trigger-opacity: 0.8;
+}
+
+.pwt-datatable-group-header-item {
+    position: relative;
+    padding: map-get($spacers, 2);
+    cursor: default;
+    text-align: left;
+    border-right: 1px solid map-get($pwt-color, "border");
+    border-bottom: 1px solid map-get($pwt-color, "border");
+}
+
+.pwt-datatable-header-menu-trigger {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: map-get($spacers, 2);
+    background-color: map-get($pwt-color, "neutral");
+    border-style: solid !important;
+    border-color: map-get($pwt-color, "border") !important;
+    border-width: 0 0 0 1px !important;
+    opacity: var(--pwt-trigger-opacity);
+    transition: opacity 0.2s ease-in-out;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.pwt-datatable-header-resize-trigger {
+    position: absolute;
+    width: 7px;
+    top: 0px;
+    bottom: 0px;
+    right: -3px;
+    background-color: transparent;
+    cursor: col-resize;
+    z-index: $zindex-dropdown;
 }
