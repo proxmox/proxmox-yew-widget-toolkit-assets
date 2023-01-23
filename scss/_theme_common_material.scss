@@ -4,11 +4,13 @@ $spacer: $font-size-base*1.5;
 
 $color-seed-primary:  adjust-color(#6200ee, $saturation: -20%);
 $color-seed-secondary: adjust-color(#03dac6, $saturation: -30%);
+$color-seed-tertiary: adjust-color($color-seed-primary, $hue: +60deg, $saturation: -30%);
 $color-seed-neutral: #fff;
 $color-seed-error: #b00020;
 
 
 $palette-primary: tonal_palette($color-seed-primary);
 $palette-secondary: tonal_palette($color-seed-secondary);
+$palette-tertiary: tonal_palette($color-seed-tertiary);
 $palette-error: tonal_palette($color-seed-error);
 $palette-neutral: tonal_palette($color-seed-neutral);

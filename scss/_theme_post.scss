@@ -118,6 +118,7 @@ a:focus {
 
 @include color-scheme("primary", $palette-primary);
 @include color-scheme("secondary", $palette-secondary);
+@include color-scheme("tertiary", $palette-tertiary);
 @include color-scheme("error", $palette-error);
 @include color-scheme("neutral", $palette-neutral);
 @include color-scheme("neutral-alt", $palette-neutral);
