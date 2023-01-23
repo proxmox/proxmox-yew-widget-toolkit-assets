@@ -16,6 +16,7 @@
 
 .pwt-panel-header {
     padding: map-get($spacers, 2);
+    color: var(--pwt-scheme-color);
     background: var(--pwt-scheme-bg-color);
 }
 
