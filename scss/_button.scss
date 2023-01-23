@@ -1,3 +1,7 @@
+button {
+    font-family: $pwt-font-sans-serif;
+}
+
 .pwt-action-icon {
     position: relative;
     display: inline-block;
@@ -19,6 +23,8 @@
 	font-weight: 800;
     }
 }
+
+
 
 .pwt-button {
     @include color-scheme-vars("scheme", "neutral-alt");
