@@ -1,14 +1,16 @@
-@mixin color-scheme-vars($prefix, $name) {
-    --pwt-#{$prefix}-bg-color: #{map-get($pwt-color, "#{$name}")};
-    --pwt-#{$prefix}-color: #{map-get($pwt-color, "on-#{$name}")};
-    --pwt-#{$prefix}-emphase-color: #{map-get($pwt-color, "#{$name}-emphase")};
-    --pwt-#{$prefix}-pressed-color: #{map-get($pwt-color, "#{$name}-pressed")};
+@mixin color-scheme-vars($name) {
+    --pwt-color-background: #{map-get($pwt-color, "#{$name}")};
+    --pwt-color: #{map-get($pwt-color, "on-#{$name}")};
+    --pwt-color-emphase: #{map-get($pwt-color, "#{$name}-emphase")};
+    --pwt-color-pressed: #{map-get($pwt-color, "#{$name}-pressed")};
+    --pwt-color-container-background: #{map-get($pwt-color, "#{$name}-container")};
+    --pwt-color-container: #{map-get($pwt-color, "on-#{$name}-container")};
 }
 
 @mixin color-scheme($name, $palette) {
 
     .pwt-scheme-#{$name} {
-	@include color-scheme-vars("scheme", $name);
+	@include color-scheme-vars($name);
     }
 
     .pwt-color-#{$name} {
@@ -53,5 +55,5 @@ $color-names: (
 );
 
 :root {
-    @include color-scheme-vars("scheme", "neutral-alt");
+    @include color-scheme-vars("neutral-alt");
 }

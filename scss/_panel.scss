@@ -1,14 +1,15 @@
 
 .pwt-panel {
-    @include color-scheme-vars("scheme", "neutral-alt");
+    @include color-scheme-vars("neutral-alt");
     display: flex;
     flex-direction: column;
+    /* panel body is always neutral */
     color: map-get($pwt-color, "on-neutral");
     background-color: map-get($pwt-color, "neutral");
 }
 
 .pwt-panel-header-text {
-    color: var(--pwt-scheme-color);
+    color: var(--pwt-color);
     margin-top: map-get($spacers, 1);
     margin-bottom: map-get($spacers, 1);
     font-size: $h5-font-size;
@@ -16,8 +17,8 @@
 
 .pwt-panel-header {
     padding: map-get($spacers, 2);
-    color: var(--pwt-scheme-color);
-    background: var(--pwt-scheme-bg-color);
+    color: var(--pwt-color);
+    background: var(--pwt-color-background);
 }
 
 .pwt-panel.pwt-rounded > .pwt-panel-header {
