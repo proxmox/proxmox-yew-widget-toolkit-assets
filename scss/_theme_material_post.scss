@@ -1,5 +1,17 @@
 .pwt-button {
-    text-transform: uppercase;
+    border-radius: 10em;
+
+    &.pwt-datatable-header-menu-trigger {
+	border-radius: 0;
+    }
+}
+
+.pwt-nav-link {
+    border-radius: 10em;
+}
+
+.pwt-nav-pills .pwt-nav-link {
+    border-radius: 10em;
 }
 
 .pwt-input {

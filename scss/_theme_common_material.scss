@@ -2,9 +2,13 @@
 $font-size-base: 16px;
 $spacer: $font-size-base * 0.5;
 
-$color-seed-primary:  adjust-color(#6200ee, $saturation: -20%);
-$color-seed-secondary: adjust-color(#03dac6, $saturation: -30%);
-$color-seed-tertiary: adjust-color($color-seed-primary, $hue: +60deg, $saturation: -30%);
+$color-shift: 60deg;
+$color-seed-primary:  adjust-color(#386a20, $saturation: +0%);
+$color-index-primary: 30;
+
+$color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: +10%);
+$color-seed-tertiary: adjust-color($color-seed-primary, $hue: +$color-shift, $saturation: -0%);
+
 $color-seed-neutral: #fff;
 $color-seed-error: #b00020;
 

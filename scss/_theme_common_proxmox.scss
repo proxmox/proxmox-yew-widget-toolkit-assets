@@ -13,7 +13,7 @@ $color-seed-error: adjust-color(red, $saturation: -30%);
 $color-seed-neutral: #fff;
 
 // compute a complementary blue (cold color) with less saturation
-$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +175deg, $saturation: -40%);
+$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +175deg, $saturation: -20%);
 // use adjacent color as secondary
 $color-seed-secondary: adjust-color($color-seed-primary, $hue: -15deg);
 // use adjacent color as tertiary
