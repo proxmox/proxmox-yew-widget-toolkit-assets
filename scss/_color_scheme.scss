@@ -26,6 +26,12 @@
     .pwt-bg-color-#{$name}-pressed {
 	background: map-get($pwt-color, "#{$name}-pressed");
     }
+    .pwt-bg-color-#{$name}-container {
+	background-color: map-get($pwt-color, "#{$name}-container");
+    }
+    .pwt-color-on-#{$name}-container {
+	color: map-get($pwt-color, "on-#{$name}-container");
+    }
 
     @each $percentage in $color-scheme-values {
 	.pwt-color-#{$name}-#{$percentage} {
