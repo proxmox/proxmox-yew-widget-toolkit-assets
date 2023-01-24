@@ -14,6 +14,10 @@
     border-radius: 10em;
 }
 
+.pwt-nav-menu {
+    padding: map-get($spacers, 1);
+}
+
 .pwt-input {
     border: 0 !important;
 }
