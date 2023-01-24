@@ -5,10 +5,10 @@ $zindex-tooltip:   1080;
 
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
+  1: $spacer * 1,
+  2: $spacer * 2,
+  3: $spacer * 3,
+  4: $spacer * 4,
 ) !default;
 
 $pwt-font-sans-serif: sans-serif;
