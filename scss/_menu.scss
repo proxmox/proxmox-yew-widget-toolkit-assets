@@ -89,12 +89,12 @@ ul.pwt-menu {
     }
 
     .pwt-menu-item-indent {
-	margin-inline-start: calc(#{map-get($spacers, 2)*2} + 1em);
+	margin-inline-start: calc(#{map-get($spacers, 2)} + 1em);
     }
 
     .pwt-menu-submenu-indent {
-	margin-inline-start: calc(#{map-get($spacers, 2)*2} + 1em);
-	margin-inline-end: calc(#{map-get($spacers, 2)*2} + 1em);
+	margin-inline-start: calc(#{map-get($spacers, 2)} + 1em);
+	margin-inline-end: calc(#{map-get($spacers, 2)} + 1em);
     }
 
     .pwt-menu-item-icon {
