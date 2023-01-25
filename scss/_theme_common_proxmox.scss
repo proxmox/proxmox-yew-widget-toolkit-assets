@@ -17,7 +17,7 @@ $color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg, $saturati
 
 // use adjacent color as secondary
 $color-shift: 15deg;
-$color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: -30%);
+$color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: -30%, $lightness: -5%);
 // use adjacent color as tertiary
 $color-seed-tertiary: adjust-color($color-seed-primary, $hue: +$color-shift, $saturation: -30%);
 
