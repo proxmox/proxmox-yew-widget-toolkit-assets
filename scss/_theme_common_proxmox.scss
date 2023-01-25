@@ -2,22 +2,23 @@
 $font-size-base: 14px; // like proxmox ExtJs theme
 $spacer: $font-size-base * 0.25;
 
-// $color-seed-primary: #3892d4;
-// $color-seed-error: #b00020;
-
+//$color-seed-primary: #3892d4;
 
 // Proxmox brand colors
 $proxmox-brand-color: #e57000;
 
-$color-seed-error: adjust-color(red, $saturation: -30%);
-$color-seed-neutral: #fff;
+$color-seed-error: #b00020;
+$color-seed-neutral: #aaa;
+$color-seed-neutral-alt: #72776c;
 
 // compute a complementary blue (cold color) with less saturation
-$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +175deg, $saturation: -20%);
+$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg, $saturation: -30%, $lightness: +9%);
+
 // use adjacent color as secondary
-$color-seed-secondary: adjust-color($color-seed-primary, $hue: -15deg);
+$color-shift: 15deg;
+$color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: -30%);
 // use adjacent color as tertiary
-$color-seed-tertiary: adjust-color($color-seed-primary, $hue: +15deg, $saturation: -30%);
+$color-seed-tertiary: adjust-color($color-seed-primary, $hue: +$color-shift, $saturation: -30%);
 
 
 $palette-primary: tonal_palette($color-seed-primary);
@@ -26,3 +27,4 @@ $palette-tertiary: tonal_palette($color-seed-tertiary);
 
 $palette-error: tonal_palette($color-seed-error);
 $palette-neutral: tonal_palette($color-seed-neutral);
+$palette-neutral-alt: tonal_palette($color-seed-neutral-alt);

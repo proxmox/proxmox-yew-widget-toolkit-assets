@@ -42,7 +42,7 @@ $pwt-color: (
     error-container: map-get($palette-error, 80),
     on-error-container: map-get($palette-error, 0),
 
-    // fixme: rename to background
+    // neutral
     neutral: map-get($palette-neutral, 20),
     neutral-emphase: map-get($palette-neutral, 30),
     neutral-pressed: map-get($palette-neutral, 40),
@@ -50,13 +50,13 @@ $pwt-color: (
     neutral-container: map-get($palette-neutral, 30),
     on-neutral-container: map-get($palette-neutral, 90),
 
-    // fixme: rename to surface
-    neutral-alt: map-get($palette-neutral, 15),
-    neutral-alt-emphase: map-get($palette-neutral, 20),
-    neutral-alt-pressed: map-get($palette-neutral, 30),
-    on-neutral-alt: map-get($palette-neutral, 100),
-    neutral-alt-container: map-get($palette-neutral, 20),
-    on-neutral-alt-container: map-get($palette-neutral, 90),
+    // neutral variant
+    neutral-alt: map-get($palette-neutral-alt, 15),
+    neutral-alt-emphase: map-get($palette-neutral-alt, 20),
+    neutral-alt-pressed: map-get($palette-neutral-alt, 30),
+    on-neutral-alt: map-get($palette-neutral-alt, 100),
+    neutral-alt-container: map-get($palette-neutral-alt, 20),
+    on-neutral-alt-container: map-get($palette-neutral-alt, 90),
 
     border: map-get($palette-neutral, 35),
     table-stripe: #383838,

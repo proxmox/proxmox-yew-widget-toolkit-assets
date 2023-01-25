@@ -3,7 +3,7 @@ $modal-backdrop-bg-color: #00000030;
 $color-primary: map-get($palette-primary, 50);
 $color-secondary: map-get($palette-secondary, 50);
 $color-tertiary: map-get($palette-tertiary, 50);
-$color-error: map-get($palette-error, 40);
+$color-error: map-get($palette-error, 50);
 
 $pwt-box-shadow: #{map-get($palette-neutral, 50)} 0px 0px 15px !important;
 $pwt-dropdown-shadow: #{map-get($palette-neutral, 60)} 0px 0px 3px !important;
@@ -36,13 +36,13 @@ $pwt-color: (
 
     error: $color-error,
     error-subtle: map-get($palette-error, 70),
-    error-emphase: map-get($palette-error, 30),
-    error-pressed: map-get($palette-error, 20),
+    error-emphase: map-get($palette-error, 40),
+    error-pressed: map-get($palette-error, 30),
     on-error: map-get($palette-error, 100),
     error-container: map-get($palette-error, 90),
     on-error-container: map-get($palette-error, 0),
 
-    // fixme: rename to background
+    // neutral
     neutral: map-get($palette-neutral, 100),
     neutral-emphase: map-get($palette-neutral, 90),
     neutral-pressed: map-get($palette-neutral, 80),
@@ -50,13 +50,13 @@ $pwt-color: (
     neutral-container: map-get($palette-neutral, 95),
     on-neutral-container: map-get($palette-neutral, 10),
 
-    // fixme: rename to surface
-    neutral-alt: map-get($palette-neutral, 95),
-    neutral-alt-emphase: map-get($palette-neutral, 80),
-    neutral-alt-pressed: map-get($palette-neutral, 70),
-    on-neutral-alt: map-get($palette-neutral, 10),
-    neutral-alt-container: map-get($palette-neutral, 100),
-    on-neutral-alt-container: map-get($palette-neutral, 10),
+    // neutral variant
+    neutral-alt: map-get($palette-neutral-alt, 95),
+    neutral-alt-emphase: map-get($palette-neutral-alt, 80),
+    neutral-alt-pressed: map-get($palette-neutral-alt, 70),
+    on-neutral-alt: map-get($palette-neutral-alt, 10),
+    neutral-alt-container: map-get($palette-neutral-alt, 100),
+    on-neutral-alt-container: map-get($palette-neutral-alt, 10),
 
     border: map-get($palette-neutral, 80),
     table-stripe:  #f8f8f8,
