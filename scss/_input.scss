@@ -60,6 +60,7 @@ input {
     border-radius: 0.2rem;
     border: 1px solid map-get($pwt-color, "border") !important;
     color: #ffffff00; // fully transparent = invisible
+    background-color: map-get($pwt-color, "neutral-alt");
     outline: 0;
 
     &.checked {
