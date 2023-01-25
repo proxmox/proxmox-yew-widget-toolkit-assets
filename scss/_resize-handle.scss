@@ -3,13 +3,13 @@
     position: relative;
     width: map-get($spacers, 2);
     cursor: col-resize;
-    background: var(--pwt-color-background);
+    background: map-get($pwt-color, "neutral-container");
     outline: 0;
 }
 
 .row-split-handle:focus-visible {
     outline-offset: -1px;
-    outline: 1px solid var(--pwt-color);
+    outline: 1px solid map-get($pwt-color, "on-neutral-container");
 }
 
 /* Visible resize handle (horizontal) */
@@ -17,12 +17,12 @@
     position: relative;
     height: map-get($spacers, 2);
     cursor: row-resize;
-    background: var(--pwt-color-background);
+    background: map-get($pwt-color, "neutral-container");
 }
 
 .column-split-handle:focus-visible {
     outline-offset: -1px;
-    outline: 1px solid var(--pwt-color);
+    outline: 1px solid map-get($pwt-color, "on-neutral-container");
 }
 
 /* Invisible resize handle */
