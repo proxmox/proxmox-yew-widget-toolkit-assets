@@ -37,7 +37,7 @@ button {
     user-select: none;
     border: 1px solid map-get($pwt-color, "border") !important;
     border-radius: 0.2rem;
-    font-size: $font-size-small;
+    font-size: $font-size-base;
 
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
