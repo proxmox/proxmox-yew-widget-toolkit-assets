@@ -11,8 +11,9 @@ $color-seed-error: #b00020;
 $color-seed-neutral: #aaa;
 $color-seed-neutral-alt: #aaa;
 
-// compute a complementary blue (cold color) with less saturation
-$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg, $saturation: -30%, $lightness: +9%);
+// compute a complementary blue (cold color) with less saturation,
+// reduce lightness to improve contrast to white.
+$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg, $saturation: -30%, $lightness: -2%);
 
 // use adjacent color as secondary
 $color-shift: 15deg;
