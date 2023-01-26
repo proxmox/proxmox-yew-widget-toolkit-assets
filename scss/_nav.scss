@@ -18,7 +18,7 @@
 	border-radius: 0.2rem;
 
 	&:focus-visible {
-            outline: 1px solid map-get($pwt-color, "on-neutral");
+            outline: 1px solid map-get($pwt-color, "on-surface");
             outline-offset: -2px;
 	}
 
@@ -46,7 +46,7 @@
 
 // Menu
 .pwt-nav-menu {
-    background: map-get($pwt-color, "neutral-alt");
+    background: map-get($pwt-color, "surface");
 
     .pwt-nav-link {
 	background: none;
@@ -58,7 +58,7 @@
 	}
 
 	&:focus-visible {
-            outline: 1px solid map-get($pwt-color, "on-neutral-alt");
+            outline: 1px solid map-get($pwt-color, "on-surface");
             outline-offset: -2px;
 	}
 
@@ -80,7 +80,7 @@
     a {
 	text-decoration: none !important;
 	text-shadow: none !important;
-	color: map-get($pwt-color, "on-neutral-alt");
+	color: map-get($pwt-color, "on-surface");
     }
 }
 

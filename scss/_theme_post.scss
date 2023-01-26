@@ -1,3 +1,7 @@
+// define surface color alias
+$pwt-color:  map-merge($pwt-color, (surface: map-get($pwt-color, neutral-container)));
+$pwt-color:  map-merge($pwt-color, (on-surface: map-get($pwt-color, on-neutral-container)));
+
 @import "variables";
 @import "color_scheme";
 @import "fonts";
