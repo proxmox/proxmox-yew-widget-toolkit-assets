@@ -75,11 +75,6 @@ button {
 }
 
 .pwt-segmented-button > .pwt-button {
-    &:focus-visible {
-        outline: 1px solid var(--pwt-color);
-        outline-offset: -1px;
-    }
-
     border-radius: 0px;
     border-inline-start: 0px ! important;
 }
