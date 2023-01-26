@@ -1,7 +1,3 @@
-// define surface color alias
-$pwt-color:  map-merge($pwt-color, (surface: map-get($pwt-color, neutral-container)));
-$pwt-color:  map-merge($pwt-color, (on-surface: map-get($pwt-color, on-neutral-container)));
-
 @import "variables";
 @import "color_scheme";
 @import "fonts";
@@ -120,11 +116,14 @@ a:focus {
     background: map-get($pwt-color, "primary");
 }
 
-@include color-scheme("primary", $palette-primary);
-@include color-scheme("secondary", $palette-secondary);
-@include color-scheme("tertiary", $palette-tertiary);
-@include color-scheme("error", $palette-error);
-@include color-scheme("neutral", $palette-neutral);
-@include color-scheme("neutral-alt", $palette-neutral-alt);
+@include color-percentages("primary", $palette-primary);
+@include color-percentages("secondary", $palette-secondary);
+@include color-percentages("tertiary", $palette-tertiary);
+@include color-percentages("error", $palette-error);
+@include color-percentages("neutral", $palette-neutral);
+
+@each $name in $color-names {
+    @include color-scheme($name);
+}
 
 @import "utilities";

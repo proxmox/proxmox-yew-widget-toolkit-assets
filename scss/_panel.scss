@@ -1,6 +1,6 @@
 
 .pwt-panel {
-    @include color-scheme-vars("neutral-alt");
+    @include color-scheme-vars("surface");
     display: flex;
     flex-direction: column;
     /* panel body is always neutral */
