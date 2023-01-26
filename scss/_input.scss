@@ -64,14 +64,15 @@ input {
     outline: 0;
 
     &.checked {
-	background-color: map-get($pwt-color, "primary");
-	color: map-get($pwt-color, "on-primary");
+	background-color: map-get($pwt-color, "surface");
+	color: map-get($pwt-color, "on-surface");
 
 	&.rounded {
 	    // make check mark inivisible for radio groups
 	    border-color: map-get($pwt-color, "neutral");
 	    inset: 10px;
-	    color: map-get($pwt-color, "primary");
+	    color: transparent;
+	    background-color: map-get($pwt-color, "primary");
 	}
     }
 
