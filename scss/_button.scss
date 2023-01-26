@@ -39,18 +39,23 @@ button {
     border-radius: 0.2rem;
     font-size: $font-size-base;
 
+    &.raised {
+	box-shadow: $pwt-button-shadow;
+    }
+
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
 
     &:active:not(:disabled) {
 	background-color: var(--pwt-color-pressed);
+	box-shadow: none !important;
     }
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
 	background-color: var(--pwt-color-emphase);
     }
 
-    &:focus {
+    &:focus-visible {
         outline: 1px solid var(--pwt-color);
         outline-offset: -2px;
     }
@@ -70,7 +75,7 @@ button {
 }
 
 .pwt-segmented-button > .pwt-button {
-    &:focus {
+    &:focus-visible {
         outline: 1px solid var(--pwt-color);
         outline-offset: -1px;
     }
@@ -110,6 +115,10 @@ button {
 {
     border-start-end-radius: 10rem !important;
     border-end-end-radius: 10rem !important;
+}
+
+.pwt-segmented-button.raised > .pwt-button {
+    box-shadow: $pwt-button-shadow;
 }
 
 
