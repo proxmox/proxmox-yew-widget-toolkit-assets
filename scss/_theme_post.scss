@@ -121,6 +121,7 @@ a:focus {
 @include color-percentages("tertiary", $palette-tertiary);
 @include color-percentages("error", $palette-error);
 @include color-percentages("neutral", $palette-neutral);
+@include color-percentages("neutral-alt", $palette-neutral-alt);
 
 @each $name in $color-names {
     @include color-scheme($name);
