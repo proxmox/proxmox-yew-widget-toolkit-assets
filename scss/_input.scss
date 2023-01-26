@@ -4,21 +4,21 @@ input {
 }
 
 .pwt-input {
-    color: map-get($pwt-color, "on-neutral-alt");
-    background-color: map-get($pwt-color, "neutral-alt");
+    color: map-get($pwt-color, "on-surface");
+    background-color: map-get($pwt-color, "surface");
     padding: map-get($spacers, 1) map-get($spacers, 2);
     border: 1px solid map-get($pwt-color, "border") !important;
     border-radius: 0.2rem;
 
     /// disable outline for inputs inside
     input {
-	color: map-get($pwt-color, "on-neutral-alt");
-	background-color: map-get($pwt-color, "neutral-alt");
+	color: map-get($pwt-color, "on-surface");
+	background-color: map-get($pwt-color, "surface");
 	outline: 0;
     }
 
     &:focus-within {
-	border-color: map-get($pwt-color, "on-neutral-alt") !important;
+	border-color: map-get($pwt-color, "on-surface") !important;
 	border-width: 1px !important;
     	outline: 0;
     }
@@ -46,7 +46,7 @@ input {
     accent-color: #{map-get($pwt-color, "primary")};
     vertical-align: middle;
     &:focus-visible {
-	outline: 1px solid map-get($pwt-color, "on-neutral-alt");
+	outline: 1px solid map-get($pwt-color, "on-surface");
     }
 }
 
@@ -60,7 +60,7 @@ input {
     border-radius: 0.2rem;
     border: 1px solid map-get($pwt-color, "border") !important;
     color: #ffffff00; // fully transparent = invisible
-    background-color: map-get($pwt-color, "neutral-alt");
+    background-color: map-get($pwt-color, "surface");
     outline: 0;
 
     &.checked {
