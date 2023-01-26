@@ -24,7 +24,7 @@ button {
     }
 }
 
-
+$defaut-button-border-radius: 0.3rem;
 
 .pwt-button {
     @include color-scheme-vars("neutral-alt");
@@ -36,7 +36,7 @@ button {
     white-space: nowrap !important;
     user-select: none;
     border: 1px solid map-get($pwt-color, "border") !important;
-    border-radius: 0.2rem;
+    border-radius: $defaut-button-border-radius;
     font-size: $font-size-base;
 
     &.raised {
@@ -80,14 +80,14 @@ button {
 }
 
 .pwt-segmented-button > .pwt-button:first-child {
-    border-start-start-radius: 0.2rem;
-    border-end-start-radius: 0.2rem;
+    border-start-start-radius: $defaut-button-border-radius;
+    border-end-start-radius: $defaut-button-border-radius;
     border-inline-start: 1px solid map-get($pwt-color, "border") !important;
 }
 
 .pwt-segmented-button > .pwt-button:last-child {
-    border-start-end-radius: 0.2rem;
-    border-end-end-radius: 0.2rem;
+    border-start-end-radius: $defaut-button-border-radius;
+    border-end-end-radius: $defaut-button-border-radius;
 }
 
 .pwt-button.rounded  {
