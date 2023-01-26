@@ -76,13 +76,13 @@ button {
 
 .pwt-segmented-button > .pwt-button {
     border-radius: 0px;
-    border-inline-start: 0px ! important;
+    border-inline-start: 0px !important;
 }
 
 .pwt-segmented-button > .pwt-button:first-child {
     border-start-start-radius: 0.2rem;
     border-end-start-radius: 0.2rem;
-    border-inline-start: 1px solid map-get($pwt-color, "border") ! important;
+    border-inline-start: 1px solid map-get($pwt-color, "border") !important;
 }
 
 .pwt-segmented-button > .pwt-button:last-child {
