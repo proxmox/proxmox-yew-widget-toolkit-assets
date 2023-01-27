@@ -56,15 +56,15 @@ $pwt-color: (
     surface-emphase: map-get($palette-neutral, 20),
     surface-pressed: map-get($palette-neutral, 30),
     on-surface: map-get($palette-neutral, 90),
-    surface-container: map-get($palette-neutral, 20),
+    surface-container: map-get($palette-neutral, 10),
     on-surface-container: map-get($palette-neutral, 90),
 
     // neutral variant
-    neutral-alt: map-get($palette-neutral-alt, 15),
-    neutral-alt-emphase: map-get($palette-neutral-alt, 20),
-    neutral-alt-pressed: map-get($palette-neutral-alt, 30),
+    neutral-alt: map-get($palette-neutral-alt, 10),
+    neutral-alt-emphase: map-get($palette-neutral-alt, 15),
+    neutral-alt-pressed: map-get($palette-neutral-alt, 20),
     on-neutral-alt: map-get($palette-neutral-alt, 100),
-    neutral-alt-container: map-get($palette-neutral-alt, 20),
+    neutral-alt-container: map-get($palette-neutral-alt, 5),
     on-neutral-alt-container: map-get($palette-neutral-alt, 90),
 
     border: map-get($palette-neutral, 35),
