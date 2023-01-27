@@ -111,11 +111,12 @@
     border-style: solid !important;
     border-color: map-get($pwt-color, "border") !important;
     border-width: 0 0 0 1px !important;
+    border-radius: 0.3rem;
     opacity: var(--pwt-trigger-opacity);
     transition: opacity 0.2s ease-in-out;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
+    top: 2px;
+    bottom: 2px;
+    right: 2px;
 }
 
 .pwt-datatable-header-resize-trigger {
