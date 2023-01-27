@@ -18,9 +18,8 @@ input {
     }
 
     &:focus-within {
-	border-color: map-get($pwt-color, "on-surface") !important;
-	border-width: 1px !important;
-    	outline: 0;
+	outline: 2px solid map-get($pwt-color, "on-surface") !important;
+        outline-offset: -2px;
     }
 
     &:not(.disabled):not(:disabled).is-invalid {
@@ -45,9 +44,6 @@ input {
     margin: 0;
     accent-color: #{map-get($pwt-color, "primary")};
     vertical-align: middle;
-    &:focus-visible {
-	outline: 1px solid map-get($pwt-color, "on-surface");
-    }
 }
 
 .pwt-label-disabled {
@@ -76,9 +72,9 @@ input {
 	}
     }
 
-    &:focus {
-	border-color: map-get($pwt-color, "on-neutral") !important;
-	border-width: 1px !important;
+    &:focus-within {
+	outline: 2px solid map-get($pwt-color, "on-surface") !important;
+        outline-offset: -2px;
     }
 
     &.disabled {

@@ -19,7 +19,7 @@ $defaut-pills-border-radius: 0.3rem;
 	border-radius: $defaut-pills-border-radius;
 
 	&:focus-visible {
-            outline: 1px solid map-get($pwt-color, "on-surface");
+            outline: 2px solid map-get($pwt-color, "on-surface");
             outline-offset: -2px;
 	}
 
@@ -31,11 +31,6 @@ $defaut-pills-border-radius: 0.3rem;
     .pwt-nav-link.active {
 	color: map-get($pwt-color, "on-primary");
 	background-color: map-get($pwt-color, "primary");
-
-	&:focus-visible {
-            outline: 1px solid map-get($pwt-color, "on-primary");
-            outline-offset: -2px;
-	}
     }
 
     a {
@@ -59,7 +54,7 @@ $defaut-pills-border-radius: 0.3rem;
 	}
 
 	&:focus-visible {
-            outline: 1px solid map-get($pwt-color, "on-surface");
+            outline: 2px solid map-get($pwt-color, "on-surface");
             outline-offset: -2px;
 	}
 
@@ -71,11 +66,6 @@ $defaut-pills-border-radius: 0.3rem;
     .pwt-nav-link.active {
 	color: map-get($pwt-color, "on-primary");
 	background-color: map-get($pwt-color, "primary");
-
-	&:focus-visible {
-            outline: 1px solid map-get($pwt-color, "on-primary");
-            outline-offset: -2px;
-	}
     }
 
     a {

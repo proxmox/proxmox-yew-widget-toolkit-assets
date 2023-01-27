@@ -56,7 +56,7 @@ $defaut-button-border-radius: 0.3rem;
     }
 
     &:focus-visible {
-        outline: 1px solid var(--pwt-color);
+        outline: 2px solid var(--pwt-color);
         outline-offset: -2px;
     }
 

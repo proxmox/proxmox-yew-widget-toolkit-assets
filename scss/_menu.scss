@@ -38,7 +38,7 @@ ul.pwt-menubar {
     }
 
     .pwt-menubar-item:focus-visible {
-	outline: 1px solid map-get($pwt-color, "on-neutral");
+	outline: 2px solid map-get($pwt-color, "on-neutral");
         outline-offset: -2px;
     }
 
@@ -63,11 +63,6 @@ ul.pwt-menu {
 	outline: 0;
     }
 
-//    li:focus-within {
-//        outline: 1px solid map-get($pwt-color, "on-neutral");
-//        outline-offset: -2px;
-//    }
-
     & > li.active:focus-within {
 	background-color: map-get($pwt-color, "primary-a20");
     }
@@ -87,7 +82,7 @@ ul.pwt-menu {
     }
 
     .pwt-menu-item:focus-visible {
-	outline: 1px solid map-get($pwt-color, "on-neutral");
+	outline: 2px solid map-get($pwt-color, "on-neutral");
         outline-offset: -2px;
     }
 

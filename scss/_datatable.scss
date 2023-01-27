@@ -15,8 +15,8 @@
     }
 
     td.cell-cursor {
-	outline: 1px solid map-get($pwt-color, "on-neutral");
-	outline-offset: -1px;
+	outline: 2px solid map-get($pwt-color, "on-neutral");
+	outline-offset: -2px;
     }
 
     tr {
@@ -84,7 +84,8 @@
 .pwt-datatable-header-item.focused,
 .pwt-datatable-header-item:focus {
     --pwt-trigger-opacity: 0.8;
-    outline: 1px solid map-get($pwt-color, "primary");
+    outline: 2px solid map-get($pwt-color, "on-surface");
+    outline-offset: -2px;
     background-color: map-get($pwt-color, "surface");
 }
 
