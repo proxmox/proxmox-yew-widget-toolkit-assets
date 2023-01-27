@@ -14,5 +14,5 @@ $palette-primary: tonal_palette($color-seed-primary);
 $palette-secondary: tonal_palette($color-seed-secondary);
 $palette-tertiary: tonal_palette($color-seed-tertiary);
 $palette-error: tonal_palette($color-seed-error);
-$palette-neutral: tonal_palette($color-seed-neutral);
-$palette-neutral-alt: tonal_palette($color-seed-neutral-alt);
+$palette-neutral: tonal_palette_linear($color-seed-neutral);
+$palette-neutral-alt: tonal_palette_linear($color-seed-neutral-alt);
