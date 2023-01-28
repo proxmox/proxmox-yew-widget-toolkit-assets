@@ -47,6 +47,7 @@ $defaut-pills-border-radius: 0.3rem;
     background: map-get($pwt-color, "surface");
 
     .pwt-nav-link {
+	line-height: map-get($line-height, "title-medium");
 	background: none;
 	border: 0;
 
@@ -72,8 +73,15 @@ $defaut-pills-border-radius: 0.3rem;
     }
 }
 
+.pwt-nav-menu-icon {
+    font-size: map-get($font-size, "title-medium");
+    line-height: map-get($line-height, "title-medium");
+    margin-inline-end: 0.75em;
+
+}
+
 .pwt-nav-menu-item-arrow {
-    margin-inline-start: map-get($spacers, 1);
+    margin-inline-start: 0.75em;
 
     &.expanded {
 	transform: scaleY(-1);
