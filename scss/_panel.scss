@@ -10,8 +10,6 @@
 
 .pwt-panel-header-text {
     color: var(--pwt-color);
-   // margin-top: map-get($spacers, 1);
-   // margin-bottom: map-get($spacers, 1);
     font-size: map-get($font-size, "title-large");
     line-height: map-get($line-height, "title-large");
 }
