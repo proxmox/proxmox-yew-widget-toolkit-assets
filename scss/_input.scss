@@ -68,7 +68,7 @@ input {
 	    border-color: map-get($pwt-color, "neutral");
 	    inset: 10px;
 	    color: transparent;
-	    background-color: map-get($pwt-color, "primary");
+	    background-color: map-get($pwt-color, "primary-pressed");
 	}
     }
 
