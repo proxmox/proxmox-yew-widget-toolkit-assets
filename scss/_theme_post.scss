@@ -28,7 +28,7 @@
 
 :root {
     font-family: $pwt-font-sans-serif;
-    font-size: $font-size-base;
+    font-size: map-get($font-size, "body-medium");
     color: map-get($pwt-color, "on-neutral");
     background: map-get($pwt-color, "neutral");
 }
@@ -82,9 +82,9 @@ hr,
 
 .pwt-log-content {
     white-space: pre;
-    font-size: $font-size-small;
+    font-size: map-get($font-size, "body-small");
     font-family: $pwt-font-monospace;
-    line-height: 1.2;
+    line-height: map-get($font-size, "body-small");
 }
 
 .pwt-no-outline {

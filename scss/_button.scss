@@ -37,7 +37,8 @@ $defaut-button-border-radius: 0.3rem;
     user-select: none;
     border: 1px solid map-get($pwt-color, "border") !important;
     border-radius: $defaut-button-border-radius;
-    font-size: $font-size-base;
+    font-size: map-get($font-size, "label-large");
+    line-height: map-get($line-height, "label-large");
 
     &.raised {
 	box-shadow: $pwt-button-shadow;
