@@ -50,10 +50,6 @@ $defaut-pills-border-radius: 0.3rem;
 	background: none;
 	border: 0;
 
-	&.pwt-nav-menu {
-	    padding-inline-end: 0;
-	}
-
 	&:focus-visible {
             outline: 2px solid map-get($pwt-color, "on-surface");
             outline-offset: -2px;
@@ -76,23 +72,10 @@ $defaut-pills-border-radius: 0.3rem;
     }
 }
 
-.pwt-nav-menu-expander {
-    padding-inline-start: 1em;
-    transition-duration: 100ms;
-}
+.pwt-nav-menu-item-arrow {
+    margin-inline-start: map-get($spacers, 1);
 
-.pwt-nav-menu-expander.expanded {
-    transform: rotate(90deg) translate(-0.25em, -0.25em);
-}
-
-html[dir="rtl"] {
-    .pwt-nav-menu-expander {
-	padding-inline-start: 1em;
-	transform: rotate(180deg) translateX(0.5em);
-	transition-duration: 100ms;
-    }
-
-    .pwt-nav-menu-expander.expanded {
-	transform: rotate(90deg) translatex(0.5em);
+    &.expanded {
+	transform: scaleY(-1);
     }
 }
