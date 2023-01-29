@@ -13,8 +13,8 @@
 
 
 .pwt-dropdown-icon {
-    font-size: map-get($font-size, "title-medium");
-    //line-height: map-get($line-height, "title-medium");
+    font-size: map-get($font-size, "body-large");
+    line-height: map-get($line-height, "body-large");
 }
 
 .pwt-dropdown[data-show] {

@@ -1,7 +1,7 @@
 input {
     font-family: $pwt-font-sans-serif;
-    font-size: map-get($font-size, "label-large");
-    line-height: map-get($line-height, "label-large");
+    font-size: map-get($font-size, "body-large");
+    line-height: map-get($line-height, "body-large");
 }
 
 .pwt-input {
@@ -51,6 +51,49 @@ input {
     opacity: 0.5;
 }
 
+.pwt-switch {
+    display: inline-block;
+    outline: 0;
+    flex: 0 0 auto;
+    font-size: map-get($font-size, "body-large");
+    line-height: map-get($line-height, "body-large");
+    width: calc(3em - 4px);
+    background-color: map-get($pwt-color, "neutral-alt");
+    border: 2px solid map-get($pwt-color, "border") !important;
+    border-radius: map-get($line-height, "body-large")/2 + 4px;
+    padding: 2px;
+
+    &.checked {
+	background-color: map-get($pwt-color, "primary");
+    }
+
+    .pwt-switch-slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: map-get($line-height, "body-large") - 4px;
+	width: map-get($line-height, "body-large") - 4px;
+	color: map-get($pwt-color, "neutral-alt-container");
+	background-color: map-get($pwt-color, "neutral-alt-container");
+	border-radius: 50%;
+	margin: 2px;
+	transition: margin-inline-start .2s;
+    }
+
+    &.checked .pwt-switch-slider {
+	margin: 0px;
+	height: map-get($line-height, "body-large");
+	width: map-get($line-height, "body-large");
+	color: map-get($pwt-color, "primary");
+	background-color: map-get($pwt-color, "on-primary");
+	margin-inline-start: calc(100% - #{map-get($line-height, "body-large")});
+    }
+
+    &:focus-visible {
+	border: 2px solid map-get($pwt-color, "on-surface") !important;
+    }
+}
+
 .pwt-checkbox {
     user-select: none;
     margin: map-get($spacers, 1) 0;
@@ -59,6 +102,8 @@ input {
     color: #ffffff00; // fully transparent = invisible
     background-color: map-get($pwt-color, "surface");
     outline: 0;
+    font-size: map-get($font-size, "body-large");
+    line-height: map-get($line-height, "body-large");
 
     &.checked {
 	background-color: map-get($pwt-color, "surface");
