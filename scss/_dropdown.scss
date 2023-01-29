@@ -11,6 +11,12 @@
     overflow:auto;
 }
 
+
+.pwt-dropdown-icon {
+    font-size: map-get($font-size, "title-medium");
+    //line-height: map-get($line-height, "title-medium");
+}
+
 .pwt-dropdown[data-show] {
     display: flex;
 }
