@@ -2,7 +2,8 @@
     z-index: $zindex-dropdown;
 
     background: map-get($pwt-color, "surface");
-    border-radius: 0.2rem;
+    border-radius: map-get($shape-corner, extra-small);
+
     box-shadow: $pwt-dropdown-shadow;
     max-height: 100vh;
     max-width: 100vw;
