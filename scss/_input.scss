@@ -1,7 +1,7 @@
 input {
     font-family: $pwt-font-sans-serif;
-    font-size: map-get($font-size, "body-large");
-    line-height: map-get($line-height, "body-large");
+    font-size: map-get($font-size, "label-large");
+    line-height: map-get($line-height, "label-large");
 }
 
 .pwt-input {
@@ -55,12 +55,12 @@ input {
     display: inline-block;
     outline: 0;
     flex: 0 0 auto;
-    font-size: map-get($font-size, "body-large");
-    line-height: map-get($line-height, "body-large");
+    font-size: map-get($font-size, "label-large");
+    line-height: map-get($line-height, "label-large");
     width: calc(3em - 4px);
     background-color: map-get($pwt-color, "neutral-alt");
     border: 2px solid map-get($pwt-color, "border") !important;
-    border-radius: map-get($line-height, "body-large")/2 + 4px;
+    border-radius: map-get($line-height, "label-large")/2 + 4px;
     padding: 2px;
 
     &.checked:not(.disabled) {
@@ -71,8 +71,8 @@ input {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: map-get($line-height, "body-large") - 4px;
-	width: map-get($line-height, "body-large") - 4px;
+	height: map-get($line-height, "label-large") - 4px;
+	width: map-get($line-height, "label-large") - 4px;
 	color: #ffffff00; // invisible
 	background-color: map-get($pwt-color, "neutral-alt-container");
 	border-radius: 50%;
@@ -82,11 +82,11 @@ input {
 
     &.checked .pwt-switch-slider {
 	margin: 0px;
-	height: map-get($line-height, "body-large");
-	width: map-get($line-height, "body-large");
+	height: map-get($line-height, "label-large");
+	width: map-get($line-height, "label-large");
 	color: map-get($pwt-color, "primary");
 	background-color: map-get($pwt-color, "on-primary");
-	margin-inline-start: calc(100% - #{map-get($line-height, "body-large")});
+	margin-inline-start: calc(100% - #{map-get($line-height, "label-large")});
     }
 
     &.checked.disabled .pwt-switch-slider {
