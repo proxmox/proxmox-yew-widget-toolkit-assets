@@ -73,6 +73,7 @@
 
 .pwt-datatable-header-item {
     --pwt-trigger-opacity: 0;
+    outline: 0;
     position: relative;
     padding: map-get($spacers, 2);
     cursor: default;
@@ -84,8 +85,6 @@
 .pwt-datatable-header-item.focused,
 .pwt-datatable-header-item:focus {
     --pwt-trigger-opacity: 0.8;
-    outline: 2px solid map-get($pwt-color, "on-surface");
-    outline-offset: -2px;
     background-color: map-get($pwt-color, "surface");
 }
 
