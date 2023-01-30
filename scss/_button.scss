@@ -71,6 +71,18 @@ $defaut-button-border-radius: 0.3rem;
     }
 }
 
+
+.pwt-button.rounded  {
+    border-radius: 10rem !important;
+ }
+
+.pwt-button.circle {
+    border-radius: 10rem !important;
+    min-width: map-get($line-height, "label-large") + 2 * map-get($spacers, 1) + 2px;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 auto;
+}
+
 .pwt-segmented-button {
     white-space: nowrap;
 }
@@ -91,9 +103,6 @@ $defaut-button-border-radius: 0.3rem;
     border-end-end-radius: $defaut-button-border-radius;
 }
 
-.pwt-button.rounded  {
-    border-radius: 10rem !important;
-}
 
 .pwt-segmented-button > .pwt-button.rounded  {
     border-radius: 0px !important;
