@@ -1,8 +1,8 @@
 $modal-backdrop-bg-color: #00000050;
 
 $color-primary: map-get($palette-primary, 60);
-$color-secondary: map-get($palette-secondary, 40);
-$color-tertiary: map-get($palette-tertiary, 40);
+$color-secondary: map-get($palette-secondary, 60);
+$color-tertiary: map-get($palette-tertiary, 60);
 $color-error: map-get($palette-error, 40);
 
 $pwt-box-shadow: #{map-get($palette-neutral, 5)} 0px 0px 15px !important;
@@ -13,25 +13,25 @@ $pwt-navbar-brand-filter: drop-shadow(3px 3px 4px #222);
 
 $pwt-color: (
     primary: $color-primary,
-    primary-emphase: map-get($palette-primary, 60),
-    primary-pressed: map-get($palette-primary, 70),
-    on-primary: map-get($palette-primary, 99),
+    primary-emphase: map-get($palette-primary, 70),
+    primary-pressed: map-get($palette-primary, 80),
+    on-primary: map-get($palette-primary, 10),
     primary-container: map-get($palette-primary, 20),
     on-primary-container: map-get($palette-primary, 100),
 
     primary-a20: change-color($color-primary, $alpha: 0.5),
 
     secondary: $color-secondary,
-    secondary-emphase: map-get($palette-secondary, 50),
-    secondary-pressed: map-get($palette-secondary, 60),
-    on-secondary: map-get($palette-secondary, 99),
+    secondary-emphase: map-get($palette-secondary, 70),
+    secondary-pressed: map-get($palette-secondary, 80),
+    on-secondary: map-get($palette-secondary, 10),
     secondary-container: map-get($palette-secondary, 20),
     on-secondary-container: map-get($palette-secondary, 90),
 
     tertiary: $color-tertiary,
-    tertiary-emphase: map-get($palette-tertiary, 50),
-    tertiary-pressed: map-get($palette-tertiary, 60),
-    on-tertiary: map-get($palette-tertiary, 99),
+    tertiary-emphase: map-get($palette-tertiary, 70),
+    tertiary-pressed: map-get($palette-tertiary, 80),
+    on-tertiary: map-get($palette-tertiary, 10),
     tertiary-container: map-get($palette-tertiary, 20),
     on-tertiary-container: map-get($palette-tertiary, 90),
 
