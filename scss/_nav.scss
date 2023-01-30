@@ -8,9 +8,8 @@
   // Note: add 1px to get same size as buttons with border
   padding: calc(#{map-get($spacers, 1)} + 1px) map-get($spacers, 2);
   line-height: 1.4em;
+  border-radius: $nav-link-corner-shape;
 }
-
-$defaut-pills-border-radius: 0.3rem;
 
 // Pills
 .pwt-nav-pills {
@@ -18,7 +17,7 @@ $defaut-pills-border-radius: 0.3rem;
     .pwt-nav-link {
 	background: none;
 	border: 0;
-	border-radius: $defaut-pills-border-radius;
+	//border-radius: $nav-link-corner-shape;
 
 	&:focus-visible {
             outline: 2px solid map-get($pwt-color, "on-surface");

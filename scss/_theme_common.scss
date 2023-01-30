@@ -44,3 +44,18 @@ $font-size: (
 
 $state-opacity10: 0.1;
 $state-opacity20: 0.2;
+
+// corner shape level
+
+$shape-corner: (
+    none: 0px,
+    extra-small: 4px,
+    small: 8px,
+    medium: 12px,
+    large: 16px,
+    extra-large: 28px,
+    full: 10rem,
+);
+
+$button-corner-shape: none;
+$nav-link-corner-shape: none;

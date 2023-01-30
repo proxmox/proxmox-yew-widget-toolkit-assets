@@ -1,6 +1,7 @@
 // Material Design
-$font-size-base: 14px;
 $spacer: 10px;
+$button-corner-shape: map-get($shape-corner, full);
+$nav-link-corner-shape: map-get($shape-corner, full);
 
 $color-seed-primary: #386a20;
 $color-seed-secondary: #55624c;

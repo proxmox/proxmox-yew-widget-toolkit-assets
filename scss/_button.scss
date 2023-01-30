@@ -24,8 +24,6 @@ button {
     }
 }
 
-$defaut-button-border-radius: 0.3rem;
-
 .pwt-button {
     @include color-scheme-vars("surface");
     display: inline-block;
@@ -36,7 +34,7 @@ $defaut-button-border-radius: 0.3rem;
     white-space: nowrap !important;
     user-select: none;
     border: 1px solid map-get($pwt-color, "border") !important;
-    border-radius: $defaut-button-border-radius;
+    border-radius: $button-corner-shape;
     font-size: map-get($font-size, "label-large");
     line-height: map-get($line-height, "label-large");
 
@@ -93,14 +91,14 @@ $defaut-button-border-radius: 0.3rem;
 }
 
 .pwt-segmented-button > .pwt-button:first-child {
-    border-start-start-radius: $defaut-button-border-radius;
-    border-end-start-radius: $defaut-button-border-radius;
+    border-start-start-radius: $button-corner-shape;
+    border-end-start-radius: $button-corner-shape;
     border-inline-start: 1px solid map-get($pwt-color, "border") !important;
 }
 
 .pwt-segmented-button > .pwt-button:last-child {
-    border-start-end-radius: $defaut-button-border-radius;
-    border-end-end-radius: $defaut-button-border-radius;
+    border-start-end-radius: $button-corner-shape;
+    border-end-end-radius: $button-corner-shape;
 }
 
 

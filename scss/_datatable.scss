@@ -111,7 +111,7 @@
     border-style: solid !important;
     border-color: map-get($pwt-color, "border") !important;
     border-width: 0 0 0 1px !important;
-    border-radius: 0.3rem;
+    border-radius: map-get($shape-corner, extra-small);
     opacity: var(--pwt-trigger-opacity);
     transition: opacity 0.2s ease-in-out;
     top: 2px;
