@@ -11,12 +11,6 @@
     overflow:auto;
 }
 
-
-.pwt-dropdown-icon {
-    font-size: map-get($font-size, "body-large");
-    line-height: map-get($line-height, "body-large");
-}
-
 .pwt-dropdown[data-show] {
     display: flex;
 }
