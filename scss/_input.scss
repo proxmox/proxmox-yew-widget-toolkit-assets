@@ -63,7 +63,7 @@ input {
     border-radius: map-get($line-height, "body-large")/2 + 4px;
     padding: 2px;
 
-    &.checked {
+    &.checked:not(.disabled) {
 	background-color: map-get($pwt-color, "primary");
     }
 
@@ -73,7 +73,7 @@ input {
 	align-items: center;
 	height: map-get($line-height, "body-large") - 4px;
 	width: map-get($line-height, "body-large") - 4px;
-	color: map-get($pwt-color, "neutral-alt-container");
+	color: #ffffff00; // invisible
 	background-color: map-get($pwt-color, "neutral-alt-container");
 	border-radius: 50%;
 	margin: 2px;
@@ -89,38 +89,46 @@ input {
 	margin-inline-start: calc(100% - #{map-get($line-height, "body-large")});
     }
 
+    &.checked.disabled .pwt-switch-slider {
+	color:  map-get($pwt-color, "on-surface");
+	background-color: map-get($pwt-color, "neutral-alt-container");
+    }
+
     &:focus-visible {
 	border: 2px solid map-get($pwt-color, "on-surface") !important;
+    }
+
+    &.disabled {
+	cursor: auto;
+	opacity: 0.5;
     }
 }
 
 .pwt-checkbox {
-    user-select: none;
-    margin: map-get($spacers, 1) 0;
-    border-radius: 0.2rem;
-    border: 1px solid map-get($pwt-color, "border") !important;
-    color: #ffffff00; // fully transparent = invisible
-    background-color: map-get($pwt-color, "surface");
+    display: inline-block;
     outline: 0;
-    font-size: map-get($font-size, "body-large");
-    line-height: map-get($line-height, "body-large");
+    flex: 0 0 auto;
+    font-size: map-get($font-size, "label-large");
+    line-height: map-get($line-height, "label-large");
+    width: calc(1em);
+    height: calc(1em);
+    border: 2px solid map-get($pwt-color, "border") !important;
+    color: #ffffff00; // invisible
+    background-color: map-get($pwt-color, "surface");
 
-    &.checked {
-	background-color: map-get($pwt-color, "surface");
-	color: map-get($pwt-color, "on-surface");
-
-	&.rounded {
-	    // make check mark inivisible for radio groups
-	    border-color: map-get($pwt-color, "neutral");
-	    inset: 10px;
-	    color: transparent;
-	    background-color: map-get($pwt-color, "primary-pressed");
-	}
+    .pwt-checkbox-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
     }
 
-    &:focus-within {
-	outline: 2px solid map-get($pwt-color, "on-surface") !important;
-        outline-offset: -2px;
+    &.checked {
+	color: map-get($pwt-color, "on-primary");
+	background-color: map-get($pwt-color, "primary");
+    }
+
+    &:focus-visible {
+	border: 2px solid map-get($pwt-color, "on-surface") !important;
     }
 
     &.disabled {
@@ -128,8 +136,59 @@ input {
 	opacity: 0.5;
     }
 
-    &.rounded  {
-	border-radius: 10rem !important;
+    &.disabled.checked {
+	color: map-get($pwt-color, "on-surface");
+	background-color: map-get($pwt-color, "surface");
+    }
+
+}
+
+.pwt-radio-button {
+    position: relative;
+    display: inline-block;
+    outline: 0;
+    flex: 0 0 auto;
+    font-size: map-get($font-size, "label-large");
+    line-height: map-get($line-height, "label-large");
+    width: calc(#{map-get($line-height, "label-large")} - 4px);
+    height: calc(#{map-get($line-height, "label-large")} - 4px);
+    border: 2px solid map-get($pwt-color, "border") !important;
+    border-radius: 50%;
+    color: #ffffff00; // invisible
+    background-color: map-get($pwt-color, "neutral");
+
+    .pwt-checkbox-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    }
+
+    &.checked:after {
+	position: absolute;
+	content: "";
+	top: 4px;
+	left: 4px;
+	bottom: 4px;
+	right: 4px;
+	background: map-get($pwt-color, "primary");
+	border-radius: 50%;
+    }
+
+    &.checked.disabled:after {
+	background-color: map-get($pwt-color, "on-surface");
+    }
+
+    &.checked:not(.disabled) {
+	border: 2px solid map-get($pwt-color, "primary") !important;
+    }
+
+    &:focus-visible {
+	border: 2px solid map-get($pwt-color, "on-surface") !important;
+    }
+
+    &.disabled {
+	cursor: auto;
+	opacity: 0.5;
     }
 }
 
