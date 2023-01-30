@@ -31,7 +31,7 @@
    */
     
     tr.selected {
-	background-color: map-get($pwt-color, "primary-a20");
+	background-color: rgba(map-get($pwt-color, "primary"), $state-opacity20);
     }
 
     td div {

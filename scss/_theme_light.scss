@@ -19,8 +19,6 @@ $pwt-color: (
     primary-container: map-get($palette-primary, 90),
     on-primary-container: map-get($palette-primary, 10),
 
-    primary-a20: change-color($color-primary, $alpha: 0.2),
-
     secondary: $color-secondary,
     secondary-emphase: map-get($palette-secondary, 40),
     secondary-pressed: map-get($palette-secondary, 30),

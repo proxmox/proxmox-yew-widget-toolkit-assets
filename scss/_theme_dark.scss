@@ -1,4 +1,6 @@
 $modal-backdrop-bg-color: #00000050;
+$state-opacity10: 0.2;
+$state-opacity20: 0.5;
 
 $color-primary: map-get($palette-primary, 60);
 $color-secondary: map-get($palette-secondary, 60);
@@ -18,8 +20,6 @@ $pwt-color: (
     on-primary: map-get($palette-primary, 10),
     primary-container: map-get($palette-primary, 20),
     on-primary-container: map-get($palette-primary, 100),
-
-    primary-a20: change-color($color-primary, $alpha: 0.5),
 
     secondary: $color-secondary,
     secondary-emphase: map-get($palette-secondary, 70),

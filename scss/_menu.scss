@@ -1,7 +1,7 @@
 .pwt-submenu {
     z-index: $zindex-dropdown;
 
-    background: map-get($pwt-color, "neutral");
+    background: map-get($pwt-color, "surface");
     border-radius: 0.2rem;
     box-shadow: $pwt-dropdown-shadow;
     max-height: 100vh;
@@ -15,17 +15,17 @@
 
 // MenuBar
 ul.pwt-menubar {
-    background: map-get($pwt-color, "neutral");
+    background: map-get($pwt-color, "surface");
     display: flex;
     align-items: stretch;
 
 
     & > li.active:focus-within {
-	background-color: map-get($pwt-color, "primary-a20");
+	background-color: rgba(map-get($pwt-color, "on-surface"), $state-opacity10);
     }
 
     & > li:hover {
-	background-color: map-get($pwt-color, "primary-a20");
+	background-color: rgba(map-get($pwt-color, "on-surface"), $state-opacity10);
     }
 
     .pwt-menubar-item {
@@ -38,7 +38,7 @@ ul.pwt-menubar {
     }
 
     .pwt-menubar-item:focus-visible {
-	outline: 2px solid map-get($pwt-color, "on-neutral");
+	outline: 2px solid map-get($pwt-color, "on-surface");
         outline-offset: -2px;
     }
 
@@ -64,7 +64,7 @@ ul.pwt-menu {
     }
 
     & > li.active:focus-within {
-	background-color: map-get($pwt-color, "primary-a20");
+	background-color: rgba(map-get($pwt-color, "on-surface"), $state-opacity10);
     }
 
     .pwt-menu-item {
@@ -82,7 +82,7 @@ ul.pwt-menu {
     }
 
     .pwt-menu-item:focus-visible {
-	outline: 2px solid map-get($pwt-color, "on-neutral");
+	outline: 2px solid map-get($pwt-color, "on-surface");
         outline-offset: -2px;
     }
 
