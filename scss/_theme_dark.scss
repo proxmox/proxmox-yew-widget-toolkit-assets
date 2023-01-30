@@ -1,6 +1,6 @@
 $modal-backdrop-bg-color: #00000050;
 
-$color-primary: map-get($palette-primary, 40);
+$color-primary: map-get($palette-primary, 60);
 $color-secondary: map-get($palette-secondary, 40);
 $color-tertiary: map-get($palette-tertiary, 40);
 $color-error: map-get($palette-error, 40);
@@ -13,8 +13,8 @@ $pwt-navbar-brand-filter: drop-shadow(3px 3px 4px #222);
 
 $pwt-color: (
     primary: $color-primary,
-    primary-emphase: map-get($palette-primary, 50),
-    primary-pressed: map-get($palette-primary, 60),
+    primary-emphase: map-get($palette-primary, 60),
+    primary-pressed: map-get($palette-primary, 70),
     on-primary: map-get($palette-primary, 99),
     primary-container: map-get($palette-primary, 20),
     on-primary-container: map-get($palette-primary, 100),
