@@ -1,18 +1,24 @@
-@mixin font($name) {
-    font-family: $pwt-font-sans-serif;
-    font-size: map-get($font-size, $name);
-    font-variation-settings: 'opsz' map-get($font-size, $name) / 1px, 'wdth' map-get($font-width, $name), 'wght' map-get($font-weight, $name);
+@function get-font-variant-settings($name) {
+
+    @return 'opsz' map-get($font-size, $name) / 1px, 'wdth' map-get($font-width, $name), 'wght' map-get($font-weight, $name);
 }
 
-@mixin font_and_line_height($name) {
-    @include font($name);
-    line-height: map-get($line-height, $name);
+@mixin font($name, $important: false) {
+    font-family: $pwt-font-sans-serif #{if($important, '!important', '')};
+    font-size: map-get($font-size, $name) #{if($important, '!important', '')};;
+    font-variation-settings: get-font-variant-settings($name) #{if($important, '!important', '')};;
 }
+
+@mixin font_and_line_height($name, $important: false) {
+    @include font($name, $important);
+    line-height: map-get($line-height, $name) #{if($important, '!important', '')};
+}
+
 
 @each $name in (display, headline, title, label, body) {
     @each $size in (large, medium, small) {
-	.pwt-fs-#{$name}-#{$size} {
-	    font-size: map-get($font-size, "#{$name}-#{$size}") !important;
+	.pwt-font-#{$name}-#{$size} {
+	    @include  font_and_line_height("#{$name}-#{$size}", $important: true);
 	}
     }
 }
@@ -25,35 +31,28 @@ p {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
-    font-weight: 700;
 }
 
 h1, .h1 {
-    font-size: map-get($font-size, "display-large");
-    line-height: map-get($line-height, "display-large");
+    @include font_and_line_height(display-large);
 }
 
 h2, .h2 {
-    font-size: map-get($font-size, "display-medium");
-    line-height: map-get($line-height, "display-medium");
+    @include font_and_line_height(display-medium);
 }
 
 h3, .h3 {
-    font-size: map-get($font-size, "display-small");
-    line-height: map-get($line-height, "display-small");
+    @include font_and_line_height(display-small);
 }
 
 h4, .h4 {
-    font-size: map-get($font-size, "headline-large");
-    line-height: map-get($line-height, "headline-large");
+    @include font_and_line_height(headline-large);
 }
 
 h5, .h5 {
-    font-size: map-get($font-size, "headline-medium");
-    line-height: map-get($line-height, "headline-medium");
+    @include font_and_line_height(headline-medium);
 }
 
 h6, .h6 {
-    font-size: map-get($font-size, "headline-small");
-    line-height: map-get($line-height, "headline-small");
+    @include font_and_line_height(headline-small);
 }
