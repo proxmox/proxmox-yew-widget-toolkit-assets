@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Roboto Flex';
+    src: url("../fonts/RobotoFlexVariableFont.ttf") format('truetype');
+}
+
+$pwt-font-sans-serif: "Roboto Flex";
+
 $spacer: 3px;
 $button-corner-shape: map-get($shape-corner, extra-small);
 $nav-link-corner-shape: map-get($shape-corner, extra-small);

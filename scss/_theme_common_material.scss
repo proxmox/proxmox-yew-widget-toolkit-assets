@@ -1,4 +1,12 @@
-// Material Design
+// Setting to create a Material Design like GUI
+
+@font-face {
+    font-family: 'Roboto Flex';
+    src: url("../fonts/RobotoFlexVariableFont.ttf") format('truetype');
+}
+
+$pwt-font-sans-serif: "Roboto Flex";
+
 $spacer: 10px;
 $button-corner-shape: map-get($shape-corner, full);
 $nav-link-corner-shape: map-get($shape-corner, full);
