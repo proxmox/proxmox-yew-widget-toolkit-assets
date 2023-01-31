@@ -1,3 +1,13 @@
+@mixin font($name) {
+    font-family: $pwt-font-sans-serif;
+    font-size: map-get($font-size, $name);
+    font-variation-settings: 'wdth' map-get($font-width, $name), 'wght' map-get($font-weight, $name);
+}
+
+@mixin font_and_line_height($name) {
+    @include font($name);
+    line-height: map-get($line-height, $name);
+}
 
 @each $name in (display, headline, title, label, body) {
     @each $size in (large, medium, small) {

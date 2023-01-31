@@ -1,5 +1,5 @@
 button {
-    font-family: $pwt-font-sans-serif;
+    @include font_and_line_height("label-large");
 }
 
 .pwt-action-icon {
@@ -35,8 +35,6 @@ button {
     user-select: none;
     border: 1px solid map-get($pwt-color, "border") !important;
     border-radius: $button-corner-shape;
-    font-size: map-get($font-size, "label-large");
-    line-height: map-get($line-height, "label-large");
 
     &.raised {
 	box-shadow: $pwt-button-shadow;

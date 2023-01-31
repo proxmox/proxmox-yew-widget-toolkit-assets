@@ -1,4 +1,8 @@
 input {
+    // Note: we dont want to set font-weight to label-large,
+    // we just want the sfont-size and line-height
+    //@include font_and_line_height("label-large");
+
     font-family: $pwt-font-sans-serif;
     font-size: map-get($font-size, "label-large");
     line-height: map-get($line-height, "label-large");

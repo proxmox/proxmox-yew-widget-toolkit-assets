@@ -43,6 +43,42 @@ $font-size: (
     label-small: 11px,
 );
 
+$font-weight: (
+    display-large: 400,
+    display-medium: 400,
+    display-small: 400,
+    headline-large: 400,
+    headline-medium: 400,
+    headline-small: 400,
+    title-large: 400,
+    title-medium: 500,
+    title-small: 500,
+    body-large: 400,
+    body-medium: 400,
+    body-small: 400,
+    label-large: 500,
+    label-medium: 500,
+    label-small: 500,
+);
+
+$font-width: (
+    display-large: 140,
+    display-medium: 140,
+    display-small: 140,
+    headline-large: 140,
+    headline-medium: 140,
+    headline-small: 140,
+    title-large: 140,
+    title-medium: 140,
+    title-small: 140,
+    body-large: 140,
+    body-medium: 140,
+    body-small: 140,
+    label-large: 140,
+    label-medium: 140,
+    label-small: 140,
+);
+
 // state layer ocupacity levels
 
 $state-opacity10: 0.1;

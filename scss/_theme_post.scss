@@ -27,9 +27,7 @@
 }
 
 :root {
-    font-family: $pwt-font-sans-serif;
-    font-size: map-get($font-size, "body-medium");
-    font-variation-settings: 'wght' 400;
+    @include font("body-medium");
     color: map-get($pwt-color, "on-neutral");
     background: map-get($pwt-color, "neutral");
 }

@@ -32,7 +32,7 @@ ul.pwt-menubar {
     .pwt-menubar-item {
 	cursor: pointer;
 	outline: 0;
-	font-size: map-get($font-size, "label-large");
+	@include font("label-large");
 	line-height: map-get($line-height, "title-medium");
 	padding: map-get($spacers, 1);
 	border: 0;
@@ -74,7 +74,7 @@ ul.pwt-menu {
 	cursor: pointer;
 	outline: 0;
 	padding: map-get($spacers, 1);
-	font-size: map-get($font-size, "label-large");
+	@include font("label-large");
 	line-height: map-get($line-height, "title-medium");
 	border: 0;
 	white-space: nowrap;

@@ -10,8 +10,7 @@
 
 .pwt-panel-header-text {
     color: var(--pwt-color);
-    font-size: map-get($font-size, "title-large");
-    line-height: map-get($line-height, "title-large");
+    @include font_and_line_height("title-large");
 }
 
 .pwt-panel-header {

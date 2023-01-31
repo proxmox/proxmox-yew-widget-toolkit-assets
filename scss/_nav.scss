@@ -9,6 +9,7 @@
   padding: calc(#{map-get($spacers, 1)} + 1px) map-get($spacers, 2);
   line-height: 1.4em; //fixme
   border-radius: $nav-link-corner-shape;
+  @include font_and_line_height("label-large");
 }
 
 // Pills
