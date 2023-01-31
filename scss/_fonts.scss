@@ -1,7 +1,7 @@
 @mixin font($name) {
     font-family: $pwt-font-sans-serif;
     font-size: map-get($font-size, $name);
-    font-variation-settings: 'wdth' map-get($font-width, $name), 'wght' map-get($font-weight, $name);
+    font-variation-settings: 'opsz' map-get($font-size, $name) / 1px, 'wdth' map-get($font-width, $name), 'wght' map-get($font-weight, $name);
 }
 
 @mixin font_and_line_height($name) {
