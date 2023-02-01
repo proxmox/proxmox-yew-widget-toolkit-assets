@@ -114,5 +114,6 @@ $shape-corner: (
     full: 10rem,
 );
 
-$button-corner-shape: none;
-$nav-link-corner-shape: none;
+$button-corner-shape: map-get($shape-corner, none);
+$nav-link-corner-shape: map-get($shape-corner, none);
+$tooltip-corner-shape: map-get($shape-corner, none);

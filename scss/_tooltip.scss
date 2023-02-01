@@ -6,10 +6,11 @@
     color: map-get($pwt-color, "on-primary-container");
 
     padding: map-get($spacers, 1) map-get($spacers, 2);
-    // border looks strange when using arrows
-    //border: 1px solid var($pwt-border-color) !important;
-    border-radius: 0.2rem;
+    border: 1px solid map-get($pwt-color, "border") !important;
+    border-radius: $tooltip-corner-shape;
     z-index: $zindex-tooltip;
+
+    @include font_and_line_height("body-large", $important: true);
 }
 
 .tooltip[data-popper-placement^='top'] > .tooltip-arrow {
