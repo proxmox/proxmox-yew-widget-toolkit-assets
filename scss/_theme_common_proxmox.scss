@@ -7,7 +7,7 @@ $pwt-font-sans-serif: "Roboto Flex";
 
 $spacer: 3px;
 $button-corner-shape: map-get($shape-corner, extra-small);
-$nav-link-corner-shape: map-get($shape-corner, extra-small);
+$nav-link-corner-shape: map-get($shape-corner, none);
 $tooltip-corner-shape: map-get($shape-corner, large);
 
 //$color-seed-primary: #3892d4;
