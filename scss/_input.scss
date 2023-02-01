@@ -95,7 +95,7 @@ input {
 	background-color: map-get($pwt-color, "neutral-alt-container");
 	border-radius: 50%;
 	margin: 2px;
-	transition: margin-inline-start .2s;
+	transition: margin-inline-start 0.2s;
     }
 
     &.checked .pwt-switch-slider {
@@ -127,7 +127,7 @@ input {
     padding: max(map-get($line-height, "label-large") - map-get($font-size, "label-large"), map-get($spacers, 1));
     background: rgba(map-get($pwt-color, "on-surface"), 0);
     border-radius: 50%;
-    transition: 0.3s;
+    transition: background 0.3s;
 
     &:hover{
 	background: rgba(map-get($pwt-color, "on-surface"), 0.06);
