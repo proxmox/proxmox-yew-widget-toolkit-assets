@@ -9,17 +9,25 @@ input {
 }
 
 .pwt-input {
+    // pwt-input is a container - use to add icons, i.e the dropdown picker
+    display: inline-flex;
+    align-items: baseline;
+    gap: $icon-spacer;
+
     color: map-get($pwt-color, "on-surface");
     background-color: map-get($pwt-color, "surface");
     padding: map-get($spacers, 1) map-get($spacers, 2);
     border: 1px solid map-get($pwt-color, "border") !important;
     border-radius: 0.2rem;
 
-    /// disable outline for inputs inside
+    /// disable border, padding, margin, outline for inputs inside
     input {
 	color: map-get($pwt-color, "on-surface");
 	background-color: map-get($pwt-color, "surface");
-	outline: 0;
+	outline: 0 !important;
+	border: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
     }
 
     &:focus-within {
@@ -27,13 +35,15 @@ input {
         outline-offset: -2px;
     }
 
-    &:not(.disabled):not(:disabled).is-invalid {
-	border-color: map-get($pwt-color, "error-subtle") !important;
+    &:not(.disabled):not(:disabled).is-invalid:after {
+	content: "";
+	width: 1em;
+	height: 1em;
+	align-self: center;
 	// svg image copied from bootstrap5 css
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
 	background-repeat: no-repeat;
-	background-position: right 0.25rem center;
-	background-size: 1rem 1rem;
+	background-size: 1em 1em;
     }
 
     &.disabled,
