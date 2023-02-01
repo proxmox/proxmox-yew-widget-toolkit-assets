@@ -18,6 +18,7 @@
     .pwt-nav-link {
 	background: none;
 	border: 0;
+	border-radius: $nav-pills-corner-shape;
 
 	&:focus-visible {
             outline: 2px solid map-get($pwt-color, "on-surface");
