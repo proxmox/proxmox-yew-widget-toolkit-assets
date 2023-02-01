@@ -79,6 +79,24 @@ $font-width: (
     label-small: 100,
 );
 
+$letter-spacing: (
+    display-large: 0,
+    display-medium: 0,
+    display-small: 0,
+    headline-large: 0,
+    headline-medium: 0,
+    headline-small: 0,
+    title-large: 0,
+    title-medium: 0.15px,
+    title-small: 0.1px,
+    body-large: 0,
+    body-medium: 0,
+    body-small: 0,
+    label-large: 0.1px,
+    label-medium: 0.5px,
+    label-small: 0.5px,
+);
+
 // state layer ocupacity levels
 
 $state-opacity10: 0.1;
