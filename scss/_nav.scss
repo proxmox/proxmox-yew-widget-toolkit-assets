@@ -79,7 +79,7 @@
 }
 
 .pwt-nav-menu-item-arrow {
-    margin-inline-start: 0.75em;
+    margin-inline-start: $icon-spacer;
     font-size: map-get($font-size, "title-medium");
     line-height: map-get($line-height, "title-medium");
 
