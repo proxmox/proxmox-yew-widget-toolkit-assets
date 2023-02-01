@@ -35,6 +35,10 @@ input {
         outline-offset: -2px;
     }
 
+    &:not(.disabled):not(:disabled).is-invalid {
+	border-color: map-get($pwt-color, "error-subtle") !important;
+    }
+
     &:not(.disabled):not(:disabled).is-invalid:after {
 	content: "";
 	width: 1em;
