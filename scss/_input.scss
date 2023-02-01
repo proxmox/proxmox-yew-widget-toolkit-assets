@@ -18,7 +18,7 @@ input {
     background-color: map-get($pwt-color, "surface");
     padding: map-get($spacers, 1) map-get($spacers, 2);
     border: 1px solid map-get($pwt-color, "border") !important;
-    border-radius: 0.2rem;
+    border-radius: $input-corner-shape;
 
     /// disable border, padding, margin, outline for inputs inside
     input {
