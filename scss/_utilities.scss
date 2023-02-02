@@ -124,6 +124,11 @@ $height-width-values: (
     box-sizing: border-box;
 }
 
+.pwt-size-fit-content {
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
 $display-values: inline inline-block block grid table table-row table-cell flex inline-flex none;
 
 @each $name in $display-values {
