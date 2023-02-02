@@ -120,7 +120,7 @@ $height-width-values: (
     display: flex !important;
     width: 100vw !important;
     height: 100vh !important;
-    overflow: auto !important;
+    overflow: hidden !important;
     box-sizing: border-box;
 }
 
