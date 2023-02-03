@@ -106,6 +106,7 @@ ul.pwt-menu {
     }
 
     .pwt-menu-item-arrow {
+	margin-inline-start: map-get($spacers, 2);
 	font-size: map-get($font-size, "title-medium");
 	line-height: map-get($line-height, "title-medium");
     }
