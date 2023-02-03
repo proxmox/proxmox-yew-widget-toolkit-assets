@@ -1,15 +1,18 @@
 
 .pwt-nav-link {
-  display: block;
-  user-select: none;
-  cursor: pointer;
-  white-space: nowrap !important;
-  outline: 0;
-  // Note: add 1px to get same size as buttons with border
-  padding: calc(#{map-get($spacers, 1)} + 1px) map-get($spacers, 2);
-  line-height: 1.4em; //fixme
-  border-radius: $nav-link-corner-shape;
-  @include font_and_line_height("label-large");
+    display: inline-flex;
+    align-items: baseline;
+    gap: $icon-spacer;
+
+    user-select: none;
+    cursor: pointer;
+    white-space: nowrap !important;
+    outline: 0;
+    // Note: add 1px to get same size as buttons with border
+    padding: calc(#{map-get($spacers, 1)} + 1px) map-get($spacers, 2);
+    line-height: 1.4em; //fixme
+    border-radius: $nav-link-corner-shape;
+    @include font_and_line_height("label-large");
 }
 
 // Pills
@@ -76,11 +79,9 @@
 .pwt-nav-menu-icon {
     font-size: map-get($font-size, "title-medium");
     line-height: map-get($line-height, "title-medium");
-    margin-inline-end: $icon-spacer;
 }
 
 .pwt-nav-menu-item-arrow {
-    margin-inline-start: $icon-spacer;
     font-size: map-get($font-size, "title-medium");
     line-height: map-get($line-height, "title-medium");
 

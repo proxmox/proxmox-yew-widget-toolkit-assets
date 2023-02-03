@@ -34,7 +34,7 @@ ul.pwt-menubar {
 	outline: 0;
 	@include font("label-large");
 	line-height: map-get($line-height, "title-medium");
-	padding: map-get($spacers, 1);
+	padding: map-get($spacers, 1) map-get($spacers, 2);
 	border: 0;
 	white-space: nowrap;
 	user-select: none;
@@ -51,7 +51,9 @@ ul.pwt-menubar {
     }
 
     .pwt-menubar-item-icon {
-	padding-inline-end: map-get($spacers, 1);
+	font-size: map-get($font-size, "title-medium");
+	line-height: map-get($line-height, "title-medium");
+	margin-inline-end: $icon-spacer;
     }
 
     .pwt-menubar-item-arrow {
@@ -64,6 +66,7 @@ ul.pwt-menu {
     & > li {
 	position: relative;
 	outline: 0;
+	width: 100%;
     }
 
     & > li.active:focus-within {
@@ -71,9 +74,13 @@ ul.pwt-menu {
     }
 
     .pwt-menu-item {
+	display: flex;
+	align-items: baseline;
+	gap: $icon-spacer;
+
 	cursor: pointer;
 	outline: 0;
-	padding: map-get($spacers, 1);
+	padding: map-get($spacers, 1) map-get($spacers, 2);
 	@include font("label-large");
 	line-height: map-get($line-height, "title-medium");
 	border: 0;
@@ -91,22 +98,16 @@ ul.pwt-menu {
         outline-offset: -2px;
     }
 
-    .pwt-menu-item-indent {
-	margin-inline-start: calc(#{map-get($spacers, 2)} + 1em);
-    }
-
-    .pwt-menu-submenu-indent {
-	margin-inline-start: calc(#{map-get($spacers, 2)} + 1em);
-	margin-inline-end: calc(#{map-get($spacers, 2)} + 1em);
-    }
-
     .pwt-menu-item-icon {
-	position: absolute;
-	left: map-get($spacers, 2);
+	display: inline-block;
+	font-size: map-get($font-size, "title-medium");
+	line-height: map-get($line-height, "title-medium");
+	width: map-get($line-height, "title-medium");
     }
 
     .pwt-menu-item-arrow {
-	margin-inline-start: map-get($spacers, 2);
+	font-size: map-get($font-size, "title-medium");
+	line-height: map-get($line-height, "title-medium");
     }
 }
 
