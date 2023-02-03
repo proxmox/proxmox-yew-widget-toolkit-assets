@@ -9,7 +9,6 @@
     white-space: nowrap !important;
     outline: 0;
     padding: map-get($spacers, 1) map-get($spacers, 2);
-    line-height: 1.4em; //fixme
     border-radius: $nav-link-corner-shape;
     @include font_and_line_height("label-large");
 }
