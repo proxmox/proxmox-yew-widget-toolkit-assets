@@ -8,8 +8,7 @@
     cursor: pointer;
     white-space: nowrap !important;
     outline: 0;
-    // Note: add 1px to get same size as buttons with border
-    padding: calc(#{map-get($spacers, 1)} + 1px) map-get($spacers, 2);
+    padding: map-get($spacers, 1) map-get($spacers, 2);
     line-height: 1.4em; //fixme
     border-radius: $nav-link-corner-shape;
     @include font_and_line_height("label-large");
