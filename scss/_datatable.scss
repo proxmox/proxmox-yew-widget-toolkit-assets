@@ -111,6 +111,7 @@
     text-align: left;
     border-right: 1px solid map-get($pwt-color, "border");
     border-bottom: 1px solid map-get($pwt-color, "border");
+    outline: 0;
 
     &:focus {
 	--pwt-trigger-opacity: 0.8;
