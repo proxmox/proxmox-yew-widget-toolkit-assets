@@ -29,7 +29,7 @@
 	outline-offset: -2px;
     }
    */
-    
+
     tr.selected {
 	background-color: rgba(map-get($pwt-color, "primary"), $state-opacity20);
     }
@@ -72,59 +72,100 @@
 }
 
 .pwt-datatable-header-item {
+    @include font_and_line_height("label-large");
+
+    display: flex;
+    align-items: baseline;
+
     --pwt-trigger-opacity: 0;
     outline: 0;
-    position: relative;
-    padding: map-get($spacers, 2);
     cursor: default;
     text-align: left;
     border-right: 1px solid map-get($pwt-color, "border");
-}
 
-.pwt-datatable-group-header-item:focus,
-.pwt-datatable-header-item.focused,
-.pwt-datatable-header-item:focus {
-    --pwt-trigger-opacity: 0.8;
-    background-color: map-get($pwt-color, "surface");
-}
+    .pwt-datatable-header-content {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	align-self: center;
+	flex: 1 1 auto;
+	padding: map-get($spacers, 2);
+   }
 
-.pwt-datatable-header-item:hover {
-    --pwt-trigger-opacity: 0.8;
+    &.focused,
+    &:focus {
+	--pwt-trigger-opacity: 0.8;
+	background-color: map-get($pwt-color, "surface");
+    }
+
+    &:hover {
+	--pwt-trigger-opacity: 0.8;
+    }
 }
 
 .pwt-datatable-group-header-item {
+    @include font_and_line_height("label-large");
     position: relative;
     padding: map-get($spacers, 2);
     cursor: default;
     text-align: left;
     border-right: 1px solid map-get($pwt-color, "border");
     border-bottom: 1px solid map-get($pwt-color, "border");
+
+    &:focus {
+	--pwt-trigger-opacity: 0.8;
+	background-color: map-get($pwt-color, "surface");
+    }
 }
 
 .pwt-datatable-header-menu-trigger {
     position: absolute;
     display: flex;
+    flex: 0 0 auto;
+    align-self: stretch;
     align-items: center;
-    padding: map-get($spacers, 2);
+    justify-content: center;
+
+    width: map-get($line-height, "label-large") + 2*map-get($spacers, 2);
+
     background-color: map-get($pwt-color, "neutral");
-    border-style: solid !important;
-    border-color: map-get($pwt-color, "border") !important;
-    border-width: 0 0 0 1px !important;
-    border-radius: map-get($shape-corner, extra-small);
+    border: 0px solid !important;
+    border-inline-start: 1px solid  map-get($pwt-color, "border") !important;
+    border-radius: 0px !important;
     opacity: var(--pwt-trigger-opacity);
     transition: opacity 0.2s ease-in-out;
-    top: 2px;
-    bottom: 2px;
-    right: 2px;
+
+    top: 0px;
+    bottom: 0px;
+    margin-inline-start: - (map-get($line-height, "label-large") + 2*map-get($spacers, 2));
+}
+
+.pwt-datatable-header-anchor {
+    position: relative;
+    flex: 0 0 auto;
+    width: 0px;
+    height: 100%;
 }
 
 .pwt-datatable-header-resize-trigger {
-    position: absolute;
-    width: 7px;
-    top: 0px;
-    bottom: 0px;
-    right: -3px;
+    position: relative;
+    flex: 0 0 auto;
+    width: 0px;
+    height: 100%;
     background-color: transparent;
     cursor: col-resize;
     z-index: $zindex-dropdown;
+}
+
+.pwt-datatable-header-resize-trigger:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background-color: transparent;
+    cursor: col-resize;
+    z-index: $zindex-dropdown;
+    top: 2px;
+    bottom: 2px;
+    left: -4px;
 }
