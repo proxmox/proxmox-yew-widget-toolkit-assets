@@ -223,6 +223,14 @@ $overflow-values: auto hidden visible scroll;
     }
 }
 
+$position-values: absolute fixed relative sticky static;
+
+@each $value in $position-values {
+    .pwt-position-#{$value} {
+	position: $value !important;
+    }
+}
+
 .pwt-shape-circle {
     border-radius: 50%;
     line-height: 1em;
