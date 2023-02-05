@@ -6,6 +6,8 @@ input {
     font-family: $pwt-font-sans-serif;
     font-size: map-get($font-size, "label-large");
     line-height: map-get($line-height, "label-large");
+
+    accent-color: #{map-get($pwt-color, "primary")};
 }
 
 .pwt-input {
@@ -61,7 +63,6 @@ input {
     padding-left: 0;
     padding-right: 0;
     margin: 0;
-    accent-color: #{map-get($pwt-color, "primary")};
     vertical-align: middle;
 }
 
