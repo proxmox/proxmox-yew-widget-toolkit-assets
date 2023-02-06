@@ -41,7 +41,7 @@ ul.pwt-menubar {
     }
 
     .pwt-menubar-item:focus-visible {
-	outline: 2px solid map-get($pwt-color, "on-surface");
+	outline: 2px solid $color-focus;
         outline-offset: -2px;
     }
 
@@ -94,7 +94,7 @@ ul.pwt-menu {
     }
 
     .pwt-menu-item:focus-visible {
-	outline: 2px solid map-get($pwt-color, "on-surface");
+	outline: 2px solid $color-focus;
         outline-offset: -2px;
     }
 

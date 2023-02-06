@@ -33,7 +33,7 @@ input {
     }
 
     &:focus-within {
-	outline: 2px solid map-get($pwt-color, "on-surface") !important;
+	outline: 2px solid $color-focus !important;
         outline-offset: -2px;
     }
 
@@ -114,7 +114,7 @@ input {
     }
 
     &:focus {
-	border: 2px solid map-get($pwt-color, "on-surface") !important;
+	border: 2px solid $color-focus !important;
     }
 
     &.disabled {
@@ -163,7 +163,7 @@ input {
     }
 
     &:focus {
-	border: 2px solid map-get($pwt-color, "on-surface") !important;
+	border: 2px solid $color-focus !important;
     }
 
     &.disabled {
@@ -217,7 +217,7 @@ input {
     }
 
     &:focus {
-	border: 2px solid map-get($pwt-color, "on-surface") !important;
+	border: 2px solid $color-focus !important;
     }
 
     &.disabled {

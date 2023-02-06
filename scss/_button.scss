@@ -24,7 +24,7 @@ button {
     }
 
     &:focus-visible {
-        outline: 2px solid map-get($pwt-color, on-surface);
+        outline: 2px solid $color-focus;
         outline-offset: -2px;
     }
 
@@ -71,7 +71,7 @@ button {
     }
 
     &:focus-visible {
-        outline: 2px solid var(--pwt-color);
+        outline: 2px solid $color-focus;
         outline-offset: -2px;
     }
 

@@ -4,6 +4,8 @@ $color-primary: map-get($palette-primary, 50);
 $color-secondary: map-get($palette-secondary, 50);
 $color-tertiary: map-get($palette-tertiary, 50);
 $color-error: map-get($palette-error, 50);
+$color-focus: map-get($palette-neutral, 10);
+
 
 $pwt-box-shadow: #{map-get($palette-neutral, 50)} 0px 0px 15px !important;
 $pwt-button-shadow: #{map-get($palette-neutral, 70)} 0px 1px 2px;
