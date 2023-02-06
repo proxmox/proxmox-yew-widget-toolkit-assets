@@ -1,6 +1,10 @@
 $modal-backdrop-bg-color: #00000050;
-$state-opacity10: 0.2;
-$state-opacity20: 0.5;
+
+$state-opacity-hover: 0.16;
+$state-opacity-focus: 0.24;
+$state-opacity-press: 0.24;
+$state-opacity-drag: 0.32;
+$state-opacity-select: 0.5;
 
 $color-primary: map-get($palette-primary, 60);
 $color-secondary: map-get($palette-secondary, 60);

@@ -100,8 +100,11 @@ $letter-spacing: (
 
 // state layer ocupacity levels
 
-$state-opacity10: 0.1;
-$state-opacity20: 0.2;
+$state-opacity-hover: 0.08;
+$state-opacity-focus: 0.12;
+$state-opacity-press: 0.12;
+$state-opacity-drag: 0.16;
+$state-opacity-select: 0.2;
 
 // corner shape level
 

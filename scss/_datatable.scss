@@ -32,7 +32,7 @@
    */
 
     tr.selected {
-	background-color: rgba(map-get($pwt-color, "primary"), $state-opacity20);
+	background-color: rgba(map-get($pwt-color, "primary"), $state-opacity-select);
     }
 
     td div {
