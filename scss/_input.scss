@@ -113,7 +113,7 @@ input {
 	background-color: map-get($pwt-color, "neutral-alt-container");
     }
 
-    &:focus-visible {
+    &:focus {
 	border: 2px solid map-get($pwt-color, "on-surface") !important;
     }
 
@@ -162,7 +162,7 @@ input {
 	background-color: map-get($pwt-color, "primary");
     }
 
-    &:focus-visible {
+    &:focus {
 	border: 2px solid map-get($pwt-color, "on-surface") !important;
     }
 
@@ -212,11 +212,11 @@ input {
 	background-color: map-get($pwt-color, "on-surface");
     }
 
-    &.checked:not(.disabled):not(:focus-visible) {
+    &.checked:not(.disabled):not(:focus) {
 	border: 2px solid map-get($pwt-color, "primary") !important;
     }
 
-    &:focus-visible {
+    &:focus {
 	border: 2px solid map-get($pwt-color, "on-surface") !important;
     }
 
