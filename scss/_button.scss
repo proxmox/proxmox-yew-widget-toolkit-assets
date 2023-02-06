@@ -3,24 +3,38 @@ button {
 }
 
 .pwt-action-icon {
-    position: relative;
-    display: inline-block;
+    line-height: map-get($line-height, label-large);
+
+    display: inline-flex;
+    align-items: baseline;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
     outline: 0;
 
-    &.disabled {
+    padding: map-get($spacers, 1);
+    border-radius: 10rem;
+    width: map-get($line-height, "label-large") + 2 * map-get($spacers, 1) !important;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+
+    &:hover:not(:disabled):not(:active):not(:active) {
+	background-color: map-get($pwt-color, surface);
+    }
+
+    &:focus-visible {
+        outline: 2px solid map-get($pwt-color, on-surface);
+        outline-offset: -2px;
+    }
+
+    &:disabled {
 	cursor: auto;
 	opacity: 0.5;
     }
 
-    &:focus:not(.disabled),
-    &:hover:not(.disabled) {
-	text-shadow: 0px 0px 0.5em map-get($pwt-color, "primary");
-	text-decoration: underline solid;
-    }
-
-    &:hover:not(.disabled) {
-	font-weight: 800;
+    &:active {
+	background-color: map-get($pwt-color, surface-emphase);
     }
 }
 
@@ -78,7 +92,8 @@ button {
 
 .pwt-button.circle {
     border-radius: 10rem !important;
-    min-width: map-get($line-height, "label-large") + 2 * map-get($spacers, 1) + 2px;
+    box-sizing: border-box;
+    width: map-get($line-height, "label-large") + 2 * map-get($spacers, 1) + 2px;
     aspect-ratio: 1 / 1;
     flex: 0 0 auto;
     align-items: center;
