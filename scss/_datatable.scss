@@ -143,7 +143,7 @@
 
     top: 0px;
     bottom: 0px;
-    margin-inline-start: - (map-get($line-height, "label-large") + 2*map-get($spacers, 1));
+    margin-inline-start: - (map-get($line-height, "label-large") + 2*map-get($spacers, 1) + 1px);
 }
 
 .pwt-datatable-header-anchor {
