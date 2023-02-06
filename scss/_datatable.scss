@@ -85,7 +85,7 @@
     --pwt-trigger-opacity: 0;
     outline: 0;
     cursor: default;
-    text-align: left;
+    text-align: start;
     border-inline-end: 1px solid  map-get($pwt-color, "border") !important;
 
     .pwt-datatable-header-content {
@@ -113,7 +113,7 @@
     position: relative;
     padding: map-get($spacers, 1) map-get($spacers, 2);
     cursor: default;
-    text-align: left;
+    text-align: start;
     border-right: 1px solid map-get($pwt-color, "border");
     border-bottom: 1px solid map-get($pwt-color, "border");
     outline: 0;
