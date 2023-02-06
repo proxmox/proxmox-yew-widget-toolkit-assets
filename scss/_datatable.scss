@@ -51,7 +51,7 @@
     }
 
     &.table-bordered td {
-	border-right: 1px solid map-get($pwt-color, "border");
+	border-inline-end: 1px solid map-get($pwt-color, "border");
     }
 
     &.table-borderless tr {
@@ -114,7 +114,7 @@
     padding: map-get($spacers, 1) map-get($spacers, 2);
     cursor: default;
     text-align: start;
-    border-right: 1px solid map-get($pwt-color, "border");
+    border-inline-end: 1px solid map-get($pwt-color, "border");
     border-bottom: 1px solid map-get($pwt-color, "border");
     outline: 0;
 
