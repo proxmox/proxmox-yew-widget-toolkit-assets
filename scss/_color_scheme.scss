@@ -34,6 +34,21 @@
     .pwt-color-on-#{$name}-container {
 	color: map-get($pwt-color, "on-#{$name}-container");
     }
+
+    // also define classes for SVG properties
+
+    .pwt-fill-#{$name} {
+	fill: map-get($pwt-color, "#{$name}");
+    }
+    .pwt-fill-on-#{$name} {
+	fill: map-get($pwt-color, "on-#{$name}");
+    }
+    .pwt-stroke-#{$name} {
+	stroke: map-get($pwt-color, "#{$name}");
+    }
+    .pwt-stroke-on-#{$name} {
+	stroke: map-get($pwt-color, "on-#{$name}");
+    }
 }
 
 @mixin color-percentages($name, $palette) {
