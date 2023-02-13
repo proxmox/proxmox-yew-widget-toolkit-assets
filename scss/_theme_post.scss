@@ -32,6 +32,13 @@
     background: map-get($pwt-color, "neutral");
 }
 
+// set default svg text color
+tspan,
+text {
+    fill: map-get($pwt-color, "on-neutral");
+    text-decoration: inherit; // chromium needs this
+}
+
 .pwt-vertical-rule {
     border-style: solid;
     border-color: map-get($pwt-color, "border");
