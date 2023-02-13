@@ -19,7 +19,7 @@ input {
     color: map-get($pwt-color, "on-surface");
     background-color: map-get($pwt-color, "surface");
     padding: map-get($spacers, 1) map-get($spacers, 2);
-    border: 1px solid map-get($pwt-color, "border") !important;
+    border: 1px solid map-get($pwt-color, "border");
     border-radius: $input-corner-shape;
 
     /// disable border, padding, margin, outline for inputs inside
@@ -59,11 +59,13 @@ input {
     }
 }
 
-.pwt-input[type="range"] {
+.pwt-input.pwt-input-type-range {
     padding-left: 0;
     padding-right: 0;
     margin: 0;
     vertical-align: middle;
+    background-color: transparent;
+    border: 0;
 }
 
 .pwt-label-disabled {
