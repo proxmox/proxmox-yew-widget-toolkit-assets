@@ -5,6 +5,7 @@
     cursor: col-resize;
     background: map-get($pwt-color, "neutral-container");
     outline: 0;
+    touch-action: none;
 }
 
 .row-split-handle:focus-visible {
@@ -18,6 +19,7 @@
     cursor: row-resize;
     background: map-get($pwt-color, "neutral-container");
     outline: 0;
+    touch-action: none;
 }
 
 .column-split-handle:focus-visible {
