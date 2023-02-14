@@ -9,6 +9,7 @@
 }
 
 .pwt-panel-header-text {
+    cursor: initial;
     color: var(--pwt-color);
     @include font_and_line_height("title-large");
 }
@@ -21,4 +22,9 @@
 
 .pwt-panel.pwt-rounded > .pwt-panel-header {
     border-radius: 0.25rem 0.25rem 0 0 !important;
+}
+
+.pwt-panel > .pwt-draggable {
+    touch-action: none;
+    cursor: move;
 }
