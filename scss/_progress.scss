@@ -18,4 +18,27 @@
 	text-align: center;
 	padding: map-get($spacers, 1) map-get($spacers, 2);
     }
+
+    @keyframes infinite-progress {
+	from {
+	    left: 0;
+	}
+	to {
+	    left:  calc(100% - 20%),
+	}
+    }
+
+    .pwt-progress-infinite {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 20%;
+	left: 0;
+	background: rgba(map-get($pwt-color, "primary"), $state-opacity-select);
+	animation-duration: 2s;
+	animation-name: infinite-progress;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+    }
 }
