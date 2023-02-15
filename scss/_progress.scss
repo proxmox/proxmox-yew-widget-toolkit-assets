@@ -1,0 +1,21 @@
+.pwt-progress {
+    @include font_and_line_height("label-large");
+
+    position: relative;
+    background: map-get($pwt-color, "surface");
+    min-height: map-get($line-height, "label-large") + 2 * map-get($spacers, 1);
+    border-radius: $progress-corner-shape;
+    overflow: hidden;
+
+    .pwt-progress-bar {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: rgba(map-get($pwt-color, "primary"), $state-opacity-select);
+    }
+
+    .pwt-progress-text {
+	text-align: center;
+	padding: map-get($spacers, 1) map-get($spacers, 2);
+    }
+}
