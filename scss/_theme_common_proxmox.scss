@@ -19,6 +19,7 @@ $tooltip-corner-shape: map-get($shape-corner, large);
 $proxmox-brand-color: #e57000;
 
 $color-seed-error: #b00020;
+$color-seed-warning: orange;
 $color-seed-neutral: #fff;
 $color-seed-neutral-alt: #fff;
 
@@ -39,5 +40,6 @@ $palette-secondary: tonal_palette($color-seed-secondary);
 $palette-tertiary: tonal_palette($color-seed-tertiary);
 
 $palette-error: tonal_palette($color-seed-error);
+$palette-warning: tonal_palette($color-seed-warning);
 $palette-neutral: tonal_palette_linear($color-seed-neutral);
 $palette-neutral-alt: tonal_palette_linear($color-seed-neutral-alt);

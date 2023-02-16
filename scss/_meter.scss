@@ -14,7 +14,7 @@
 	background: rgba(map-get($pwt-color, "primary"), $state-opacity-select);
 
 	&.pwt-meter-distance-1 {
-	    background: rgba(orange, $state-opacity-select);
+	    background: rgba(map-get($pwt-color, "warning"), $state-opacity-select);
 	}
 
 	&.pwt-meter-distance-2 {

@@ -10,6 +10,7 @@ $color-primary: map-get($palette-primary, 60);
 $color-secondary: map-get($palette-secondary, 60);
 $color-tertiary: map-get($palette-tertiary, 60);
 $color-error: map-get($palette-error, 40);
+$color-warning: map-get($palette-warning, 40);
 $color-focus: map-get($palette-neutral, 90);
 
 $pwt-box-shadow: #{map-get($palette-neutral, 5)} 0px 0px 15px !important;
@@ -47,6 +48,14 @@ $pwt-color: (
     on-error: map-get($palette-error, 99),
     error-container: map-get($palette-error, 80),
     on-error-container: map-get($palette-error, 0),
+
+    warning: $color-warning,
+    warning-subtle: map-get($palette-warning, 30),
+    warning-emphase: map-get($palette-warning, 50),
+    warning-pressed: map-get($palette-warning, 60),
+    on-warning: map-get($palette-warning, 0),
+    warning-container: map-get($palette-warning, 80),
+    on-warning-container: map-get($palette-warning, 0),
 
     // neutral
     neutral: map-get($palette-neutral, 20),
