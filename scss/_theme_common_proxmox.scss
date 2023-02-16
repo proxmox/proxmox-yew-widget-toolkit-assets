@@ -43,3 +43,96 @@ $palette-error: tonal_palette($color-seed-error);
 $palette-warning: tonal_palette($color-seed-warning);
 $palette-neutral: tonal_palette_linear($color-seed-neutral);
 $palette-neutral-alt: tonal_palette_linear($color-seed-neutral-alt);
+
+
+// font setup (values from material design 3)
+
+$line-height: (
+    display-large: 50px,
+    display-medium: 42px,
+    display-small: 38px,
+    headline-large: 32px,
+    headline-medium: 28px,
+    headline-small: 26px,
+    title-large: 20px,
+    title-medium: 18px,
+    title-small: 16px,
+    body-large: 18px,
+    body-medium: 16px,
+    body-small: 14px,
+    label-large: 16px,
+    label-medium: 14px,
+    label-small: 12px,
+);
+
+$font-size: (
+    display-large: 44px,
+    display-medium: 36px,
+    display-small: 32px,
+    headline-large: 28px,
+    headline-medium: 24px,
+    headline-small: 22px,
+    title-large: 16px,
+    title-medium: 14px,
+    title-small: 13px,
+    body-large: 14px,
+    body-medium: 13px,
+    body-small: 11px,
+    label-large: 13px,
+    label-medium: 11px,
+    label-small: 10px,
+);
+
+$font-weight: (
+    display-large: 400,
+    display-medium: 400,
+    display-small: 400,
+    headline-large: 400,
+    headline-medium: 400,
+    headline-small: 400,
+    title-large: 400,
+    title-medium: 400,
+    title-small: 400,
+    body-large: 400,
+    body-medium: 400,
+    body-small: 400,
+    label-large: 400,
+    label-medium: 400,
+    label-small: 400,
+);
+
+$font-width: (
+    display-large: 100,
+    display-medium: 100,
+    display-small: 100,
+    headline-large: 100,
+    headline-medium: 100,
+    headline-small: 100,
+    title-large: 100,
+    title-medium: 120,
+    title-small: 120,
+    body-large: 100,
+    body-medium: 100,
+    body-small: 100,
+    label-large: 120,
+    label-medium: 120,
+    label-small: 140,
+);
+
+$letter-spacing: (
+    display-large: 0,
+    display-medium: 0,
+    display-small: 0,
+    headline-large: 0,
+    headline-medium: 0,
+    headline-small: 0,
+    title-large: 0,
+    title-medium: 0.15px,
+    title-small: 0.1px,
+    body-large: 0,
+    body-medium: 0,
+    body-small: 0,
+    label-large: 0.1px,
+    label-medium: 0.5px,
+    label-small: 0.5px,
+);
