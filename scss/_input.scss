@@ -39,6 +39,7 @@ input {
 
     &:not(.disabled):not(:disabled).is-invalid {
 	border-color: map-get($pwt-color, "error-subtle") !important;
+	outline-color: map-get($pwt-color, "error-subtle") !important;
     }
 
     &:not(.disabled):not(:disabled).is-invalid:after {
