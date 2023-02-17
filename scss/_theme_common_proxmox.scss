@@ -18,16 +18,15 @@ $color-seed-warning: orange;
 $color-seed-neutral: #fff;
 $color-seed-neutral-alt: #fff;
 
-/* 
 // Proxmox brand colors
 $proxmox-brand-color: #e57000;
 // compute a complementary blue (cold color) with less saturation,
 // reduce lightness to improve contrast to white.
-// $color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg, $saturation: -30%, $lightness: -2%);
-*/
+$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg, $saturation: -30%, $lightness: -2%);
 
 // Use color from existing extjs theme
-$color-seed-primary: #3892d4;
+// Note: this has not enought contrast to black/white
+// $color-seed-primary: #3892d4;
 
 // use adjacent color as secondary
 $color-shift: 15deg;
