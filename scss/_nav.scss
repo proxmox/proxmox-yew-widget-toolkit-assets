@@ -17,6 +17,7 @@
 .pwt-nav-pills {
 
     .pwt-nav-link {
+	line-height: map-get($line-height, "title-medium");
 	background: none;
 	border: 0;
 	border-radius: $nav-pills-corner-shape;
