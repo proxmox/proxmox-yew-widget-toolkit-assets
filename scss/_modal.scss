@@ -6,6 +6,8 @@ dialog {
     border: 1px solid map-get($pwt-color, "border") !important;
     box-shadow: $pwt-box-shadow;
 
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
 
@@ -22,4 +24,71 @@ dialog:not(.pwt-dropdown)::backdrop {
 
 dialog.pwt-dropdown::backdrop {
     background-color: #ffffff00; // fully transparent
+}
+
+dialog .dialog-resize-handle {
+    position: absolute;
+    opacity: 0;
+    user-select: none;
+    touch-action: none;
+
+    &.west, &.east, &.north-east, &.north-west, &.south-east, &.south-west {
+	width: 5px;
+    }
+
+    &.north, &.south, &.north-east, &.north-west, &.south-east, &.south-west {
+	height: 5px;
+    }
+
+    &.west {
+	top: 5px;
+	bottom: 5px;
+	left: 0px;
+	cursor: w-resize;
+    }
+
+    &.east {
+	top: 5px;
+	bottom: 5px;
+	right: 0px;
+	cursor: e-resize;
+    }
+
+    &.north {
+	top: 0px;
+	left: 5px;
+	right: 5px;
+	cursor: n-resize;
+    }
+
+    &.south {
+	bottom: 0px;
+	left: 5px;
+	right: 5px;
+	cursor: s-resize;
+    }
+
+    &.north-west {
+	top: 0px;
+	left: 0px;
+	cursor: nw-resize;
+    }
+
+    &.north-east {
+	top: 0px;
+	right: 0px;
+	cursor: ne-resize;
+    }
+
+    &.south-west {
+	bottom: 0px;
+	left: 0px;
+	cursor: sw-resize;
+    }
+
+    &.south-east {
+	bottom: 0px;
+	right: 0px;
+	cursor: se-resize;
+    }
 }
