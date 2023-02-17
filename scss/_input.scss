@@ -193,6 +193,7 @@ input {
     border-radius: 50%;
     color: #ffffff00; // invisible
     background-color: map-get($pwt-color, "neutral");
+    transition: 0.2s all linear;
 
     .pwt-checkbox-icon {
 	display: flex;
