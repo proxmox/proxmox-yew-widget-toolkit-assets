@@ -1,0 +1,59 @@
+.pwt-bar-scroll {
+	display: flex;
+
+	.pwt-bar-scroll-left-arrow {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: map-get($line-height, label-large);
+		width: 0;
+	}
+
+	.pwt-bar-scroll-left-arrow.visible {
+		cursor: pointer;
+		padding: map-get($spacers, 1);
+		width: auto;
+
+		&:hover:not(.disabled) {
+			background-color: map-get($pwt-color, "neutral-emphase");
+		}
+
+		&:active:not(.disabled) {
+			background-color: map-get($pwt-color, "neutral-pressed");
+		}
+
+		&.disabled {
+			cursor: auto;
+			opacity: 0.5;
+		}
+	}
+
+	.pwt-bar-scroll-right-arrow {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: map-get($line-height, label-large);
+		width: 0;
+	}
+
+	.pwt-bar-scroll-right-arrow.visible {
+		cursor: pointer;
+		padding: map-get($spacers, 1);
+		width: auto;
+
+		&:hover:not(.disabled) {
+			background-color: map-get($pwt-color, "neutral-emphase");
+		}
+
+		&:active:not(.disabled) {
+			background-color: map-get($pwt-color, "neutral-pressed");
+		}
+
+		&.disabled {
+			cursor: auto;
+			opacity: 0.5;
+		}
+	}
+}
