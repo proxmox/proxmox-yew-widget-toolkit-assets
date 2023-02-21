@@ -1,7 +1,15 @@
-
 .pwt-toolbar {
+    @include miniscroll;
+
     // fixme: ???
     &.emphased {
-	background: map-get($pwt-color, "neutral-alt");
+        background: map-get($pwt-color, "neutral-alt");
+    }
+
+    .pwt-toolbar-content {
+        display: flex;
+        gap: map-get($spacers, 2);
+        padding: map-get($spacers, 2);
+        width: fit-content;
     }
 }
