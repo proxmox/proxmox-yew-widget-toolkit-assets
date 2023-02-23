@@ -14,11 +14,7 @@
 }
 
 // Pills
-
 .pwt-nav-pills {
-    @include miniscroll;
-}
-.pwt-nav-pills-content {
     display: flex;
     column-gap: 1em;
 

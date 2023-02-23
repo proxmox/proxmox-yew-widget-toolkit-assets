@@ -2,7 +2,10 @@
 *
 * Try to use very small scroll bars. Usefule for toolbars/tabbar scrolling.
 */
-@mixin miniscroll {
+@mixin mini-scroll {
+    width: 0px; // do not request any width
+    min-width: 100%; // resize to parent width
+
     overflow: auto; // for firefox
     overflow: overlay; // for webkit (ignored by firefox)
     //scrollbar-width: auto; // firefox
@@ -26,4 +29,8 @@
     &::-webkit-scrollbar-thumb:hover {
         background: map-get($pwt-color, "primary");
     }
+}
+
+.pwt-mini-scroll {
+    @include mini-scroll;
 }
