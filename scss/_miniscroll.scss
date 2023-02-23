@@ -3,7 +3,14 @@
 * Try to use very small scroll bars. Usefule for toolbars/tabbar scrolling.
 */
 
-.pwt-mini-scroll-content {
+.pwt-mini-scroll-content-arrow {
+    overflow: hidden;
+    width: 0px; // do not request any width
+    min-width: 100%; // resize to parent width
+    flex: 1 1 auto;
+}
+
+.pwt-mini-scroll-content-native {
     width: 0px; // do not request any width
     min-width: 100%; // resize to parent width
 
