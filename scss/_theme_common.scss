@@ -1,6 +1,13 @@
 $spacer: 3px;
 $icon-spacer: 0.5em; // space between icon and text
 
+$state-layer-opacity: (
+    hover: 8%,
+    pressed: 12%,
+    focus: 12%,
+    drag: 16%,
+);
+
 $pwt-font-sans-serif: sans-serif;
 $pwt-font-monospace: monospace;
 

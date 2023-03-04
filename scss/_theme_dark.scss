@@ -21,62 +21,46 @@ $pwt-navbar-brand-filter: drop-shadow(3px 3px 4px #222);
 
 $pwt-color: (
     primary: $color-primary,
-    primary-emphase: map-get($palette-primary, 70),
-    primary-pressed: map-get($palette-primary, 80),
     on-primary: map-get($palette-primary, 10),
     primary-container: map-get($palette-primary, 20),
     on-primary-container: map-get($palette-primary, 100),
 
     secondary: $color-secondary,
-    secondary-emphase: map-get($palette-secondary, 70),
-    secondary-pressed: map-get($palette-secondary, 80),
     on-secondary: map-get($palette-secondary, 10),
     secondary-container: map-get($palette-secondary, 20),
     on-secondary-container: map-get($palette-secondary, 90),
 
     tertiary: $color-tertiary,
-    tertiary-emphase: map-get($palette-tertiary, 70),
-    tertiary-pressed: map-get($palette-tertiary, 80),
     on-tertiary: map-get($palette-tertiary, 10),
     tertiary-container: map-get($palette-tertiary, 20),
     on-tertiary-container: map-get($palette-tertiary, 90),
 
     error: $color-error,
     error-subtle: map-get($palette-error, 30),
-    error-emphase: map-get($palette-error, 50),
-    error-pressed: map-get($palette-error, 60),
     on-error: map-get($palette-error, 99),
     error-container: map-get($palette-error, 80),
     on-error-container: map-get($palette-error, 0),
 
     warning: $color-warning,
     warning-subtle: map-get($palette-warning, 30),
-    warning-emphase: map-get($palette-warning, 50),
-    warning-pressed: map-get($palette-warning, 60),
     on-warning: map-get($palette-warning, 0),
     warning-container: map-get($palette-warning, 80),
     on-warning-container: map-get($palette-warning, 0),
 
     // neutral
     neutral: map-get($palette-neutral, 20),
-    neutral-emphase: map-get($palette-neutral, 30),
-    neutral-pressed: map-get($palette-neutral, 40),
     on-neutral: map-get($palette-neutral, 90),
     neutral-container: map-get($palette-neutral, 15),
     on-neutral-container: map-get($palette-neutral, 90),
 
     // surface
     surface: map-get($palette-neutral, 15),
-    surface-emphase: map-get($palette-neutral, 20),
-    surface-pressed: map-get($palette-neutral, 30),
     on-surface: map-get($palette-neutral, 90),
     surface-container: map-get($palette-neutral, 10),
     on-surface-container: map-get($palette-neutral, 90),
 
     // neutral variant
     neutral-alt: map-get($palette-neutral-alt, 10),
-    neutral-alt-emphase: map-get($palette-neutral-alt, 15),
-    neutral-alt-pressed: map-get($palette-neutral-alt, 20),
     on-neutral-alt: map-get($palette-neutral-alt, 100),
     neutral-alt-container: map-get($palette-neutral-alt, 40),
     on-neutral-alt-container: map-get($palette-neutral-alt, 90),
@@ -84,6 +68,26 @@ $pwt-color: (
     border: map-get($palette-neutral, 35),
     table-stripe: #383838,
 );
+
+@each $name in $color-names {
+    $emphase: mix(map-get($pwt-color, $name),
+        map-get($pwt-color, "on-#{$name}"),
+        100% - 2*$state-opacity-hover);
+    $pressed: mix(map-get($pwt-color, $name),
+        map-get($pwt-color, "on-#{$name}"),
+        100% - 2*$state-opacity-press);
+    $focus: mix(map-get($pwt-color, $name),
+        map-get($pwt-color, "on-#{$name}"),
+        100% - 2*$state-opacity-focus);
+    $drag: mix(map-get($pwt-color, $name),
+        map-get($pwt-color, "on-#{$name}"),
+        100% - 2*$state-opacity-drag);
+
+    $pwt-color: map-merge($pwt-color, ("#{$name}-emphase": $emphase));
+    $pwt-color: map-merge($pwt-color, ("#{$name}-pressed": $pressed));
+    $pwt-color: map-merge($pwt-color, ("#{$name}-focus": $focus));
+    $pwt-color: map-merge($pwt-color, ("#{$name}-drag": $drag));
+}
 
 :root {
     color-scheme: dark;
