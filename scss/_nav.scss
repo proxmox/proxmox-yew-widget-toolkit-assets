@@ -30,7 +30,7 @@
 	}
 
 	&:hover {
-	    background-color: rgba(map-get($pwt-color, "on-neutral-alt"), $state-opacity-hover);
+	    background-color: rgba(map-get($pwt-color, "on-neutral-alt"), $state-layer-opacity-hover);
 	}
     }
 
@@ -61,7 +61,7 @@
 	}
 
 	&:hover {
-	    background-color: rgba(map-get($pwt-color, "on-neutral-alt"), $state-opacity-hover);
+	    background-color: rgba(map-get($pwt-color, "on-neutral-alt"), $state-layer-opacity-hover);
 	}
     }
 

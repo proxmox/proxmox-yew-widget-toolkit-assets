@@ -11,7 +11,7 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	background: rgba(map-get($pwt-color, "primary"), $state-opacity-select);
+	background: rgba(map-get($pwt-color, "primary"), $state-layer-opacity-select);
     }
 
     .pwt-progress-text {
@@ -40,7 +40,7 @@
 	bottom: 0;
 	width: 20%;
 	left: 0;
-	background: rgba(map-get($pwt-color, "primary"), $state-opacity-select);
+	background: rgba(map-get($pwt-color, "primary"), $state-layer-opacity-select);
 	animation-duration: 2s;
 	animation-name: infinite-progress;
 	animation-iteration-count: infinite;

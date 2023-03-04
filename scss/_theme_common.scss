@@ -1,13 +1,6 @@
 $spacer: 3px;
 $icon-spacer: 0.5em; // space between icon and text
 
-$state-layer-opacity: (
-    hover: 8%,
-    pressed: 12%,
-    focus: 12%,
-    drag: 16%,
-);
-
 $pwt-font-sans-serif: sans-serif;
 $pwt-font-monospace: monospace;
 
@@ -107,11 +100,11 @@ $letter-spacing: (
 
 // state layer ocupacity levels
 
-$state-opacity-hover: 0.08;
-$state-opacity-focus: 0.12;
-$state-opacity-press: 0.12;
-$state-opacity-drag: 0.16;
-$state-opacity-select: 0.2;
+$state-layer-opacity-hover: 0.08;
+$state-layer-opacity-focus: 0.12;
+$state-layer-opacity-press: 0.12;
+$state-layer-opacity-drag: 0.16;
+$state-layer-opacity-select: 0.2;
 
 // corner shape level
 

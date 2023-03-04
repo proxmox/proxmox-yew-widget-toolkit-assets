@@ -11,14 +11,14 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	background: rgba(map-get($pwt-color, "primary"), $state-opacity-select);
+	background: rgba(map-get($pwt-color, "primary"), $state-layer-opacity-select);
 
 	&.pwt-meter-distance-1 {
-	    background: rgba(map-get($pwt-color, "warning"), $state-opacity-select);
+	    background: rgba(map-get($pwt-color, "warning"), $state-layer-opacity-select);
 	}
 
 	&.pwt-meter-distance-2 {
-	    background: rgba(map-get($pwt-color, "error"), $state-opacity-select);
+	    background: rgba(map-get($pwt-color, "error"), $state-layer-opacity-select);
 	}
     }
 
