@@ -1,35 +1,35 @@
 .pwt-meter {
-    @include font_and_line_height("label-large");
+	@include font_and_line_height("label-large");
 
-    position: relative;
-    background: map-get($pwt-color, "surface");
-    min-height: map-get($line-height, "label-large") + 2 * map-get($spacers, 1);
-    border-radius: $progress-corner-shape;
-    overflow: hidden;
+	position: relative;
+	background: map-get($pwt-color, "surface");
+	min-height: map-get($line-height, "label-large") + 2 * map-get($spacers, 1);
+	border-radius: $progress-corner-shape;
+	overflow: hidden;
 
-    .pwt-meter-bar {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	background: rgba(map-get($pwt-color, "primary"), $state-layer-opacity-select);
+	.pwt-meter-bar {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background: map-get($pwt-color, "primary-container");
 
-	&.pwt-meter-distance-1 {
-	    background: rgba(map-get($pwt-color, "warning"), $state-layer-opacity-select);
+		&.pwt-meter-distance-1 {
+			background: map-get($pwt-color, "warning-container");
+		}
+
+		&.pwt-meter-distance-2 {
+			background: map-get($pwt-color, "error-container");
+		}
+
+		.pwt-meter-text {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			padding: map-get($spacers, 1) map-get($spacers, 2);
+			z-index: 1;
+		}
 	}
-
-	&.pwt-meter-distance-2 {
-	    background: rgba(map-get($pwt-color, "error"), $state-layer-opacity-select);
-	}
-    }
-
-    .pwt-meter-text {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	text-align: center;
-	padding: map-get($spacers, 1) map-get($spacers, 2);
-	z-index: 1;
-    }
 }

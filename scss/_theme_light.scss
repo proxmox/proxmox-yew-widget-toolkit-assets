@@ -17,29 +17,29 @@ $pwt-navbar-brand-filter: drop-shadow(2px 2px 4px #888);
 $pwt-color: (
     primary: $color-primary,
     on-primary: map-get($palette-primary, 100),
-    primary-container: map-get($palette-primary, 90),
+    primary-container: map-get($palette-primary, 80),
     on-primary-container: map-get($palette-primary, 10),
 
     secondary: $color-secondary,
     on-secondary: map-get($palette-secondary, 100),
-    secondary-container: map-get($palette-secondary, 90),
+    secondary-container: map-get($palette-secondary, 80),
     on-secondary-container: map-get($palette-secondary, 10),
 
     tertiary: $color-tertiary,
     on-tertiary: map-get($palette-tertiary, 100),
-    tertiary-container: map-get($palette-tertiary, 90),
+    tertiary-container: map-get($palette-tertiary, 80),
     on-tertiary-container: map-get($palette-tertiary, 10),
 
     error: $color-error,
     error-subtle: map-get($palette-error, 70),
     on-error: map-get($palette-error, 100),
-    error-container: map-get($palette-error, 90),
+    error-container: map-get($palette-error, 80),
     on-error-container: map-get($palette-error, 0),
 
     warning: $color-warning,
     warning-subtle: map-get($palette-warning, 70),
     on-warning: map-get($palette-warning, 10),
-    warning-container: map-get($palette-warning, 90),
+    warning-container: map-get($palette-warning, 80),
     on-warning-container: map-get($palette-warning, 10),
 
     // neutral
