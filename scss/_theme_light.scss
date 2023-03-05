@@ -53,8 +53,8 @@ $pwt-color: (
     on-surface-container: map-get($palette-neutral, 10),
 
     neutral-alt: map-get($palette-neutral-alt, 90),
-    on-neutral-alt: map-get($palette-neutral-alt, 10),
-    neutral-alt-container: map-get($palette-neutral-alt, 100),
+    on-neutral-alt: map-get($palette-neutral-alt, 30),
+    neutral-alt-container: map-get($palette-neutral-alt, 80),
     on-neutral-alt-container: map-get($palette-neutral-alt, 10),
 
     border: map-get($palette-neutral, 80),

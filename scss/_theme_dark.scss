@@ -52,10 +52,10 @@ $pwt-color: (
     on-surface-container: map-get($palette-neutral, 90),
 
     // neutral variant
-    neutral-alt: map-get($palette-neutral-alt, 10),
-    on-neutral-alt: map-get($palette-neutral-alt, 100),
-    neutral-alt-container: map-get($palette-neutral-alt, 40),
-    on-neutral-alt-container: map-get($palette-neutral-alt, 90),
+    neutral-alt: map-get($palette-neutral-alt, 30),
+    on-neutral-alt: map-get($palette-neutral-alt, 80),
+    neutral-alt-container: map-get($palette-neutral-alt, 20),
+    on-neutral-alt-container: map-get($palette-neutral-alt, 80),
 
     border: map-get($palette-neutral, 35),
     table-stripe: #383838,
