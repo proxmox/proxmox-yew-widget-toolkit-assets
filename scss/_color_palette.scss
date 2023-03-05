@@ -12,6 +12,13 @@ $color-names: (
 
 $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 35, 30, 20, 15, 10, 5, 0);
 
+// Fixme: use HCT to generate tonal palettes
+//
+// https://material.io/blog/science-of-color-design
+//
+// Note: AFAIK, there is currently no SCSS plugin for HCT.
+
+
 // Generate palette with linear lightness from white to black.
 // Disadvantage: Resulting palette does not contain the original color.
 @function tonal_palette_linear($base-color) {
