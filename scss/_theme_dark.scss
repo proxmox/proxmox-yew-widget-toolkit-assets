@@ -1,10 +1,10 @@
 $modal-backdrop-bg-color: #00000050;
 
-$color-primary: map-get($palette-primary, 60);
-$color-secondary: map-get($palette-secondary, 60);
-$color-tertiary: map-get($palette-tertiary, 60);
-$color-error: map-get($palette-error, 40);
-$color-warning: map-get($palette-warning, 40);
+$color-primary: map-get($palette-primary, 80);
+$color-secondary: map-get($palette-secondary, 80);
+$color-tertiary: map-get($palette-tertiary, 80);
+$color-error: map-get($palette-error, 80);
+$color-warning: map-get($palette-warning, 80);
 $color-focus: map-get($palette-neutral, 90);
 
 $pwt-box-shadow: #{map-get($palette-neutral, 5)} 0px 0px 15px !important;
@@ -15,27 +15,27 @@ $pwt-navbar-brand-filter: drop-shadow(3px 3px 4px #222);
 
 $pwt-color: (
     primary: $color-primary,
-    on-primary: map-get($palette-primary, 10),
+    on-primary: map-get($palette-primary, 20),
     primary-container: map-get($palette-primary, 30),
     on-primary-container: map-get($palette-primary, 90),
 
     secondary: $color-secondary,
-    on-secondary: map-get($palette-secondary, 10),
+    on-secondary: map-get($palette-secondary, 20),
     secondary-container: map-get($palette-secondary, 30),
     on-secondary-container: map-get($palette-secondary, 90),
 
     tertiary: $color-tertiary,
-    on-tertiary: map-get($palette-tertiary, 10),
+    on-tertiary: map-get($palette-tertiary, 20),
     tertiary-container: map-get($palette-tertiary, 30),
     on-tertiary-container: map-get($palette-tertiary, 90),
 
     error: $color-error,
-    on-error: map-get($palette-error, 90),
+    on-error: map-get($palette-error, 20),
     error-container: map-get($palette-error, 30),
     on-error-container: map-get($palette-error, 90),
 
     warning: $color-warning,
-    on-warning: map-get($palette-warning, 0),
+    on-warning: map-get($palette-warning, 20),
     warning-container: map-get($palette-warning, 30),
     on-warning-container: map-get($palette-warning, 90),
 

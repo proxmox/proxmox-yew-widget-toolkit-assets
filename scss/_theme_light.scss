@@ -1,10 +1,10 @@
 $modal-backdrop-bg-color: #00000030;
 
-$color-primary: map-get($palette-primary, 50);
-$color-secondary: map-get($palette-secondary, 50);
-$color-tertiary: map-get($palette-tertiary, 50);
-$color-error: map-get($palette-error, 50);
-$color-warning: map-get($palette-warning, 50);
+$color-primary: map-get($palette-primary, 40);
+$color-secondary: map-get($palette-secondary, 40);
+$color-tertiary: map-get($palette-tertiary, 40);
+$color-error: map-get($palette-error, 40);
+$color-warning: map-get($palette-warning, 40);
 $color-focus: map-get($palette-neutral, 10);
 
 
@@ -17,27 +17,27 @@ $pwt-navbar-brand-filter: drop-shadow(2px 2px 4px #888);
 $pwt-color: (
     primary: $color-primary,
     on-primary: map-get($palette-primary, 100),
-    primary-container: map-get($palette-primary, 80),
+    primary-container: map-get($palette-primary, 90),
     on-primary-container: map-get($palette-primary, 10),
 
     secondary: $color-secondary,
     on-secondary: map-get($palette-secondary, 100),
-    secondary-container: map-get($palette-secondary, 80),
+    secondary-container: map-get($palette-secondary, 90),
     on-secondary-container: map-get($palette-secondary, 10),
 
     tertiary: $color-tertiary,
     on-tertiary: map-get($palette-tertiary, 100),
-    tertiary-container: map-get($palette-tertiary, 80),
+    tertiary-container: map-get($palette-tertiary, 90),
     on-tertiary-container: map-get($palette-tertiary, 10),
 
     error: $color-error,
     on-error: map-get($palette-error, 100),
-    error-container: map-get($palette-error, 80),
-    on-error-container: map-get($palette-error, 0),
+    error-container: map-get($palette-error, 90),
+    on-error-container: map-get($palette-error, 10),
 
     warning: $color-warning,
-    on-warning: map-get($palette-warning, 10),
-    warning-container: map-get($palette-warning, 80),
+    on-warning: map-get($palette-warning, 100),
+    warning-container: map-get($palette-warning, 90),
     on-warning-container: map-get($palette-warning, 10),
 
     // neutral

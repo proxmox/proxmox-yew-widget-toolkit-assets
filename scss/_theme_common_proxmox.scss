@@ -16,13 +16,12 @@ $tooltip-corner-shape: map-get($shape-corner, large);
 $color-seed-error: #b00020;
 $color-seed-warning: orange;
 $color-seed-neutral: #fff;
-$color-seed-neutral-alt: #fff;
+
 
 // Proxmox brand colors
 $proxmox-brand-color: #e57000;
 // compute a complementary blue (cold color) with less saturation,
-// reduce lightness to improve contrast to white.
-$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg, $saturation: -30%, $lightness: -2%);
+$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg);
 
 // Use color from existing extjs theme
 // Note: this has not enought contrast to black/white
@@ -42,6 +41,8 @@ $palette-tertiary: tonal_palette($color-seed-tertiary);
 $palette-error: tonal_palette($color-seed-error);
 $palette-warning: tonal_palette($color-seed-warning);
 $palette-neutral: tonal_palette($color-seed-neutral);
+
+$color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 $palette-neutral-alt: tonal_palette($color-seed-neutral-alt);
 
 

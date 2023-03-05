@@ -19,7 +19,6 @@ $color-seed-primary: #386a20;
 $color-seed-secondary: #55624c;
 $color-seed-tertiary: #19686a;
 $color-seed-neutral: #fff;
-$color-seed-neutral-alt: #fff;
 
 $color-seed-error: #b3261e;
 $color-seed-warning: orange;
@@ -30,4 +29,8 @@ $palette-tertiary: tonal_palette($color-seed-tertiary);
 $palette-error: tonal_palette($color-seed-error);
 $palette-warning: tonal_palette($color-seed-warning);
 $palette-neutral: tonal_palette($color-seed-neutral);
+
+// use primary with 5% saturation for neutral-alt
+$color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
+
 $palette-neutral-alt: tonal_palette($color-seed-neutral-alt);
