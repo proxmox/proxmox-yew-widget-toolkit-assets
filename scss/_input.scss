@@ -1,3 +1,5 @@
+@use "sass:math";
+
 input {
     // Note: we dont want to set font-weight to label-large,
     // we just want the sfont-size and line-height
@@ -82,7 +84,7 @@ input {
     width: calc(3em - 4px);
     background-color: map-get($pwt-color, "neutral-alt");
     border: 2px solid map-get($pwt-color, "border") !important;
-    border-radius: map-get($line-height, "label-large")/2 + 4px;
+    border-radius: math.div(map-get($line-height, "label-large"), 2) + 4px;
     padding: 2px;
 
     &.checked:not(.disabled) {

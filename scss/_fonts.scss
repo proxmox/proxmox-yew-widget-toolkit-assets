@@ -1,5 +1,5 @@
 @function get-font-variant-settings($name) {
-    @return 'opsz' map-get($font-size, $name) / 1px, 'wdth' map-get($font-width, $name), 'wght' map-get($font-weight, $name);
+    @return 'opsz' map-get($font-size, $name), 'wdth' map-get($font-width, $name), 'wght' map-get($font-weight, $name);
 }
 
 @mixin font($name, $important: false) {

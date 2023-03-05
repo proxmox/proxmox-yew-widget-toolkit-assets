@@ -42,6 +42,7 @@ $palette-error: tonal_palette($color-seed-error);
 $palette-warning: tonal_palette($color-seed-warning);
 $palette-neutral: tonal_palette($color-seed-neutral);
 
+// use primary with 5% saturation for neutral-alt
 $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 $palette-neutral-alt: tonal_palette($color-seed-neutral-alt);
 

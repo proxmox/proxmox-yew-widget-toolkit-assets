@@ -64,16 +64,16 @@ $pwt-color: (
 @each $name in $color-names {
     $emphase: mix(map-get($pwt-color, $name),
         map-get($pwt-color, "on-#{$name}"),
-        100 - 200*$state-layer-opacity-hover);
+        (100 - 200*$state-layer-opacity-hover) * 1%);
     $pressed: mix(map-get($pwt-color, $name),
         map-get($pwt-color, "on-#{$name}"),
-        100 - 200*$state-layer-opacity-press);
+        (100 - 200*$state-layer-opacity-press) * 1%);
     $focus: mix(map-get($pwt-color, $name),
         map-get($pwt-color, "on-#{$name}"),
-        100 - 200*$state-layer-opacity-focus);
+        (100 - 200*$state-layer-opacity-focus) * 1%);
     $drag: mix(map-get($pwt-color, $name),
         map-get($pwt-color, "on-#{$name}"),
-        100 - 200*$state-layer-opacity-drag);
+        (100 - 200*$state-layer-opacity-drag) * 1%);
 
     $pwt-color: map-merge($pwt-color, ("#{$name}-emphase": $emphase));
     $pwt-color: map-merge($pwt-color, ("#{$name}-pressed": $pressed));
