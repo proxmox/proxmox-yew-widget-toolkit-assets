@@ -38,8 +38,8 @@ input {
     }
 
     &:not(.disabled):not(:disabled).is-invalid {
-	border-color: map-get($pwt-color, "error-subtle") !important;
-	outline-color: map-get($pwt-color, "error-subtle") !important;
+	border-color: map-get($pwt-color, "error-container") !important;
+	outline-color: map-get($pwt-color, "error-container") !important;
     }
 
     &:not(.disabled):not(:disabled).is-invalid:after {

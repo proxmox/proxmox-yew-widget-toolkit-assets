@@ -30,13 +30,11 @@ $pwt-color: (
     on-tertiary-container: map-get($palette-tertiary, 90),
 
     error: $color-error,
-    error-subtle: map-get($palette-error, 80),
     on-error: map-get($palette-error, 90),
     error-container: map-get($palette-error, 30),
     on-error-container: map-get($palette-error, 90),
 
     warning: $color-warning,
-    warning-subtle: map-get($palette-warning, 80),
     on-warning: map-get($palette-warning, 0),
     warning-container: map-get($palette-warning, 30),
     on-warning-container: map-get($palette-warning, 90),
