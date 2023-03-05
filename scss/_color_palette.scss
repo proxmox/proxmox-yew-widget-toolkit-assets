@@ -12,46 +12,28 @@ $color-names: (
 
 $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 35, 30, 20, 15, 10, 5, 0);
 
-// Fixme: use HCT to generate tonal palettes
+// use HCT to generate tonal palettes
 //
-// https://material.io/blog/science-of-color-design
+// See: https://material.io/blog/science-of-color-design
 //
-// Note: AFAIK, there is currently no SCSS plugin for HCT.
+// Note: AFAIK, there is currently no official SCSS plugin for HCT.
 
+// But There is a prototype mentioned in:
+// https://github.com/material-foundation/material-color-utilities/issues/17
+// libmonet.scss: https://gist.github.com/jpohhhh/6ade636f207bf97742d101650798a088
 
-// Generate palette with linear lightness from white to black.
-// Disadvantage: Resulting palette does not contain the original color.
-@function tonal_palette_linear($base-color) {
-    $palette: ();
+@use "sass:list";
 
-    @each $percentage in $color-scheme-values {
-	$palette: map-merge($palette, ($percentage: change-color($base-color, $lightness: $percentage * 1%)));
-    }
-
-    @return $palette;
-}
-
-// New version:
-// Advantage: Resulting palette contain the original color at position 50.
+// Generate palette use HCT tones
 @function tonal_palette($base-color) {
     $palette: ();
 
-    $palette: map-merge($palette, (0: adjust-color($base-color, $lightness: -100%)));
-    $palette: map-merge($palette, (5: adjust-color($base-color, $lightness: lightness($base-color)*-0.9)));
-    $palette: map-merge($palette, (10: adjust-color($base-color, $lightness: lightness($base-color)*-0.8)));
-    $palette: map-merge($palette, (15: adjust-color($base-color, $lightness: lightness($base-color)*-0.7)));
-    $palette: map-merge($palette, (20: adjust-color($base-color, $lightness: lightness($base-color)*-0.6)));
-    $palette: map-merge($palette, (30: adjust-color($base-color, $lightness: lightness($base-color)*-0.4)));
-    $palette: map-merge($palette, (35: adjust-color($base-color, $lightness: lightness($base-color)*-0.3)));
-    $palette: map-merge($palette, (40: adjust-color($base-color, $lightness: lightness($base-color)*-0.2)));
-    $palette: map-merge($palette, (50: $base-color));
-    $palette: map-merge($palette, (60: adjust-color($base-color, $lightness: (100% - lightness($base-color))*0.2)));
-    $palette: map-merge($palette, (70: adjust-color($base-color, $lightness: (100% - lightness($base-color))*0.4)));
-    $palette: map-merge($palette, (80: adjust-color($base-color, $lightness: (100% - lightness($base-color))*0.6)));
-    $palette: map-merge($palette, (90: adjust-color($base-color, $lightness: (100% - lightness($base-color))*0.8)));
-    $palette: map-merge($palette, (95: adjust-color($base-color, $lightness: (100% - lightness($base-color))*0.9)));
-    $palette: map-merge($palette, (99: adjust-color($base-color, $lightness: (100% - lightness($base-color))*0.98)));
-    $palette: map-merge($palette, (100: adjust-color($base-color, $lightness: +100%)));
+    $base-hct: hct_from_color($base-color);
+
+    @each $percentage in $color-scheme-values {
+        $new: hct(list.nth($base-hct, 1), list.nth($base-hct, 2), $percentage);
+        $palette: map-merge($palette, ($percentage: $new));
+    }
 
     @return $palette;
 }
