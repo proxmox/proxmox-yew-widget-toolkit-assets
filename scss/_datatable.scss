@@ -42,7 +42,7 @@
     }
 
     &.table-striped > tr:nth-of-type(even):not(.selected) {
-	background-color: map-get($pwt-color, "table-stripe");
+	background-color: map-get($pwt-color, "neutral-stripe");
     }
 
     &.table-hover > tr:hover:not(.selected) {

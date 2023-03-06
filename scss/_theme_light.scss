@@ -59,11 +59,12 @@ $pwt-color: (
 
     high-contrast-border: map-get($palette-neutral-alt, 50),
     border: map-get($palette-neutral-alt, 80),
-
-    table-stripe: #f8f8f8,
 );
 
 @each $name in $color-names {
+    $stripe: mix(map-get($pwt-color, $name),
+        map-get($pwt-color, "on-#{$name}"),
+        (100 - 200*$state-layer-opacity-stripe) * 1%);
     $emphase: mix(map-get($pwt-color, $name),
         map-get($pwt-color, "on-#{$name}"),
         (100 - 200*$state-layer-opacity-hover) * 1%);
@@ -77,6 +78,7 @@ $pwt-color: (
         map-get($pwt-color, "on-#{$name}"),
         (100 - 200*$state-layer-opacity-drag) * 1%);
 
+    $pwt-color: map-merge($pwt-color, ("#{$name}-stripe": $stripe));
     $pwt-color: map-merge($pwt-color, ("#{$name}-emphase": $emphase));
     $pwt-color: map-merge($pwt-color, ("#{$name}-pressed": $pressed));
     $pwt-color: map-merge($pwt-color, ("#{$name}-focus": $focus));
