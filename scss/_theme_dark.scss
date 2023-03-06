@@ -42,13 +42,13 @@ $pwt-color: (
     // neutral
     neutral: map-get($palette-neutral, 20),
     on-neutral: map-get($palette-neutral, 90),
-    neutral-container: map-get($palette-neutral, 15),
+    neutral-container: map-get($palette-neutral, 15), // surface
     on-neutral-container: map-get($palette-neutral, 90),
 
     // surface
     surface: map-get($palette-neutral, 15),
     on-surface: map-get($palette-neutral, 90),
-    surface-container: map-get($palette-neutral, 10),
+    surface-container: map-get($palette-neutral, 20), // neutral
     on-surface-container: map-get($palette-neutral, 90),
 
     // neutral variant

@@ -43,18 +43,18 @@ $pwt-color: (
     // neutral
     neutral: map-get($palette-neutral, 100),
     on-neutral: map-get($palette-neutral, 10),
-    neutral-container: map-get($palette-neutral, 95),
+    neutral-container: map-get($palette-neutral, 95), // surface
     on-neutral-container: map-get($palette-neutral, 10),
 
     // surface
     surface: map-get($palette-neutral, 95),
     on-surface: map-get($palette-neutral, 10),
-    surface-container: map-get($palette-neutral, 100),
+    surface-container: map-get($palette-neutral, 100), // neutral
     on-surface-container: map-get($palette-neutral, 10),
 
     neutral-alt: map-get($palette-neutral-alt, 90),
     on-neutral-alt: map-get($palette-neutral-alt, 30),
-    neutral-alt-container: map-get($palette-neutral-alt, 80),
+    neutral-alt-container: map-get($palette-neutral-alt, 99),
     on-neutral-alt-container: map-get($palette-neutral-alt, 10),
 
     high-contrast-border: map-get($palette-neutral-alt, 50),

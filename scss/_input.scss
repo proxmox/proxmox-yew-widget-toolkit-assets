@@ -26,39 +26,39 @@ input {
 
     /// disable border, padding, margin, outline for inputs inside
     input {
-	color: map-get($pwt-color, "on-surface");
-	background-color: map-get($pwt-color, "surface");
-	outline: 0 !important;
-	border: 0 !important;
-	padding: 0 !important;
-	margin: 0 !important;
+        color: map-get($pwt-color, "on-surface");
+        background-color: map-get($pwt-color, "surface");
+        outline: 0 !important;
+        border: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     &:focus-within {
-	outline: 2px solid $color-focus !important;
+        outline: 2px solid $color-focus !important;
         outline-offset: -2px;
     }
 
     &:not(.disabled):not(:disabled).is-invalid {
-	border-color: map-get($pwt-color, "error-container") !important;
-	outline-color: map-get($pwt-color, "error-container") !important;
+        border-color: map-get($pwt-color, "error-container") !important;
+        outline-color: map-get($pwt-color, "error-container") !important;
     }
 
     &:not(.disabled):not(:disabled).is-invalid:after {
-	content: "";
-	width: 1em;
-	height: 1em;
-	align-self: center;
-	// svg image copied from bootstrap5 css
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-	background-repeat: no-repeat;
-	background-size: 1em 1em;
+        content: "";
+        width: 1em;
+        height: 1em;
+        align-self: center;
+        // svg image copied from bootstrap5 css
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-size: 1em 1em;
     }
 
     &.disabled,
     &:disabled {
-	cursor: auto;
-	opacity: 0.5;
+        cursor: auto;
+        opacity: 0.5;
     }
 }
 
@@ -88,43 +88,43 @@ input {
     padding: 2px;
 
     &.checked:not(.disabled) {
-	background-color: map-get($pwt-color, "primary");
+        background-color: map-get($pwt-color, "primary");
     }
 
     .pwt-switch-slider {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: map-get($line-height, "label-large") - 4px;
-	width: map-get($line-height, "label-large") - 4px;
-	color: #ffffff00; // invisible
-	background-color: map-get($pwt-color, "neutral-alt-container");
-	border-radius: 50%;
-	margin: 2px;
-	transition: margin-inline-start 0.2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: map-get($line-height, "label-large") - 4px;
+        width: map-get($line-height, "label-large") - 4px;
+        color: #ffffff00; // invisible
+        background-color: map-get($pwt-color, "high-contrast-border");
+        border-radius: 50%;
+        margin: 2px;
+        transition: margin-inline-start 0.2s;
     }
 
     &.checked .pwt-switch-slider {
-	margin: 0px;
-	height: map-get($line-height, "label-large");
-	width: map-get($line-height, "label-large");
-	color: map-get($pwt-color, "primary");
-	background-color: map-get($pwt-color, "on-primary");
-	margin-inline-start: calc(100% - #{map-get($line-height, "label-large")});
+        margin: 0px;
+        height: map-get($line-height, "label-large");
+        width: map-get($line-height, "label-large");
+        color: map-get($pwt-color, "primary");
+        background-color: map-get($pwt-color, "on-primary");
+        margin-inline-start: calc(100% - #{map-get($line-height, "label-large")});
     }
 
     &.checked.disabled .pwt-switch-slider {
-	color:  map-get($pwt-color, "on-surface");
-	background-color: map-get($pwt-color, "neutral-alt-container");
+        color: map-get($pwt-color, "on-surface");
+        background-color: map-get($pwt-color, "high-contrast-border");
     }
 
     &:focus {
-	border: 2px solid $color-focus !important;
+        border: 2px solid $color-focus !important;
     }
 
     &.disabled {
-	cursor: auto;
-	opacity: 0.5;
+        cursor: auto;
+        opacity: 0.5;
     }
 }
 
@@ -135,12 +135,12 @@ input {
     border-radius: 50%;
     transition: background 0.3s;
 
-    &:hover{
-	background: rgba(map-get($pwt-color, "on-surface"), 0.06);
+    &:hover {
+        background: rgba(map-get($pwt-color, "on-surface"), 0.06);
     }
 
     &:active {
-	background: rgba(map-get($pwt-color, "on-surface"), 0.1);
+        background: rgba(map-get($pwt-color, "on-surface"), 0.1);
     }
 }
 
@@ -157,28 +157,28 @@ input {
     background-color: map-get($pwt-color, "surface");
 
     .pwt-checkbox-icon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &.checked {
-	color: map-get($pwt-color, "on-primary");
-	background-color: map-get($pwt-color, "primary");
+        color: map-get($pwt-color, "on-primary");
+        background-color: map-get($pwt-color, "primary");
     }
 
     &:focus {
-	border: 2px solid $color-focus !important;
+        border: 2px solid $color-focus !important;
     }
 
     &.disabled {
-	cursor: auto;
-	opacity: 0.5;
+        cursor: auto;
+        opacity: 0.5;
     }
 
     &.disabled.checked {
-	color: map-get($pwt-color, "on-surface");
-	background-color: map-get($pwt-color, "surface");
+        color: map-get($pwt-color, "on-surface");
+        background-color: map-get($pwt-color, "surface");
     }
 }
 
@@ -198,39 +198,40 @@ input {
     transition: 0.2s all linear;
 
     .pwt-checkbox-icon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
     }
 
     &.checked {
-	background: map-get($pwt-color, "primary");
+        background: map-get($pwt-color, "primary");
     }
 
     &.checked.disabled:after {
-	background-color: map-get($pwt-color, "on-surface");
+        background-color: map-get($pwt-color, "on-surface");
     }
 
     &.checked:not(.disabled):not(:focus) {
-	border: 2px solid map-get($pwt-color, "primary") !important;
+        border: 2px solid map-get($pwt-color, "primary") !important;
     }
 
     &:focus {
-	border: 2px solid $color-focus !important;
+        border: 2px solid $color-focus !important;
     }
 
     &.disabled {
-	cursor: auto;
-	opacity: 0.5;
+        cursor: auto;
+        opacity: 0.5;
     }
 }
 
 // Removing spin buttons for <input type=number> (styling them is too clumsy)
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+    -webkit-appearance: none;
 }
+
 input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
