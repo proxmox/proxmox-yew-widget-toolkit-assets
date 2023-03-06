@@ -57,7 +57,9 @@ $pwt-color: (
     neutral-alt-container: map-get($palette-neutral-alt, 20),
     on-neutral-alt-container: map-get($palette-neutral-alt, 80),
 
-    border: map-get($palette-neutral-alt, 60),
+    high-contrast-border: map-get($palette-neutral-alt, 60),
+    border: map-get($palette-neutral-alt, 30),
+
     table-stripe: #383838,
 );
 
