@@ -18,19 +18,18 @@ $color-seed-warning: orange;
 $color-seed-neutral: #fff;
 
 
-// Proxmox brand colors
-$proxmox-brand-color: #e57000;
-// compute a complementary blue (cold color) with less saturation,
-$color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg);
+// // Proxmox brand colors
+// $proxmox-brand-color: #e57000;
+// // compute a complementary blue (cold color)
+// $color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg);
 
 // Use color from existing extjs theme
-// Note: this has not enought contrast to black/white
-// $color-seed-primary: #3892d4;
+$color-seed-primary: #3892d4;
 
-// use adjacent color as secondary
+// use adjacent color as secondary, reduce saturation
 $color-shift: 15deg;
-$color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: -30%, $lightness: -5%);
-// use adjacent color as tertiary
+$color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: -30%);
+// use adjacent color as tertiary, reduce saturation
 $color-seed-tertiary: adjust-color($color-seed-primary, $hue: +$color-shift, $saturation: -30%);
 
 
