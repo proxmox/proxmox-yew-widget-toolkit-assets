@@ -1,5 +1,4 @@
 .pwt-toolbar {
-    //@include mini-scroll;
 
     // fixme: ???
     &.emphased {
@@ -7,9 +6,9 @@
     }
 
     .pwt-toolbar-content {
+        flex: 1 1 auto;
         display: flex;
         gap: map-get($spacers, 2);
         padding: map-get($spacers, 2);
-        width: fit-content;
     }
 }
