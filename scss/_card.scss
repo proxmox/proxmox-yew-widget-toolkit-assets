@@ -2,7 +2,7 @@
 
 /// Cards
 
-@mixin surface-elevation($default) {
+@mixin surface-elevation-rules($default) {
 
     $default-distance: map-get($elevation-levels, $default);
     $default-opacity: map-get($elevation-levels-tint-opacity, $default);
@@ -10,8 +10,10 @@
     box-shadow: $color-shadow 0px math.div($default-distance, 2) $default-distance;
     background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $default-opacity);
 
-    @each $level, $distance in $elevation-levels {
+    @each $level,
+    $distance in $elevation-levels {
         $opacity: map-get($elevation-levels-tint-opacity, $level);
+
         &.pwt-elevation#{$level} {
             box-shadow: $color-shadow 0px math.div($distance, 2) $distance;
             background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity);
@@ -22,12 +24,27 @@
 .pwt-card {
     background-color: map-get($pwt-color, "surface");
 
-    @include surface-elevation(1);
-
-    min-height: 5em; // fixme: remove
+    @include surface-elevation-rules(1);
 
     padding: map-get($spacers, 1) map-get($spacers, 2);
     color: map-get($pwt-color, "on-surface");
 
     border-radius: $card-corner-shape;
+
+    &.pwt-interactive {
+
+        &:hover {
+            $distance: map-get($elevation-levels, 2);
+            $opacity: map-get($elevation-levels-tint-opacity, 2);
+            box-shadow: $color-shadow 0px math.div($distance, 2) $distance;
+            background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity + $state-layer-opacity-hover*100%);
+        }
+
+        &:active {
+            $distance: map-get($elevation-levels, 1);
+            $opacity: map-get($elevation-levels-tint-opacity, 1);
+            box-shadow: $color-shadow 0px math.div($distance, 1) $distance;
+            background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity + $state-layer-opacity-press*100%);
+        }
+    }
 }
