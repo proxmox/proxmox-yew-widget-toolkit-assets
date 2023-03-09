@@ -44,6 +44,7 @@ button {
     display: inline-flex;
     align-items: baseline;
     gap: $icon-spacer;
+    transition: 0.1s;
 
     padding: map-get($spacers, 1) map-get($spacers, 2);
     text-align: center;
