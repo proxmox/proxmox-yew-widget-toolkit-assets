@@ -2,7 +2,6 @@ dialog {
     padding: 0;
     color: map-get($pwt-color, "on-neutral");
     background: map-get($pwt-color, "neutral");
-    border-radius: 0.25rem !important;
     border: 1px solid map-get($pwt-color, "border") !important;
     box-shadow: $pwt-box-shadow;
 
@@ -14,6 +13,10 @@ dialog {
     font-family: $pwt-font-sans-serif;
     font-size: map-get($font-size, "body-medium");
     font-weight: normal;
+
+    &:not(.pwt-dropdown) {
+        border-radius: $dialog-corner-shape;
+    }
  }
 
 // Note: css var() does not work here
