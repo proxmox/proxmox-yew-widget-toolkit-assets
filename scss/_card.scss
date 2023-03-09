@@ -30,6 +30,7 @@
     color: map-get($pwt-color, "on-surface");
 
     border-radius: $card-corner-shape;
+    transition: 0.1s;
 
     &.pwt-interactive {
 
