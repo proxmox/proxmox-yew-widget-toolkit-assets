@@ -149,7 +149,7 @@ border-start-end-radius: 10rem !important;
 border-end-end-radius: 10rem !important;
 }
 
-.pwt-segmented-button.raised>.pwt-button {
+.pwt-segmented-button.pwt-elevated>.pwt-button {
     $distance: map-get($elevation-levels, 1);
     box-shadow: $color-shadow 0px math.div($distance, 1) $distance;
 }
