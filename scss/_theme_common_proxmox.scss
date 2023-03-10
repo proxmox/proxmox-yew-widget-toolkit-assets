@@ -20,15 +20,16 @@ $color-seed-warning: orange;
 $color-seed-neutral: #fff;
 
 
-// // Proxmox brand colors
-// $proxmox-brand-color: #e57000;
+// Proxmox brand colors
+$proxmox-brand-color: #e57000;
 // // compute a complementary blue (cold color)
 // $color-seed-primary: adjust-color($proxmox-brand-color, $hue: +180deg);
+$color-seed-primary: adjust-color($proxmox-brand-color, $saturation: -30%);
 
-// Use color from existing extjs theme
-$color-seed-primary: #3892d4;
-// but reduce saturation
-$color-seed-primary: adjust-color($color-seed-primary, $saturation: -30%);
+// // Use color from existing extjs theme
+// $color-seed-primary: #3892d4;
+// // but reduce saturation
+// $color-seed-primary: adjust-color($color-seed-primary, $saturation: -30%);
 
 // use adjacent color as secondary, reduce saturation
 $color-shift: 15deg;
