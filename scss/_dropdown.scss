@@ -4,7 +4,7 @@
     color: map-get($pwt-color, "on-neutral");
     z-index: $zindex-dropdown;
 
-    box-shadow: $pwt-dropdown-shadow;
+	@include surface-elevation-box-shadow(1);
 
     max-height:100vh;
     max-width:100vw;

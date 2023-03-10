@@ -328,3 +328,9 @@ $position-values: absolute fixed relative sticky static;
         border-end-end-radius: $radius !important;
     }
 }
+
+@each $level, $distance in $elevation-levels {
+    .pwt-shadow#{$level} {
+        @include surface-elevation-box-shadow($level);
+    }
+}

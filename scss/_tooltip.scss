@@ -1,6 +1,7 @@
 .tooltip {
     display: none;
-    box-shadow: $pwt-tooltip-shadow;
+
+    @include surface-elevation-box-shadow(3);
 
     background-color: map-get($pwt-color, "primary-container");
     color: map-get($pwt-color, "on-primary-container");

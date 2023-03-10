@@ -5,9 +5,10 @@
 
 @import "miniscroll";
 @import "tooltip";
-@import "dropdown";
 
 @import "modal";
+@import "dropdown";
+
 @import "button";
 @import "panel";
 @import "input";
@@ -22,10 +23,6 @@
 @import "meter";
 @import "slidable";
 @import "card";
-
-.pwt-shadow {
-    box-shadow: var($pwt-box-shadow);
-}
 
 // fixme
 .pwt-rounded {

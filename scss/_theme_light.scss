@@ -10,9 +10,6 @@ $color-focus: map-get($palette-neutral, 10);
 $color-surface-tint: $color-primary;
 $color-shadow: #{map-get($palette-neutral, 0)};
 
-$pwt-box-shadow: #{map-get($palette-neutral, 50)} 0px 0px 15px !important;
-$pwt-dropdown-shadow: #{map-get($palette-neutral, 60)} 0px 0px 3px !important;
-$pwt-tooltip-shadow: #{map-get($palette-neutral, 50)} 0px 2px 4px !important;
 $pwt-navbar-brand-filter: drop-shadow(2px 2px 4px #888);
 
 $pwt-color: (
