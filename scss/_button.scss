@@ -48,6 +48,8 @@ button {
     gap: $icon-spacer;
     transition: 0.1s;
 
+    position: relative; // required to set z-index
+
     padding: map-get($spacers, 1) map-get($spacers, 2);
     text-align: center;
     vertical-align: middle;
@@ -65,17 +67,20 @@ button {
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
 
+    &.pressed,
     &:active:not(:disabled) {
         background-color: var(--pwt-color-pressed);
         //box-shadow: none !important;
         $distance: map-get($elevation-levels, 1);
         box-shadow: $color-shadow 0px math.div($distance, 1) $distance;
+        z-index: 1,  // correctly show shadows
     }
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
         background-color: var(--pwt-color-emphase);
         $distance: map-get($elevation-levels, 2);
         box-shadow: $color-shadow 0px math.div($distance, 2) $distance;
+        z-index: 1, // correctly show shadows
     }
 
     &:focus-visible {
@@ -86,10 +91,6 @@ button {
     &:disabled {
         cursor: auto;
         opacity: 0.5;
-    }
-
-    &.pressed {
-        background-color: var(--pwt-color-pressed);
     }
 }
 
