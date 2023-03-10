@@ -62,28 +62,30 @@ $pwt-color: (
     border: map-get($palette-neutral-alt, 30),
 );
 
-@each $name in $color-names {
-    $stripe: mix(map-get($pwt-color, "on-#{$name}"),
-        map-get($pwt-color, $name),
-        map-get($state-layer-opacity, stripe));
-    $emphase: mix(map-get($pwt-color, "on-#{$name}"),
-        map-get($pwt-color, $name),
-        map-get($state-layer-opacity, hover));
-    $pressed: mix(map-get($pwt-color, "on-#{$name}"),
-        map-get($pwt-color, $name),
-        map-get($state-layer-opacity, press));
-    $focus: mix(map-get($pwt-color, "on-#{$name}"),
-        map-get($pwt-color, $name),
-        map-get($state-layer-opacity, focus));
-    $drag: mix(map-get($pwt-color, "on-#{$name}"),
-        map-get($pwt-color, $name),
-        map-get($state-layer-opacity, drag));
+@each $color-name in $color-names {
+    @each $name in ($color-name, "#{$color-name}-container") {
+        $stripe: mix(map-get($pwt-color, "on-#{$name}"),
+            map-get($pwt-color, $name),
+            map-get($state-layer-opacity, stripe));
+        $emphase: mix(map-get($pwt-color, "on-#{$name}"),
+            map-get($pwt-color, $name),
+            map-get($state-layer-opacity, hover));
+        $pressed: mix(map-get($pwt-color, "on-#{$name}"),
+            map-get($pwt-color, $name),
+            map-get($state-layer-opacity, press));
+        $focus: mix(map-get($pwt-color, "on-#{$name}"),
+            map-get($pwt-color, $name),
+            map-get($state-layer-opacity, focus));
+        $drag: mix(map-get($pwt-color, "on-#{$name}"),
+            map-get($pwt-color, $name),
+            map-get($state-layer-opacity, drag));
 
-    $pwt-color: map-merge($pwt-color, ("#{$name}-stripe": $stripe));
-    $pwt-color: map-merge($pwt-color, ("#{$name}-emphase": $emphase));
-    $pwt-color: map-merge($pwt-color, ("#{$name}-pressed": $pressed));
-    $pwt-color: map-merge($pwt-color, ("#{$name}-focus": $focus));
-    $pwt-color: map-merge($pwt-color, ("#{$name}-drag": $drag));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-stripe": $stripe));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-emphase": $emphase));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-pressed": $pressed));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-focus": $focus));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-drag": $drag));
+    }
 }
 
 :root {
