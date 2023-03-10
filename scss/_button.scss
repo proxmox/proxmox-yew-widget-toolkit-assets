@@ -54,13 +54,9 @@ button {
     cursor: pointer;
     white-space: nowrap !important;
     user-select: none;
-    border: 1px solid map-get($pwt-color, "border") !important;
+    //border: 1px solid map-get($pwt-color, "border") !important;
+    border: 0;
     border-radius: $button-corner-shape;
-
-    &.pwt-elevated {
-        --pwt-color: #{map-get($pwt-color, "primary")};
-        @include surface-elevation-box-shadow(1);
-    }
 
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
@@ -68,15 +64,14 @@ button {
     &.pressed,
     &:active:not(:disabled) {
         background-color: var(--pwt-color-pressed);
-        //box-shadow: none !important;
-        @include surface-elevation-box-shadow(1);
-        z-index: 1,  // correctly show shadows
+        box-shadow: none;
     }
 
+    &:focus:not(:disabled):not(:active):not(.pressed),
     &:hover:not(:disabled):not(:active):not(.pressed) {
-        background-color: var(--pwt-color-emphase);
-        @include surface-elevation-box-shadow(2);
-        z-index: 1, // correctly show shadows
+            background-color: var(--pwt-color-emphase);
+        @include surface-elevation-box-shadow(1);
+        z-index: 1; // correctly show shadows
     }
 
     &:focus-visible {
@@ -90,6 +85,25 @@ button {
     }
 }
 
+.pwt-segmented-button.pwt-elevated > .pwt-button,
+.pwt-button.pwt-elevated {
+    --pwt-color: #{map-get($pwt-color, "primary")};
+    @include surface-elevation-box-shadow(1);
+
+    &.pressed,
+    &:active:not(:disabled) {
+        background-color: var(--pwt-color-pressed);
+        @include surface-elevation-box-shadow(1);
+        z-index: 1; // correctly show shadows
+    }
+
+    &:focus:not(:disabled):not(:active):not(.pressed),
+    &:hover:not(:disabled):not(:active):not(.pressed) {
+        background-color: var(--pwt-color-emphase);
+        @include surface-elevation-box-shadow(2);
+        z-index: 1; // correctly show shadows
+    }
+}
 
 .pwt-button.rounded {
     border-radius: 10rem !important;
@@ -143,11 +157,6 @@ border-end-start-radius: 10rem !important;
 border-start-end-radius: 10rem !important;
 border-end-end-radius: 10rem !important;
 }
-
-.pwt-segmented-button.pwt-elevated>.pwt-button {
-    @include surface-elevation-box-shadow(1);
-}
-
 
 @mixin button-color-definitions($scheme) {
 
