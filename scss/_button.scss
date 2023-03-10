@@ -20,7 +20,7 @@ button {
     aspect-ratio: 1 / 1;
 
     &:hover:not(:disabled):not(:active):not(:active) {
-	background-color: map-get($pwt-color, surface);
+        background-color: map-get($pwt-color, surface);
     }
 
     &:focus-visible {
@@ -29,12 +29,12 @@ button {
     }
 
     &:disabled {
-	cursor: auto;
-	opacity: 0.5;
+        cursor: auto;
+        opacity: 0.5;
     }
 
     &:active {
-	background-color: map-get($pwt-color, surface-emphase);
+        background-color: map-get($pwt-color, surface-emphase);
     }
 }
 
@@ -56,19 +56,19 @@ button {
     border-radius: $button-corner-shape;
 
     &.raised {
-	box-shadow: $pwt-button-shadow;
+        box-shadow: $pwt-button-shadow;
     }
 
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
 
     &:active:not(:disabled) {
-	background-color: var(--pwt-color-pressed);
-	box-shadow: none !important;
+        background-color: var(--pwt-color-pressed);
+        box-shadow: none !important;
     }
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
-	background-color: var(--pwt-color-emphase);
+        background-color: var(--pwt-color-emphase);
     }
 
     &:focus-visible {
@@ -77,19 +77,19 @@ button {
     }
 
     &:disabled {
-	cursor: auto;
-	opacity: 0.5;
+        cursor: auto;
+        opacity: 0.5;
     }
 
     &.pressed {
-	background-color: var(--pwt-color-pressed);
+        background-color: var(--pwt-color-pressed);
     }
 }
 
 
-.pwt-button.rounded  {
+.pwt-button.rounded {
     border-radius: 10rem !important;
- }
+}
 
 .pwt-button.circle {
     border-radius: 10rem !important;
@@ -105,52 +105,53 @@ button {
     white-space: nowrap;
 }
 
-.pwt-segmented-button > .pwt-button {
+.pwt-segmented-button>.pwt-button {
     border-radius: 0px;
     border-inline-start: 0px !important;
 }
 
-.pwt-segmented-button > .pwt-button:first-child {
+.pwt-segmented-button>.pwt-button:first-child {
     border-start-start-radius: $button-corner-shape;
     border-end-start-radius: $button-corner-shape;
     border-inline-start: 1px solid map-get($pwt-color, "border") !important;
 }
 
-.pwt-segmented-button > .pwt-button:last-child {
+.pwt-segmented-button>.pwt-button:last-child {
     border-start-end-radius: $button-corner-shape;
     border-end-end-radius: $button-corner-shape;
 }
 
 
-.pwt-segmented-button > .pwt-button.rounded  {
+.pwt-segmented-button>.pwt-button.rounded {
     border-radius: 0px !important;
 }
 
-.pwt-segmented-button > .pwt-button.rounded:first-child,
-.pwt-segmented-button.rounded > .pwt-button:first-child,
+.pwt-segmented-button>.pwt-button.rounded:first-child,
+.pwt-segmented-button.rounded>.pwt-button:first-child,
 {
-    border-start-start-radius: 10rem !important;
-    border-end-start-radius: 10rem !important;
+border-start-start-radius: 10rem !important;
+border-end-start-radius: 10rem !important;
 }
 
-.pwt-segmented-button > .pwt-button.rounded:last-child,
-.pwt-segmented-button.rounded > .pwt-button:last-child,
+.pwt-segmented-button>.pwt-button.rounded:last-child,
+.pwt-segmented-button.rounded>.pwt-button:last-child,
 {
-    border-start-end-radius: 10rem !important;
-    border-end-end-radius: 10rem !important;
+border-start-end-radius: 10rem !important;
+border-end-end-radius: 10rem !important;
 }
 
-.pwt-segmented-button.raised > .pwt-button {
+.pwt-segmented-button.raised>.pwt-button {
     box-shadow: $pwt-button-shadow;
 }
 
 
 @mixin button-color-definitions($scheme) {
-    .pwt-segmented-button.pwt-scheme-#{$scheme} > .pwt-button,
-    .pwt-segmented-button > .pwt-button.pwt-scheme-#{$scheme},
+
+    .pwt-segmented-button.pwt-scheme-#{$scheme}>.pwt-button,
+    .pwt-segmented-button>.pwt-button.pwt-scheme-#{$scheme},
     {
-	@include color-scheme-vars($scheme);
-    }
+    @include color-scheme-vars($scheme);
+}
 }
 
 @each $scheme-name in $color-names {
