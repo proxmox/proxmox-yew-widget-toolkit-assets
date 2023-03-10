@@ -1,0 +1,6 @@
+@use "sass:math";
+
+@mixin surface-elevation-box-shadow($level) {
+    $distance: map-get($elevation-levels, $level);
+    box-shadow: $color-shadow 0px math.div($distance, 2) $distance;
+}

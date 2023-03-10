@@ -44,13 +44,15 @@ $pwt-color: (
     // neutral
     neutral: map-get($palette-neutral, 20),
     on-neutral: map-get($palette-neutral, 90),
-    neutral-container: map-get($palette-neutral, 15), // surface
+    neutral-container: map-get($palette-neutral, 15),
+    // surface
     on-neutral-container: map-get($palette-neutral, 90),
 
     // surface
     surface: map-get($palette-neutral, 15),
     on-surface: map-get($palette-neutral, 90),
-    surface-container: map-get($palette-neutral, 20), // neutral
+    surface-container: map-get($palette-neutral, 20),
+    // neutral
     on-surface-container: map-get($palette-neutral, 90),
 
     // neutral variant
@@ -64,21 +66,21 @@ $pwt-color: (
 );
 
 @each $name in $color-names {
-    $stripe: mix(map-get($pwt-color, $name),
-    map-get($pwt-color, "on-#{$name}"),
-    (100 - 200*$state-layer-opacity-stripe) * 1%);
-    $emphase: mix(map-get($pwt-color, $name),
-        map-get($pwt-color, "on-#{$name}"),
-        (100 - 200*$state-layer-opacity-hover) * 1%);
-    $pressed: mix(map-get($pwt-color, $name),
-        map-get($pwt-color, "on-#{$name}"),
-        (100 - 200*$state-layer-opacity-press) * 1%);
-    $focus: mix(map-get($pwt-color, $name),
-        map-get($pwt-color, "on-#{$name}"),
-        (100 - 200*$state-layer-opacity-focus) * 1%);
-    $drag: mix(map-get($pwt-color, $name),
-        map-get($pwt-color, "on-#{$name}"),
-        (100 - 200*$state-layer-opacity-drag) * 1%);
+    $stripe: mix(map-get($pwt-color, "on-#{$name}"),
+        map-get($pwt-color, $name),
+        map-get($state-layer-opacity, stripe));
+    $emphase: mix(map-get($pwt-color, "on-#{$name}"),
+        map-get($pwt-color, $name),
+        map-get($state-layer-opacity, hover));
+    $pressed: mix(map-get($pwt-color, "on-#{$name}"),
+        map-get($pwt-color, $name),
+        map-get($state-layer-opacity, press));
+    $focus: mix(map-get($pwt-color, "on-#{$name}"),
+        map-get($pwt-color, $name),
+        map-get($state-layer-opacity, focus));
+    $drag: mix(map-get($pwt-color, "on-#{$name}"),
+        map-get($pwt-color, $name),
+        map-get($state-layer-opacity, drag));
 
     $pwt-color: map-merge($pwt-color, ("#{$name}-stripe": $stripe));
     $pwt-color: map-merge($pwt-color, ("#{$name}-emphase": $emphase));

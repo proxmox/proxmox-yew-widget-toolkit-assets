@@ -38,14 +38,14 @@
             $distance: map-get($elevation-levels, 2);
             $opacity: map-get($elevation-levels-tint-opacity, 2);
             box-shadow: $color-shadow 0px math.div($distance, 2) $distance;
-            background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity + $state-layer-opacity-hover*100%);
+            background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity + map-get($state-layer-opacity, hover));
         }
 
         &:active {
             $distance: map-get($elevation-levels, 1);
             $opacity: map-get($elevation-levels-tint-opacity, 1);
             box-shadow: $color-shadow 0px math.div($distance, 1) $distance;
-            background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity + $state-layer-opacity-press*100%);
+            background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity + map-get($state-layer-opacity, press));
         }
     }
 }

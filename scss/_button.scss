@@ -1,5 +1,3 @@
-@use "sass:math";
-
 button {
     @include font_and_line_height("label-large");
 }
@@ -61,8 +59,7 @@ button {
 
     &.pwt-elevated {
         --pwt-color: #{map-get($pwt-color, "primary")};
-        $distance: map-get($elevation-levels, 1);
-        box-shadow: $color-shadow 0px math.div($distance, 1) $distance;
+        @include surface-elevation-box-shadow(1);
     }
 
     color: var(--pwt-color);
@@ -72,15 +69,13 @@ button {
     &:active:not(:disabled) {
         background-color: var(--pwt-color-pressed);
         //box-shadow: none !important;
-        $distance: map-get($elevation-levels, 1);
-        box-shadow: $color-shadow 0px math.div($distance, 1) $distance;
+        @include surface-elevation-box-shadow(1);
         z-index: 1,  // correctly show shadows
     }
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
         background-color: var(--pwt-color-emphase);
-        $distance: map-get($elevation-levels, 2);
-        box-shadow: $color-shadow 0px math.div($distance, 2) $distance;
+        @include surface-elevation-box-shadow(2);
         z-index: 1, // correctly show shadows
     }
 
@@ -150,8 +145,7 @@ border-end-end-radius: 10rem !important;
 }
 
 .pwt-segmented-button.pwt-elevated>.pwt-button {
-    $distance: map-get($elevation-levels, 1);
-    box-shadow: $color-shadow 0px math.div($distance, 1) $distance;
+    @include surface-elevation-box-shadow(1);
 }
 
 
