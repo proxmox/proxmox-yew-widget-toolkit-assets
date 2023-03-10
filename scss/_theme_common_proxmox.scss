@@ -27,6 +27,7 @@ $color-seed-neutral: #fff;
 
 // Use color from existing extjs theme
 $color-seed-primary: #3892d4;
+// but reduce saturation
 $color-seed-primary: adjust-color($color-seed-primary, $saturation: -30%);
 
 // use adjacent color as secondary, reduce saturation

@@ -1,64 +1,65 @@
 @mixin color-scheme-vars($name) {
     --pwt-color-background: #{map-get($pwt-color, "#{$name}")};
-    --pwt-color: #{map-get($pwt-color, "on-#{$name}")};
-    --pwt-color-emphase: #{map-get($pwt-color, "#{$name}-emphase")};
-    --pwt-color-pressed: #{map-get($pwt-color, "#{$name}-pressed")};
-    --pwt-color-container-background: #{map-get($pwt-color, "#{$name}-container")};
-    --pwt-color-container: #{map-get($pwt-color, "on-#{$name}-container")};
+ --pwt-color: #{map-get($pwt-color, "on-#{$name}")};
+ --pwt-color-emphase: #{map-get($pwt-color, "#{$name}-emphase")};
+ --pwt-color-pressed: #{map-get($pwt-color, "#{$name}-pressed")};
+
 }
 
 @mixin color-scheme($name) {
 
     .pwt-scheme-#{$name} {
-	@include color-scheme-vars($name);
+        @include color-scheme-vars($name);
     }
 
     .pwt-color-#{$name} {
-	color: map-get($pwt-color, "#{$name}");
+        color: map-get($pwt-color, "#{$name}");
     }
+
     .pwt-bg-color-#{$name} {
-	background-color: map-get($pwt-color, "#{$name}");
+        background-color: map-get($pwt-color, "#{$name}");
     }
+
     .pwt-color-on-#{$name} {
-	color: map-get($pwt-color, "on-#{$name}");
+        color: map-get($pwt-color, "on-#{$name}");
     }
+
     .pwt-bg-color-#{$name}-emphased {
-	background-color: map-get($pwt-color, "#{$name}-emphase");
+        background-color: map-get($pwt-color, "#{$name}-emphase");
     }
+
     .pwt-bg-color-#{$name}-pressed {
-	background-color: map-get($pwt-color, "#{$name}-pressed");
-    }
-    .pwt-bg-color-#{$name}-container {
-	background-color: map-get($pwt-color, "#{$name}-container");
-    }
-    .pwt-color-on-#{$name}-container {
-	color: map-get($pwt-color, "on-#{$name}-container");
+        background-color: map-get($pwt-color, "#{$name}-pressed");
     }
 
     // also define classes for SVG properties
 
     .pwt-fill-#{$name} {
-	fill: map-get($pwt-color, "#{$name}");
+        fill: map-get($pwt-color, "#{$name}");
     }
+
     .pwt-fill-on-#{$name} {
-	fill: map-get($pwt-color, "on-#{$name}");
+        fill: map-get($pwt-color, "on-#{$name}");
     }
+
     .pwt-stroke-#{$name} {
-	stroke: map-get($pwt-color, "#{$name}");
+        stroke: map-get($pwt-color, "#{$name}");
     }
+
     .pwt-stroke-on-#{$name} {
-	stroke: map-get($pwt-color, "on-#{$name}");
+        stroke: map-get($pwt-color, "on-#{$name}");
     }
 }
 
 @mixin color-percentages($name, $palette) {
     @each $percentage in $color-scheme-values {
-	.pwt-color-#{$name}-#{$percentage} {
-	    color: map-get($palette, $percentage);
-	}
-	.pwt-bg-color-#{$name}-#{$percentage} {
-	    background-color: map-get($palette, $percentage);
-	}
+        .pwt-color-#{$name}-#{$percentage} {
+            color: map-get($palette, $percentage);
+        }
+
+        .pwt-bg-color-#{$name}-#{$percentage} {
+            background-color: map-get($palette, $percentage);
+        }
     }
 }
 

@@ -135,6 +135,7 @@ a:focus {
 
 @each $name in $color-names {
     @include color-scheme($name);
+    @include color-scheme("#{$name}-container");
 }
 
 @import "utilities";
