@@ -59,7 +59,8 @@ button {
     border: 1px solid map-get($pwt-color, "border") !important;
     border-radius: $button-corner-shape;
 
-    &.raised {
+    &.pwt-elevated {
+        --pwt-color: #{map-get($pwt-color, "primary")};
         $distance: map-get($elevation-levels, 1);
         box-shadow: $color-shadow 0px math.div($distance, 1) $distance;
     }
