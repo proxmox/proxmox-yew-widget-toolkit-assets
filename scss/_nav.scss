@@ -37,11 +37,11 @@
         }
 
         &.active {
-            color: map-get($pwt-color, "on-primary");
-            background-color: map-get($pwt-color, "primary");
+            color: map-get($pwt-color, "on-primary-container");
+            background-color: map-get($pwt-color, "primary-container");
 
             &:active {
-                background-color: map-get($pwt-color, "primary-pressed");
+                background-color: map-get($pwt-color, "primary-container-pressed");
             }
         }
     }
@@ -76,11 +76,11 @@
         }
 
         &.active {
-            color: map-get($pwt-color, "on-primary");
-            background-color: map-get($pwt-color, "primary");
+            color: map-get($pwt-color, "on-primary-container");
+            background-color: map-get($pwt-color, "primary-container");
 
             &:active {
-                background-color: map-get($pwt-color, "primary-pressed");
+                background-color: map-get($pwt-color, "primary-container-pressed");
             }
         }
     }
