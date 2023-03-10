@@ -27,12 +27,13 @@ $color-seed-neutral: #fff;
 
 // Use color from existing extjs theme
 $color-seed-primary: #3892d4;
+$color-seed-primary: adjust-color($color-seed-primary, $saturation: -30%);
 
 // use adjacent color as secondary, reduce saturation
 $color-shift: 15deg;
-$color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: -30%);
+$color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: -10%);
 // use adjacent color as tertiary, reduce saturation
-$color-seed-tertiary: adjust-color($color-seed-primary, $hue: +$color-shift, $saturation: -30%);
+$color-seed-tertiary: adjust-color($color-seed-primary, $hue: +$color-shift, $saturation: -5%);
 
 
 $palette-primary: tonal_palette($color-seed-primary);
