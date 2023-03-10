@@ -4,3 +4,8 @@
     $distance: map-get($elevation-levels, $level);
     box-shadow: $color-shadow 0px math.div($distance, 2) $distance;
 }
+
+@mixin surface-elevation-background-color($level, $state) {
+    $opacity: map-get($elevation-levels-tint-opacity, $level);
+    background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity + map-get($state-layer-opacity, $state));
+}
