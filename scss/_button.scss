@@ -67,7 +67,7 @@ button {
         box-shadow: none;
     }
 
-    &:focus:not(:disabled):not(:active):not(.pressed),
+    &:focus:not(:disabled):not(:active):not(.pressed) {
         background-color: var(--pwt-color-emphase);
         @include surface-elevation-box-shadow(0);
         z-index: 1; // correctly show shadows
