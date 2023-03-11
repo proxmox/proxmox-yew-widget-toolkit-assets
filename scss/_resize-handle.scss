@@ -8,8 +8,9 @@
     touch-action: none;
 }
 
+.row-split-handle:hover,
 .row-split-handle:focus-visible {
-    background: map-get($pwt-color, "neutral-pressed");
+        background: map-get($pwt-color, "neutral-pressed");
 }
 
 /* Visible resize handle (horizontal) */
@@ -22,8 +23,9 @@
     touch-action: none;
 }
 
+.column-split-handle:hover,
 .column-split-handle:focus-visible {
-    background: map-get($pwt-color, "neutral-pressed");
+        background: map-get($pwt-color, "neutral-pressed");
 }
 
 /* Invisible resize handle */
