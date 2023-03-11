@@ -91,17 +91,22 @@ button {
     @include surface-elevation-box-shadow(1);
 
     &.pressed,
+    &:focus:not(:disabled):not(:active):not(.pressed),
     &:active:not(:disabled) {
         background-color: var(--pwt-color-pressed);
         @include surface-elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
     }
 
-    &:focus:not(:disabled):not(:active):not(.pressed),
     &:hover:not(:disabled):not(:active):not(.pressed) {
         background-color: var(--pwt-color-emphase);
         @include surface-elevation-box-shadow(2);
         z-index: 1; // correctly show shadows
+    }
+
+    &:disabled {
+        --pwt-color: #{map-get($pwt-color, "on-surface")};
+        @include surface-elevation-box-shadow(0);
     }
 }
 
