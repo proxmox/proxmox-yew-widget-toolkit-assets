@@ -1,15 +1,26 @@
 @mixin color-scheme-vars($name) {
-    --pwt-color-background: #{map-get($pwt-color, "#{$name}")};
+    --pwt-color-background: #{map-get($pwt-color, $name)};
  --pwt-color: #{map-get($pwt-color, "on-#{$name}")};
  --pwt-color-emphase: #{map-get($pwt-color, "#{$name}-emphase")};
  --pwt-color-pressed: #{map-get($pwt-color, "#{$name}-pressed")};
 
 }
 
+@mixin outline-button-color-scheme-vars($name) {
+    --pwt-color-background: #{map-get($pwt-color, surface)};
+    --pwt-color: #{map-get($pwt-color, $name)};
+    --pwt-color-emphase: #{map-get($pwt-color, surface-emphase)};
+    --pwt-color-pressed: #{map-get($pwt-color, surface-pressed)};
+}
+
 @mixin color-scheme($name) {
 
     .pwt-scheme-#{$name} {
         @include color-scheme-vars($name);
+    }
+
+    .pwt-scheme-#{$name}.pwt-button-outline {
+        @include outline-button-color-scheme-vars($name);
     }
 
     .pwt-color-#{$name} {

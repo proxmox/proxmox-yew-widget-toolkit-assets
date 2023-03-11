@@ -95,43 +95,32 @@ button {
     @include surface-elevation-box-shadow(0);
     border: 2px solid map-get($pwt-color, high-contrast-border);
 
-    color: var(--pwt-color-background);
-    background-color: map-get($pwt-color, surface);
-
     // Note: outline buttons must have same size as filled buttons
     padding: map-get($spacers, 1) map-get($spacers, 2);
 
-    &.pressed,
-    &:active:not(:disabled) {
-        background-color: map-get($pwt-color, surface-pressed);
-    }
-
-    &:focus:not(:disabled):not(:active):not(.pressed) {
-        background-color: map-get($pwt-color, surface-focus);
-    }
     &:hover:not(:disabled):not(:active):not(.pressed) {
         @include surface-elevation-box-shadow(0);
-        background-color: map-get($pwt-color, surface-emphase);
     }
+}
+.pwt-button.pwt-button-outline:not(:disabled),
+.pwt-button.pwt-elevated:not(:disabled)    {
+    @include outline-button-color-scheme-vars(primary);
 }
 
 .pwt-segmented-button.pwt-elevated>.pwt-button,
 .pwt-button.pwt-elevated {
     &:not(:disabled) {
-        --pwt-color: #{map-get($pwt-color, "primary")};
         @include surface-elevation-box-shadow(1);
     }
 
     &.pressed,
     &:focus:not(:disabled):not(:active):not(.pressed),
     &:active:not(:disabled) {
-        background-color: var(--pwt-color-pressed);
         @include surface-elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
     }
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
-        background-color: var(--pwt-color-emphase);
         @include surface-elevation-box-shadow(2);
         z-index: 1; // correctly show shadows
     }
