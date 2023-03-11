@@ -69,7 +69,7 @@ button {
 
     &:focus:not(:disabled):not(:active):not(.pressed),
     &:hover:not(:disabled):not(:active):not(.pressed) {
-            background-color: var(--pwt-color-emphase);
+        background-color: var(--pwt-color-emphase);
         @include surface-elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
     }
@@ -82,13 +82,17 @@ button {
     &:disabled {
         cursor: auto;
         opacity: 0.5;
+        @include color-scheme-vars("surface");
+        @include surface-elevation-box-shadow(0);
     }
 }
 
-.pwt-segmented-button.pwt-elevated > .pwt-button,
+.pwt-segmented-button.pwt-elevated>.pwt-button,
 .pwt-button.pwt-elevated {
-    --pwt-color: #{map-get($pwt-color, "primary")};
-    @include surface-elevation-box-shadow(1);
+    &:not(:disabled) {
+        --pwt-color: #{map-get($pwt-color, "primary")};
+        @include surface-elevation-box-shadow(1);
+    }
 
     &.pressed,
     &:focus:not(:disabled):not(:active):not(.pressed),
@@ -102,11 +106,6 @@ button {
         background-color: var(--pwt-color-emphase);
         @include surface-elevation-box-shadow(2);
         z-index: 1; // correctly show shadows
-    }
-
-    &:disabled {
-        --pwt-color: #{map-get($pwt-color, "on-surface")};
-        @include surface-elevation-box-shadow(0);
     }
 }
 
