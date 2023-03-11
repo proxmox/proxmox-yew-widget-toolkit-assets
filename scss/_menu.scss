@@ -21,13 +21,12 @@ ul.pwt-menubar {
 	display: flex;
 	align-items: stretch;
 
-
 	&>li.active:focus-within {
-		background-color: rgba(map-get($pwt-color, "on-surface"), map-get($state-layer-opacity, focus));
+		background-color: map-get($pwt-color, "surface-focus");
 	}
 
 	&>li:hover {
-		background-color: rgba(map-get($pwt-color, "on-surface"), map-get($state-layer-opacity, hover));
+		background-color: map-get($pwt-color, "surface-emphase");
 	}
 
 	.pwt-menubar-item {
@@ -71,7 +70,7 @@ ul.pwt-menu {
 	}
 
 	&>li.active:focus-within {
-		background-color: rgba(map-get($pwt-color, "on-surface"), map-get($state-layer-opacity, focus));
+		background-color: map-get($pwt-color, "surface-focus");
 	}
 
 	.pwt-menu-item {
