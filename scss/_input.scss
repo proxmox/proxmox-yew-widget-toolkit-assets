@@ -131,15 +131,16 @@ input {
 .pwt-checkbox-state {
     display: inline-block;
     padding: max(map-get($line-height, "label-large") - map-get($font-size, "label-large"), map-get($spacers, 1));
+    background: rgba(map-get($pwt-color, "on-surface"), 0);
     border-radius: 50%;
-    transition: background 0.1s;
+    transition: background 0.3s;
 
     &:hover {
-        background: map-get($pwt-color, "surface-emphase");
+        background: rgba(map-get($pwt-color, "on-surface"), 0.06);
     }
 
     &:active {
-        background: map-get($pwt-color, "surface-pressed");
+        background: rgba(map-get($pwt-color, "on-surface"), 0.1);
     }
 }
 
