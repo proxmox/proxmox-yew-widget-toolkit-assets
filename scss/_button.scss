@@ -40,7 +40,6 @@ button {
 
 .pwt-button {
     @include color-scheme-vars("surface");
-
     display: inline-flex;
     align-items: baseline;
     gap: $icon-spacer;
@@ -48,13 +47,13 @@ button {
 
     position: relative; // required to set z-index
 
-    padding: map-get($spacers, 1) map-get($spacers, 2);
+    // add border space to padding (to make outline buttons same size)
+    padding: calc(map-get($spacers, 1) + 2px) calc(map-get($spacers, 2) + 2px);
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
     white-space: nowrap !important;
     user-select: none;
-    //border: 1px solid map-get($pwt-color, "border") !important;
     border: 0;
     border-radius: $button-corner-shape;
 
@@ -89,6 +88,30 @@ button {
         opacity: 0.5;
         @include color-scheme-vars("surface");
         @include surface-elevation-box-shadow(0);
+    }
+}
+
+.pwt-button.pwt-button-outline {
+    @include surface-elevation-box-shadow(0);
+    border: 2px solid map-get($pwt-color, high-contrast-border);
+
+    color: var(--pwt-color-background);
+    background-color: map-get($pwt-color, surface);
+
+    // Note: outline buttons must have same size as filled buttons
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+
+    &.pressed,
+    &:active:not(:disabled) {
+        background-color: map-get($pwt-color, surface-pressed);
+    }
+
+    &:focus:not(:disabled):not(:active):not(.pressed) {
+        background-color: map-get($pwt-color, surface-focus);
+    }
+    &:hover:not(:disabled):not(:active):not(.pressed) {
+        @include surface-elevation-box-shadow(0);
+        background-color: map-get($pwt-color, surface-emphase);
     }
 }
 
