@@ -86,7 +86,7 @@ button {
     &:disabled {
         cursor: auto;
         opacity: 0.5;
-        @include color-scheme-vars("surface");
+        @include color-scheme-vars("surface", $important: true);
         @include surface-elevation-box-shadow(0);
     }
 }
