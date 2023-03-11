@@ -91,6 +91,14 @@ button {
     }
 }
 
+.pwt-button.pwt-button-text {
+    @include outline-button-color-scheme-vars(primary, $base: neutral);
+    @include surface-elevation-box-shadow(0);
+    &:hover:not(:disabled):not(:active):not(.pressed) {
+        @include surface-elevation-box-shadow(0);
+    }
+}
+
 .pwt-button.pwt-button-outline {
     @include surface-elevation-box-shadow(0);
     border: 2px solid map-get($pwt-color, high-contrast-border);
