@@ -103,12 +103,12 @@ button {
     }
 }
 .pwt-button.pwt-button-outline:not(:disabled),
-.pwt-button.pwt-elevated:not(:disabled)    {
+.pwt-button.pwt-button-elevated:not(:disabled)    {
     @include outline-button-color-scheme-vars(primary);
 }
 
-.pwt-segmented-button.pwt-elevated>.pwt-button,
-.pwt-button.pwt-elevated {
+.pwt-segmented-button.pwt-button-elevated>.pwt-button,
+.pwt-button.pwt-button-elevated {
     &:not(:disabled) {
         @include surface-elevation-box-shadow(1);
     }
