@@ -110,9 +110,11 @@ button {
         @include surface-elevation-box-shadow(0);
     }
 }
+
 .pwt-button.pwt-button-outline:not(:disabled),
-.pwt-button.pwt-button-elevated:not(:disabled)    {
-    @include outline-button-color-scheme-vars(primary);
+.pwt-button.pwt-button-elevated:not(:disabled),
+.pwt-button.pwt-fab:not(:disabled)    {
+        @include outline-button-color-scheme-vars(primary);
 }
 
 .pwt-segmented-button.pwt-button-elevated>.pwt-button,
@@ -130,6 +132,24 @@ button {
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
         @include surface-elevation-box-shadow(2);
+        z-index: 1; // correctly show shadows
+    }
+}
+
+.pwt-button.pwt-fab {
+    &:not(:disabled) {
+        @include surface-elevation-box-shadow(3);
+    }
+
+    &.pressed,
+    &:focus:not(:disabled):not(:active):not(.pressed),
+    &:active:not(:disabled) {
+        @include surface-elevation-box-shadow(3);
+        z-index: 1; // correctly show shadows
+    }
+
+    &:hover:not(:disabled):not(:active):not(.pressed) {
+        @include surface-elevation-box-shadow(4);
         z-index: 1; // correctly show shadows
     }
 }
@@ -185,6 +205,36 @@ border-end-start-radius: 10rem !important;
 {
 border-start-end-radius: 10rem !important;
 border-end-end-radius: 10rem !important;
+}
+
+
+.pwt-fab-icon {
+    font-size: map-get($font-size, "headline-large");
+}
+
+.pwt-fab {
+    //position: fixed;
+    //bottom: map-get($spacers, 2);
+    //right: map-get($spacers, 2);
+    border-radius: map-get($shape-corner, large);
+
+    padding: map-get($spacers, 3);
+
+
+    width: map-get($font-size, "headline-large") + 2 * map-get($spacers, 3) + 2px;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    &.pwt-fab-small {
+        padding: map-get($spacers, 1);
+        width: map-get($font-size, "title-large") + 2 * map-get($spacers, 1) + 2px;
+
+        .pwt-fab-icon {
+            font-size: map-get($font-size, "title-large")
+        }
+    }
 }
 
 @mixin button-color-definitions($scheme) {
