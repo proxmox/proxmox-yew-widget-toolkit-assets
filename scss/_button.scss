@@ -94,6 +94,7 @@ button {
 .pwt-button.pwt-button-text {
     @include outline-button-color-scheme-vars(primary, $base: neutral);
     @include surface-elevation-box-shadow(0);
+
     &:hover:not(:disabled):not(:active):not(.pressed) {
         @include surface-elevation-box-shadow(0);
     }
@@ -113,8 +114,8 @@ button {
 
 .pwt-button.pwt-button-outline:not(:disabled),
 .pwt-button.pwt-button-elevated:not(:disabled),
-.pwt-button.pwt-fab:not(:disabled)    {
-        @include outline-button-color-scheme-vars(primary);
+.pwt-button.pwt-fab:not(:disabled) {
+    @include outline-button-color-scheme-vars(primary);
 }
 
 .pwt-segmented-button.pwt-button-elevated>.pwt-button,
@@ -248,4 +249,101 @@ border-end-end-radius: 10rem !important;
 
 @each $scheme-name in $color-names {
     @include button-color-definitions($scheme-name);
+}
+
+// Fab Menus
+.pwt-fab-menu-container {
+    position: relative;
+
+    .pwt-fab-menu-item {
+        position: absolute;
+        visibility: hidden;
+        top: calc(50% - 22px);
+        left: calc(50% - 22px);
+        z-index: -1;
+    }
+
+    &.active-left .pwt-fab-menu-item,
+    &.active-right .pwt-fab-menu-item,
+    &.active-up .pwt-fab-menu-item,
+    &.active-down .pwt-fab-menu-item {
+            visibility: visible;
+            z-index: 1;
+    }
+
+    &.active-down > .pwt-fab-menu-item:nth-child(2) {
+        top: calc(100% + map-get($spacers, 2));
+    }
+    &.active-down > .pwt-fab-menu-item:nth-child(3) {
+        top: calc(100% + map-get($spacers, 2) + 1*(44px + map-get($spacers, 2)));
+    }
+    &.active-down > .pwt-fab-menu-item:nth-child(4) {
+        top: calc(100% + map-get($spacers, 2) + 2*(44px + map-get($spacers, 2)));
+    }
+    &.active-down > .pwt-fab-menu-item:nth-child(5) {
+        top: calc(100% + map-get($spacers, 2) + 3*(44px + map-get($spacers, 2)));
+    }
+    &.active-down > .pwt-fab-menu-item:nth-child(6) {
+        top: calc(100% + map-get($spacers, 2) + 4*(44px + map-get($spacers, 2)));
+    }
+
+    &.active-up > .pwt-fab-menu-item:nth-child(2) {
+        top: calc(-44px - map-get($spacers, 2));
+    }
+    &.active-up > .pwt-fab-menu-item:nth-child(3) {
+        top: calc(-44px - (map-get($spacers, 2) + 1*(44px + map-get($spacers, 2))));
+    }
+    &.active-up > .pwt-fab-menu-item:nth-child(4) {
+        top: calc(-44px - (map-get($spacers, 2) + 2*(44px + map-get($spacers, 2))));
+    }
+    &.active-up > .pwt-fab-menu-item:nth-child(5) {
+        top: calc(-44px - (map-get($spacers, 2) + 3*(44px + map-get($spacers, 2))));
+    }
+    &.active-up > .pwt-fab-menu-item:nth-child(6) {
+        top: calc(-44px - (map-get($spacers, 2) + 4*(44px + map-get($spacers, 2))));
+    }
+
+    &.active-left > .pwt-fab-menu-item:nth-child(2) {
+        left: calc(-44px - map-get($spacers, 2));
+    }
+    &.active-left > .pwt-fab-menu-item:nth-child(3) {
+        left: calc(-44px - (map-get($spacers, 2) + 1*(44px + map-get($spacers, 2))));
+    }
+    &.active-left > .pwt-fab-menu-item:nth-child(4) {
+        left: calc(-44px - (map-get($spacers, 2) + 2*(44px + map-get($spacers, 2))));
+    }
+    &.active-left > .pwt-fab-menu-item:nth-child(5) {
+        left: calc(-44px - (map-get($spacers, 2) + 3*(44px + map-get($spacers, 2))));
+    }
+    &.active-left > .pwt-fab-menu-item:nth-child(6) {
+        left: calc(-44px - (map-get($spacers, 2) + 4*(44px + map-get($spacers, 2))));
+    }
+
+    &.active-right > .pwt-fab-menu-item:nth-child(2) {
+        left: calc(100% + map-get($spacers, 2));
+    }
+    &.active-right > .pwt-fab-menu-item:nth-child(3) {
+        left: calc(100% + map-get($spacers, 2) + 1*(44px + map-get($spacers, 2)));
+    }
+    &.active-right > .pwt-fab-menu-item:nth-child(4) {
+        left: calc(100% + map-get($spacers, 2) + 2*(44px + map-get($spacers, 2)));
+    }
+    &.active-right > .pwt-fab-menu-item:nth-child(5) {
+        left: calc(100% + map-get($spacers, 2) + 3*(44px + map-get($spacers, 2)));
+    }
+    &.active-right > .pwt-fab-menu-item:nth-child(6) {
+        left: calc(100% + map-get($spacers, 2) + 4*(44px + map-get($spacers, 2)));
+    }
+
+
+    /*
+    &.active:nth-child(2) .pwt-fab-menu-item {
+        top: calc(100% + 44px + map-get($spacers, 2));
+    }
+    &.active:nth-child(3) .pwt-fab-menu-item {
+        top: calc(100% + (44px + (map-get($spacers, 2) * 2) ));
+    }
+    */
+
+
 }
