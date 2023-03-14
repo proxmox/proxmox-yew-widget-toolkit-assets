@@ -255,11 +255,13 @@ border-end-end-radius: 10rem !important;
 .pwt-fab-menu-container {
     position: relative;
 
+    --fab-small-button-width: #{map-get($font-size, "title-large") + 2 * map-get($spacers, 1) + 2px};
+
     .pwt-fab-menu-item {
         position: absolute;
         visibility: hidden;
-        top: calc(50% - 22px);
-        left: calc(50% - 22px);
+        top: calc(50% - var(--fab-small-button-width)/2);
+        left: calc(50% - var(--fab-small-button-width)/2);
         z-index: -1;
     }
 
@@ -275,75 +277,66 @@ border-end-end-radius: 10rem !important;
         top: calc(100% + map-get($spacers, 2));
     }
     &.active-down > .pwt-fab-menu-item:nth-child(3) {
-        top: calc(100% + map-get($spacers, 2) + 1*(44px + map-get($spacers, 2)));
+        top: calc(100% + map-get($spacers, 2) + 1*(var(--fab-small-button-width) + map-get($spacers, 2)));
     }
     &.active-down > .pwt-fab-menu-item:nth-child(4) {
-        top: calc(100% + map-get($spacers, 2) + 2*(44px + map-get($spacers, 2)));
+        top: calc(100% + map-get($spacers, 2) + 2*(var(--fab-small-button-width) + map-get($spacers, 2)));
     }
     &.active-down > .pwt-fab-menu-item:nth-child(5) {
-        top: calc(100% + map-get($spacers, 2) + 3*(44px + map-get($spacers, 2)));
+        top: calc(100% + map-get($spacers, 2) + 3*(var(--fab-small-button-width) + map-get($spacers, 2)));
     }
     &.active-down > .pwt-fab-menu-item:nth-child(6) {
-        top: calc(100% + map-get($spacers, 2) + 4*(44px + map-get($spacers, 2)));
+        top: calc(100% + map-get($spacers, 2) + 4*(var(--fab-small-button-width) + map-get($spacers, 2)));
     }
 
     &.active-up > .pwt-fab-menu-item:nth-child(2) {
-        top: calc(-44px - map-get($spacers, 2));
+        top: calc(0px - var(--fab-small-button-width) - map-get($spacers, 2));
     }
     &.active-up > .pwt-fab-menu-item:nth-child(3) {
-        top: calc(-44px - (map-get($spacers, 2) + 1*(44px + map-get($spacers, 2))));
+        top: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 1*(var(--fab-small-button-width) + map-get($spacers, 2))));
     }
     &.active-up > .pwt-fab-menu-item:nth-child(4) {
-        top: calc(-44px - (map-get($spacers, 2) + 2*(44px + map-get($spacers, 2))));
+        top: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 2*(var(--fab-small-button-width) + map-get($spacers, 2))));
     }
     &.active-up > .pwt-fab-menu-item:nth-child(5) {
-        top: calc(-44px - (map-get($spacers, 2) + 3*(44px + map-get($spacers, 2))));
+        top: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 3*(var(--fab-small-button-width) + map-get($spacers, 2))));
     }
     &.active-up > .pwt-fab-menu-item:nth-child(6) {
-        top: calc(-44px - (map-get($spacers, 2) + 4*(44px + map-get($spacers, 2))));
+        top: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 4*(var(--fab-small-button-width) + map-get($spacers, 2))));
     }
 
     &.active-left > .pwt-fab-menu-item:nth-child(2) {
-        left: calc(-44px - map-get($spacers, 2));
+        left: calc(0px - var(--fab-small-button-width) - map-get($spacers, 2));
     }
     &.active-left > .pwt-fab-menu-item:nth-child(3) {
-        left: calc(-44px - (map-get($spacers, 2) + 1*(44px + map-get($spacers, 2))));
+        left: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 1*(var(--fab-small-button-width) + map-get($spacers, 2))));
     }
     &.active-left > .pwt-fab-menu-item:nth-child(4) {
-        left: calc(-44px - (map-get($spacers, 2) + 2*(44px + map-get($spacers, 2))));
+        left: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 2*(var(--fab-small-button-width) + map-get($spacers, 2))));
     }
     &.active-left > .pwt-fab-menu-item:nth-child(5) {
-        left: calc(-44px - (map-get($spacers, 2) + 3*(44px + map-get($spacers, 2))));
+        left: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 3*(var(--fab-small-button-width) + map-get($spacers, 2))));
     }
     &.active-left > .pwt-fab-menu-item:nth-child(6) {
-        left: calc(-44px - (map-get($spacers, 2) + 4*(44px + map-get($spacers, 2))));
+        left: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 4*(var(--fab-small-button-width) + map-get($spacers, 2))));
     }
 
     &.active-right > .pwt-fab-menu-item:nth-child(2) {
         left: calc(100% + map-get($spacers, 2));
     }
     &.active-right > .pwt-fab-menu-item:nth-child(3) {
-        left: calc(100% + map-get($spacers, 2) + 1*(44px + map-get($spacers, 2)));
+        left: calc(100% + map-get($spacers, 2) + 1*(var(--fab-small-button-width) + map-get($spacers, 2)));
     }
     &.active-right > .pwt-fab-menu-item:nth-child(4) {
-        left: calc(100% + map-get($spacers, 2) + 2*(44px + map-get($spacers, 2)));
+        left: calc(100% + map-get($spacers, 2) + 2*(var(--fab-small-button-width) + map-get($spacers, 2)));
     }
     &.active-right > .pwt-fab-menu-item:nth-child(5) {
-        left: calc(100% + map-get($spacers, 2) + 3*(44px + map-get($spacers, 2)));
+        left: calc(100% + map-get($spacers, 2) + 3*(var(--fab-small-button-width) + map-get($spacers, 2)));
     }
     &.active-right > .pwt-fab-menu-item:nth-child(6) {
-        left: calc(100% + map-get($spacers, 2) + 4*(44px + map-get($spacers, 2)));
+        left: calc(100% + map-get($spacers, 2) + 4*(var(--fab-small-button-width) + map-get($spacers, 2)));
     }
 
-
-    /*
-    &.active:nth-child(2) .pwt-fab-menu-item {
-        top: calc(100% + 44px + map-get($spacers, 2));
-    }
-    &.active:nth-child(3) .pwt-fab-menu-item {
-        top: calc(100% + (44px + (map-get($spacers, 2) * 2) ));
-    }
-    */
 
 
 }
