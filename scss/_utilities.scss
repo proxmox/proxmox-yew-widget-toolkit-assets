@@ -1,69 +1,90 @@
-
-
-@each $name, $value in $spacers {
+@each $name,
+$value in $spacers {
     .pwt-p-#{$name} {
-	padding: $value !important;
+        padding: $value !important;
     }
+
     .pwt-ps-#{$name} {
-	padding-inline-start: $value !important;
+        padding-inline-start: $value !important;
     }
+
     .pwt-pe-#{$name} {
-	padding-inline-end: $value !important;
+        padding-inline-end: $value !important;
     }
+
     .pwt-pt-#{$name} {
-	padding-top: $value !important;
+        padding-top: $value !important;
     }
+
     .pwt-pb-#{$name} {
-	padding-bottom: $value !important;
+        padding-bottom: $value !important;
     }
+
     .pwt-px-#{$name} {
-	padding-left: $value !important;
-	padding-right: $value !important;
+        padding-left: $value !important;
+        padding-right: $value !important;
     }
+
     .pwt-py-#{$name} {
-	padding-top: $value !important;
-	padding-bottom: $value !important;
+        padding-top: $value !important;
+        padding-bottom: $value !important;
     }
 
     .pwt-m-#{$name} {
-	margin: $value !important;
+        margin: $value !important;
     }
+
     .pwt-ms-#{$name} {
-	margin-inline-start: $value !important;
+        margin-inline-start: $value !important;
     }
+
     .pwt-me-#{$name} {
-	margin-inline-end: $value !important;
+        margin-inline-end: $value !important;
     }
+
     .pwt-mt-#{$name} {
-	margin-top: $value !important;
+        margin-top: $value !important;
     }
+
     .pwt-mb-#{$name} {
-	margin-bottom: $value !important;
+        margin-bottom: $value !important;
     }
+
     .pwt-mx-#{$name} {
-	margin-left: $value !important;
-	margin-right: $value !important;
+        margin-left: $value !important;
+        margin-right: $value !important;
     }
+
     .pwt-my-#{$name} {
-	margin-top: $value !important;
-	margin-bottom: $value !important;
+        margin-top: $value !important;
+        margin-bottom: $value !important;
     }
 
     .pwt-gap-#{$name} {
-	gap: $value !important;
+        gap: $value !important;
     }
+
     .pwt-column-gap-#{$name} {
-	column-gap: $value !important;
+        column-gap: $value !important;
     }
+
     .pwt-row-gap-#{$name} {
-	row-gap: $value !important;
+        row-gap: $value !important;
     }
 }
 
-$white-space-values: (normal, nowrap, pre, pre-wrap, pre-line, break-spaces);
+$white-space-values: (
+    normal,
+    nowrap,
+    pre,
+    pre-wrap,
+    pre-line,
+    break-spaces
+);
+
 @each $value in $white-space-values {
     .pwt-white-space-#{$value} {
-	white-space:  $value !important;
+        white-space: $value !important;
     }
 }
 
@@ -73,18 +94,33 @@ $white-space-values: (normal, nowrap, pre, pre-wrap, pre-line, break-spaces);
     white-space: nowrap;
 }
 
-$user-select-values: (auto, none, text, all);
+$user-select-values: (
+    auto,
+    none,
+    text,
+    all
+);
+
 @each $value in $user-select-values {
     .pwt-user-select-#{$value} {
-	user-select: $value !important;
+        user-select: $value !important;
     }
 }
 
-$text-align-values: (start, end, left, right, center, justify, justify-all);
+$text-align-values: (
+    start,
+    end,
+    left,
+    right,
+    center,
+    justify,
+    justify-all
+);
 ;
+
 @each $value in $text-align-values {
     .pwt-text-align-#{$value} {
-	text-align: $value !important;
+        text-align: $value !important;
     }
 }
 
@@ -95,14 +131,17 @@ $height-width-values: (
     100: 100%,
     auto: auto
 );
-@each $name, $value in $height-width-values {
+
+@each $name,
+$value in $height-width-values {
     .pwt-h-#{$name} {
-	height: $value !important;
-	box-sizing: border-box;
+        height: $value !important;
+        box-sizing: border-box;
     }
+
     .pwt-w-#{$name} {
-	width: $value !important;
-	box-sizing: border-box;
+        width: $value !important;
+        box-sizing: border-box;
     }
 }
 
@@ -125,6 +164,7 @@ $height-width-values: (
 }
 
 $content-sizes: none auto min-content max-content fit-content;
+
 @each $name in $content-sizes {
     .pwt-size-#{$name} {
         width: $name !important;
@@ -136,7 +176,7 @@ $display-values: inline inline-block block grid table table-row table-cell flex 
 
 @each $name in $display-values {
     .pwt-d-#{$name} {
-	display: $name !important;
+        display: $name !important;
     }
 }
 
@@ -145,16 +185,18 @@ $display-values: inline inline-block block grid table table-row table-cell flex 
 }
 
 $flex-direction-values: row column row-reverse column-reverse;
+
 @each $name in $flex-direction-values {
     .pwt-flex-#{$name} {
-	flex-direction: $name !important;
+        flex-direction: $name !important;
     }
 }
 
 $flex-wrap-values: wrap nowrap wrap-reverse;
+
 @each $name in $flex-wrap-values {
     .pwt-flex-#{$name} {
-	flex-wrap: $name;
+        flex-wrap: $name;
     }
 }
 
@@ -175,7 +217,7 @@ $justify-content-values: (
 
 @each $value in $justify-content-values {
     .pwt-justify-content-#{$value} {
-	justify-content: $value !important;
+        justify-content: $value !important;
     }
 }
 
@@ -192,7 +234,7 @@ $align-items-values: (
 
 @each $value in $align-items-values {
     .pwt-align-items-#{$value} {
-	align-items: $value !important;
+        align-items: $value !important;
     }
 }
 
@@ -208,7 +250,7 @@ $align-self-values: (
 
 @each $value in $align-self-values {
     .pwt-align-self-#{$value} {
-	align-self: $value !important;
+        align-self: $value !important;
     }
 }
 
@@ -216,13 +258,15 @@ $overflow-values: auto hidden visible scroll;
 
 @each $value in $overflow-values {
     .pwt-overflow-#{$value} {
-	overflow: $value !important;
+        overflow: $value !important;
     }
+
     .pwt-overflow-x-#{$value} {
-	overflow-x: $value !important;
+        overflow-x: $value !important;
     }
+
     .pwt-overflow-y-#{$value} {
-	overflow-y: $value !important;
+        overflow-y: $value !important;
     }
 }
 
@@ -230,7 +274,7 @@ $position-values: absolute fixed relative sticky static;
 
 @each $value in $position-values {
     .pwt-position-#{$value} {
-	position: $value !important;
+        position: $value !important;
     }
 }
 
@@ -295,41 +339,51 @@ $position-values: absolute fixed relative sticky static;
     border-bottom: 0 !important;
 }
 
-@each $name, $radius in $shape-corner {
+@each $name,
+$radius in $shape-corner {
     .pwt-shape-#{$name} {
         border-radius: $radius !important;
     }
+
     .pwt-shape-top-#{$name} {
         border-top-left-radius: $radius !important;
         border-top-right-radius: $radius !important;
     }
+
     .pwt-shape-bottom-#{$name} {
         border-bottom-left-radius: $radius !important;
         border-bottom-right-radius: $radius !important;
     }
+
     .pwt-shape-start-#{$name} {
         border-start-start-radius: $radius !important;
         border-end-start-radius: $radius !important;
     }
+
     .pwt-shape-end-#{$name} {
         border-start-end-radius: $radius !important;
         border-end-end-radius: $radius !important;
     }
+
     .pwt-shape-top-start-#{$name} {
         border-start-start-radius: $radius !important;
     }
+
     .pwt-shape-top-end-#{$name} {
         border-start-end-radius: $radius !important;
     }
+
     .pwt-shape-bottom-start-#{$name} {
         border-end-start-radius: $radius !important;
     }
+
     .pwt-shape-bottom-end-#{$name} {
         border-end-end-radius: $radius !important;
     }
 }
 
-@each $level, $distance in $elevation-levels {
+@each $level,
+$distance in $elevation-levels {
     .pwt-shadow#{$level} {
         @include surface-elevation-box-shadow($level);
     }
