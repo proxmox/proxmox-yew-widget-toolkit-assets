@@ -71,6 +71,22 @@ $value in $spacers {
     .pwt-row-gap-#{$name} {
         row-gap: $value !important;
     }
+
+    .pwt-top-#{$name} {
+        top: $value !important;
+    }
+
+    .pwt-bottom-#{$name} {
+        bottom: $value !important;
+    }
+
+    .pwt-left-#{$name} {
+        left: $value !important;
+    }
+
+    .pwt-right-#{$name} {
+        right: $value !important;
+    }
 }
 
 $white-space-values: (
