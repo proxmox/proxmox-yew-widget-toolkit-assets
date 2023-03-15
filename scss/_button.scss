@@ -209,24 +209,19 @@ border-end-end-radius: 10rem !important;
 }
 
 
-.pwt-fab-icon {
-    font-size: map-get($font-size, "headline-large");
-}
-
 .pwt-fab {
-    //position: fixed;
-    //bottom: map-get($spacers, 2);
-    //right: map-get($spacers, 2);
     border-radius: map-get($shape-corner, large);
-
-    padding: map-get($spacers, 3);
-
-
-    height: map-get($font-size, "headline-large") + 2 * map-get($spacers, 3) + 2px;
+    padding: map-get($spacers, 2);
+    height: map-get($font-size, "headline-medium") + 2 * map-get($spacers, 2) + 2px;
     aspect-ratio: 1 / 1;
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
+
+
+    .pwt-fab-icon {
+        font-size: map-get($font-size, "headline-medium");
+    }
 
     &.pwt-fab-small {
         padding: map-get($spacers, 1);
@@ -234,6 +229,15 @@ border-end-end-radius: 10rem !important;
 
         .pwt-fab-icon {
             font-size: map-get($font-size, "title-large")
+        }
+    }
+
+    &.pwt-fab-large {
+        padding: map-get($spacers, 3);
+        height: map-get($font-size, "headline-large") + 2 * map-get($spacers, 3) + 2px;
+
+        .pwt-fab-icon {
+            font-size: map-get($font-size, "headline-large")
         }
     }
 }
