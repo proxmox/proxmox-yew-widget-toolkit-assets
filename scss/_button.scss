@@ -222,7 +222,7 @@ border-end-end-radius: 10rem !important;
     padding: map-get($spacers, 3);
 
 
-    width: map-get($font-size, "headline-large") + 2 * map-get($spacers, 3) + 2px;
+    height: map-get($font-size, "headline-large") + 2 * map-get($spacers, 3) + 2px;
     aspect-ratio: 1 / 1;
     flex: 0 0 auto;
     align-items: center;
@@ -230,7 +230,7 @@ border-end-end-radius: 10rem !important;
 
     &.pwt-fab-small {
         padding: map-get($spacers, 1);
-        width: map-get($font-size, "title-large") + 2 * map-get($spacers, 1) + 2px;
+        height: map-get($font-size, "title-large") + 2 * map-get($spacers, 1) + 2px;
 
         .pwt-fab-icon {
             font-size: map-get($font-size, "title-large")
@@ -255,14 +255,14 @@ border-end-end-radius: 10rem !important;
 .pwt-fab-menu-container {
     position: relative;
 
-    --fab-small-button-width: #{map-get($font-size, "title-large") + 2 * map-get($spacers, 1) + 2px};
+    --fab-small-button-height: #{map-get($font-size, "title-large") + 2 * map-get($spacers, 1) + 2px};
 
     .pwt-fab-menu-item {
         position: absolute;
         visibility: hidden;
         opacity: 0;
-        top: calc(50% - var(--fab-small-button-width)/2);
-        left: calc(50% - var(--fab-small-button-width)/2);
+        top: calc(50% - var(--fab-small-button-height)/2);
+        left: calc(50% - var(--fab-small-button-height)/2);
         z-index: -1;
     }
 
@@ -296,67 +296,83 @@ border-end-end-radius: 10rem !important;
         z-index: 1;
     }
 
-    &.pwt-fab-direction-down.active > .pwt-fab-menu-item:nth-child(2) {
+    &.pwt-fab-direction-down.active>.pwt-fab-menu-item:nth-child(2) {
         top: calc(100% + map-get($spacers, 2));
     }
-    &.pwt-fab-direction-down.active > .pwt-fab-menu-item:nth-child(3) {
-        top: calc(100% + map-get($spacers, 2) + 1*(var(--fab-small-button-width) + map-get($spacers, 2)));
-    }
-    &.pwt-fab-direction-down.active > .pwt-fab-menu-item:nth-child(4) {
-        top: calc(100% + map-get($spacers, 2) + 2*(var(--fab-small-button-width) + map-get($spacers, 2)));
-    }
-    &.pwt-fab-direction-down.active > .pwt-fab-menu-item:nth-child(5) {
-        top: calc(100% + map-get($spacers, 2) + 3*(var(--fab-small-button-width) + map-get($spacers, 2)));
-    }
-    &.pwt-fab-direction-down.active > .pwt-fab-menu-item:nth-child(6) {
-        top: calc(100% + map-get($spacers, 2) + 4*(var(--fab-small-button-width) + map-get($spacers, 2)));
+
+    &.pwt-fab-direction-down.active>.pwt-fab-menu-item:nth-child(3) {
+        top: calc(100% + map-get($spacers, 2) + 1*(var(--fab-small-button-height) + map-get($spacers, 2)));
     }
 
-    &.pwt-fab-direction-up.active > .pwt-fab-menu-item:nth-child(2) {
-        top: calc(0px - var(--fab-small-button-width) - map-get($spacers, 2));
-    }
-    &.pwt-fab-direction-up.active > .pwt-fab-menu-item:nth-child(3) {
-        top: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 1*(var(--fab-small-button-width) + map-get($spacers, 2))));
-    }
-    &.pwt-fab-direction-up.active > .pwt-fab-menu-item:nth-child(4) {
-        top: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 2*(var(--fab-small-button-width) + map-get($spacers, 2))));
-    }
-    &.pwt-fab-direction-up.active > .pwt-fab-menu-item:nth-child(5) {
-        top: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 3*(var(--fab-small-button-width) + map-get($spacers, 2))));
-    }
-    &.pwt-fab-direction-up.active > .pwt-fab-menu-item:nth-child(6) {
-        top: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 4*(var(--fab-small-button-width) + map-get($spacers, 2))));
+    &.pwt-fab-direction-down.active>.pwt-fab-menu-item:nth-child(4) {
+        top: calc(100% + map-get($spacers, 2) + 2*(var(--fab-small-button-height) + map-get($spacers, 2)));
     }
 
-    &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(2) {
-        left: calc(0px - var(--fab-small-button-width) - map-get($spacers, 2));
-    }
-    &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(3) {
-        left: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 1*(var(--fab-small-button-width) + map-get($spacers, 2))));
-    }
-    &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(4) {
-        left: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 2*(var(--fab-small-button-width) + map-get($spacers, 2))));
-    }
-    &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(5) {
-        left: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 3*(var(--fab-small-button-width) + map-get($spacers, 2))));
-    }
-    &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(6) {
-        left: calc(0px - var(--fab-small-button-width) - (map-get($spacers, 2) + 4*(var(--fab-small-button-width) + map-get($spacers, 2))));
+    &.pwt-fab-direction-down.active>.pwt-fab-menu-item:nth-child(5) {
+        top: calc(100% + map-get($spacers, 2) + 3*(var(--fab-small-button-height) + map-get($spacers, 2)));
     }
 
-    &.pwt-fab-direction-right.active > .pwt-fab-menu-item:nth-child(2) {
+    &.pwt-fab-direction-down.active>.pwt-fab-menu-item:nth-child(6) {
+        top: calc(100% + map-get($spacers, 2) + 4*(var(--fab-small-button-height) + map-get($spacers, 2)));
+    }
+
+    &.pwt-fab-direction-up.active>.pwt-fab-menu-item:nth-child(2) {
+        top: calc(0px - var(--fab-small-button-height) - map-get($spacers, 2));
+    }
+
+    &.pwt-fab-direction-up.active>.pwt-fab-menu-item:nth-child(3) {
+        top: calc(0px - var(--fab-small-button-height) - (map-get($spacers, 2) + 1*(var(--fab-small-button-height) + map-get($spacers, 2))));
+    }
+
+    &.pwt-fab-direction-up.active>.pwt-fab-menu-item:nth-child(4) {
+        top: calc(0px - var(--fab-small-button-height) - (map-get($spacers, 2) + 2*(var(--fab-small-button-height) + map-get($spacers, 2))));
+    }
+
+    &.pwt-fab-direction-up.active>.pwt-fab-menu-item:nth-child(5) {
+        top: calc(0px - var(--fab-small-button-height) - (map-get($spacers, 2) + 3*(var(--fab-small-button-height) + map-get($spacers, 2))));
+    }
+
+    &.pwt-fab-direction-up.active>.pwt-fab-menu-item:nth-child(6) {
+        top: calc(0px - var(--fab-small-button-height) - (map-get($spacers, 2) + 4*(var(--fab-small-button-height) + map-get($spacers, 2))));
+    }
+
+    &.pwt-fab-direction-left.active>.pwt-fab-menu-item:nth-child(2) {
+        left: calc(0px - var(--fab-small-button-height) - map-get($spacers, 2));
+    }
+
+    &.pwt-fab-direction-left.active>.pwt-fab-menu-item:nth-child(3) {
+        left: calc(0px - var(--fab-small-button-height) - (map-get($spacers, 2) + 1*(var(--fab-small-button-height) + map-get($spacers, 2))));
+    }
+
+    &.pwt-fab-direction-left.active>.pwt-fab-menu-item:nth-child(4) {
+        left: calc(0px - var(--fab-small-button-height) - (map-get($spacers, 2) + 2*(var(--fab-small-button-height) + map-get($spacers, 2))));
+    }
+
+    &.pwt-fab-direction-left.active>.pwt-fab-menu-item:nth-child(5) {
+        left: calc(0px - var(--fab-small-button-height) - (map-get($spacers, 2) + 3*(var(--fab-small-button-height) + map-get($spacers, 2))));
+    }
+
+    &.pwt-fab-direction-left.active>.pwt-fab-menu-item:nth-child(6) {
+        left: calc(0px - var(--fab-small-button-height) - (map-get($spacers, 2) + 4*(var(--fab-small-button-height) + map-get($spacers, 2))));
+    }
+
+    &.pwt-fab-direction-right.active>.pwt-fab-menu-item:nth-child(2) {
         left: calc(100% + map-get($spacers, 2));
     }
-    &.pwt-fab-direction-right.active > .pwt-fab-menu-item:nth-child(3) {
-        left: calc(100% + map-get($spacers, 2) + 1*(var(--fab-small-button-width) + map-get($spacers, 2)));
+
+    &.pwt-fab-direction-right.active>.pwt-fab-menu-item:nth-child(3) {
+        left: calc(100% + map-get($spacers, 2) + 1*(var(--fab-small-button-height) + map-get($spacers, 2)));
     }
-    &.pwt-fab-direction-right.active > .pwt-fab-menu-item:nth-child(4) {
-        left: calc(100% + map-get($spacers, 2) + 2*(var(--fab-small-button-width) + map-get($spacers, 2)));
+
+    &.pwt-fab-direction-right.active>.pwt-fab-menu-item:nth-child(4) {
+        left: calc(100% + map-get($spacers, 2) + 2*(var(--fab-small-button-height) + map-get($spacers, 2)));
     }
-    &.pwt-fab-direction-right.active > .pwt-fab-menu-item:nth-child(5) {
-        left: calc(100% + map-get($spacers, 2) + 3*(var(--fab-small-button-width) + map-get($spacers, 2)));
+
+    &.pwt-fab-direction-right.active>.pwt-fab-menu-item:nth-child(5) {
+        left: calc(100% + map-get($spacers, 2) + 3*(var(--fab-small-button-height) + map-get($spacers, 2)));
     }
-    &.pwt-fab-direction-right.active > .pwt-fab-menu-item:nth-child(6) {
-        left: calc(100% + map-get($spacers, 2) + 4*(var(--fab-small-button-width) + map-get($spacers, 2)));
+
+    &.pwt-fab-direction-right.active>.pwt-fab-menu-item:nth-child(6) {
+        left: calc(100% + map-get($spacers, 2) + 4*(var(--fab-small-button-height) + map-get($spacers, 2)));
     }
 }
