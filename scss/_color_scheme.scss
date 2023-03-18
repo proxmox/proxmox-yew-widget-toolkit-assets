@@ -1,8 +1,14 @@
+@use "sass:math";
+
 @mixin color-scheme-vars($name, $important: false) {
     --pwt-color-background: #{map-get($pwt-color, $name)} #{if($important, '!important', '')};
     --pwt-color: #{map-get($pwt-color, "on-#{$name}")} #{if($important, '!important', '')};
  --pwt-color-emphase: #{map-get($pwt-color, "#{$name}-emphase")} #{if($important, '!important', '')};
  --pwt-color-pressed: #{map-get($pwt-color, "#{$name}-pressed")} #{if($important, '!important', '')};
+
+
+    --pwt-color-transparent-state-hover: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, hover), 100%))} #{if($important, '!important', '')};
+    --pwt-color-transparent-state-press: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, press), 100%))} #{if($important, '!important', '')};
 
 }
 
@@ -10,7 +16,10 @@
     --pwt-color-background: #{map-get($pwt-color, $base)} #{if($important, '!important', '')};
     --pwt-color: #{map-get($pwt-color, $name)} #{if($important, '!important', '')};
     --pwt-color-emphase: #{map-get($pwt-color, "#{$base}-emphase")} #{if($important, '!important', '')};
-    --pwt-color-pressed: #{map-get($pwt-color, "#{$base}-pressed")} #{if($important, '!important', '')};
+ --pwt-color-pressed: #{map-get($pwt-color, "#{$base}-pressed")} #{if($important, '!important', '')};
+
+    --pwt-color-transparent-state-hover: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, hover), 100%))} #{if($important, '!important', '')};
+    --pwt-color-transparent-state-press: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, press), 100%))} #{if($important, '!important', '')};
 }
 
 @mixin color-scheme($name) {

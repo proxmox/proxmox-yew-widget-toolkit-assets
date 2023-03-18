@@ -3,6 +3,10 @@ button {
 }
 
 .pwt-action-icon {
+    @include outline-button-color-scheme-vars(primary, $base: neutral);
+
+    color: var(--pwt-color);
+
     line-height: map-get($line-height, label-large);
 
     display: inline-flex;
@@ -21,7 +25,7 @@ button {
     aspect-ratio: 1 / 1;
 
     &:hover:not(:disabled):not(:active):not(:active) {
-        background-color: rgba(map-get($pwt-color, "on-surface"), map-get($state-layer-opacity, hover));
+        background-color: var(--pwt-color-transparent-state-hover);
     }
 
     &:focus-visible {
@@ -35,7 +39,7 @@ button {
     }
 
     &:active {
-        background-color: rgba(map-get($pwt-color, "on-surface"), map-get($state-layer-opacity, press));
+        background-color: var(--pwt-color-transparent-state-press);
     }
 }
 
