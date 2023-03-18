@@ -56,11 +56,11 @@
         width: auto;
 
         &:hover:not(.disabled) {
-            background-color: map-get($pwt-color, "neutral-emphase");
+            background-color: map-get($pwt-color, "neutral-state-hover");
         }
 
         &:active:not(.disabled) {
-            background-color: map-get($pwt-color, "neutral-pressed");
+            background-color: map-get($pwt-color, "neutral-state-press");
         }
 
         &.disabled {
@@ -84,11 +84,11 @@
         width: auto;
 
         &:hover:not(.disabled) {
-            background-color: map-get($pwt-color, "neutral-emphase");
+            background-color: map-get($pwt-color, "neutral-state-hover");
         }
 
         &:active:not(.disabled) {
-            background-color: map-get($pwt-color, "neutral-pressed");
+            background-color: map-get($pwt-color, "neutral-state-press");
         }
 
         &.disabled {

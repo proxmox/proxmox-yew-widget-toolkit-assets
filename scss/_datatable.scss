@@ -47,7 +47,7 @@
 
     &.table-hover > tr:hover:not(.selected) {
 	cursor: pointer;
-	background-color: map-get($pwt-color, "neutral-emphase") !important;
+	background-color: map-get($pwt-color, "neutral-state-hover") !important;
     }
 
     &.table-bordered td {

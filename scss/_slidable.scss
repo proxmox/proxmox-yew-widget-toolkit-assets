@@ -27,10 +27,10 @@
     align-items: center;
 
     &:active:not(:disabled) {
-        background-color: var(--pwt-color-pressed);
+        background-color: var(--pwt-color-state-press);
     }
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
-        background-color: var(--pwt-color-emphase);
+        background-color: var(--pwt-color-state-hover);
     }
 }

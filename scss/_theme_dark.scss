@@ -81,10 +81,10 @@ $pwt-color: (
             map-get($state-layer-opacity, drag));
 
         $pwt-color: map-merge($pwt-color, ("#{$name}-stripe": $stripe));
-        $pwt-color: map-merge($pwt-color, ("#{$name}-emphase": $emphase));
-        $pwt-color: map-merge($pwt-color, ("#{$name}-pressed": $pressed));
-        $pwt-color: map-merge($pwt-color, ("#{$name}-focus": $focus));
-        $pwt-color: map-merge($pwt-color, ("#{$name}-drag": $drag));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-state-hover": $emphase));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-state-press": $pressed));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-state-focus": $focus));
+        $pwt-color: map-merge($pwt-color, ("#{$name}-state-drag": $drag));
     }
 }
 

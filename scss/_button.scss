@@ -67,18 +67,18 @@ button {
 
     &.pressed,
     &:active:not(:disabled) {
-        background-color: var(--pwt-color-pressed);
+        background-color: var(--pwt-color-state-press);
         box-shadow: none;
     }
 
     &:focus:not(:disabled):not(:active):not(.pressed) {
-        background-color: var(--pwt-color-emphase);
+        background-color: var(--pwt-color-state-hover);
         @include surface-elevation-box-shadow(0);
         z-index: 1; // correctly show shadows
     }
 
     &:hover:not(:disabled):not(:active):not(.pressed) {
-        background-color: var(--pwt-color-emphase);
+        background-color: var(--pwt-color-state-hover);
         @include surface-elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
     }
