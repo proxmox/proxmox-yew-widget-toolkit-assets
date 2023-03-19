@@ -120,12 +120,12 @@ button {
 
 .pwt-segmented-button.pwt-button-elevated>.pwt-button,
 .pwt-button.pwt-button-elevated {
-    &:not(:disabled) {
+    &:not(:disabled):not(.disabled) {
         @include surface-elevation-box-shadow(1);
     }
 
     &.pressed:not(:disabled):not(.disabled),
-    &:focus:not(:disabled):not(.disabled),
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
     &:active:not(:disabled):not(.disabled) {
         @include surface-elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
@@ -143,7 +143,7 @@ button {
     }
 
     &.pressed:not(:disabled):not(.disabled),
-    &:focus:not(:disabled):not(.disabled),
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
     &:active:not(:disabled):not(.disabled) {
         @include surface-elevation-box-shadow(3);
         z-index: 1; // correctly show shadows
@@ -213,7 +213,7 @@ border-end-end-radius: 10rem !important;
     border-radius: map-get($shape-corner, large);
     padding: map-get($spacers, 2);
     height: map-get($font-size, "headline-medium") + 2 * map-get($spacers, 2) + 2px;
-    aspect-ratio: 1 / 1;
+    min-width: map-get($font-size, "headline-medium") + 2 * map-get($spacers, 2) + 2px;
     flex: 0 0 auto;
     align-items: center;
     justify-content: center;
@@ -226,6 +226,7 @@ border-end-end-radius: 10rem !important;
     &.pwt-fab-small {
         padding: map-get($spacers, 1);
         height: map-get($font-size, "title-large") + 2 * map-get($spacers, 1) + 2px;
+        min-width: map-get($font-size, "title-large") + 2 * map-get($spacers, 1) + 2px;
 
         .pwt-fab-icon {
             font-size: map-get($font-size, "title-large")
@@ -235,6 +236,7 @@ border-end-end-radius: 10rem !important;
     &.pwt-fab-large {
         padding: map-get($spacers, 3);
         height: map-get($font-size, "headline-large") + 2 * map-get($spacers, 3) + 2px;
+        min-width: map-get($font-size, "headline-large") + 2 * map-get($spacers, 3) + 2px;
 
         .pwt-fab-icon {
             font-size: map-get($font-size, "headline-large")
