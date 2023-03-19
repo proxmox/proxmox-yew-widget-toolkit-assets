@@ -122,6 +122,7 @@ $shape-corner: (
 );
 
 $button-corner-shape: map-get($shape-corner, none);
+$fab-corner-shape: map-get($shape-corner, small);
 $progress-corner-shape: map-get($shape-corner, none);
 $nav-link-corner-shape: map-get($shape-corner, none);
 $nav-pills-corner-shape: map-get($shape-corner, none);

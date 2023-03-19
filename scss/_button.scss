@@ -212,7 +212,7 @@ border-end-end-radius: 10rem !important;
 
 
 .pwt-fab {
-    border-radius: map-get($shape-corner, large);
+    border-radius: $fab-corner-shape;
     padding: map-get($spacers, 2);
     height: map-get($font-size, "headline-medium") + 2 * map-get($spacers, 2) + 2px;
     min-width: map-get($font-size, "headline-medium") + 2 * map-get($spacers, 2) + 2px;

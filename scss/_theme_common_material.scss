@@ -9,6 +9,7 @@ $pwt-font-sans-serif: "Roboto Flex";
 
 $spacer: 10px;
 $button-corner-shape: map-get($shape-corner, full);
+$fab-corner-shape: map-get($shape-corner, large);
 $progress-corner-shape: map-get($shape-corner, extra-small);
 $nav-link-corner-shape: map-get($shape-corner, full);
 $nav-pills-corner-shape: map-get($shape-corner, full);
