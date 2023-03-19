@@ -6,10 +6,18 @@
  --pwt-color-state-hover: #{map-get($pwt-color, "#{$name}-state-hover")} #{if($important, '!important', '')};
  --pwt-color-state-press: #{map-get($pwt-color, "#{$name}-state-press")} #{if($important, '!important', '')};
 
+    @each $level, $opacity in $elevation-levels-tint-opacity {
+        $tint: mix(map-get($pwt-color, "on-#{$name}"), map-get($pwt-color, $name), $opacity);
+        --pwt-color-elevation#{$level}: #{$tint} #{if($important, '!important', '')};
+        @each $state, $state-opacity in $state-layer-opacity {
+            $tint: mix(map-get($pwt-color, "on-#{$name}"), map-get($pwt-color, $name), $opacity + $state-opacity);
+            --pwt-color-elevation#{$level}-#{$state}: #{$tint} #{if($important, '!important', '')};
+        }
+    }
 
-    --pwt-color-transparent-state-hover: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, hover), 100%))} #{if($important, '!important', '')};
-    --pwt-color-transparent-state-press: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, press), 100%))} #{if($important, '!important', '')};
-
+    @each $state in (stripe, hover, focus, drag) {
+        --pwt-color-transparent-state-#{$state}: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, $state), 100%))} #{if($important, '!important', '')};
+    }
 }
 
 @mixin outline-button-color-scheme-vars($name, $base: surface, $important: false) {
@@ -18,8 +26,16 @@
     --pwt-color-state-hover: #{map-get($pwt-color, "#{$base}-state-hover")} #{if($important, '!important', '')};
  --pwt-color-state-press: #{map-get($pwt-color, "#{$base}-state-press")} #{if($important, '!important', '')};
 
-    --pwt-color-transparent-state-hover: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, hover), 100%))} #{if($important, '!important', '')};
-    --pwt-color-transparent-state-press: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, press), 100%))} #{if($important, '!important', '')};
+    @each $level, $opacity in $elevation-levels-tint-opacity {
+        --pwt-color-elevation#{$level}: #{change-color(map-get($pwt-color, $name), $alpha: math.div($opacity, 100%))} #{if($important, '!important', '')};
+        @each $state, $state-opacity in $state-layer-opacity {
+            --pwt-color-elevation#{$level}-#{$state}: #{change-color(map-get($pwt-color, $name), $alpha: math.div($opacity + $state-opacity, 100%))} #{if($important, '!important', '')};
+        }
+    }
+
+    @each $state in (stripe, hover, focus, drag) {
+    --pwt-color-transparent-state-#{$state}: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, $state), 100%))} #{if($important, '!important', '')};
+    }
 }
 
 @mixin color-scheme($name) {

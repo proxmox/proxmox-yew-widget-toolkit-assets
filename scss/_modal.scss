@@ -4,7 +4,7 @@ dialog {
     background: map-get($pwt-color, "neutral");
     border: 1px solid map-get($pwt-color, "border") !important;
 
-    @include surface-elevation-box-shadow(3);
+    @include elevation-box-shadow(3);
 
     box-sizing: border-box;
 

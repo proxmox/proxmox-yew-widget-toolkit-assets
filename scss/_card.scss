@@ -3,38 +3,58 @@
 /// Cards
 
 @mixin surface-elevation-rules($default) {
-    @include surface-elevation-box-shadow($default);
-    @include surface-elevation-background-color($default, none);
+    @include elevation-box-shadow($default);
+
+    background-color: var(--pwt-color-elevation#{$default});
 
     @each $level, $distance in $elevation-levels {
         &.pwt-elevation#{$level} {
-            @include surface-elevation-box-shadow($level);
-            @include surface-elevation-background-color($level, none);
+            @include elevation-box-shadow($level);
+            @include elevation-background-color($level, none);
         }
     }
 }
 
 .pwt-card {
-    background-color: map-get($pwt-color, "surface");
-
+    @include color-scheme-vars("surface");
     @include surface-elevation-rules(1);
 
-    padding: map-get($spacers, 1) map-get($spacers, 2);
-    color: map-get($pwt-color, "on-surface");
+    color: var(--pwt-color);
 
+    padding: map-get($spacers, 1) map-get($spacers, 2);
     border-radius: $card-corner-shape;
     transition: 0.1s;
 
     &.pwt-interactive {
 
         &:hover {
-            @include surface-elevation-box-shadow(2);
-            @include surface-elevation-background-color(2, hover);
+            @include elevation-box-shadow(2);
+            @include elevation-background-color(2, hover);
         }
 
         &:active {
-            @include surface-elevation-box-shadow(1);
-            @include surface-elevation-background-color(1, press);
+            @include elevation-box-shadow(1);
+            @include elevation-background-color(1, press);
+        }
+    }
+}
+
+.pwt-card.pwt-card-outline {
+    @include elevation-box-shadow(0);
+    @include elevation-background-color(0, none);
+
+    border: 2px solid map-get($pwt-color, high-contrast-border);
+
+    &.pwt-interactive {
+
+        &:hover {
+            @include elevation-box-shadow(0);
+            @include elevation-background-color(0, hover);
+        }
+
+        &:active {
+            @include elevation-box-shadow(0);
+            @include elevation-background-color(0, press);
         }
     }
 }

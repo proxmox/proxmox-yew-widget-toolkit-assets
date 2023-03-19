@@ -69,13 +69,13 @@ button {
 
     &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         background-color: var(--pwt-color-state-hover);
-        @include surface-elevation-box-shadow(0);
+        @include elevation-box-shadow(0);
         z-index: 1; // correctly show shadows
     }
 
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         background-color: var(--pwt-color-state-hover);
-        @include surface-elevation-box-shadow(1);
+        @include elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
     }
 
@@ -89,28 +89,28 @@ button {
         cursor: auto;
         opacity: 0.5;
         @include color-scheme-vars("surface", $important: true);
-        @include surface-elevation-box-shadow(0);
+        @include elevation-box-shadow(0);
     }
 }
 
 .pwt-button.pwt-button-text {
     @include outline-button-color-scheme-vars(primary, $base: neutral);
-    @include surface-elevation-box-shadow(0);
+    @include elevation-box-shadow(0);
 
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include surface-elevation-box-shadow(0);
+        @include elevation-box-shadow(0);
     }
 }
 
 .pwt-button.pwt-button-outline {
-    @include surface-elevation-box-shadow(0);
+    @include elevation-box-shadow(0);
     border: 2px solid map-get($pwt-color, high-contrast-border);
 
     // Note: outline buttons must have same size as filled buttons
     padding: map-get($spacers, 1) map-get($spacers, 2);
 
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include surface-elevation-box-shadow(0);
+        @include elevation-box-shadow(0);
     }
 }
 
@@ -123,36 +123,36 @@ button {
 .pwt-segmented-button.pwt-button-elevated>.pwt-button,
 .pwt-button.pwt-button-elevated {
     &:not(:disabled):not(.disabled) {
-        @include surface-elevation-box-shadow(1);
+        @include elevation-box-shadow(1);
     }
 
     &.pressed:not(:disabled):not(.disabled),
     &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
     &:active:not(:disabled):not(.disabled) {
-        @include surface-elevation-box-shadow(1);
+        @include elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
     }
 
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include surface-elevation-box-shadow(2);
+        @include elevation-box-shadow(2);
         z-index: 1; // correctly show shadows
     }
 }
 
 .pwt-button.pwt-fab {
     &:not(:disabled):not(.disabled) {
-        @include surface-elevation-box-shadow(3);
+        @include elevation-box-shadow(3);
     }
 
     &.pressed:not(:disabled):not(.disabled),
     &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
     &:active:not(:disabled):not(.disabled) {
-        @include surface-elevation-box-shadow(3);
+        @include elevation-box-shadow(3);
         z-index: 1; // correctly show shadows
     }
 
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include surface-elevation-box-shadow(4);
+        @include elevation-box-shadow(4);
         z-index: 1; // correctly show shadows
     }
 }

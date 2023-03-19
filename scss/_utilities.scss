@@ -401,6 +401,6 @@ $radius in $shape-corner {
 @each $level,
 $distance in $elevation-levels {
     .pwt-shadow#{$level} {
-        @include surface-elevation-box-shadow($level);
+        @include elevation-box-shadow($level);
     }
 }
