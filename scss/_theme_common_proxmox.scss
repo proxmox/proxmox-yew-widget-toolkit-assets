@@ -37,6 +37,13 @@ $color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $s
 // use adjacent color as tertiary, reduce saturation
 $color-seed-tertiary: adjust-color($color-seed-primary, $hue: +$color-shift, $saturation: -5%);
 
+// Test with brighter color from bootstrap
+
+$color-seed-primary: #0b5ed7;
+//$color-seed-secondary: #6c757d;
+//$color-seed-tertiary: #198754;
+$color-seed-secondary: #198754;
+$color-seed-tertiary: #0dcaf0;
 
 $palette-primary: tonal_palette($color-seed-primary);
 $palette-secondary: tonal_palette($color-seed-secondary);
