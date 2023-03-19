@@ -20,6 +20,7 @@
 		&.pwt-meter-distance-2 {
 			background: map-get($pwt-color, "error-container");
 		}
+	}
 
 		.pwt-meter-text {
 			position: absolute;
@@ -31,5 +32,5 @@
 			padding: map-get($spacers, 1) map-get($spacers, 2);
 			z-index: 1;
 		}
-	}
+
 }
