@@ -31,6 +31,7 @@ button {
         outline-offset: -2px;
     }
 
+    &.disabled,
     &:disabled {
         cursor: auto;
         opacity: 0.5;
@@ -83,6 +84,7 @@ button {
         outline-offset: -2px;
     }
 
+    &.disabled,
     &:disabled {
         cursor: auto;
         opacity: 0.5;
@@ -112,9 +114,9 @@ button {
     }
 }
 
-.pwt-button.pwt-button-outline:not(:disabled),
-.pwt-button.pwt-button-elevated:not(:disabled),
-.pwt-button.pwt-fab:not(:disabled) {
+.pwt-button.pwt-button-outline:not(:disabled):not(.disabled),
+.pwt-button.pwt-button-elevated:not(:disabled):not(.disabled),
+.pwt-button.pwt-fab:not(:disabled):not(.disabled) {
     @include outline-button-color-scheme-vars(primary);
 }
 
