@@ -27,9 +27,11 @@
  --pwt-color-state-press: #{map-get($pwt-color, "#{$base}-state-press")} #{if($important, '!important', '')};
 
     @each $level, $opacity in $elevation-levels-tint-opacity {
-        --pwt-color-elevation#{$level}: #{change-color(map-get($pwt-color, $name), $alpha: math.div($opacity, 100%))} #{if($important, '!important', '')};
+        $tint: mix(map-get($pwt-color, $name), map-get($pwt-color, $base), $opacity);
+        --pwt-color-elevation#{$level}: #{$tint} #{if($important, '!important', '')};
         @each $state, $state-opacity in $state-layer-opacity {
-            --pwt-color-elevation#{$level}-#{$state}: #{change-color(map-get($pwt-color, $name), $alpha: math.div($opacity + $state-opacity, 100%))} #{if($important, '!important', '')};
+            $tint: mix(map-get($pwt-color, $name), map-get($pwt-color, $base), $opacity + $state-opacity);
+            --pwt-color-elevation#{$level}-#{$state}: #{$tint} #{if($important, '!important', '')};
         }
     }
 
