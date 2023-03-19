@@ -4,6 +4,7 @@ button {
 
 .pwt-action-icon {
     @include outline-button-color-scheme-vars(primary, $base: neutral);
+    @include state-layer-transparent;
 
     color: var(--pwt-color);
 
@@ -24,9 +25,6 @@ button {
     box-sizing: border-box;
     aspect-ratio: 1 / 1;
 
-    &:hover:not(:disabled):not(:active):not(:active) {
-        background-color: var(--pwt-color-transparent-state-hover);
-    }
 
     &:focus-visible {
         outline: 2px solid $color-focus;
@@ -36,10 +34,6 @@ button {
     &:disabled {
         cursor: auto;
         opacity: 0.5;
-    }
-
-    &:active {
-        background-color: var(--pwt-color-transparent-state-press);
     }
 }
 
@@ -65,19 +59,19 @@ button {
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
 
-    &.pressed,
+    &.pressed:not(.disabled),
     &:active:not(:disabled) {
         background-color: var(--pwt-color-state-press);
         box-shadow: none;
     }
 
-    &:focus:not(:disabled):not(:active):not(.pressed) {
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         background-color: var(--pwt-color-state-hover);
         @include surface-elevation-box-shadow(0);
         z-index: 1; // correctly show shadows
     }
 
-    &:hover:not(:disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         background-color: var(--pwt-color-state-hover);
         @include surface-elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
