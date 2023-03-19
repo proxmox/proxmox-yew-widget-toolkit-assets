@@ -39,6 +39,7 @@ button {
 
 .pwt-button {
     @include color-scheme-vars("surface");
+
     display: inline-flex;
     align-items: baseline;
     gap: $icon-spacer;
@@ -59,8 +60,8 @@ button {
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
 
-    &.pressed:not(.disabled),
-    &:active:not(:disabled) {
+    &.pressed:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
         background-color: var(--pwt-color-state-press);
         box-shadow: none;
     }
@@ -94,7 +95,7 @@ button {
     @include outline-button-color-scheme-vars(primary, $base: neutral);
     @include surface-elevation-box-shadow(0);
 
-    &:hover:not(:disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         @include surface-elevation-box-shadow(0);
     }
 }
@@ -106,7 +107,7 @@ button {
     // Note: outline buttons must have same size as filled buttons
     padding: map-get($spacers, 1) map-get($spacers, 2);
 
-    &:hover:not(:disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         @include surface-elevation-box-shadow(0);
     }
 }
@@ -123,32 +124,32 @@ button {
         @include surface-elevation-box-shadow(1);
     }
 
-    &.pressed,
-    &:focus:not(:disabled):not(:active):not(.pressed),
-    &:active:not(:disabled) {
+    &.pressed:not(:disabled):not(.disabled),
+    &:focus:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
         @include surface-elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
     }
 
-    &:hover:not(:disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         @include surface-elevation-box-shadow(2);
         z-index: 1; // correctly show shadows
     }
 }
 
 .pwt-button.pwt-fab {
-    &:not(:disabled) {
+    &:not(:disabled):not(.disabled) {
         @include surface-elevation-box-shadow(3);
     }
 
-    &.pressed,
-    &:focus:not(:disabled):not(:active):not(.pressed),
-    &:active:not(:disabled) {
+    &.pressed:not(:disabled):not(.disabled),
+    &:focus:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
         @include surface-elevation-box-shadow(3);
         z-index: 1; // correctly show shadows
     }
 
-    &:hover:not(:disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         @include surface-elevation-box-shadow(4);
         z-index: 1; // correctly show shadows
     }
