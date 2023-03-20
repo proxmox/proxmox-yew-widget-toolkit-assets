@@ -15,7 +15,7 @@
         }
     }
 
-    @each $state in (stripe, hover, focus, drag) {
+    @each $state in (stripe, hover, focus, press, drag) {
         --pwt-color-transparent-state-#{$state}: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, $state), 100%))} #{if($important, '!important', '')};
     }
 }
@@ -35,7 +35,7 @@
         }
     }
 
-    @each $state in (stripe, hover, focus, drag) {
+    @each $state in (stripe, hover, focus, press, drag) {
     --pwt-color-transparent-state-#{$state}: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, $state), 100%))} #{if($important, '!important', '')};
     }
 }
