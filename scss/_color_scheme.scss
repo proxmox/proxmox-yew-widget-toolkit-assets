@@ -1,47 +1,56 @@
 @use "sass:math";
 
 @mixin color-scheme-vars($name, $important: false) {
-    --pwt-color-background: #{map-get($pwt-color, $name)} #{if($important, '!important', '')};
-    --pwt-color: #{map-get($pwt-color, "on-#{$name}")} #{if($important, '!important', '')};
- --pwt-color-state-hover: #{map-get($pwt-color, "#{$name}-state-hover")} #{if($important, '!important', '')};
- --pwt-color-state-press: #{map-get($pwt-color, "#{$name}-state-press")} #{if($important, '!important', '')};
+    --pwt-color-background: #{map-get($pwt-color, $name)} #{if($important, "!important", "")};
+    --pwt-color: #{map-get($pwt-color, "on-#{$name}")} #{if($important, " !important", " ")};
+    --pwt-color-state-hover: #{map-get($pwt-color, "#{$name}-state-hover")} #{if($important, " !important", " ")};
+    --pwt-color-state-press: #{map-get($pwt-color, "#{$name}-state-press")} #{if($important, " !important", " ")};
 
     @each $level, $opacity in $elevation-levels-tint-opacity {
         $tint: mix(map-get($pwt-color, "on-#{$name}"), map-get($pwt-color, $name), $opacity);
-        --pwt-color-elevation#{$level}: #{$tint} #{if($important, '!important', '')};
+        --pwt-color-elevation#{$level}: #{$tint} #{if($important, "!important", "")};
+
         @each $state, $state-opacity in $state-layer-opacity {
             $tint: mix(map-get($pwt-color, "on-#{$name}"), map-get($pwt-color, $name), $opacity + $state-opacity);
-            --pwt-color-elevation#{$level}-#{$state}: #{$tint} #{if($important, '!important', '')};
+            --pwt-color-elevation#{$level}-#{$state}: #{$tint} #{if($important, "!important", "")};
         }
     }
 
     @each $state in (stripe, hover, focus, press, drag) {
-        --pwt-color-transparent-state-#{$state}: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, $state), 100%))} #{if($important, '!important', '')};
+        --pwt-color-transparent-state-#{$state}: #{change-color(
+                map-get($pwt-color, $name),
+                $alpha: math.div(map-get($state-layer-opacity, $state), 100%)
+            )}
+            #{if($important, "!important", "")};
     }
 }
 
 @mixin outline-button-color-scheme-vars($name, $base: surface, $important: false) {
-    --pwt-color-background: #{map-get($pwt-color, $base)} #{if($important, '!important', '')};
-    --pwt-color: #{map-get($pwt-color, $name)} #{if($important, '!important', '')};
-    --pwt-color-state-hover: #{map-get($pwt-color, "#{$base}-state-hover")} #{if($important, '!important', '')};
- --pwt-color-state-press: #{map-get($pwt-color, "#{$base}-state-press")} #{if($important, '!important', '')};
+    --pwt-color-background: #{map-get($pwt-color, $base)} #{if($important, "!important", "")};
+    --pwt-color: #{map-get($pwt-color, $name)} #{if($important, "!important", "")};
+    --pwt-color-state-hover: #{map-get($pwt-color, "#{$base}-state-hover")} #{if($important, " !important", " ")};
+    --pwt-color-state-press: #{map-get($pwt-color, "#{$base}-state-press")} #{if($important, " !important", " ")};
 
     @each $level, $opacity in $elevation-levels-tint-opacity {
         $tint: mix(map-get($pwt-color, $name), map-get($pwt-color, $base), $opacity);
-        --pwt-color-elevation#{$level}: #{$tint} #{if($important, '!important', '')};
+        --pwt-color-elevation#{$level}: #{$tint} #{if($important, "!important", "")};
+
         @each $state, $state-opacity in $state-layer-opacity {
             $tint: mix(map-get($pwt-color, $name), map-get($pwt-color, $base), $opacity + $state-opacity);
-            --pwt-color-elevation#{$level}-#{$state}: #{$tint} #{if($important, '!important', '')};
+            --pwt-color-elevation#{$level}-#{$state}: #{$tint} #{if($important, "!important", "")};
         }
     }
 
     @each $state in (stripe, hover, focus, press, drag) {
-    --pwt-color-transparent-state-#{$state}: #{change-color(map-get($pwt-color, $name), $alpha: math.div(map-get($state-layer-opacity, $state), 100%))} #{if($important, '!important', '')};
+        --pwt-color-transparent-state-#{$state}: #{change-color(
+                map-get($pwt-color, $name),
+                $alpha: math.div(map-get($state-layer-opacity, $state), 100%)
+            )}
+            #{if($important, "!important", "")};
     }
 }
 
 @mixin color-scheme($name) {
-
     .pwt-scheme-#{$name} {
         @include color-scheme-vars($name, $important: true);
     }

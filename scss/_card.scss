@@ -26,7 +26,6 @@
     transition: 0.1s;
 
     &.pwt-interactive {
-
         &:hover {
             @include elevation-box-shadow(2);
             @include elevation-background-color(2, hover);
@@ -48,9 +47,7 @@
     @include elevation-box-shadow(0);
     @include elevation-background-color(0, none);
 
-
     &.pwt-interactive {
-
         &:hover {
             @include elevation-box-shadow(0);
             @include elevation-background-color(0, hover);

@@ -4,11 +4,11 @@
     color: map-get($pwt-color, "on-neutral");
     z-index: $zindex-dropdown;
 
-	@include elevation-box-shadow(1);
+    @include elevation-box-shadow(1);
 
-    max-height:100vh;
-    max-width:100vw;
-    overflow:auto;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: auto;
 }
 
 .pwt-dropdown[data-show] {

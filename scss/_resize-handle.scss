@@ -10,7 +10,7 @@
 
 .row-split-handle:hover,
 .row-split-handle:focus-visible {
-        background: map-get($pwt-color, "neutral-state-press");
+    background: map-get($pwt-color, "neutral-state-press");
 }
 
 /* Visible resize handle (horizontal) */
@@ -25,7 +25,7 @@
 
 .column-split-handle:hover,
 .column-split-handle:focus-visible {
-        background: map-get($pwt-color, "neutral-state-press");
+    background: map-get($pwt-color, "neutral-state-press");
 }
 
 /* Invisible resize handle */

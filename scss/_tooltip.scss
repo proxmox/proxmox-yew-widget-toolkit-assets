@@ -14,38 +14,38 @@
     @include font_and_line_height("body-large", $important: true);
 }
 
-.tooltip[data-popper-placement^='top'] > .tooltip-arrow {
+.tooltip[data-popper-placement^="top"] > .tooltip-arrow {
     bottom: -4px;
 }
 
-.tooltip[data-popper-placement^='bottom'] > .tooltip-arrow {
+.tooltip[data-popper-placement^="bottom"] > .tooltip-arrow {
     top: -4px;
 }
 
-.tooltip[data-popper-placement^='left'] > .tooltip-arrow {
+.tooltip[data-popper-placement^="left"] > .tooltip-arrow {
     right: -4px;
 }
 
-.tooltip[data-popper-placement^='right'] > .tooltip-arrow {
+.tooltip[data-popper-placement^="right"] > .tooltip-arrow {
     left: -4px;
 }
 
 .tooltip-arrow,
 .tooltip-arrow::before {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: inherit;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
 }
 
 .tooltip-arrow {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .tooltip-arrow::before {
-  visibility: visible;
-  content: '';
-  transform: rotate(45deg);
+    visibility: visible;
+    content: "";
+    transform: rotate(45deg);
 }
 
 .tooltip[data-show] {

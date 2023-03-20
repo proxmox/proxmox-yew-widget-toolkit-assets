@@ -5,11 +5,14 @@
     box-shadow: $color-shadow 0px math.div($distance, 2) $distance;
 }
 
-
 // background color for elevated "surface"
 @mixin surface-elevation-background-color($level, $state) {
     $opacity: map-get($elevation-levels-tint-opacity, $level);
-    background-color: mix($color-surface-tint, map-get($pwt-color, "surface"), $opacity + map-get($state-layer-opacity, $state));
+    background-color: mix(
+        $color-surface-tint,
+        map-get($pwt-color, "surface"),
+        $opacity + map-get($state-layer-opacity, $state)
+    );
 }
 // elevation background color for var color
 @mixin elevation-background-color($level, $state) {

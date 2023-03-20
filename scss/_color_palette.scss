@@ -1,14 +1,4 @@
-
-$color-names: (
-    neutral,
-    surface,
-    neutral-alt,
-    primary,
-    secondary,
-    tertiary,
-    error,
-    warning,
-);
+$color-names: (neutral, surface, neutral-alt, primary, secondary, tertiary, error, warning);
 
 $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 30, 20, 15, 10, 5, 0);
 
@@ -32,7 +22,12 @@ $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 30, 20, 15, 10, 5, 0
 
     @each $percentage in $color-scheme-values {
         $new: hct(list.nth($base-hct, 1), list.nth($base-hct, 2), $percentage);
-        $palette: map-merge($palette, ($percentage: $new));
+        $palette: map-merge(
+            $palette,
+            (
+                $percentage: $new,
+            )
+        );
     }
 
     @return $palette;

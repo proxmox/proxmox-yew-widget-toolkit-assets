@@ -1,5 +1,4 @@
-@each $name,
-$value in $spacers {
+@each $name, $value in $spacers {
     .pwt-p-#{$name} {
         padding: $value !important;
     }
@@ -89,14 +88,7 @@ $value in $spacers {
     }
 }
 
-$white-space-values: (
-    normal,
-    nowrap,
-    pre,
-    pre-wrap,
-    pre-line,
-    break-spaces
-);
+$white-space-values: (normal, nowrap, pre, pre-wrap, pre-line, break-spaces);
 
 @each $value in $white-space-values {
     .pwt-white-space-#{$value} {
@@ -110,12 +102,7 @@ $white-space-values: (
     white-space: nowrap;
 }
 
-$user-select-values: (
-    auto,
-    none,
-    text,
-    all
-);
+$user-select-values: (auto, none, text, all);
 
 @each $value in $user-select-values {
     .pwt-user-select-#{$value} {
@@ -123,17 +110,7 @@ $user-select-values: (
     }
 }
 
-$text-align-values: (
-    start,
-    end,
-    left,
-    right,
-    center,
-    justify,
-    justify-all
-);
-;
-
+$text-align-values: (start, end, left, right, center, justify, justify-all);
 @each $value in $text-align-values {
     .pwt-text-align-#{$value} {
         text-align: $value !important;
@@ -145,11 +122,10 @@ $height-width-values: (
     50: 50%,
     75: 75%,
     100: 100%,
-    auto: auto
+    auto: auto,
 );
 
-@each $name,
-$value in $height-width-values {
+@each $name, $value in $height-width-values {
     .pwt-h-#{$name} {
         height: $value !important;
         box-sizing: border-box;
@@ -228,7 +204,7 @@ $justify-content-values: (
     space-between,
     space-around,
     space-evenly,
-    stretch,
+    stretch
 );
 
 @each $value in $justify-content-values {
@@ -237,16 +213,7 @@ $justify-content-values: (
     }
 }
 
-$align-items-values: (
-    normal,
-    flex-start,
-    flex-end,
-    center,
-    start,
-    end,
-    baseline,
-    stretch,
-);
+$align-items-values: (normal, flex-start, flex-end, center, start, end, baseline, stretch);
 
 @each $value in $align-items-values {
     .pwt-align-items-#{$value} {
@@ -254,15 +221,7 @@ $align-items-values: (
     }
 }
 
-$align-self-values: (
-    auto,
-    normal,
-    flex-start,
-    flex-end,
-    center,
-    baseline,
-    stretch,
-);
+$align-self-values: (auto, normal, flex-start, flex-end, center, baseline, stretch);
 
 @each $value in $align-self-values {
     .pwt-align-self-#{$value} {
@@ -355,8 +314,7 @@ $position-values: absolute fixed relative sticky static;
     border-bottom: 0 !important;
 }
 
-@each $name,
-$radius in $shape-corner {
+@each $name, $radius in $shape-corner {
     .pwt-shape-#{$name} {
         border-radius: $radius !important;
     }
@@ -398,8 +356,7 @@ $radius in $shape-corner {
     }
 }
 
-@each $level,
-$distance in $elevation-levels {
+@each $level, $distance in $elevation-levels {
     .pwt-shadow#{$level} {
         @include elevation-box-shadow($level);
     }

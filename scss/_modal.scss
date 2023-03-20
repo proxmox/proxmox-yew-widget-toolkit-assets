@@ -18,7 +18,7 @@ dialog {
     &:not(.pwt-dropdown) {
         border-radius: $dialog-corner-shape;
     }
- }
+}
 
 // Note: css var() does not work here
 // see: https://bugs.chromium.org/p/chromium/issues/detail?id=996467
@@ -36,63 +36,73 @@ dialog .dialog-resize-handle {
     user-select: none;
     touch-action: none;
 
-    &.west, &.east, &.north-east, &.north-west, &.south-east, &.south-west {
-	width: 5px;
+    &.west,
+    &.east,
+    &.north-east,
+    &.north-west,
+    &.south-east,
+    &.south-west {
+        width: 5px;
     }
 
-    &.north, &.south, &.north-east, &.north-west, &.south-east, &.south-west {
-	height: 5px;
+    &.north,
+    &.south,
+    &.north-east,
+    &.north-west,
+    &.south-east,
+    &.south-west {
+        height: 5px;
     }
 
     &.west {
-	top: 5px;
-	bottom: 5px;
-	left: 0px;
-	cursor: w-resize;
+        top: 5px;
+        bottom: 5px;
+        left: 0px;
+        cursor: w-resize;
     }
 
     &.east {
-	top: 5px;
-	bottom: 5px;
-	right: 0px;
-	cursor: e-resize;
+        top: 5px;
+        bottom: 5px;
+        right: 0px;
+        cursor: e-resize;
     }
 
     &.north {
-	top: 0px;
-	left: 5px;
-	right: 5px;
-	cursor: n-resize;
+        top: 0px;
+        left: 5px;
+        right: 5px;
+        cursor: n-resize;
     }
 
     &.south {
-	bottom: 0px;
-	left: 5px;
-	right: 5px;
-	cursor: s-resize;
+        bottom: 0px;
+        left: 5px;
+        right: 5px;
+        cursor: s-resize;
     }
 
     &.north-west {
-	top: 0px;
-	left: 0px;
-	cursor: nw-resize;
+        top: 0px;
+        left: 0px;
+        cursor: nw-resize;
     }
 
     &.north-east {
-	top: 0px;
-	right: 0px;
-	cursor: ne-resize;
+        top: 0px;
+        right: 0px;
+        cursor: ne-resize;
     }
 
     &.south-west {
-	bottom: 0px;
-	left: 0px;
-	cursor: sw-resize;
+        bottom: 0px;
+        left: 0px;
+        cursor: sw-resize;
     }
 
     &.south-east {
-	bottom: 0px;
-	right: 0px;
-	cursor: se-resize;
+        bottom: 0px;
+        right: 0px;
+        cursor: se-resize;
     }
 }

@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Roboto Flex';
-    src: url("../fonts/RobotoFlexVariableFont.ttf") format('truetype');
+    font-family: "Roboto Flex";
+    src: url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
 }
 
 $pwt-font-sans-serif: "Roboto Flex";
@@ -19,7 +19,6 @@ $color-seed-error: #b00020;
 $color-seed-warning: orange;
 $color-seed-neutral: #fff;
 
-
 // // Proxmox brand colors
 // $proxmox-brand-color: #e57000;
 // // compute a complementary blue (cold color)
@@ -35,7 +34,7 @@ $color-seed-primary: adjust-color($color-seed-primary, $saturation: -30%);
 $color-shift: 15deg;
 $color-seed-secondary: adjust-color($color-seed-primary, $hue: -$color-shift, $saturation: -10%);
 // use adjacent color as tertiary, reduce saturation
-$color-seed-tertiary: adjust-color($color-seed-primary, $hue: +$color-shift, $saturation: -5%);
+$color-seed-tertiary: adjust-color($color-seed-primary, $hue: + $color-shift, $saturation: -5%);
 
 // Test with brighter color from bootstrap
 
@@ -56,7 +55,6 @@ $palette-neutral: tonal_palette($color-seed-neutral);
 // use primary with 5% saturation for neutral-alt
 $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 $palette-neutral-alt: tonal_palette($color-seed-neutral-alt);
-
 
 $line-height: (
     display-large: 44px,

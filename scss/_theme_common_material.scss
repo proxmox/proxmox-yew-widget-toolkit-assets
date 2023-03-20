@@ -1,8 +1,8 @@
 // Setting to create a Material Design like GUI
 
 @font-face {
-    font-family: 'Roboto Flex';
-    src: url("../fonts/RobotoFlexVariableFont.ttf") format('truetype');
+    font-family: "Roboto Flex";
+    src: url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
 }
 
 $pwt-font-sans-serif: "Roboto Flex";
@@ -18,9 +18,9 @@ $input-corner-shape: map-get($shape-corner, extra-small);
 $card-corner-shape: map-get($shape-corner, extra-large);
 $dialog-corner-shape: map-get($shape-corner, extra-large);
 
-$color-seed-primary: #6750A4;
-$color-seed-secondary: #958DA5;
-$color-seed-tertiary: #B58392;
+$color-seed-primary: #6750a4;
+$color-seed-secondary: #958da5;
+$color-seed-tertiary: #b58392;
 $color-seed-neutral: #fff;
 
 $color-seed-error: #b3261e;

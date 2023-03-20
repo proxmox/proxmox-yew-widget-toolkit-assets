@@ -9,19 +9,19 @@
     user-select: none;
 
     td {
-	outline: 0;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+        outline: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     td.cell-cursor {
-	outline: 2px solid map-get($pwt-color, "on-neutral");
-	outline-offset: -2px;
+        outline: 2px solid map-get($pwt-color, "on-neutral");
+        outline-offset: -2px;
     }
 
     tr {
-	border-bottom: 1px solid map-get($pwt-color, "border");
+        border-bottom: 1px solid map-get($pwt-color, "border");
     }
 
     /* disbale row corsor for now (cell cursor is enough)
@@ -36,36 +36,36 @@
     }
 
     td div {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     &.table-striped > tr:nth-of-type(even):not(.selected) {
-	background-color: map-get($pwt-color, "neutral-stripe");
+        background-color: map-get($pwt-color, "neutral-stripe");
     }
 
     &.table-hover > tr:hover:not(.selected) {
-	cursor: pointer;
-	background-color: map-get($pwt-color, "neutral-state-hover") !important;
+        cursor: pointer;
+        background-color: map-get($pwt-color, "neutral-state-hover") !important;
     }
 
     &.table-bordered td {
-	border-inline-end: 1px solid map-get($pwt-color, "border");
+        border-inline-end: 1px solid map-get($pwt-color, "border");
     }
 
     &.table-borderless tr {
-	// make the border invisible
-	border-color: map-get($pwt-color, "neutral");
+        // make the border invisible
+        border-color: map-get($pwt-color, "neutral");
     }
 
     .pwt-datatable-cell {
-	padding: map-get($spacers, 1) map-get($spacers, 2);
+        padding: map-get($spacers, 1) map-get($spacers, 2);
     }
 }
 
 .pwt-datatable-cell {
-   // empty, but custom theme may override/add settings
+    // empty, but custom theme may override/add settings
 }
 
 .pwt-datatable-header {
@@ -86,25 +86,25 @@
     outline: 0;
     cursor: default;
     text-align: start;
-    border-inline-end: 1px solid  map-get($pwt-color, "border") !important;
+    border-inline-end: 1px solid map-get($pwt-color, "border") !important;
 
     .pwt-datatable-header-content {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	align-self: center;
-	flex: 1 1 auto;
-	padding: map-get($spacers, 1) map-get($spacers, 2);
-   }
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        align-self: center;
+        flex: 1 1 auto;
+        padding: map-get($spacers, 1) map-get($spacers, 2);
+    }
 
     &.focused,
     &:focus {
-	--pwt-trigger-opacity: 0.8;
-	background-color: map-get($pwt-color, "surface");
+        --pwt-trigger-opacity: 0.8;
+        background-color: map-get($pwt-color, "surface");
     }
 
     &:hover {
-	--pwt-trigger-opacity: 0.8;
+        --pwt-trigger-opacity: 0.8;
     }
 }
 
@@ -119,8 +119,8 @@
     outline: 0;
 
     &:focus {
-	--pwt-trigger-opacity: 0.8;
-	background-color: map-get($pwt-color, "surface");
+        --pwt-trigger-opacity: 0.8;
+        background-color: map-get($pwt-color, "surface");
     }
 }
 
@@ -132,7 +132,7 @@
     align-items: center;
     justify-content: center;
 
-    width: map-get($line-height, "label-large") + 2*map-get($spacers, 1);
+    width: map-get($line-height, "label-large") + 2 * map-get($spacers, 1);
 
     background-color: map-get($pwt-color, "neutral");
     border: 0px solid !important;
@@ -143,7 +143,7 @@
 
     top: 0px;
     bottom: 0px;
-    margin-inline-start: - (map-get($line-height, "label-large") + 2*map-get($spacers, 1) + 1px);
+    margin-inline-start: -(map-get($line-height, "label-large") + 2 * map-get($spacers, 1) + 1px);
 }
 
 .pwt-datatable-header-anchor {
