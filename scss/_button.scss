@@ -233,6 +233,10 @@ border-end-end-radius: 10rem !important;
         .pwt-fab-icon {
             font-size: map-get($font-size, "title-large")
         }
+
+        &.pwt-fab-extended {
+            padding: map-get($spacers, 1) map-get($spacers, 2);
+        }
     }
 
     &.pwt-fab-large {
