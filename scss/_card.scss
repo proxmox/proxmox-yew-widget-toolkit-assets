@@ -40,10 +40,14 @@
 }
 
 .pwt-card.pwt-card-outline {
+    border: 2px solid map-get($pwt-color, high-contrast-border);
+}
+
+.pwt-card.pwt-card-flat,
+.pwt-card.pwt-card-outline {
     @include elevation-box-shadow(0);
     @include elevation-background-color(0, none);
 
-    border: 2px solid map-get($pwt-color, high-contrast-border);
 
     &.pwt-interactive {
 
