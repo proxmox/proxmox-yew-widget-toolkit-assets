@@ -36,6 +36,11 @@
             width: 24px;
             transition: width 0.2s;
 
+            &.active {
+                width: 56px;
+                background-color: var(--pwt-color-elevation2-press);
+            }
+
             &:focus-within,
             &:hover {
                 width: 56px;
