@@ -51,5 +51,9 @@
         .pwt-navigation-bar-icon {
                 font-size: map-get($font-size, "headline-small");
         }
+
+        .pwt-navigation-bar-label {
+            font-size: map-get($font-size, "label-medium");
+        }
     }
 }
