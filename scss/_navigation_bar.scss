@@ -1,0 +1,55 @@
+.pwt-navigation-bar {
+    //@include color-scheme-vars(surface-container);
+    //@include color-scheme-vars(primary-container);
+    @include color-scheme-vars(neutral);
+
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: map-get($spacers, 1) map-get($spacers, 2) map-get($spacers, 2) map-get($spacers, 2);
+    gap: map-get($spacers, 2);
+
+    width: 100%;
+
+    background: var(--pwt-color-elevation2);
+
+    .pwt-navigation-bar-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        align-items: center;
+        justify-content: center;
+        min-width: 64px;
+        min-height: 48px;
+
+        //background: red;
+        .pwt-navigation-bar-icon-container {
+            //background: red;
+            border-radius: 10rem;
+            padding: 4px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 24px;
+            transition: width 0.2s;
+
+            &:focus-within,
+            &:hover {
+                width: 56px;
+                background-color: var(--pwt-color-elevation2-hover);
+            }
+
+            &:active {
+                width: 56px;
+                background-color: var(--pwt-color-elevation2-press);
+            }
+        }
+
+        .pwt-navigation-bar-icon {
+                font-size: map-get($font-size, "headline-small");
+        }
+    }
+}
