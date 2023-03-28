@@ -13,6 +13,8 @@ $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 30, 20, 15, 10, 5, 0
 // libmonet.scss: https://gist.github.com/jpohhhh/6ade636f207bf97742d101650798a088
 
 @use "sass:list";
+@use "sass:color";
+@use "sass:math";
 
 // Generate palette use HCT tones
 @function tonal_palette($base-color) {
@@ -22,6 +24,47 @@ $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 30, 20, 15, 10, 5, 0
 
     @each $percentage in $color-scheme-values {
         $new: hct(list.nth($base-hct, 1), list.nth($base-hct, 2), $percentage);
+        $palette: map-merge(
+            $palette,
+            (
+                $percentage: $new,
+            )
+        );
+    }
+
+    @return $palette;
+}
+
+/*
+@function luma601($color) {
+    @return math.div(
+        color.red($color) * 0.299 +
+        color.green($color) * 0.587 +
+        color.blue($color) * 0.114, 255);
+}
+
+@function luma709($color) {
+    @return math.div(
+        color.red($color) * 0.2126 +
+        color.green($color) * 0.7152 +
+        color.blue($color) * 0.0722, 255);
+}
+
+@function luma240($color) {
+    @return math.div(
+        color.red($color) * 0.212 +
+        color.green($color) * 0.701 +
+        color.blue($color) * 0.087, 255);
+}
+*/
+
+// Generate palette use HSL lightness
+// Note: tonal_palette() produces better results
+@function tonal_palette2($base-color) {
+    $palette: ();
+
+    @each $percentage in $color-scheme-values {
+        $new: color.change($base-color, $lightness: $percentage * 1%);
         $palette: map-merge(
             $palette,
             (
