@@ -19,6 +19,8 @@
 // MenuBar
 ul.pwt-menubar {
 	background: map-get($pwt-color, "surface");
+	color: map-get($pwt-color, "on-surface");
+
 	display: flex;
 	align-items: stretch;
 
