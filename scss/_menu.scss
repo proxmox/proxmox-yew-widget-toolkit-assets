@@ -2,6 +2,7 @@
 	z-index: $zindex-dropdown;
 
 	background: map-get($pwt-color, "surface");
+	color: map-get($pwt-color, "on-surface");
 	border-radius: map-get($shape-corner, extra-small);
 
 	@include elevation-box-shadow(1);
