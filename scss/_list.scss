@@ -12,7 +12,7 @@
 
     color: var(--pwt-color);
 
-    padding: map-get($spacers, 1) map-get($spacers, 2);
+    padding: map-get($spacers, 2);
     transition: 0.1s;
 
     &.pwt-interactive {
