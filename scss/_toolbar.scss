@@ -1,4 +1,9 @@
 .pwt-toolbar {
+    // Note: toolbar are mostly used inside a flex column,
+    // and we want to be able to set "overflow: hidden". We
+    // need to flex to none - else we get zero height.
+    flex: none;
+
     // fixme: ???
     &.emphased {
         background: map-get($pwt-color, "neutral-alt");
