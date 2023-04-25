@@ -176,6 +176,10 @@ $display-values: inline inline-block block grid table table-row table-cell flex 
     flex: 1 1 auto !important;
 }
 
+.pwt-flex-none {
+    flex: 0 0 auto !important;
+}
+
 $flex-direction-values: row column row-reverse column-reverse;
 
 @each $name in $flex-direction-values {
