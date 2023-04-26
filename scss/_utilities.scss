@@ -172,12 +172,17 @@ $display-values: inline inline-block block grid table table-row table-cell flex 
     }
 }
 
-.pwt-flex-fill {
-    flex: 1 1 auto !important;
-}
+$flex-values: (
+    fill: 1 1 auto, // same aus auto
+    initial: 0 1 auto,
+    auto: 1 1 auto,
+    none: 0 0 auto,
+);
 
-.pwt-flex-none {
-    flex: 0 0 auto !important;
+@each $name, $value in $flex-values {
+    .pwt-flex-#{$name} {
+	flex: $value !important;
+    }
 }
 
 $flex-direction-values: row column row-reverse column-reverse;
