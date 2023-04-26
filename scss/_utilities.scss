@@ -183,7 +183,7 @@ $display-values: inline inline-block block grid table table-row table-cell flex 
 $flex-direction-values: row column row-reverse column-reverse;
 
 @each $name in $flex-direction-values {
-    .pwt-flex-#{$name} {
+    .pwt-flex-direction-#{$name} {
         flex-direction: $name !important;
     }
 }
