@@ -60,7 +60,8 @@
     }
 
     .pwt-scheme-#{$name}.pwt-button-elevated,
-    .pwt-scheme-#{$name}.pwt-button-outline {
+    .pwt-scheme-#{$name}.pwt-button-outline,
+    .pwt-scheme-#{$name}.pwt-action-icon {
         @include outline-button-color-scheme-vars($name, $important: true);
     }
 
