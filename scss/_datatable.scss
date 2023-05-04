@@ -64,12 +64,24 @@
     }
 }
 
+.pwt-dropdown {
+    .pwt-datatable-content {
+	tr:last-child {
+	    border-bottom: 0px;
+	}
+    }
+}
+
 .pwt-datatable-cell {
     // empty, but custom theme may override/add settings
 }
 
 .pwt-datatable-header {
     border-bottom: 2px solid map-get($pwt-color, "border");
+
+    &.pwt-datatable-header-hidden {
+	border-bottom: 0px;
+    }
 }
 
 .pwt-datatable-header-cell {
