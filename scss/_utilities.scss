@@ -144,6 +144,14 @@ $height-width-values: (
     box-sizing: border-box;
 }
 
+// Apply "pwt-fit" to the first child of a container
+.pwt-fit-first-child > :first-child {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: auto !important;
+    box-sizing: border-box;
+}
+
 .pwt-viewport {
     top: 0;
     left: 0;
