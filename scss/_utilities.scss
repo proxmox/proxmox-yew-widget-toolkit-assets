@@ -146,10 +146,16 @@ $height-width-values: (
 
 // Apply "pwt-fit" to the first child of a container
 .pwt-fit-first-child > :first-child {
+    flex: 1 1 auto;
     width: 100% !important;
     height: 100% !important;
     overflow: auto !important;
     box-sizing: border-box;
+}
+
+// Apply "flex: 1 1 auto;" to the first child of a container
+.pwt-flex-fill-first-child > :first-child {
+    flex: 1 1 auto;
 }
 
 .pwt-viewport {
