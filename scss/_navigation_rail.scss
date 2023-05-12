@@ -7,9 +7,10 @@
     flex-direction: column;
     justify-content: space-evenly;
 
-    padding: map-get($spacers, 1) 0 map-get($spacers, 2) 0;
+    padding: map-get($spacers, 2) map-get($spacers, 1);
     gap: map-get($spacers, 2);
 
+    box-sizing: border-box;
     height: 100%;
 
     background: var(--pwt-color-elevation2);
