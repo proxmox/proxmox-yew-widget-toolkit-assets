@@ -10,7 +10,7 @@
 .pwt-panel-header-text {
     cursor: initial;
     color: var(--pwt-color);
-    @include font_and_line_height("title-large");
+    @include font_and_line_height("headline-small");
 }
 
 .pwt-panel-header {
