@@ -267,11 +267,6 @@ $position-values: absolute fixed relative sticky static;
     }
 }
 
-.pwt-shape-circle {
-    border-radius: 50%;
-    line-height: 1em;
-}
-
 .pwt-border {
     border: 1px solid map-get($pwt-color, "border") !important;
 }
@@ -326,6 +321,11 @@ $position-values: absolute fixed relative sticky static;
 
 .pwt-no-border-bottom {
     border-bottom: 0 !important;
+}
+
+.pwt-shape-circle {
+    border-radius: map-get($shape-corner, "full");
+    line-height: 1em;
 }
 
 @each $name, $radius in $shape-corner {
