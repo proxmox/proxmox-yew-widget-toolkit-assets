@@ -87,6 +87,14 @@ hr,
     user-select: none;
 }
 
+.pwt-message-sign {
+    background: map-get($pwt-color, "surface");
+    color: map-get($pwt-color, "error");
+    padding: 1em;
+    margin-inline-end: 0.5em;
+    border-radius: map-get($shape-corner, "full");
+}
+
 .pwt-navbar {
     background: map-get($pwt-color, "neutral-alt");
     color: map-get($pwt-color, "on-neutral-alt");
