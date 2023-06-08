@@ -18,14 +18,14 @@ $input-corner-shape: map-get($shape-corner, extra-small);
 $card-corner-shape: map-get($shape-corner, large);
 $dialog-corner-shape: map-get($shape-corner, small);
 
-// libadwaita colors (index 3)
-$color-seed-primary: #3584E4;
-$color-seed-secondary: #33D17A;
-$color-seed-tertiary: #F6D32D;
+// libadwaita colors: https://en.wikipedia.org/wiki/Adwaita_(design_language)
+$color-seed-primary: #3584E4;   // Blue3
+$color-seed-secondary: #33D17A; // Green3
+$color-seed-tertiary: #F6D32D;  // Yellow3
 $color-seed-neutral: #fff;
 
-$color-seed-error: #E01B24;
-$color-seed-warning: #FF7800;
+$color-seed-error: #E01B24;     // Red3
+$color-seed-warning: #FF7800;   // Orange3
 
 $palette-primary: tonal_palette($color-seed-primary);
 $palette-secondary: tonal_palette($color-seed-secondary);
