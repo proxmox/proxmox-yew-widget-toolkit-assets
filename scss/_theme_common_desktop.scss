@@ -1,0 +1,39 @@
+// Setting to create a Material Design like GUI
+
+@font-face {
+    font-family: "Roboto Flex";
+    src: url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
+}
+
+$pwt-font-sans-serif: "Roboto Flex";
+
+$spacer: 5px;
+$button-corner-shape: map-get($shape-corner, small);
+$fab-corner-shape: map-get($shape-corner, large);
+$progress-corner-shape: map-get($shape-corner, extra-small);
+$nav-link-corner-shape: map-get($shape-corner, small);
+$nav-pills-corner-shape: map-get($shape-corner, small);
+$tooltip-corner-shape: map-get($shape-corner, extra-large);
+$input-corner-shape: map-get($shape-corner, extra-small);
+$card-corner-shape: map-get($shape-corner, large);
+$dialog-corner-shape: map-get($shape-corner, small);
+
+$color-seed-primary: #6750a4;
+$color-seed-secondary: #958da5;
+$color-seed-tertiary: #b58392;
+$color-seed-neutral: #fff;
+
+$color-seed-error: #b3261e;
+$color-seed-warning: orange;
+
+$palette-primary: tonal_palette($color-seed-primary);
+$palette-secondary: tonal_palette($color-seed-secondary);
+$palette-tertiary: tonal_palette($color-seed-tertiary);
+$palette-error: tonal_palette($color-seed-error);
+$palette-warning: tonal_palette($color-seed-warning);
+$palette-neutral: tonal_palette($color-seed-neutral);
+
+// use primary with 5% saturation for neutral-alt
+$color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
+
+$palette-neutral-alt: tonal_palette($color-seed-neutral-alt);
