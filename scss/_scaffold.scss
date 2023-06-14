@@ -1,0 +1,63 @@
+
+
+.pwt-scaffold-drawer-mask {
+
+    z-index: -1;
+    position: absolute;
+    background-color: $modal-backdrop-bg-color;
+
+    border-radius: 0px !important;
+
+    overflow: hidden;
+    width: 0px; // invisible by default
+
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+
+    &.visible {
+        z-index: $zindex-modal;
+        width: 100%;
+    }
+}
+
+.pwt-scaffold-drawer {
+    display: flex;
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+
+    color: map-get($pwt-color, "on-neutral");
+    background-color: map-get($pwt-color, "neutral");
+
+    &.slide-in {
+        animation: scaffold-drawer-animation-slide-in 0.2s forwards;
+    }
+    &.slide-out {
+        animation: scaffold-drawer-animation-slide-out 0.1s forwards;
+    }
+}
+
+@keyframes scaffold-drawer-animation-slide-in {
+    from {
+        transform: translateX(-100%);
+        transform-origin: left;
+    }
+    to {
+        transform: translateX(0);
+        transform-origin: left;
+    }
+}
+
+@keyframes scaffold-drawer-animation-slide-out {
+    from {
+        transform: translateX(0);
+        transform-origin: left;
+    }
+    to {
+        transform: translateX(-100%);
+        transform-origin: left;
+    }
+}
