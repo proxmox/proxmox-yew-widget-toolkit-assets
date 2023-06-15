@@ -1,4 +1,4 @@
-dialog {
+.pwt-dialog {
     padding: 0;
     color: map-get($pwt-color, "on-neutral");
     background: map-get($pwt-color, "neutral");
@@ -22,15 +22,15 @@ dialog {
 
 // Note: css var() does not work here
 // see: https://bugs.chromium.org/p/chromium/issues/detail?id=996467
-dialog:not(.pwt-dropdown)::backdrop {
+.pwt-dialog:not(.pwt-dropdown)::backdrop {
     background-color: $modal-backdrop-bg-color;
 }
 
-dialog.pwt-dropdown::backdrop {
+.pwt-dialog.pwt-dropdown::backdrop {
     background-color: #ffffff00; // fully transparent
 }
 
-dialog .dialog-resize-handle {
+.pwt-dialog .dialog-resize-handle {
     position: absolute;
     opacity: 0;
     user-select: none;
