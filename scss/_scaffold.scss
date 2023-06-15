@@ -32,32 +32,13 @@
     color: map-get($pwt-color, "on-neutral");
     background-color: map-get($pwt-color, "neutral");
 
-    &.slide-in {
-        animation: scaffold-drawer-animation-slide-in 0.2s forwards;
-    }
-    &.slide-out {
-        animation: scaffold-drawer-animation-slide-out 0.1s forwards;
-    }
-}
+    transition: transform 0.2s;
 
-@keyframes scaffold-drawer-animation-slide-in {
-    from {
-        transform: translateX(-100%);
-        transform-origin: left;
-    }
-    to {
+    &.visible {
         transform: translateX(0);
-        transform-origin: left;
     }
-}
 
-@keyframes scaffold-drawer-animation-slide-out {
-    from {
-        transform: translateX(0);
-        transform-origin: left;
-    }
-    to {
+    &.hidden {
         transform: translateX(-100%);
-        transform-origin: left;
     }
 }
