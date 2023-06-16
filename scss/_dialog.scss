@@ -110,7 +110,7 @@
 // Transparent dialog covering the whole viewport
 .pwt-side-dialog {
     position: fixed;
-    overflow:hidden;
+    overflow: hidden;
     touch-action: none; // important for GestureDetector on Chromium
 
     top: 0;
@@ -130,6 +130,33 @@
     padding: 0px;
 
     background: transparent !important;
+}
+
+
+.pwt-side-dialog[open]::backdrop {
+    animation: backdrop-fade-in 0.2s ease forwards;
+}
+
+.pwt-side-dialog.hidden::backdrop {
+    animation: backdrop-fade-out 0.2s ease forwards;
+}
+
+@keyframes backdrop-fade-out {
+    from {
+        background: $modal-backdrop-bg-color;
+    }
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes backdrop-fade-in {
+    from {
+        background: transparent;
+    }
+    to {
+        background: $modal-backdrop-bg-color;
+    }
 }
 
 // Side dialog content is inside this slider
@@ -197,6 +224,4 @@
             transform: translateY(100%);
         }
     }
-
-
 }
