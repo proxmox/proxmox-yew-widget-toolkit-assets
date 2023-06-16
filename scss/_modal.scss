@@ -107,10 +107,11 @@
     }
 }
 
-
 // Transparent dialog covering the whole viewport
 .pwt-side-dialog {
     position: fixed;
+    overflow:hidden;
+
     top: 0;
     left: 0;
 
@@ -131,23 +132,69 @@
 }
 
 .pwt-side-dialog-slider {
-    position: absolute;
+    position: fixed;
     display: flex;
-
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
 
     color: map-get($pwt-color, "on-neutral");
     background-color: map-get($pwt-color, "neutral");
 
     transition: transform 0.2s;
 
-    &.visible {
-        transform: translateX(0);
+    &.pwt-side-dialog-left {
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+
+        &.visible {
+            transform: translateX(0);
+        }
+
+        &.hidden {
+            transform: translateX(-100%);
+        }
     }
 
-    &.hidden {
-        transform: translateX(-100%);
+    &.pwt-side-dialog-right {
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+
+        &.visible {
+            transform: translateX(0);
+        }
+
+        &.hidden {
+            transform: translateX(100%);
+        }
     }
+
+    &.pwt-side-dialog-top {
+        top: 0px;
+        left: 0px;
+        right: 0px;
+
+        &.visible {
+            transform: translateY(0);
+        }
+
+        &.hidden {
+            transform: translateY(-100%);
+        }
+    }
+
+    &.pwt-side-dialog-bottom {
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+
+        &.visible {
+            transform: translateY(0);
+        }
+
+        &.hidden {
+            transform: translateY(100%);
+        }
+    }
+
+
 }
