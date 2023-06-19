@@ -25,3 +25,11 @@
     left: map-get($spacers, 4);
     right: map-get($spacers, 4);
 }
+
+// limit snackbar width to 840px
+@media (min-width: 840px) {
+    .pwt-snackbar {
+        left: calc((100% - 840px)/2 + map-get($spacers, 4));
+        width: calc(840px - map-get($spacers, 4) * 2);
+    }
+}
