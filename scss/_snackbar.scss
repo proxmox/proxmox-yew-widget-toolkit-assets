@@ -2,17 +2,19 @@
 .pwt-snackbar {
     display: flex;
     align-items: center;
+    overflow: hidden;
 
     background: map-get($pwt-color, "inverse-surface");
     color: map-get($pwt-color, "on-inverse-surface");
     @include elevation-box-shadow(3);
-    font-size: map-get($font-size, "body-medium");
+    //font-size: map-get($font-size, "body-medium");
+    @include font_and_line_height("body-medium");
 
     border-radius: map-get($shape-corner, "extra-small");
 
     .pwt-snackbar-message {
         flex: 1 1 auto;
-        padding: map-get($spacers, 2);
+        padding: calc(map-get($spacers, 1) + 2px); // same height as button
     }
 
     .pwt-snackbar-action {
