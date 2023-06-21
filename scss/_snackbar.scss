@@ -22,14 +22,39 @@
     position: fixed;
     z-index: $zindex-modal;
     bottom: map-get($spacers, 4);
-    left: map-get($spacers, 4);
-    right: map-get($spacers, 4);
+    left: map-get($spacers, 2);
+    right: map-get($spacers, 2);
+
+    &.fade-in {
+        animation: snackbar-animation-fade-in 0.2s ease-in;
+    }
+    &.fade-out {
+        animation: snackbar-animation-fade-out 0.2s ease-out;
+    }
+}
+
+@keyframes snackbar-animation-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes snackbar-animation-fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 // limit snackbar width to 840px
 @media (min-width: 840px) {
     .pwt-snackbar {
-        left: calc((100% - 840px)/2 + map-get($spacers, 4));
-        width: calc(840px - map-get($spacers, 4) * 2);
+        left: calc((100% - 840px)/2 + map-get($spacers, 2));
+        width: calc(840px - map-get($spacers, 2) * 2);
     }
 }
