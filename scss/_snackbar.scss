@@ -16,6 +16,7 @@
     }
 
     .pwt-snackbar-action {
+        border-radius: 0 !important;
         color: map-get($pwt-color, "primary-container");
     }
 
