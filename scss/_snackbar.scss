@@ -4,9 +4,12 @@
     align-items: center;
     overflow: hidden;
 
-    background: map-get($pwt-color, "inverse-surface");
-    color: map-get($pwt-color, "on-inverse-surface");
+    @include color-scheme-vars("inverse-surface", false);
     @include elevation-box-shadow(3);
+    @include elevation-background-color(3, none);
+
+    color: var(--pwt-color);
+
     //font-size: map-get($font-size, "body-medium");
     @include font_and_line_height("body-medium");
 
@@ -21,6 +24,7 @@
         border-radius: 0 !important;
         box-shadow: unset !important;
         color: map-get($pwt-color, "primary-container");
+        background-color: transparent;
     }
 
     position: fixed;
