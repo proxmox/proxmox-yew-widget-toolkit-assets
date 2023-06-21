@@ -2,7 +2,6 @@
 .pwt-snackbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     background: map-get($pwt-color, "inverse-surface");
     color: map-get($pwt-color, "on-inverse-surface");
@@ -12,6 +11,7 @@
     border-radius: map-get($shape-corner, "extra-small");
 
     .pwt-snackbar-message {
+        flex: 1 1 auto;
         padding: map-get($spacers, 2);
     }
 
