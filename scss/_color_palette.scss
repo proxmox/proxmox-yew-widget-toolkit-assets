@@ -58,5 +58,4 @@ $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 30, 20, 15, 10, 5, 0
     @each $percentage in $color-scheme-values {
         --pwt-color-#{$color-name}-#{$percentage}: #{map-get($palette, $percentage)};
     }
-
 }

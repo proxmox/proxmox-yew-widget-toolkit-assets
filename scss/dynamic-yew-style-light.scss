@@ -2,6 +2,7 @@
 @import "libmonet";
 @import "color_palette";
 @import "color_scheme2";
+@import "state-layer2";
 
 // Color setup
 // libadwaita colors: https://en.wikipedia.org/wiki/Adwaita_(design_language)
@@ -116,7 +117,7 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 
     --pwt-color-neutral-alt: var(--pwt-color-neutral-alt-90);
     --pwt-color-on-neutral-alt: var(--pwt-color-neutral-alt-30);
-    --pwt-color-neutral-alt-container: var(--pwt-color-neutral-alt-99);
+    --pwt-color-neutral-alt-container: var(--pwt-color-neutrElevantional-alt-99);
     --pwt-color-on-neutral-alt-container: var(--pwt-color-neutral-alt-10);
 
 
@@ -127,18 +128,24 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 
     --pwt-modal-backdrop-bg-color: #00000030;
     --pwt-color-surface-tint: var(--pwt-color-primary);
-    --pwt-color-color-shadow: var(--pwt-color-neutral-0);
+    --pwt-color-shadow: var(--pwt-color-neutral-0);
 }
+
+$shape-corner: (
+    none: 0px,
+    extra-small: 4px,
+    small: 8px,
+    medium: 12px,
+    large: 16px,
+    extra-large: 28px,
+    full: 10rem,
+);
 
 /* Corner Shape (radius) definitions */
 :root {
-    --pwt-shape-corner-none: 0px;
-    --pwt-shape-corner-extra-small: 4px;
-    --pwt-shape-corner-small: 8px;
-    --pwt-shape-corner-medium: 12px;
-    --pwt-shape-corner-large: 16px;
-    --pwt-shape-corner-extra-large: 28px;
-    --pwt-shape-corner-full: 10rem;
+    @each $name, $value in $shape-corner {
+        --pwt-shape-corner-#{$name}: #{$value};
+    }
 
     /* Corner shape for components */
     --pwt-button-corner-shape: var(--pwt-shape-corner-small);
@@ -150,6 +157,50 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
     --pwt-input-corner-shape: var(--pwt-shape-corner-extra-small);
     --pwt-card-corner-shape: var(--pwt-shape-corner-small);
     --pwt-dialog-corner-shape: var(--pwt-shape-corner-small);
+}
+
+$elevation-levels: (
+    0: 0px,
+    1: 2px,
+    2: 4px,
+    3: 6px,
+    4: 8px,
+    5: 12px,
+);
+
+/* Define elevation levels */
+:root {
+    @each $level, $value in $elevation-levels {
+        --pwt-elevation-level-#{$level}: #{$value};
+    }
+}
+
+$state-layer-opacity: (
+    none: 0%,
+    stripe: 2%,
+    hover: 8%,
+    focus: 12%,
+    press: 12%,
+    drag: 16%,
+);
+
+$elevation-levels-tint-opacity: (
+    0: 0%,
+    1: 5%,
+    2: 8%,
+    3: 11%,
+    4: 12%,
+    5: 14%,
+);
+/* Define state layer opacity */
+:root {
+    @each $state, $value in $state-layer-opacity {
+        --pwt-state-layer-opacity-#{$state}: #{$value};
+    }
+
+    @each $level, $value in $elevation-levels-tint-opacity {
+        --pwt-state-layer-opacity-#{$level}: #{$value};
+    }
 }
 
 //@import "theme_common";
@@ -173,3 +224,4 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 }
 
 @import "panel2";
+@import "card2";

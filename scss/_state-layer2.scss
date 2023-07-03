@@ -1,0 +1,19 @@
+@use "sass:math";
+
+@mixin elevation-box-shadow($level) {
+    box-shadow: var(--pwt-color-shadow) 0px calc(var(--pwt-elevation-level-#{$level}) / 2)
+        var(--pwt-elevation-level-#{$level});
+}
+
+@mixin elevation-background-color($level, $state) {
+    --pwt-tmp-elevation-color: color-mix(
+        in srgb,
+        var(--pwt-color-surface-tint) var(--pwt-state-layer-opacity-#{$level}),
+        var(--pwt-color-background)
+    );
+    background-color: color-mix(
+        in srgb,
+        var(--pwt-color) var(--pwt-state-layer-opacity-#{$state}),
+        var(--pwt-tmp-elevation-color)
+    );
+}
