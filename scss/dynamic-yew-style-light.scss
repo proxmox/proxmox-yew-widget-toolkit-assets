@@ -1,0 +1,175 @@
+// import libraries and mixins
+@import "libmonet";
+@import "color_palette";
+@import "color_scheme2";
+
+// Color setup
+// libadwaita colors: https://en.wikipedia.org/wiki/Adwaita_(design_language)
+$color-seed-primary: #3584E4;   // Blue3
+$color-seed-secondary: #33D17A; // Green3
+$color-seed-tertiary: #F6D32D;  // Yellow3
+$color-seed-neutral: #fff;
+
+$color-seed-error: #E01B24;     // Red3
+$color-seed-warning: #FF7800;   // Orange3
+
+//$palette-primary: tonal_palette($color-seed-primary);
+//$palette-secondary: tonal_palette($color-seed-secondary);
+//$palette-tertiary: tonal_palette($color-seed-tertiary);
+//$palette-error: tonal_palette($color-seed-error);
+//$palette-warning: tonal_palette($color-seed-warning);
+//$palette-neutral: tonal_palette($color-seed-neutral);
+
+// use primary with 5% saturation for neutral-alt
+$color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
+
+//$palette-neutral-alt: tonal_palette($color-seed-neutral-alt);
+
+
+
+// Generate output
+
+/* Reset CSS first */
+@import "reset-src";
+
+/* Font setup */
+@font-face {
+    font-family: "Roboto Flex";
+    src: url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
+}
+
+/* Common setings */
+:root {
+    --pwt-spacer-base-width: 5px;
+    --pwt-spacer-0: 0;
+    --pwt-spacer-1: calc(var(--pwt-spacer-base-width) * 1);
+    --pwt-spacer-2: calc(var(--pwt-spacer-base-width) * 2);
+    --pwt-spacer-3: calc(var(--pwt-spacer-base-width) * 3);
+    --pwt-spacer-4: calc(var(--pwt-spacer-base-width) * 4);
+
+    --pwt-icon-spacer: 0.5em; // space between icon and text
+
+    --pwt-font-sans-serif: "Roboto Flex";
+    --pwt-font-monospace: monospace;
+
+}
+
+/* Tonal color values */
+:root {
+    @include pwt-color-palette-vars("primary", $color-seed-primary);
+    @include pwt-color-palette-vars("secondary", $color-seed-secondary);
+    @include pwt-color-palette-vars("tertiary", $color-seed-tertiary);
+    @include pwt-color-palette-vars("error", $color-seed-error);
+    @include pwt-color-palette-vars("warning", $color-seed-warning);
+    @include pwt-color-palette-vars("neutral", $color-seed-neutral);
+    @include pwt-color-palette-vars("neutral-alt", $color-seed-neutral-alt);
+}
+
+/* light theme color scheme */
+:root {
+    color-scheme: light;
+
+    --pwt-color-primary: var(--pwt-color-primary-40);
+    --pwt-color-on-primary: var(--pwt-color-primary-100);
+    --pwt-color-primary-container: var(--pwt-color-primary-90);
+    --pwt-color-on-primary-container: var(--pwt-color-primary-10);
+
+    --pwt-color-secondary: var(--pwt-color-secondary-40);
+    --pwt-color-on-secondary: var(--pwt-color-secondary-100);
+    --pwt-color-secondary-container: var(--pwt-color-secondary-90);
+    --pwt-color-on-secondary-container: var(--pwt-color-secondary-10);
+
+    --pwt-color-tertiary: var(--pwt-color-tertiary-40);
+    --pwt-color-on-tertiary: var(--pwt-color-tertiary-100);
+    --pwt-color-tertiary-container: var(--pwt-color-tertiary-90);
+    --pwt-color-on-tertiary-container: var(--pwt-color-tertiary-10);
+
+    --pwt-color-error: var(--pwt-color-error-40);
+    --pwt-color-on-error: var(--pwt-color-error-100);
+    --pwt-color-error-container: var(--pwt-color-error-90);
+    --pwt-color-on-error-container: var(--pwt-color-error-10);
+
+    --pwt-color-warning: var(--pwt-color-warning-40),
+    --pwt-color-on-warning: var(--pwt-color-warning-100);
+    --pwt-color-warning-container: var(--pwt-color-warning-90);
+    --pwt-color-on-warning-container: var(--pwt-color-warning-10);
+
+    // neutral
+    --pwt-color-neutral: var(--pwt-color-neutral-100);
+    --pwt-color-on-neutral: var(--pwt-color-neutral-10);
+    --pwt-color-neutral-container: var(--pwt-color-neutral-95);
+    // surface
+    --pwt-color-on-neutral-container: var(--pwt-color-neutral-10);
+
+    // surface
+    --pwt-color-surface: var(--pwt-color-neutral-95);
+    --pwt-color-on-surface: var(--pwt-color-neutral-10);
+    --pwt-color-surface-container: var(--pwt-color-neutral-100);
+    // neutral
+    --pwt-color-on-surface-container: var(--pwt-color-neutral-10);
+
+    // inverse-surface
+    --pwt-color-inverse-surface: var(--pwt-color-neutral-10);
+    --pwt-color-on-inverse-surface: var(--pwt-color-neutral-95);
+    --pwt-color-inverse-surface-container: var(--pwt-color-neutral-10);
+    --pwt-color-on-inverse-surface-container: var(--pwt-color-neutral-100);
+
+    --pwt-color-neutral-alt: var(--pwt-color-neutral-alt-90);
+    --pwt-color-on-neutral-alt: var(--pwt-color-neutral-alt-30);
+    --pwt-color-neutral-alt-container: var(--pwt-color-neutral-alt-99);
+    --pwt-color-on-neutral-alt-container: var(--pwt-color-neutral-alt-10);
+
+
+    /* border and focus colors */
+    --pwt-high-contrast-border: var(--pwt-color-neutral-alt-50);
+    --pwt-border-color: var(--pwt-color-neutral-alt-80);
+    --pwt-color-focus: var(--pwt-color-neutral-10);
+
+    --pwt-modal-backdrop-bg-color: #00000030;
+    --pwt-color-surface-tint: var(--pwt-color-primary);
+    --pwt-color-color-shadow: var(--pwt-color-neutral-0);
+}
+
+/* Corner Shape (radius) definitions */
+:root {
+    --pwt-shape-corner-none: 0px;
+    --pwt-shape-corner-extra-small: 4px;
+    --pwt-shape-corner-small: 8px;
+    --pwt-shape-corner-medium: 12px;
+    --pwt-shape-corner-large: 16px;
+    --pwt-shape-corner-extra-large: 28px;
+    --pwt-shape-corner-full: 10rem;
+
+    /* Corner shape for components */
+    --pwt-button-corner-shape: var(--pwt-shape-corner-small);
+    --pwt-fab-corner-shape: var(--pwt-shape-corner-large);
+    --pwt-progress-corner-shape: var(--pwt-shape-corner-extra-small);
+    --pwt-nav-link-corner-shape: var(--pwt-shape-corner-small);
+    --pwt-nav-pills-corner-shape: var(--pwt-shape-corner-small);
+    --pwt-tooltip-corner-shape: var(--pwt-shape-corner-extra-large);
+    --pwt-input-corner-shape: var(--pwt-shape-corner-extra-small);
+    --pwt-card-corner-shape: var(--pwt-shape-corner-small);
+    --pwt-dialog-corner-shape: var(--pwt-shape-corner-small);
+}
+
+//@import "theme_common";
+//@import "theme_common_desktop";
+//@import "theme_light";
+
+//@import "theme_post";
+@import "utilities2";
+
+@include color-percentages("primary");
+@include color-percentages("secondary");
+@include color-percentages("tertiary");
+@include color-percentages("error");
+@include color-percentages("warning");
+@include color-percentages("neutral");
+@include color-percentages("neutral-alt");
+
+@each $name in $color-names {
+    @include color-scheme($name);
+    @include color-scheme("#{$name}-container");
+}
+
+@import "panel2";

@@ -35,29 +35,6 @@ $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 30, 20, 15, 10, 5, 0
     @return $palette;
 }
 
-/*
-@function luma601($color) {
-    @return math.div(
-        color.red($color) * 0.299 +
-        color.green($color) * 0.587 +
-        color.blue($color) * 0.114, 255);
-}
-
-@function luma709($color) {
-    @return math.div(
-        color.red($color) * 0.2126 +
-        color.green($color) * 0.7152 +
-        color.blue($color) * 0.0722, 255);
-}
-
-@function luma240($color) {
-    @return math.div(
-        color.red($color) * 0.212 +
-        color.green($color) * 0.701 +
-        color.blue($color) * 0.087, 255);
-}
-*/
-
 // Generate palette use HSL lightness
 // Note: tonal_palette() produces better results
 @function tonal_palette2($base-color) {
@@ -74,4 +51,12 @@ $color-scheme-values: (100, 99, 95, 90, 80, 70, 60, 50, 40, 30, 20, 15, 10, 5, 0
     }
 
     @return $palette;
+}
+
+@mixin pwt-color-palette-vars($color-name, $base-color) {
+    $palette: tonal_palette($base-color);
+    @each $percentage in $color-scheme-values {
+        --pwt-color-#{$color-name}-#{$percentage}: #{map-get($palette, $percentage)};
+    }
+
 }
