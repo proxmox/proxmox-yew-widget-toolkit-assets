@@ -1,8 +1,8 @@
 // import libraries and mixins
 @import "libmonet";
-@import "color_palette";
-@import "color_scheme2";
-@import "state-layer2";
+@import "mixins/color_palette";
+@import "mixins/color_scheme2";
+@import "mixins/state-layer2";
 
 // Color setup
 // libadwaita colors: https://en.wikipedia.org/wiki/Adwaita_(design_language)
