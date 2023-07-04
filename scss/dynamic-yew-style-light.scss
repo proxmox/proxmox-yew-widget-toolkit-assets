@@ -52,6 +52,8 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 }
 
 /* light theme color scheme */
+$modal-backdrop-bg-color: #00000030;
+
 :root {
     color-scheme: light;
 
@@ -111,7 +113,6 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
     --pwt-border-color: var(--pwt-color-neutral-alt-80);
     --pwt-color-focus: var(--pwt-color-neutral-10);
 
-    --pwt-modal-backdrop-bg-color: #00000030;
     --pwt-color-surface-tint: var(--pwt-color-primary);
     --pwt-color-shadow: var(--pwt-color-neutral-0);
 
@@ -222,5 +223,6 @@ $pwt-font-monospace: monospace;
 }
 
 @import "button2";
+@import "dialog2";
 @import "panel2";
 @import "card2";
