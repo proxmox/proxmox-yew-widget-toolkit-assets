@@ -1,3 +1,7 @@
+/* Reset CSS first */
+@import "reset-src";
+
+
 // import libraries and mixins
 @import "libmonet";
 @import "mixins/color_palette";
@@ -16,35 +20,22 @@ $color-seed-neutral: #fff;
 $color-seed-error: #E01B24;     // Red3
 $color-seed-warning: #FF7800;   // Orange3
 
-//$palette-primary: tonal_palette($color-seed-primary);
-//$palette-secondary: tonal_palette($color-seed-secondary);
-//$palette-tertiary: tonal_palette($color-seed-tertiary);
-//$palette-error: tonal_palette($color-seed-error);
-//$palette-warning: tonal_palette($color-seed-warning);
-//$palette-neutral: tonal_palette($color-seed-neutral);
-
 // use primary with 5% saturation for neutral-alt
 $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 
-//$palette-neutral-alt: tonal_palette($color-seed-neutral-alt);
-
+/* Tonal color values */
+:root {
+    @include pwt-color-palette-vars("primary", $color-seed-primary);
+    @include pwt-color-palette-vars("secondary", $color-seed-secondary);
+    @include pwt-color-palette-vars("tertiary", $color-seed-tertiary);
+    @include pwt-color-palette-vars("error", $color-seed-error);
+    @include pwt-color-palette-vars("warning", $color-seed-warning);
+    @include pwt-color-palette-vars("neutral", $color-seed-neutral);
+    @include pwt-color-palette-vars("neutral-alt", $color-seed-neutral-alt);
+}
 
 
 // Generate output
-
-/* Reset CSS first */
-@import "reset-src";
-
-/* Font setup */
-@font-face {
-    font-family: "Roboto Flex";
-    src: url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
-}
-$pwt-font-sans-serif: "Roboto Flex";
-$pwt-font-monospace: monospace;
-@import "font_sizes_material";
-@import "mixins/fonts2";
-@include font_classes();
 
 /* Common setings */
 :root {
@@ -58,17 +49,6 @@ $pwt-font-monospace: monospace;
     --pwt-icon-spacer: 0.5em; // space between icon and text
 
 
-}
-
-/* Tonal color values */
-:root {
-    @include pwt-color-palette-vars("primary", $color-seed-primary);
-    @include pwt-color-palette-vars("secondary", $color-seed-secondary);
-    @include pwt-color-palette-vars("tertiary", $color-seed-tertiary);
-    @include pwt-color-palette-vars("error", $color-seed-error);
-    @include pwt-color-palette-vars("warning", $color-seed-warning);
-    @include pwt-color-palette-vars("neutral", $color-seed-neutral);
-    @include pwt-color-palette-vars("neutral-alt", $color-seed-neutral-alt);
 }
 
 /* light theme color scheme */
@@ -134,6 +114,8 @@ $pwt-font-monospace: monospace;
     --pwt-modal-backdrop-bg-color: #00000030;
     --pwt-color-surface-tint: var(--pwt-color-primary);
     --pwt-color-shadow: var(--pwt-color-neutral-0);
+
+    @include color-scheme-vars(surface);
 }
 
 $shape-corner: (
@@ -207,6 +189,17 @@ $elevation-levels-tint-opacity: (
         --pwt-state-layer-opacity-#{$level}: #{$value};
     }
 }
+
+/* Font setup */
+@font-face {
+    font-family: "Roboto Flex";
+    src: url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
+}
+$pwt-font-sans-serif: "Roboto Flex";
+$pwt-font-monospace: monospace;
+@import "font_sizes_material";
+@import "mixins/fonts2";
+@include font_classes();
 
 //@import "theme_common";
 //@import "theme_common_desktop";
