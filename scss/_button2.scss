@@ -161,9 +161,8 @@ button {
 }
 
 .pwt-button.pwt-fab {
-
-    color: var(--pwt-color-background);
-    @include elevation-background-color-inverse(2, none);
+    @include color-scheme-vars("primary-container");
+    @include elevation-background-color(0, none);
 
     &:not(:disabled):not(.disabled) {
         @include elevation-box-shadow(3);
@@ -172,14 +171,14 @@ button {
     &.pressed:not(:disabled):not(.disabled),
     &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
     &:active:not(:disabled):not(.disabled) {
-        @include elevation-box-shadow(3);
-        @include elevation-background-color-inverse(2, press);
+        @include elevation-box-shadow(2);
+        @include elevation-background-color(0, press);
         z-index: 1; // correctly show shadows
     }
 
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         @include elevation-box-shadow(4);
-        @include elevation-background-color-inverse(2, hover);
+        @include elevation-background-color(0, hover);
         z-index: 1; // correctly show shadows
     }
 }
