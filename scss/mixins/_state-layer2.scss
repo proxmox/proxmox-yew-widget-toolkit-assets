@@ -17,3 +17,52 @@
         var(--pwt-tmp-elevation-color)
     );
 }
+
+@mixin elevation-background-color-inverse($level, $state) {
+    --pwt-tmp-elevation-color: color-mix(
+        in srgb,
+        var(--pwt-color-surface-tint) var(--pwt-state-layer-opacity-#{$level}),
+        var(--pwt-color)
+    );
+    background-color: color-mix(
+        in srgb,
+        var(--pwt-color-background) var(--pwt-state-layer-opacity-#{$state}),
+        var(--pwt-tmp-elevation-color)
+    );
+}
+
+@mixin state-layer-background($state) {
+    background-color: color-mix(
+        in srgb,
+        var(--pwt-color) var(--pwt-state-layer-opacity-#{$state}),
+        var(--pwt-color-background)
+    );
+}
+@mixin state-layer-background-inverse($state) {
+    background-color: color-mix(
+        in srgb,
+        var(--pwt-color-background) var(--pwt-state-layer-opacity-#{$state}),
+        var(--pwt-color)
+    );
+}
+
+// transparent, interactive state layer
+@mixin state-layer-transparent {
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+        background-color: color-mix(
+            in srgb,
+            var(--pwt-color) var(--pwt-state-layer-opacity-hover),
+            transparent
+        );
+    }
+
+    &.pressed:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
+        background-color: color-mix(
+            in srgb,
+            var(--pwt-color) var(--pwt-state-layer-opacity-press),
+            transparent
+        );
+    }
+}

@@ -3,7 +3,12 @@
 @mixin color-scheme-vars($name, $important: false) {
     --pwt-color-background: var(--pwt-color-#{$name}) #{if($important, "!important", "")};
     --pwt-color: var(--pwt-color-on-#{$name}) #{if($important, " !important", " ")};
- }
+}
+
+ @mixin outline-button-color-scheme-vars($name, $base: surface, $important: false) {
+    --pwt-color-background: var(--pwt-color-#{$base}) #{if($important, "!important", "")};
+    --pwt-color: var(--pwt-color-#{$name}) #{if($important, " !important", " ")};
+}
 
 @mixin color-scheme($name) {
     .pwt-scheme-#{$name} {

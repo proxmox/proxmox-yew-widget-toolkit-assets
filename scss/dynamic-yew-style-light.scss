@@ -221,5 +221,6 @@ $pwt-font-monospace: monospace;
     @include color-scheme("#{$name}-container");
 }
 
+@import "button2";
 @import "panel2";
 @import "card2";
