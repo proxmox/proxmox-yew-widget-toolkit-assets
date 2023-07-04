@@ -117,6 +117,9 @@ $modal-backdrop-bg-color: #00000030;
     --pwt-color-shadow: var(--pwt-color-neutral-0);
 
     @include color-scheme-vars(surface);
+
+    color: var(--pwt-color-on-neutral);
+    background: var(--pwt-color-neutral);
 }
 
 $shape-corner: (
@@ -198,15 +201,17 @@ $elevation-levels-tint-opacity: (
 }
 $pwt-font-sans-serif: "Roboto Flex";
 $pwt-font-monospace: monospace;
+
+
 @import "font_sizes_material";
 @import "mixins/fonts2";
+
+:root {
+    @include font("body-medium");
+}
+
 @include font_classes();
 
-//@import "theme_common";
-//@import "theme_common_desktop";
-//@import "theme_light";
-
-//@import "theme_post";
 @import "utilities2";
 
 @include color-percentages("primary");
@@ -224,5 +229,6 @@ $pwt-font-monospace: monospace;
 
 @import "button2";
 @import "dialog2";
+@import "miscellaneous";
 @import "panel2";
 @import "card2";
