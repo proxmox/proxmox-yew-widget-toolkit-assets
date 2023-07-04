@@ -4,6 +4,8 @@
 @import "mixins/color_scheme2";
 @import "mixins/state-layer2";
 
+
+
 // Color setup
 // libadwaita colors: https://en.wikipedia.org/wiki/Adwaita_(design_language)
 $color-seed-primary: #3584E4;   // Blue3
@@ -38,6 +40,11 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
     font-family: "Roboto Flex";
     src: url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
 }
+$pwt-font-sans-serif: "Roboto Flex";
+$pwt-font-monospace: monospace;
+@import "font_sizes_material";
+@import "mixins/fonts2";
+@include font_classes();
 
 /* Common setings */
 :root {
@@ -50,8 +57,6 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
 
     --pwt-icon-spacer: 0.5em; // space between icon and text
 
-    --pwt-font-sans-serif: "Roboto Flex";
-    --pwt-font-monospace: monospace;
 
 }
 
