@@ -23,7 +23,7 @@
 // Note: css var() does not work here
 // see: https://bugs.chromium.org/p/chromium/issues/detail?id=996467
 .pwt-dialog:not(.pwt-dropdown)::backdrop {
-   // background-color: $modal-backdrop-bg-color;
+    background-color: $modal-backdrop-bg-color;
 }
 
 .pwt-dialog.pwt-dropdown::backdrop {

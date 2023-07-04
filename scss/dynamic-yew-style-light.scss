@@ -8,6 +8,10 @@
 @import "mixins/color_scheme2";
 @import "mixins/state-layer2";
 
+// zindex: use same values as bootstrap
+$zindex-dropdown: 1000;
+$zindex-modal: 1055;
+$zindex-tooltip: 1080;
 
 
 // Color setup
@@ -110,7 +114,7 @@ $modal-backdrop-bg-color: #00000030;
 
     /* border and focus colors */
     --pwt-high-contrast-border: var(--pwt-color-neutral-alt-50);
-    --pwt-border-color: var(--pwt-color-neutral-alt-80);
+    --pwt-color-border: var(--pwt-color-neutral-alt-80);
     --pwt-color-focus: var(--pwt-color-neutral-10);
 
     --pwt-color-surface-tint: var(--pwt-color-primary);
@@ -229,6 +233,8 @@ $pwt-font-monospace: monospace;
 
 @import "button2";
 @import "dialog2";
+@import "dropdown2";
+@import "input2";
 @import "miscellaneous";
 @import "panel2";
 @import "card2";
