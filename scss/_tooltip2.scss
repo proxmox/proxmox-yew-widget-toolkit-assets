@@ -1,0 +1,21 @@
+.tooltip {
+    @include color-scheme-vars(primary-container);
+
+    display: none;
+
+    @include elevation-box-shadow(3);
+
+    background-color: var(--pwt-color-background);
+    color: var(--pwt-color);
+
+    padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
+    border: 1px solid var(--pwt-color-border) !important;
+    border-radius: var(--pwt-tooltip-corner-shape);
+    z-index: $zindex-tooltip;
+
+    @include font_and_line_height("body-large", $important: true);
+}
+
+.tooltip[data-show] {
+    display: block;
+}
