@@ -1,6 +1,4 @@
 .pwt-navigation-bar {
-    //@include color-scheme-vars(surface-container);
-    //@include color-scheme-vars(primary-container);
     @include color-scheme-vars(surface-container);
     @include accent-color-scheme-vars(neutral-alt);
 
@@ -18,7 +16,6 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
-
 
         align-items: center;
         justify-content: center;
@@ -38,23 +35,31 @@
 
             width: 24px;
             transition: width 0.2s;
+            &:focus-within,
+            &:hover {
+                width: 56px;
+                @include elevation-background-color(2, hover);
+            }
 
-            //@include state-layer-background-accent(none);
+            &:active {
+                width: 56px;
+                @include elevation-background-color(2, press);
+            }
 
             &.active {
                 width: 56px;
                 @include state-layer-background-accent(press);
-            }
 
-            &:focus-within,
-            &:hover {
-                @include state-layer-background-accent(hover);
-                width: 56px;
-            }
+                &:focus-within,
+                &:hover {
+                    width: 56px;
+                    @include state-layer-background-accent(hover);
+                }
 
-            &:active {
-                @include state-layer-background-accent(press);
-                width: 56px;
+                &:active {
+                    width: 56px;
+                    @include state-layer-background-accent(press);
+                }
             }
         }
 

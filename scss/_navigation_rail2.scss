@@ -49,20 +49,31 @@
                 width: 24px;
                 transition: width 0.2s;
 
-                &.active {
-                    width: 56px;
-                    @include state-layer-background-accent(press);
-                }
-
                 &:focus-within,
                 &:hover {
                     width: 56px;
-                    @include state-layer-background-accent(hover);
+                    @include elevation-background-color(2, hover);
                 }
 
                 &:active {
                     width: 56px;
+                    @include elevation-background-color(2, press);
+                }
+
+                &.active {
+                    width: 56px;
                     @include state-layer-background-accent(press);
+
+                    &:focus-within,
+                    &:hover {
+                        width: 56px;
+                        @include state-layer-background-accent(hover);
+                    }
+
+                    &:active {
+                        width: 56px;
+                        @include state-layer-background-accent(press);
+                    }
                 }
             }
 
