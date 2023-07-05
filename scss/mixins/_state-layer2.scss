@@ -55,6 +55,21 @@
     );
 }
 
+// interactive state layer
+@mixin state-layer {
+    @include state-layer-background(none);
+
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+        @include state-layer-background(hover);
+    }
+
+    &.pressed:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
+        @include state-layer-background(press);
+    }
+}
+
 // transparent, interactive state layer
 @mixin state-layer-transparent {
     &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
