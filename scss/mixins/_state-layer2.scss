@@ -38,11 +38,20 @@
         var(--pwt-color-background)
     );
 }
+
 @mixin state-layer-background-inverse($state) {
     background-color: color-mix(
         in srgb,
         var(--pwt-color-background) var(--pwt-state-layer-opacity-#{$state}),
         var(--pwt-color)
+    );
+}
+
+@mixin state-layer-background-accent($state) {
+    background-color: color-mix(
+        in srgb,
+        var(--pwt-accent-color) var(--pwt-state-layer-opacity-#{$state}),
+        var(--pwt-accent-color-background)
     );
 }
 

@@ -1,0 +1,118 @@
+.pwt-nav-link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--pwt-icon-spacer);
+    transition: 0.1s;
+
+    user-select: none;
+    cursor: pointer;
+    white-space: nowrap !important;
+    outline: 0;
+    padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
+    border-radius: var(--pwt-nav-link-corner-shape);
+    @include font_and_line_height("label-large");
+}
+
+// Pills
+.pwt-nav-pills {
+    @include color-scheme-vars(neutral-alt);
+    @include accent-color-scheme-vars(primary-container);
+
+    display: flex;
+    column-gap: 1em;
+
+    .pwt-nav-link {
+        line-height: map-get($line-height, "title-medium");
+        background: none;
+        border: 0;
+        border-radius: var(--pwt-nav-pills-corner-shape);
+
+        &:focus-visible {
+            outline: 2px solid var(--pwt-color-on-surface);
+            outline-offset: -2px;
+        }
+        &:hover {
+            @include state-layer-background(hover);
+        }
+        &:active {
+            @include state-layer-background(press);
+        }
+
+        &.active {
+            color: var(--pwt-accent-color);
+            background-color: var(--pwt-accent-color-background);
+
+            &:hover {
+                @include state-layer-background-accent(hover);
+            }
+            &:active {
+                @include state-layer-background-accent(press);
+            }
+        }
+    }
+
+    a {
+        text-decoration: none !important;
+        text-shadow: none !important;
+        color: var(--pwt-color-on-neutral);
+    }
+}
+
+// Menu
+.pwt-nav-menu {
+    @include color-scheme-vars(surface);
+    @include accent-color-scheme-vars(primary-container);
+
+    background: var(--pwt-color-background);
+
+    .pwt-nav-link {
+        line-height: map-get($line-height, "title-medium");
+        background: none;
+        border: 0;
+
+        &:focus-visible {
+            outline: 2px solid var(--pwt-color-on-surface);
+            outline-offset: -2px;
+        }
+
+        &:hover {
+            @include state-layer-background(hover);
+        }
+
+        &:active {
+            @include state-layer-background(press);
+        }
+
+        &.active {
+            color: var(--pwt-accent-color);
+            background-color: var(--pwt-accent-color-background);
+
+            &:hover {
+                @include state-layer-background-accent(hover);
+            }
+            &:active {
+                @include state-layer-background-accent(press);
+            }
+        }
+    }
+
+    a {
+        text-decoration: none !important;
+        text-shadow: none !important;
+        color: var(--pwt-color-on-surface);
+    }
+}
+
+.pwt-nav-menu-icon {
+    font-size: map-get($font-size, "title-medium");
+    line-height: map-get($line-height, "title-medium");
+}
+
+.pwt-nav-menu-item-arrow {
+    font-size: map-get($font-size, "title-medium");
+    line-height: map-get($line-height, "title-medium");
+
+    &.expanded {
+        transform: scaleY(-1);
+    }
+}
