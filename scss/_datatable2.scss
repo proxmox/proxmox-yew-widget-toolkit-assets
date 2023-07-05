@@ -33,7 +33,13 @@
     */
 
     tr.selected {
-        background: var(--pwt-color-primary-container);
+        @include elevation-background-color(3, none);
+        &:hover {
+            @include elevation-background-color(3, hover);
+        }
+        &:active {
+            @include elevation-background-color(3, press);
+        }
     }
 
     td div {
