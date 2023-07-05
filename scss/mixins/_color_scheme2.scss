@@ -20,6 +20,10 @@
         @include color-scheme-vars($name, $important: true);
     }
 
+    .pwt-accent-#{$name} {
+        @include accent-color-scheme-vars($name, $important: true);
+    }
+
     //.pwt-scheme-#{$name}.pwt-button-text {
     //    @include outline-button-color-scheme-vars($name, $base: neutral, $important: true);
     //}
