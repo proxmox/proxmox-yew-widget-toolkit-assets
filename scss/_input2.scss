@@ -13,21 +13,27 @@ input {
 }
 
 .pwt-input {
+    @include color-scheme-vars(surface);
+    @include accent-color-scheme-vars(primary);
+
+    accent-color: var(--pwt-accent-color);
+
     // pwt-input is a container - use to add icons, i.e the dropdown picker
     display: inline-flex;
     align-items: baseline;
     gap: var(--pwt-icon-spacer);
 
-    color: var(--pwt-color-on-surface);
-    background-color: var(--pwt-color-surface);
+    color: var(--pwt-color);
+    background-color: var(--pwt-color-background);
+
     padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
     border: 1px solid var(--pwt-color-border);
     border-radius: var(--pwt-input-corner-shape);
 
     /// disable border, padding, margin, outline for inputs inside
     input {
-        color: var(--pwt-color-on-surface);
-        background-color: var(--pwt-color-surface);
+        color: var(--pwt-color);
+        background-color: var(--pwt-color-background);
         outline: 0 !important;
         border: 0 !important;
         padding: 0 !important;
@@ -76,19 +82,22 @@ input {
 }
 
 .pwt-switch {
+    @include color-scheme-vars(neutral-alt);
+    @include accent-color-scheme-vars(primary);
+
     display: inline-block;
     outline: 0;
     flex: 0 0 auto;
     font-size: map-get($font-size, "label-large");
     line-height: map-get($line-height, "label-large");
     width: calc(3em - 4px);
-    background-color: var(--pwt-color-neutral-alt);
+    background-color: var(--pwt-color-background);
     border: 2px solid var(--pwt-color-border) !important;
     border-radius: math.div(map-get($line-height, "label-large"), 2) + 4px;
     padding: 2px;
 
     &.checked:not(.disabled) {
-        background-color: var(--pwt-color-primary);
+        background-color: var(--pwt-accent-color-background);
     }
 
     .pwt-switch-slider {
@@ -108,13 +117,13 @@ input {
         margin: 0px;
         height: map-get($line-height, "label-large");
         width: map-get($line-height, "label-large");
-        color: var(--pwt-color-primary);
-        background-color: var(--pwt-color-on-primary);
+        color: var(--pwt-accent-color-background);
+        background-color: var(--pwt-accent-color);
         margin-inline-start: calc(100% - #{map-get($line-height, "label-large")});
     }
 
     &.checked.disabled .pwt-switch-slider {
-        color: var(--pwt-color-on-surface);
+        color: var(--pwt-color);
         background-color: var(--pwt-high-contrast-border);
     }
 
@@ -129,13 +138,15 @@ input {
 }
 
 .pwt-checkbox-state {
+    @include color-scheme-vars(surface);
+    @include accent-color-scheme-vars(primary);
+
     display: inline-block;
     padding: max(map-get($line-height, "label-large") - map-get($font-size, "label-large"), var(--pwt-spacer-1));
     border-radius: 50%;
     transition: background 0.3s;
 
-    --pwt-color: var(--pwt-color-primary);
-    @include state-layer-transparent();
+    @include state-layer-transparent-accent-inverse();
 }
 
 .pwt-checkbox {
@@ -148,7 +159,7 @@ input {
     height: calc(1em);
     border: 2px solid var(--pwt-color-border) !important;
     color: #ffffff00; // invisible
-    background-color: var(--pwt-color-surface);
+    background-color: var(--pwt-color-background);
 
     .pwt-checkbox-icon {
         display: flex;
@@ -157,8 +168,8 @@ input {
     }
 
     &.checked {
-        color: var(--pwt-color-on-primary);
-        background-color: var(--pwt-color-primary);
+        color: var(--pwt-accent-color);
+        background-color: var(--pwt-accent-color-background);
     }
 
     &:focus {
@@ -171,8 +182,8 @@ input {
     }
 
     &.disabled.checked {
-        color: var(--pwt-color-on-surface);
-        background-color: var(--pwt-color-surface);
+        color: var(--pwt-color);
+        background-color: var(--pwt-color-background);
     }
 }
 
@@ -188,7 +199,7 @@ input {
     border: 2px solid var(--pwt-color-border) !important;
     border-radius: 50%;
     color: #ffffff00; // invisible
-    background-color: var(--pwt-color-neutral);
+    background-color: var(--pwt-color-backround);
     transition: 0.2s all linear;
 
     .pwt-checkbox-icon {
@@ -199,15 +210,15 @@ input {
     }
 
     &.checked {
-        background: var(--pwt-color-primary);
+        background-color: var(--pwt-accent-color-background);
     }
 
     &.checked.disabled:after {
-        background-color: var(--pwt-color-on-surface);
+        background-color: var(--pwt-color-background);
     }
 
     &.checked:not(.disabled):not(:focus) {
-        border: 2px solid var(--pwt-color-primary) !important;
+        border: 2px solid var(--pwt-accent-color-background) !important;
     }
 
     &:focus {

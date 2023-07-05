@@ -75,3 +75,24 @@
         );
     }
 }
+
+// transparent, interactive state layer with inverse accent scheme
+@mixin state-layer-transparent-accent-inverse {
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+        background-color: color-mix(
+            in srgb,
+            var(--pwt-accent-color-background) var(--pwt-state-layer-opacity-hover),
+            transparent
+        );
+    }
+
+    &.pressed:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
+        background-color: color-mix(
+            in srgb,
+            var(--pwt-accent-color-background) var(--pwt-state-layer-opacity-press),
+            transparent
+        );
+    }
+}
