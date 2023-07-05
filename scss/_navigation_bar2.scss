@@ -1,0 +1,69 @@
+.pwt-navigation-bar {
+    //@include color-scheme-vars(surface-container);
+    //@include color-scheme-vars(primary-container);
+    @include color-scheme-vars(surface-container);
+    @include accent-color-scheme-vars(neutral-alt);
+
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: var(--pwt-spacer-1) 0 var(--pwt-spacer-2) 0;
+    gap: var(--pwt-spacer-2);
+
+    width: 100%;
+
+    @include state-layer-background(2);
+
+    .pwt-navigation-bar-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+
+        align-items: center;
+        justify-content: center;
+        min-width: 64px;
+        min-height: 48px;
+
+        .pwt-navigation-bar-icon-container {
+            cursor: pointer;
+
+            //background: red;
+            border-radius: 10rem;
+            padding: 4px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 24px;
+            transition: width 0.2s;
+
+            //@include state-layer-background-accent(none);
+
+            &.active {
+                width: 56px;
+                @include state-layer-background-accent(press);
+            }
+
+            &:focus-within,
+            &:hover {
+                @include state-layer-background-accent(hover);
+                width: 56px;
+            }
+
+            &:active {
+                @include state-layer-background-accent(press);
+                width: 56px;
+            }
+        }
+
+        .pwt-navigation-bar-icon {
+            font-size: map-get($font-size, "headline-small");
+        }
+
+        .pwt-navigation-bar-label {
+            font-size: map-get($font-size, "label-medium");
+        }
+    }
+}
