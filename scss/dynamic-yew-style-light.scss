@@ -13,37 +13,13 @@ $zindex-dropdown: 1000;
 $zindex-modal: 1055;
 $zindex-tooltip: 1080;
 
+@import "theme_colors_adwaita";
 
-// Color setup
-// libadwaita colors: https://en.wikipedia.org/wiki/Adwaita_(design_language)
-$color-seed-primary: #3584E4;   // Blue3
-$color-seed-secondary: #33D17A; // Green3
-$color-seed-tertiary: #F6D32D;  // Yellow3
-$color-seed-neutral: #fff;
 
-$color-seed-error: #E01B24;     // Red3
-$color-seed-warning: #FF7800;   // Orange3
-
-// use primary with 5% saturation for neutral-alt
-$color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
-
-/* Tonal color values */
+/* Spacer settings */
+$spacer-base-width: 5px;
 :root {
-    @include pwt-color-palette-vars("primary", $color-seed-primary);
-    @include pwt-color-palette-vars("secondary", $color-seed-secondary);
-    @include pwt-color-palette-vars("tertiary", $color-seed-tertiary);
-    @include pwt-color-palette-vars("error", $color-seed-error);
-    @include pwt-color-palette-vars("warning", $color-seed-warning);
-    @include pwt-color-palette-vars("neutral", $color-seed-neutral);
-    @include pwt-color-palette-vars("neutral-alt", $color-seed-neutral-alt);
-}
-
-
-// Generate output
-
-/* Common setings */
-:root {
-    --pwt-spacer-base-width: 5px;
+    --pwt-spacer-base-width: #{$spacer-base-width};
     --pwt-spacer-0: 0;
     --pwt-spacer-1: calc(var(--pwt-spacer-base-width) * 1);
     --pwt-spacer-2: calc(var(--pwt-spacer-base-width) * 2);
@@ -51,80 +27,10 @@ $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
     --pwt-spacer-4: calc(var(--pwt-spacer-base-width) * 4);
 
     --pwt-icon-spacer: 0.5em; // space between icon and text
-
-
 }
 
-/* light theme color scheme */
-$modal-backdrop-bg-color: #00000030;
-
-:root {
-    color-scheme: light;
-
-    --pwt-color-primary: var(--pwt-color-primary-40);
-    --pwt-color-on-primary: var(--pwt-color-primary-100);
-    --pwt-color-primary-container: var(--pwt-color-primary-90);
-    --pwt-color-on-primary-container: var(--pwt-color-primary-10);
-
-    --pwt-color-secondary: var(--pwt-color-secondary-40);
-    --pwt-color-on-secondary: var(--pwt-color-secondary-100);
-    --pwt-color-secondary-container: var(--pwt-color-secondary-90);
-    --pwt-color-on-secondary-container: var(--pwt-color-secondary-10);
-
-    --pwt-color-tertiary: var(--pwt-color-tertiary-40);
-    --pwt-color-on-tertiary: var(--pwt-color-tertiary-100);
-    --pwt-color-tertiary-container: var(--pwt-color-tertiary-90);
-    --pwt-color-on-tertiary-container: var(--pwt-color-tertiary-10);
-
-    --pwt-color-error: var(--pwt-color-error-40);
-    --pwt-color-on-error: var(--pwt-color-error-100);
-    --pwt-color-error-container: var(--pwt-color-error-90);
-    --pwt-color-on-error-container: var(--pwt-color-error-10);
-
-    --pwt-color-warning: var(--pwt-color-warning-40);
-    --pwt-color-on-warning: var(--pwt-color-warning-100);
-    --pwt-color-warning-container: var(--pwt-color-warning-90);
-    --pwt-color-on-warning-container: var(--pwt-color-warning-10);
-
-    // neutral
-    --pwt-color-neutral: var(--pwt-color-neutral-100);
-    --pwt-color-on-neutral: var(--pwt-color-neutral-10);
-    --pwt-color-neutral-container: var(--pwt-color-neutral-95);
-    // surface
-    --pwt-color-on-neutral-container: var(--pwt-color-neutral-10);
-
-    // surface
-    --pwt-color-surface: var(--pwt-color-neutral-95);
-    --pwt-color-on-surface: var(--pwt-color-neutral-10);
-    --pwt-color-surface-container: var(--pwt-color-neutral-100);
-    // neutral
-    --pwt-color-on-surface-container: var(--pwt-color-neutral-10);
-
-    // inverse-surface
-    --pwt-color-inverse-surface: var(--pwt-color-neutral-10);
-    --pwt-color-on-inverse-surface: var(--pwt-color-neutral-95);
-    --pwt-color-inverse-surface-container: var(--pwt-color-neutral-10);
-    --pwt-color-on-inverse-surface-container: var(--pwt-color-neutral-100);
-
-    --pwt-color-neutral-alt: var(--pwt-color-neutral-alt-90);
-    --pwt-color-on-neutral-alt: var(--pwt-color-neutral-alt-30);
-    --pwt-color-neutral-alt-container: var(--pwt-color-neutrElevantional-alt-99);
-    --pwt-color-on-neutral-alt-container: var(--pwt-color-neutral-alt-10);
-
-
-    /* border and focus colors */
-    --pwt-high-contrast-border: var(--pwt-color-neutral-alt-50);
-    --pwt-color-border: var(--pwt-color-neutral-alt-80);
-    --pwt-color-focus: var(--pwt-color-neutral-10);
-
-    --pwt-color-surface-tint: var(--pwt-color-primary);
-    --pwt-color-shadow: var(--pwt-color-neutral-0);
-
-    @include color-scheme-vars(surface);
-
-    color: var(--pwt-color-on-neutral);
-    background: var(--pwt-color-neutral);
-}
+//@import "theme_scheme_dark";
+@import "theme_scheme_light";
 
 $shape-corner: (
     none: 0px,
