@@ -1,8 +1,9 @@
 .pwt-progress {
+	@include accent-color-scheme-vars(primary);
 	@include font_and_line_height("label-large");
 
 	position: relative;
-	background: map-get($pwt-color, "border");
+	background: var(--pwt-color-border);
 	overflow: hidden;
 	height: 4px;
 	min-height: 4px;
@@ -11,7 +12,7 @@
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		background: map-get($pwt-color, "primary");
+		background: var(--pwt-accent-color-background);
 	}
 
 	@keyframes infinite-progress {
@@ -30,7 +31,7 @@
 		bottom: 0;
 		width: 20%;
 		left: 0;
-		background: map-get($pwt-color, "primary");
+		background: var(--pwt-accent-color-background);
 		animation-duration: 2s;
 		animation-name: infinite-progress;
 		animation-iteration-count: infinite;
