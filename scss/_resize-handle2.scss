@@ -1,0 +1,52 @@
+/* Visible resize handle (vertical) */
+.row-split-handle {
+    @include color-scheme-vars(neutral-container);
+    @include state-layer();
+
+    position: relative;
+    width: var(--pwt-spacer-2);
+    cursor: col-resize;
+    outline: 0;
+    touch-action: none;
+
+}
+
+
+/* Visible resize handle (horizontal) */
+.column-split-handle {
+    @include color-scheme-vars(neutral-container);
+    @include state-layer();
+
+    position: relative;
+    height: var(--pwt-spacer-2);
+    cursor: row-resize;
+    outline: 0;
+    touch-action: none;
+}
+
+/* Invisible resize handle */
+.resize-handle {
+    position: relative;
+    background: black;
+    margin-inline-start: 3px;
+    opacity: 0;
+    width: 0px;
+    /* cursor: col-resize; */
+    flex-shrink: 0;
+}
+
+.resize-handle:hover {
+    opacity: 0.5;
+}
+
+.resize-handle::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    margin-inline-start: -10px;
+    background-color: transparent;
+    cursor: col-resize;
+}
