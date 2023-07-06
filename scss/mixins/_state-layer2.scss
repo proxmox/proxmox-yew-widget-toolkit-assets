@@ -5,6 +5,25 @@
         var(--pwt-elevation-level-#{$level});
 }
 
+@mixin elevation-background-color2(
+    $base: transparent, // surface background color
+    $tint: var(--pwt-color-surface-tint), // surface tint color
+    $color: var(--pwt-color), // surface forground color
+    $level: 0, // elevation level
+    $state: none // state layer state
+) {
+    @if (($base == transparent) or ($level == 0)) {
+        background-color: color-mix(in srgb, $color var(--pwt-state-layer-opacity-#{$state}), $base);
+    } @else {
+        --pwt-tmp-elevation-color: color-mix(in srgb, $tint var(--pwt-state-layer-opacity-#{$level}), $base);
+        background-color: color-mix(
+            in srgb,
+            var(--pwt-color) var(--pwt-state-layer-opacity-#{$state}),
+            var(--pwt-tmp-elevation-color)
+        );
+    }
+}
+
 @mixin elevation-background-color($level, $state) {
     --pwt-tmp-elevation-color: color-mix(
         in srgb,
@@ -61,13 +80,29 @@
     &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         @include elevation-background-color($level, hover);
-
     }
 
     &.pressed:not(:disabled):not(.disabled),
     &:active:not(:disabled):not(.disabled) {
         @include elevation-background-color($level, press);
+    }
+}
 
+//@mixin state-layer2($base: transparent, $tint: var(--pwt-color), $level: 0) {
+@mixin state-layer2(
+    $base: transparent, // surface background color
+    $tint: var(--pwt-color-surface-tint), // surface tint color
+    $color: var(--pwt-color), // surface forground color
+    $level: 0, // elevation level
+) {
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+        @include elevation-background-color2($base, $tint, $color, $level, hover);
+    }
+
+    &.pressed:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
+        @include elevation-background-color2($base, $tint, $color, $level, press);
     }
 }
 
@@ -75,20 +110,12 @@
 @mixin state-layer-transparent {
     &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        background-color: color-mix(
-            in srgb,
-            var(--pwt-color) var(--pwt-state-layer-opacity-hover),
-            transparent
-        );
+        background-color: color-mix(in srgb, var(--pwt-color) var(--pwt-state-layer-opacity-hover), transparent);
     }
 
     &.pressed:not(:disabled):not(.disabled),
     &:active:not(:disabled):not(.disabled) {
-        background-color: color-mix(
-            in srgb,
-            var(--pwt-color) var(--pwt-state-layer-opacity-press),
-            transparent
-        );
+        background-color: color-mix(in srgb, var(--pwt-color) var(--pwt-state-layer-opacity-press), transparent);
     }
 }
 

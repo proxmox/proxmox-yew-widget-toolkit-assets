@@ -56,32 +56,10 @@ button {
     user-select: none;
     border: 0;
     border-radius: var(--pwt-button-corner-shape);
+    z-index: 1; // correctly show shadows
 
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
-
-    &.pressed:not(:disabled):not(.disabled),
-    &:active:not(:disabled):not(.disabled) {
-        @include state-layer-background(press);
-        box-shadow: none;
-    }
-
-    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include state-layer-background(hover);
-        @include elevation-box-shadow(0);
-        z-index: 1; // correctly show shadows
-    }
-
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include state-layer-background(hover);
-        @include elevation-box-shadow(1);
-        z-index: 1; // correctly show shadows
-    }
-
-    &:focus-visible {
-        outline: 2px solid var(--pwt-color-focus);
-        outline-offset: -2px;
-    }
 
     &.disabled,
     &:disabled {
@@ -92,19 +70,38 @@ button {
     }
 }
 
-.pwt-fab,
-.pwt-button-text,
-.pwt-button-outline,
-.pwt-button-elevated {
-    @include color-scheme-vars("primary");
+// implement state layer for normal buttons
+.pwt-button:not(.pwt-fab):not(.pwt-button-text):not(.pwt-button-outline):not(.pwt-button-elevated) {
+    &.pressed:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
+        @include state-layer-background(press);
+        box-shadow: none;
+    }
+
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+        @include state-layer-background(hover);
+        @include elevation-box-shadow(0);
+    }
+
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+        @include state-layer-background(hover);
+        @include elevation-box-shadow(1);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--pwt-color-focus);
+        outline-offset: -2px;
+    }
 }
 
 .pwt-button.pwt-button-text {
     @include elevation-box-shadow(0);
+    @include color-scheme-vars("primary");
 
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include elevation-box-shadow(0);
-    }
+    color: var(--pwt-color-background);
+    background: none;
+
+    @include state_layer2($base: transparent, $color: var(--pwt-color-background));
 }
 
 .pwt-button.pwt-button-outline {
@@ -122,23 +119,13 @@ button {
 }
 
 .pwt-button.pwt-button-outline:not(:disabled):not(.disabled),
-.pwt-button.pwt-button-text:not(:disabled):not(.disabled),
 .pwt-button.pwt-button-elevated:not(:disabled):not(.disabled) {
+    @include color-scheme-vars("primary");
+
     color: var(--pwt-color-background);
-    background-color: var(--pwt-color);
+    background-color: var(--pwt-color-neutral);
 
-    &.pressed:not(:disabled):not(.disabled),
-    &:active:not(:disabled):not(.disabled) {
-        @include state-layer-background-inverse(press);
-    }
-
-    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include state-layer-background-inverse(hover);
-    }
-
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
-        @include state-layer-background-inverse(hover);
-    }
+    @include state_layer2($base: var(--pwt-color-neutral), $color: var(--pwt-color-background));
 }
 
 .pwt-segmented-button.pwt-button-elevated > .pwt-button,
@@ -160,6 +147,7 @@ button {
     }
 }
 
+// implement state layer for FAB buttons
 .pwt-button.pwt-fab {
     @include color-scheme-vars("primary-container");
     @include elevation-background-color(0, none);
@@ -285,6 +273,7 @@ button {
 // Fab Menus
 .pwt-fab-menu-container {
     position: relative;
+    z-index: $zindex-dropdown;
 
     --fab-small-button-height: calc(#{map-get($font-size, "title-large")} + 2 * var(--pwt-spacer-1) + 2px);
 
@@ -369,7 +358,6 @@ button {
         top: calc(
             0px - var(--fab-small-button-height) -
                 (var(--pwt-spacer-2) + 3 * (var(--fab-small-button-height) + var(--pwt-spacer-2)))
-
         );
     }
 
@@ -377,39 +365,38 @@ button {
         top: calc(
             0px - var(--fab-small-button-height) -
                 (var(--pwt-spacer-2) + 4 * (var(--fab-small-button-height) + var(--pwt-spacer-2)))
-
         );
     }
 
     &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(2) {
-        left: calc(0px - var(--fab-small-button-height) -  var(--pwt-spacer-2));
+        left: calc(0px - var(--fab-small-button-height) - var(--pwt-spacer-2));
     }
 
     &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(3) {
         left: calc(
             0px - var(--fab-small-button-height) -
-                (var(--pwt-spacer-2) + 1 * (var(--fab-small-button-height) +  var(--pwt-spacer-2)))
+                (var(--pwt-spacer-2) + 1 * (var(--fab-small-button-height) + var(--pwt-spacer-2)))
         );
     }
 
     &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(4) {
         left: calc(
             0px - var(--fab-small-button-height) -
-                (var(--pwt-spacer-2) + 2 * (var(--fab-small-button-height) +  var(--pwt-spacer-2)))
+                (var(--pwt-spacer-2) + 2 * (var(--fab-small-button-height) + var(--pwt-spacer-2)))
         );
     }
 
     &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(5) {
         left: calc(
             0px - var(--fab-small-button-height) -
-                (var(--pwt-spacer-2) + 3 * (var(--fab-small-button-height) +  var(--pwt-spacer-2)))
+                (var(--pwt-spacer-2) + 3 * (var(--fab-small-button-height) + var(--pwt-spacer-2)))
         );
     }
 
     &.pwt-fab-direction-left.active > .pwt-fab-menu-item:nth-child(6) {
         left: calc(
             0px - var(--fab-small-button-height) -
-                (var(--pwt-spacer-2) + 4 * (var(--fab-small-button-height) +  var(--pwt-spacer-2)))
+                (var(--pwt-spacer-2) + 4 * (var(--fab-small-button-height) + var(--pwt-spacer-2)))
         );
     }
 
