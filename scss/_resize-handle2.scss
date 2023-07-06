@@ -3,6 +3,8 @@
     @include color-scheme-vars(neutral-container);
     @include state-layer();
 
+    background: var(--pwt-color-background);
+
     position: relative;
     width: var(--pwt-spacer-2);
     cursor: col-resize;
@@ -16,6 +18,8 @@
 .column-split-handle {
     @include color-scheme-vars(neutral-container);
     @include state-layer();
+
+    background: var(--pwt-color-background);
 
     position: relative;
     height: var(--pwt-spacer-2);
