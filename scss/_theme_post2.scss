@@ -18,25 +18,16 @@
     }
 
     /* Corner shape for components */
-    --pwt-button-corner-shape: var(--pwt-shape-corner-small);
-    --pwt-fab-corner-shape: var(--pwt-shape-corner-large);
-    --pwt-progress-corner-shape: var(--pwt-shape-corner-extra-small);
-    --pwt-nav-link-corner-shape: var(--pwt-shape-corner-small);
-    --pwt-nav-pills-corner-shape: var(--pwt-shape-corner-small);
-    --pwt-tooltip-corner-shape: var(--pwt-shape-corner-extra-large);
-    --pwt-input-corner-shape: var(--pwt-shape-corner-extra-small);
-    --pwt-card-corner-shape: var(--pwt-shape-corner-small);
-    --pwt-dialog-corner-shape: var(--pwt-shape-corner-small);
+    --pwt-button-corner-shape: #{$button-corner-shape};
+    --pwt-fab-corner-shape: #{$fab-corner-shape};
+    --pwt-progress-corner-shape: #{$progress-corner-shape};
+    --pwt-nav-link-corner-shape: #{$nav-link-corner-shape};
+    --pwt-nav-pills-corner-shape: #{$nav-pills-corner-shape};
+    --pwt-tooltip-corner-shape:#{$tooltip-corner-shape};
+    --pwt-input-corner-shape: #{$input-corner-shape};
+    --pwt-card-corner-shape: #{$card-corner-shape};
+    --pwt-dialog-corner-shape: #{$dialog-corner-shape};
 }
-
-$elevation-levels: (
-    0: 0px,
-    1: 2px,
-    2: 4px,
-    3: 6px,
-    4: 8px,
-    5: 12px,
-);
 
 /* Define elevation levels */
 :root {
