@@ -3,11 +3,11 @@
 
 $color-seed-primary: #00617F; // proxmox blue
 $color-seed-secondary: #e57000; // proxmox orange
-$color-seed-tertiary: #33D17A;
+$color-seed-tertiary: #ABBABA; // proxmox grey
 $color-seed-neutral: #fff;
 
-$color-seed-error: #E01B24;     // Red3
-$color-seed-warning: #FF7800;   // Orange3
+$color-seed-error: #E01B24;
+$color-seed-warning: #FF7800;
 
 // use primary with 5% saturation for neutral-alt
 $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
