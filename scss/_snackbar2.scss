@@ -8,7 +8,7 @@
     @include accent-color-scheme-vars("primary-container");
 
     @include elevation-box-shadow(3);
-    @include elevation-background-color(3, none);
+    @include elevation-background-color($level: 3, $state: none);
 
     color: var(--pwt-color);
 

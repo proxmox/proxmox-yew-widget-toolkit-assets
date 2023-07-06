@@ -58,7 +58,7 @@
         padding: var(--pwt-spacer-1);
         width: auto;
 
-        @include state_layer();
+        @include state-layer();
 
         &.disabled {
             cursor: auto;
@@ -80,7 +80,7 @@
         padding: var(--pwt-spacer-1);
         width: auto;
 
-        @include state_layer();
+        @include state-layer();
 
         &.disabled {
             cursor: auto;

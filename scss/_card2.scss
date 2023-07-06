@@ -4,19 +4,19 @@
 
 @mixin surface-elevation-rules($default) {
     @include elevation-box-shadow($default);
-    @include elevation-background-color($default, none);
+    @include elevation-background-color($level: $default, $state: none);
 
     @each $level, $_value in $elevation-levels {
         &.pwt-elevation#{$level} {
             @include elevation-box-shadow($level);
-            @include elevation-background-color($level, none);
+            @include elevation-background-color($level: $level, $state: none);
 
             &:hover {
-               @include elevation-background-color($level, hover);
+               @include elevation-background-color($level: $level, $state: hover);
             }
 
             &:active {
-                @include elevation-background-color($level, press);
+                @include elevation-background-color($level: $level, $state: press);
             }
         }
     }
@@ -26,12 +26,12 @@
     &.pwt-interactive {
         &:hover {
             @include elevation-box-shadow(2);
-            @include elevation-background-color(2, hover);
+            @include elevation-background-color($level: 2, $state: hover);
         }
 
         &:active {
             @include elevation-box-shadow(1);
-            @include elevation-background-color(1, press);
+            @include elevation-background-color($level: 1, $state: press);
         }
     }
 
@@ -52,17 +52,14 @@
 .pwt-card.pwt-card-flat,
 .pwt-card.pwt-card-outline {
     @include elevation-box-shadow(0);
-    //@include elevation-background-color(0, none);
 
     &.pwt-interactive {
         &:hover {
             @include elevation-box-shadow(0);
-            //@include elevation-background-color(0, hover);
         }
 
         &:active {
             @include elevation-box-shadow(0);
-            //@include elevation-background-color(0, press);
         }
     }
 }

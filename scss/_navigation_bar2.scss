@@ -38,28 +38,19 @@
             &:focus-within,
             &:hover {
                 width: 56px;
-                @include elevation-background-color(2, hover);
+                @include elevation-background-color($level: 2, $state: hover);
             }
 
             &:active {
                 width: 56px;
-                @include elevation-background-color(2, press);
+                @include elevation-background-color($level: 2, $state: press);
             }
 
             &.active {
                 width: 56px;
-                @include state-layer-background-accent(press);
-
-                &:focus-within,
-                &:hover {
-                    width: 56px;
-                    @include state-layer-background-accent(hover);
-                }
-
-                &:active {
-                    width: 56px;
-                    @include state-layer-background-accent(press);
-                }
+                color: var(--pwt-accent-color);
+                background-color: var(--pwt-accent-color-background);
+                @include state-layer($base: var(--pwt-accent-color-background), $color: var(--pwt-accent-color));
             }
         }
 

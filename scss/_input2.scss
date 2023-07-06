@@ -146,7 +146,7 @@ input {
     border-radius: 50%;
     transition: background 0.3s;
 
-    @include state-layer-transparent-accent-inverse();
+    @include state-layer($base: transparent, $color: var(--pwt-accent-color-background));
 }
 
 .pwt-checkbox {

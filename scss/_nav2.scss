@@ -31,23 +31,13 @@
             outline: 2px solid var(--pwt-color-on-surface);
             outline-offset: -2px;
         }
-        &:hover {
-            @include state-layer-background(hover);
-        }
-        &:active {
-            @include state-layer-background(press);
-        }
+
+        @include state-layer();
 
         &.active {
             color: var(--pwt-accent-color);
             background-color: var(--pwt-accent-color-background);
-
-            &:hover {
-                @include state-layer-background-accent(hover);
-            }
-            &:active {
-                @include state-layer-background-accent(press);
-            }
+            @include state-layer($base:  var(--pwt-accent-color-background), $color: var(--pwt-accent-color));
         }
     }
 
@@ -75,24 +65,13 @@
             outline-offset: -2px;
         }
 
-        &:hover {
-            @include state-layer-background(hover);
-        }
-
-        &:active {
-            @include state-layer-background(press);
-        }
+        @include state-layer();
 
         &.active {
             color: var(--pwt-accent-color);
             background-color: var(--pwt-accent-color-background);
+            @include state-layer($base:  var(--pwt-accent-color-background), $color: var(--pwt-accent-color));
 
-            &:hover {
-                @include state-layer-background-accent(hover);
-            }
-            &:active {
-                @include state-layer-background-accent(press);
-            }
         }
     }
 

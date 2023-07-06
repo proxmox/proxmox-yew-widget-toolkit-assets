@@ -3,7 +3,7 @@ button {
 }
 
 .pwt-action-icon {
-    @include state-layer-transparent;
+    @include state-layer($base: transparent);
 
     --pwt-color: var(--pwt-color-primary);
     color: var(--pwt-color);
@@ -101,7 +101,7 @@ button {
     color: var(--pwt-color-background);
     background: none;
 
-    @include state_layer2($base: transparent, $color: var(--pwt-color-background));
+    @include state-layer($base: transparent, $color: var(--pwt-color-background));
 }
 
 .pwt-button.pwt-button-outline {
@@ -125,7 +125,7 @@ button {
     color: var(--pwt-color-background);
     background-color: var(--pwt-color-neutral);
 
-    @include state_layer2($base: var(--pwt-color-neutral), $color: var(--pwt-color-background));
+    @include state-layer($base: var(--pwt-color-neutral), $color: var(--pwt-color-background));
 }
 
 .pwt-segmented-button.pwt-button-elevated > .pwt-button,
@@ -150,8 +150,9 @@ button {
 // implement state layer for FAB buttons
 .pwt-button.pwt-fab {
     @include color-scheme-vars("primary-container");
-    @include elevation-background-color(0, none);
+    @include elevation-background-color($base: var(--pwt-color-background), $level: 0, $state: none);
 
+    // fixme: defazult state layer
     &:not(:disabled):not(.disabled) {
         @include elevation-box-shadow(3);
     }
@@ -160,14 +161,14 @@ button {
     &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
     &:active:not(:disabled):not(.disabled) {
         @include elevation-box-shadow(2);
-        @include elevation-background-color(0, press);
-        z-index: 1; // correctly show shadows
+        //@include elevation-background-color(0, press);
+        @include elevation-background-color($base: var(--pwt-color-background), $level: 0, $state: press);
     }
 
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         @include elevation-box-shadow(4);
-        @include elevation-background-color(0, hover);
-        z-index: 1; // correctly show shadows
+        //@include elevation-background-color(0, hover);
+        @include elevation-background-color($base: var(--pwt-color-background), $level: 0, $state: hover);
     }
 }
 

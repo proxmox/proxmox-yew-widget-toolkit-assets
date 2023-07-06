@@ -33,12 +33,12 @@
     */
 
     tr.selected {
-        @include elevation-background-color(3, none);
+        @include elevation-background-color($level: 3, $state: none);
         &:hover {
-            @include elevation-background-color(3, hover);
+            @include elevation-background-color($level: 3, $state: hover);
         }
         &:active {
-            @include elevation-background-color(3, press);
+            @include elevation-background-color($level: 3, $state: press);
         }
     }
 
