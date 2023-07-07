@@ -1,6 +1,6 @@
 .pwt-navigation-rail {
     @include color-scheme-vars(surface-container);
-    @include accent-color-scheme-vars(primary-container);
+    @include accent-color-scheme-vars(#{$default-accent-color}-container);
 
     display: flex;
     flex-direction: column;

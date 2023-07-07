@@ -82,18 +82,18 @@ a:visited {
 }
 
 a:focus {
-    text-shadow: 0px 0px 0.5em var(--pwt-color-primary);
+    text-shadow: 0px 0px 0.5em var(--pwt-color-#{$default-accent-color});
     text-decoration: underline solid;
 }
 
 // text selection colors
 
 ::-moz-selection {
-    color: var(--pwt-color-on-primary);
-    background: var(--pwt-color-primary);
+    color: var(--pwt-color-on-#{$default-accent-color});
+    background: var(--pwt-color-#{$default-accent-color});
 }
 
 ::selection {
-    color: var(--pwt-color-on-primary);
-    background: var(--pwt-color-primary);
+    color: var(--pwt-color-on-#{$default-accent-color});
+    background: var(--pwt-color-#{$default-accent-color});
 }

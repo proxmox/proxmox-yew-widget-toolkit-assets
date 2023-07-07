@@ -16,7 +16,7 @@
 // Pills
 .pwt-nav-pills {
     @include color-scheme-vars(neutral-alt);
-    @include accent-color-scheme-vars(primary-container);
+    @include accent-color-scheme-vars(#{$default-accent-color}-container);
 
     display: flex;
     column-gap: 1em;
@@ -51,7 +51,7 @@
 // Menu
 .pwt-nav-menu {
     @include color-scheme-vars(surface);
-    @include accent-color-scheme-vars(primary-container);
+    @include accent-color-scheme-vars(#{$default-accent-color}-container);
 
     background: var(--pwt-color-background);
 

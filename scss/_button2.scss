@@ -3,10 +3,12 @@ button {
 }
 
 .pwt-action-icon {
-    @include state-layer($base: transparent);
+    @include color-scheme-vars($default-accent-color);
 
-    --pwt-color: var(--pwt-color-primary);
-    color: var(--pwt-color);
+    color: var(--pwt-color-background);
+    background: none;
+
+    @include state-layer($base: transparent, $color: var(--pwt-color-background));
 
     line-height: map-get($line-height, label-large);
 
@@ -96,7 +98,7 @@ button {
 
 .pwt-button.pwt-button-text {
     @include elevation-box-shadow(0);
-    @include color-scheme-vars("primary");
+    @include color-scheme-vars($default-accent-color);
 
     color: var(--pwt-color-background);
     background: none;
@@ -106,7 +108,7 @@ button {
 
 .pwt-button.pwt-button-outline {
     @include elevation-box-shadow(0);
-    @include color-scheme-vars("primary");
+    @include color-scheme-vars($default-accent-color);
 
     border: 2px solid var(--pwt-high-contrast-border);
 
@@ -120,7 +122,7 @@ button {
 
 .pwt-button.pwt-button-outline:not(:disabled):not(.disabled),
 .pwt-button.pwt-button-elevated:not(:disabled):not(.disabled) {
-    @include color-scheme-vars("primary");
+    @include color-scheme-vars($default-accent-color);
 
     color: var(--pwt-color-background);
     background-color: var(--pwt-color-neutral);
@@ -149,7 +151,7 @@ button {
 
 // implement state layer for FAB buttons
 .pwt-button.pwt-fab {
-    @include color-scheme-vars("primary-container");
+    @include color-scheme-vars("#{$default-accent-color}-container");
     @include elevation-background-color($base: var(--pwt-color-background), $level: 0, $state: none);
 
     // fixme: defazult state layer

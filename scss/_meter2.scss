@@ -1,6 +1,6 @@
 .pwt-meter {
 	@include color-scheme-vars(surface);
-	@include accent-color-scheme-vars(primary-container);
+	@include accent-color-scheme-vars(#{$default-accent-color}-container);
 
 	@include font_and_line_height("label-large");
 

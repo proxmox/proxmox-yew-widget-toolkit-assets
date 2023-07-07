@@ -9,12 +9,12 @@ input {
     font-size: map-get($font-size, "label-large");
     line-height: map-get($line-height, "label-large");
 
-    accent-color: var(--pwt-color-primary);
+    accent-color: var(--pwt-color-#{$default-accent-color});
 }
 
 .pwt-input {
     @include color-scheme-vars(surface);
-    @include accent-color-scheme-vars(primary);
+    @include accent-color-scheme-vars($default-accent-color);
 
     accent-color: var(--pwt-accent-color);
 
@@ -83,7 +83,7 @@ input {
 
 .pwt-switch {
     @include color-scheme-vars(neutral-alt);
-    @include accent-color-scheme-vars(primary);
+    @include accent-color-scheme-vars($default-accent-color);
 
     display: inline-block;
     outline: 0;
@@ -139,7 +139,7 @@ input {
 
 .pwt-checkbox-state {
     @include color-scheme-vars(surface);
-    @include accent-color-scheme-vars(primary);
+    @include accent-color-scheme-vars($default-accent-color);
 
     display: inline-block;
     padding: max(map-get($line-height, "label-large") - map-get($font-size, "label-large"), var(--pwt-spacer-1));

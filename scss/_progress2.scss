@@ -1,5 +1,5 @@
 .pwt-progress {
-	@include accent-color-scheme-vars(primary);
+	@include accent-color-scheme-vars($default-accent-color);
 	@include font_and_line_height("label-large");
 
 	position: relative;
