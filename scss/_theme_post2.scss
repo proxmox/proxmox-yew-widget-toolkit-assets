@@ -11,6 +11,18 @@
     --pwt-icon-spacer:  #{$icon_spacer}; // space between icon and text
 }
 
+.pwt-density-high {
+    --pwt-spacer-base-width: 3px;
+}
+
+.pwt-density-medium {
+    --pwt-spacer-base-width: 5px;
+}
+
+.pwt-density-touch {
+    --pwt-spacer-base-width: 10px;
+}
+
 /* Corner Shape (radius) definitions */
 :root {
     @each $name, $value in $shape-corner {
