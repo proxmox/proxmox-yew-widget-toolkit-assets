@@ -1,6 +1,6 @@
 .pwt-navigation-bar {
     @include color-scheme-vars(surface-container);
-    @include accent-color-scheme-vars(neutral-alt);
+    @include accent-color-scheme-vars(primary-container);
 
     display: flex;
     justify-content: space-evenly;
