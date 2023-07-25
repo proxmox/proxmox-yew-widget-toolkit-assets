@@ -1,10 +1,6 @@
-@import "theme_pre";
-
-@import "theme_common";
-@import "theme_common_material";
-@import "theme_dark";
-
-@import "theme_post";
-
-@import "theme_post_material";
-
+@import "theme_pre2";
+@import "material/theme_colors_material";
+@import "theme_scheme_dark";
+@import "material/theme_config_material";
+@import "theme_post2";
+@import "material/theme_post_material";
