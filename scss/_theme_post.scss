@@ -77,7 +77,7 @@ $pwt-font-monospace: monospace;
 
 @include font_classes();
 
-@import "utilities2";
+@import "utilities";
 
 @include color-percentages("primary");
 @include color-percentages("secondary");
@@ -92,25 +92,25 @@ $pwt-font-monospace: monospace;
     @include color-scheme("#{$name}-container");
 }
 
-@import "button2";
-@import "card2";
-@import "datatable2";
-@import "dialog2";
-@import "dropdown2";
-@import "form2";
-@import "input2";
-@import "menu2";
-@import "meter2";
-@import "miniscroll2";
+@import "button";
+@import "card";
+@import "datatable";
+@import "dialog";
+@import "dropdown";
+@import "form";
+@import "input";
+@import "menu";
+@import "meter";
+@import "miniscroll";
 @import "miscellaneous";
-@import "nav2";
-@import "navigation_bar2";
-@import "navigation_rail2";
+@import "nav";
+@import "navigation_bar";
+@import "navigation_rail";
 @import "page";
-@import "panel2";
-@import "progress2";
-@import "resize-handle2";
-@import "slidable2";
-@import "snackbar2";
-@import "toolbar2";
-@import "tooltip2";
+@import "panel";
+@import "progress";
+@import "resize-handle";
+@import "slidable";
+@import "snackbar";
+@import "toolbar";
+@import "tooltip";
