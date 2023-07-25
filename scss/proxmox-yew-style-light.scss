@@ -1,7 +1,4 @@
-@import "theme_pre";
-
-@import "theme_common";
-@import "theme_common_proxmox";
-@import "theme_light";
-
-@import "theme_post";
+@import "theme_pre2";
+@import "proxmox/theme_colors_proxmox";
+@import "proxmox/theme_scheme_light_proxmox";
+@import "theme_post2";
