@@ -23,6 +23,16 @@
 }
 
 .pwt-card {
+    @include color-scheme-vars("surface");
+
+    color: var(--pwt-color);
+
+    padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
+    border-radius: var(--pwt-card-corner-shape);
+    transition: 0.1s;
+}
+
+.pwt-card:not(.pwt-card-flat):not(.pwt-card-outline) {
     &.pwt-interactive {
         &:hover {
             @include elevation-box-shadow(2);
@@ -35,34 +45,25 @@
         }
     }
 
-    @include color-scheme-vars("surface");
     @include surface-elevation-rules(1);
-
-    color: var(--pwt-color);
-
-    padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
-    border-radius: var(--pwt-card-corner-shape);
-    transition: 0.1s;
 }
 
 .pwt-card.pwt-card-outline {
     @include color-scheme-vars("neutral");
-    @include surface-elevation-rules(0);
-
     border: 2px solid var(--pwt-high-contrast-border);
 }
 
 .pwt-card.pwt-card-flat,
 .pwt-card.pwt-card-outline {
-    @include elevation-box-shadow(0);
+    @include surface-elevation-rules(0);
 
     &.pwt-interactive {
         &:hover {
-            @include elevation-box-shadow(0);
+            @include elevation-background-color($level: 0, $state: hover);
         }
 
         &:active {
-            @include elevation-box-shadow(0);
+            @include elevation-background-color($level: 0, $state: press);
         }
     }
 }
