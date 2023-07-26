@@ -1,5 +1,5 @@
 .pwt-navigation-rail {
-    @include color-scheme-vars(surface-container);
+    @include color-scheme-vars(surface);
     @include accent-color-scheme-vars(#{$default-accent-color}-container);
 
     display: flex;
@@ -13,7 +13,7 @@
     box-sizing: border-box;
     height: 100%;
 
-    @include elevation-background-color($level: 2);
+    @include elevation-background-color($level: 0);
 
     .pwt-navigation-rail-tabs {
         display: flex;
