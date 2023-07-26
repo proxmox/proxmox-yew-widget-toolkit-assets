@@ -13,7 +13,7 @@
     box-sizing: border-box;
     height: 100%;
 
-    @include state-layer-background(2);
+    @include elevation-background-color($level: 2);
 
     .pwt-navigation-rail-tabs {
         display: flex;
