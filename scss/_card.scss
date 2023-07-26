@@ -46,6 +46,9 @@
 }
 
 .pwt-card.pwt-card-outline {
+    @include color-scheme-vars("neutral");
+    @include surface-elevation-rules(0);
+
     border: 2px solid var(--pwt-high-contrast-border);
 }
 
