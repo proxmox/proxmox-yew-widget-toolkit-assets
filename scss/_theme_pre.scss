@@ -5,8 +5,8 @@
 // import libraries and mixins
 @import "libmonet";
 @import "mixins/color_palette";
-@import "mixins/color_scheme2";
-@import "mixins/state-layer2";
+@import "mixins/color_scheme";
+@import "mixins/state-layer";
 
 // zindex: use same values as bootstrap
 $zindex-dropdown: 1000;

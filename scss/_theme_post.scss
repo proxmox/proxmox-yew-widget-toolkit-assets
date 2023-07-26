@@ -68,8 +68,7 @@ $pwt-font-sans-serif: "Roboto Flex";
 $pwt-font-monospace: monospace;
 
 
-@import "font_sizes_material";
-@import "mixins/fonts2";
+@import "mixins/fonts";
 
 :root {
     @include font("body-medium");
