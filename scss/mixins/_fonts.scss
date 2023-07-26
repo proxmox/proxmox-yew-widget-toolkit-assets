@@ -53,73 +53,32 @@
     }
 
     h1,
-    .h1,
-    .pwt-font-display-large {
+    .h1 {
         @include font_and_line_height(display-large);
     }
 
     h2,
-    .h2,
-    .pwt-font-display-medium {
+    .h2 {
         @include font_and_line_height(display-medium);
     }
 
     h3,
-    .h3,
-    .pwt-font-display-small {
+    .h3 {
         @include font_and_line_height(display-small);
     }
 
     h4,
-    .h4,
-    .pwt-font-headline-large {
+    .h4 {
         @include font_and_line_height(headline-large);
     }
 
     h5,
-    .h5,
-    .pwt-font-headline-medium {
+    .h5 {
         @include font_and_line_height(headline-medium);
     }
 
     h6,
-    .h6,
-    .pwt-font-headline-small {
+    .h6 {
         @include font_and_line_height(headline-small);
-    }
-
-    .pwt-font-title-large {
-        @include font_and_line_height(title-large);
-    }
-    .pwt-font-title-medium {
-        @include font_and_line_height(title-medium);
-    }
-
-    .pwt-font-title-small {
-        @include font_and_line_height(title-small);
-    }
-
-    .pwt-font-label-large {
-        @include font_and_line_height(label-large);
-    }
-
-    .pwt-font-label-medium {
-        @include font_and_line_height(label-medium);
-    }
-
-    .pwt-font-label-small {
-        @include font_and_line_height(label-small);
-    }
-
-    .pwt-font-body-large {
-        @include font_and_line_height(body-large);
-    }
-
-    .pwt-font-body-medium {
-        @include font_and_line_height(body-medium);
-    }
-
-    .pwt-font-body-small {
-        @include font_and_line_height(body-small);
     }
 }
