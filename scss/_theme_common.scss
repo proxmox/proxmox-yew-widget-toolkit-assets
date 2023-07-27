@@ -37,7 +37,7 @@ $fab-corner-shape: map-get($shape-corner, large);
 $progress-corner-shape: map-get($shape-corner, extra-small);
 $nav-link-corner-shape: map-get($shape-corner, extra-small);
 $nav-pills-corner-shape: map-get($shape-corner, extra-small);
-$tooltip-corner-shape: map-get($shape-corner, extra-large);
+$tooltip-corner-shape: map-get($shape-corner, small);
 $input-corner-shape: map-get($shape-corner, extra-small);
 $card-corner-shape: map-get($shape-corner, small);
 $dialog-corner-shape: map-get($shape-corner, small);

@@ -1,5 +1,5 @@
 .tooltip {
-    @include color-scheme-vars(#{$default-accent-color}-container);
+    @include color-scheme-vars("inverse-surface");
 
     display: none;
 
