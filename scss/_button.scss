@@ -153,7 +153,7 @@ button {
 
 // implement state layer for FAB buttons
 .pwt-button.pwt-fab {
-    @include color-scheme-vars("#{$default-accent-color}-container");
+    @include color-scheme-vars("primary-container");
     @include elevation-background-color($base: var(--pwt-color-background), $level: 0, $state: none);
 
     // fixme: defazult state layer
