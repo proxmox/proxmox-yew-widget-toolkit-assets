@@ -450,6 +450,9 @@ button {
     height: calc(var(--pwt-ripple-radius) * 2);
 
     opacity: 0;
+}
+
+.pwt-button-ripple.animate {
     animation: pwt-animation-button-ripple var(--button-ripple-animation-time) ease-in;
 }
 
