@@ -42,6 +42,8 @@ button {
 .pwt-button {
     @include color-scheme-vars("surface");
 
+    overflow: hidden; // reqired by ripple effect
+
     display: inline-flex;
     align-items: baseline;
     gap: var(--pwt-icon-spacer);
@@ -421,5 +423,43 @@ button {
 
     &.pwt-fab-direction-right.active > .pwt-fab-menu-item:nth-child(6) {
         left: calc(100% + var(--pwt-spacers-2) + 4 * (var(--fab-small-button-height) + var(--pwt-spacers-2)));
+    }
+}
+
+
+// Material design ripple effect
+
+:root {
+    --button-ripple-animation-time: 0.4s;
+}
+
+.pwt-button-ripple {
+    position: absolute;
+
+    background-color: rgba(255, 255, 255, 0.4);
+
+    border-radius: 50%;
+
+    --pwt-ripple-radius: 100px;
+    --pwt-ripple-x: 50%;
+    --pwt-ripple-y: 50%;
+
+    top: calc(var(--pwt-ripple-y) - var(--pwt-ripple-radius));
+    left: calc(var(--pwt-ripple-x) - var(--pwt-ripple-radius));
+    width: calc(var(--pwt-ripple-radius) * 2);
+    height: calc(var(--pwt-ripple-radius) * 2);
+
+    opacity: 0;
+    animation: pwt-animation-button-ripple var(--button-ripple-animation-time) ease-in;
+}
+
+@keyframes pwt-animation-button-ripple {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1);
+        opacity: 0;
     }
 }
