@@ -19,6 +19,8 @@
 .pwt-tooltip-rich {
     @include color-scheme-vars("surface-container");
     @include elevation-background-color($level: 2, $state: none);
+
+    border-radius: var(--pwt-dialog-corner-shape); // use same shape as dialog
 }
 
 .pwt-tooltip[data-show] {
