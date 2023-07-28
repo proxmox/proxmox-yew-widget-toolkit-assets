@@ -1,9 +1,9 @@
-.tooltip {
+.pwt-tooltip {
     @include color-scheme-vars("inverse-surface");
 
     display: none;
 
-    @include elevation-box-shadow(3);
+    @include elevation-box-shadow(2);
 
     background-color: var(--pwt-color-background);
     color: var(--pwt-color);
@@ -16,6 +16,11 @@
     @include font_and_line_height("body-large", $important: true);
 }
 
-.tooltip[data-show] {
+.pwt-tooltip-rich {
+    @include color-scheme-vars("surface-container");
+    @include elevation-background-color($level: 2, $state: none);
+}
+
+.pwt-tooltip[data-show] {
     display: block;
 }
