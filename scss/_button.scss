@@ -75,7 +75,7 @@ button {
 }
 
 // implement state layer for normal buttons
-.pwt-button:not(.pwt-fab):not(.pwt-button-text):not(.pwt-button-outline):not(.pwt-button-elevated) {
+:not(.pwt-segmented-button.pwt-button-elevated) > .pwt-button:not(.pwt-fab):not(.pwt-button-text):not(.pwt-button-outline):not(.pwt-button-elevated) {
     &.pressed:not(:disabled):not(.disabled),
     &:active:not(:disabled):not(.disabled) {
         @include state-layer-background(press);
@@ -90,6 +90,29 @@ button {
     &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
         @include state-layer-background(hover);
         @include elevation-box-shadow(1);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--pwt-color-focus);
+        outline-offset: -2px;
+    }
+}
+
+.pwt-segmented-button.pwt-button-elevated > .pwt-button:not(.pwt-fab):not(.pwt-button-text):not(.pwt-button-outline):not(.pwt-button-elevated) {
+    &.pressed:not(:disabled):not(.disabled),
+    &:active:not(:disabled):not(.disabled) {
+        @include state-layer-background(press);
+        @include elevation-box-shadow(1);
+    }
+
+    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+        @include state-layer-background(hover);
+        @include elevation-box-shadow(1);
+    }
+
+    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+        @include state-layer-background(hover);
+        @include elevation-box-shadow(2);
     }
 
     &:focus-visible {
