@@ -56,11 +56,6 @@ hr,
     border-radius: var(--pwt-shape-corner-full);
 }
 
-.pwt-navbar {
-    background: var(--pwt-color-neutral-alt);
-    color: var(--pwt-color-on-neutral-alt);
-}
-
 .pwt-log-content {
     white-space: pre;
     font-size: map-get($font-size, "body-small");
