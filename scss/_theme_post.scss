@@ -91,6 +91,7 @@ $pwt-font-monospace: monospace;
     @include color-scheme("#{$name}-container");
 }
 
+@import "application_bar";
 @import "button";
 @import "card";
 @import "datatable";

@@ -370,9 +370,8 @@ $position-values: absolute fixed relative sticky static;
     }
 }
 
-// fixme:
-// @each $level, $distance in $elevation-levels {
-//    .pwt-shadow#{$level} {
-//        @include elevation-box-shadow($level);
-//    }
-//}
+@each $level, $distance in $elevation-levels {
+    .pwt-shadow#{$level} {
+        @include elevation-box-shadow($level);
+    }
+}
