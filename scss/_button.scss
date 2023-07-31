@@ -202,7 +202,6 @@ button {
 .pwt-segmented-button > .pwt-button:first-child {
     border-start-start-radius: var(--pwt-button-corner-shape);
     border-end-start-radius: var(--pwt-button-corner-shape);
-    border-inline-start: 1px solid var(--pwt-color-border) !important;
 }
 
 .pwt-segmented-button > .pwt-button:last-child {
