@@ -40,7 +40,7 @@ input {
         margin: 0 !important;
     }
 
-    &:focus-within {
+    &:not(.pwt-input-type-range):focus-within {
         outline: 2px solid var(--pwt-color-focus) !important;
         outline-offset: -2px;
     }
@@ -69,12 +69,22 @@ input {
 }
 
 .pwt-input.pwt-input-type-range {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     margin: 0;
     vertical-align: middle;
     background-color: transparent;
     border: 0;
+
+    & input[type=range] {
+        padding: var(--pwt-spacer-1) var(--pwt-spacer-2) !important;
+        height: map-get($line-height, "label-large");
+        border-radius: var(--pwt-input-corner-shape);
+
+        &:focus-visible {
+            outline: 2px solid var(--pwt-color-focus) !important;
+            outline-offset: -2px;
+        }
+    }
 }
 
 .pwt-label-disabled {
