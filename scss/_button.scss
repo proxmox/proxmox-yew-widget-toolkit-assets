@@ -75,7 +75,7 @@ button {
 }
 
 // implement state layer for normal buttons
-:not(.pwt-segmented-button) > .pwt-button:not(.pwt-fab):not(.pwt-button-text):not(.pwt-button-outline):not(.pwt-button-elevated) {
+:not(.pwt-segmented-button.pwt-button-elevated):not(.pwt-segmented-button.pwt-button-outline) > .pwt-button:not(.pwt-fab):not(.pwt-button-text):not(.pwt-button-outline):not(.pwt-button-elevated) {
     &.pressed:not(:disabled):not(.disabled),
     &:active:not(:disabled):not(.disabled) {
         @include state-layer-background(press);
