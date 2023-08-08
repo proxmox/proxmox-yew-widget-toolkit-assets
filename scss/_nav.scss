@@ -39,6 +39,11 @@
             background-color: var(--pwt-accent-color-background);
             @include state-layer($base:  var(--pwt-accent-color-background), $color: var(--pwt-accent-color));
         }
+
+        &.disabled {
+            opacity: 0.5;
+            cursor: auto;
+        }
     }
 
     a {
