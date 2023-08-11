@@ -61,7 +61,6 @@
 
 .pwt-tab-material {
     @include color-scheme-vars(neutral);
-    @include accent-color-scheme-vars(#{$default-accent-color}-container);
 
     display: flex;
     position: relative;
