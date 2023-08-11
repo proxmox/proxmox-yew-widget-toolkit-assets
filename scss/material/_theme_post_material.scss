@@ -4,3 +4,21 @@
 .pwt-nav-link {
     padding: var(--pwt-spacer-1) 1rem;
 }
+
+.pwt-tab-material {
+
+    .pwt-nav-link {
+        padding: var(--pwt-spacer-1) var(--pwt-spacer-3);
+
+        span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+
+            &:before {
+                font-size: map-get($font-size, "headline-small")
+            }
+        }
+    }
+}
