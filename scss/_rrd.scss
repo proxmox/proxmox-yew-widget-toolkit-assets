@@ -23,14 +23,14 @@
 }
 
 .pwt-rrd-outline-path2 {
-    stroke: var(--pwt-color-tertiary);
+    stroke: var(--pwt-color-primary);
     fill: none;
     stroke-width: 0.3;
 }
 
 .pwt-rrd-fill-path2 {
     stroke: none;
-    fill:  color-mix(in srgb, var(--pwt-color-tertiary) var(--pwt-state-layer-opacity-5), transparent);
+    fill:  color-mix(in srgb, var(--pwt-color-primary) var(--pwt-state-layer-opacity-5), transparent);
 }
 
 .pwt-rrd-selection {
