@@ -114,3 +114,5 @@ $pwt-font-monospace: monospace;
 @import "snackbar";
 @import "toolbar";
 @import "tooltip";
+
+@import "rrd"; // only useed by proxmox RRD component
