@@ -1,6 +1,22 @@
 .pwt-rrd {
 }
 
+.pwt-rrd-legend-marker0 {
+    color: var(--pwt-color-secondary);
+
+    &.disabled {
+	opacity: 0.3;
+    }
+}
+
+.pwt-rrd-legend-marker1 {
+    color: var(--pwt-color-primary);
+
+    &.disabled {
+	opacity: 0.3;
+    }
+}
+
 .pwt-rrd-label-text {
     font-size:  map-get($font-size, "label-large");
     fill:  var(--pwt-color-on-neutral);
