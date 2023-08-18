@@ -1,3 +1,7 @@
+.pwt-rrd-panel {
+    min-width: calc(800px - 2 * var(--pwt-spacer-2));
+}
+
 .pwt-rrd-container {
     margin: var(--pwt-spacer-2);
 }
