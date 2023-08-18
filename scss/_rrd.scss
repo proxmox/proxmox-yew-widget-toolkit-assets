@@ -1,4 +1,9 @@
-.pwt-rrd {
+.pwt-rrd-container {
+    margin: var(--pwt-spacer-2);
+}
+
+.pwt-rrd-svg {
+    user-select: none;
 }
 
 .pwt-rrd-legend-marker0 {
