@@ -43,6 +43,7 @@ button {
     @include color-scheme-vars("surface");
 
     overflow: hidden; // reqired by ripple effect
+    flex: 0 0 auto; // do not shrink/grow buttons
 
     display: inline-flex;
     align-items: baseline;
