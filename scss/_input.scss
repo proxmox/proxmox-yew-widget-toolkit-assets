@@ -12,6 +12,14 @@ input {
     accent-color: var(--pwt-color-#{$default-accent-color});
 }
 
+// This is used to display non-editable content returned by a render function,
+// when displayed value is different than submitted value (see Combobox)
+.pwt-input-content {
+    font-family: $pwt-font-sans-serif;
+    font-size: map-get($font-size, "label-large");
+    line-height: map-get($line-height, "label-large");
+}
+
 .pwt-input {
     @include color-scheme-vars(surface);
     @include accent-color-scheme-vars($default-accent-color);
@@ -31,7 +39,8 @@ input {
     border-radius: var(--pwt-input-corner-shape);
 
     /// disable border, padding, margin, outline for inputs inside
-    input {
+    input,
+    .pwt-input-content {
         color: var(--pwt-color);
         background-color: var(--pwt-color-background);
         outline: 0 !important;
@@ -75,7 +84,7 @@ input {
     background-color: transparent;
     border: 0;
 
-    & input[type=range] {
+    & input[type="range"] {
         padding: var(--pwt-spacer-1) var(--pwt-spacer-2) !important;
         height: map-get($line-height, "label-large");
         border-radius: var(--pwt-input-corner-shape);
