@@ -56,6 +56,11 @@ hr,
     border-radius: var(--pwt-shape-corner-full);
 }
 
+.pwt-log {
+    min-width: 800px;
+    min-height: 400px;
+}
+
 .pwt-log-content {
     white-space: pre;
     font-size: map-get($font-size, "body-small");
