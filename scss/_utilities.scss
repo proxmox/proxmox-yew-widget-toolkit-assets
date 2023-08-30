@@ -144,6 +144,11 @@ $height-width-values: (
     box-sizing: border-box;
 }
 
+.pwt-flex-fit {
+    flex: 1 1 auto;
+    overflow: auto !important;
+}
+
 // Apply "flex: 1 1 auto;" to the first child of a container
 .pwt-flex-fill-first-child > :first-child {
     flex: 1 1 auto;
