@@ -16,8 +16,8 @@
         white-space: nowrap;
     }
 
-    td.cell-cursor {
-        outline: 2px solid var(--pwt-color-on-neutral);
+    td.cell-cursor:focus-visible {
+        outline: 1px solid var(--pwt-color-on-neutral);
         outline-offset: -2px;
     }
 
