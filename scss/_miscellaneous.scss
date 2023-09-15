@@ -51,9 +51,14 @@ hr,
 .pwt-message-sign {
     background: var(--pwt-color-surface);
     color: var(--pwt-color-error);
-    padding: 1em;
     margin-inline-end: 0.5em;
     border-radius: var(--pwt-shape-corner-full);
+    width: 2.5rem;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pwt-log {
