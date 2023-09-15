@@ -5,6 +5,13 @@
     padding: var(--pwt-spacer-1) 1rem;
 }
 
+.pwt-nav-menu {
+    .pwt-nav-section {
+        font-size: map-get($font-size, "title-medium");
+        padding: var(--pwt-spacer-2);
+    }
+}
+
 .pwt-tab-material {
 
     .pwt-nav-link {

@@ -124,6 +124,12 @@
 
     background: var(--pwt-color-background);
 
+    .pwt-nav-section {
+        opacity: 0.7;
+        font-size: map-get($font-size, "label-medium");
+        padding: var(--pwt-spacer-2) var(--pwt-spacer-4);
+    }
+
     .pwt-nav-link {
         line-height: map-get($line-height, "title-medium");
         background: none;
