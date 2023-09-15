@@ -10,6 +10,10 @@ input {
     line-height: map-get($line-height, "label-large");
 
     accent-color: var(--pwt-color-#{$default-accent-color});
+
+    &[aria-disabled=true] {
+        pointer-events: none;
+    }
 }
 
 // This is used to display non-editable content returned by a render function,
@@ -54,12 +58,12 @@ input {
         outline-offset: -2px;
     }
 
-    &:not(.disabled):not(:disabled).is-invalid {
+    &:not(.disabled):not(:disabled):not([aria-disabled=true]).is-invalid {
         border-color: var(--pwt-color-error-container) !important;
         outline-color: var(--pwt-color-error-container) !important;
     }
 
-    &:not(.disabled):not(:disabled).is-invalid:after {
+    &:not(.disabled):not(:disabled):not([aria-disabled=true]).is-invalid:after {
         content: "";
         width: 1em;
         height: 1em;
@@ -71,7 +75,8 @@ input {
     }
 
     &.disabled,
-    &:disabled {
+    &:disabled,
+    &[aria-disabled=true]{
         cursor: auto;
         opacity: 0.5;
     }

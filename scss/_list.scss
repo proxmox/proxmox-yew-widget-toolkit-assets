@@ -16,11 +16,11 @@
     transition: 0.1s;
 
 
-    &[disabled] {
+    &[disabled], &[aria-disabled] {
         opacity: 0.5;
     }
 
-    &.pwt-interactive:not([disabled]) {
+    &.pwt-interactive:not([disabled]):not([aria-disabled=true]) {
         cursor: pointer;
 
         &:hover {

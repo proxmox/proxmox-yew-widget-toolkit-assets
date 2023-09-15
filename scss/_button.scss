@@ -33,7 +33,8 @@ button {
     }
 
     &.disabled,
-    &:disabled {
+    &:disabled,
+    &[aria-disabled=true] {
         cursor: auto;
         opacity: 0.5;
     }
@@ -66,7 +67,8 @@ button {
     background-color: var(--pwt-color-background);
 
     &.disabled,
-    &:disabled {
+    &:disabled,
+    &[aria-disabled=true] {
         cursor: auto;
         opacity: 0.5;
         @include color-scheme-vars("surface", $important: true);
@@ -76,18 +78,18 @@ button {
 
 // implement state layer for normal buttons
 :not(.pwt-segmented-button.pwt-button-elevated):not(.pwt-segmented-button.pwt-button-outline) > .pwt-button:not(.pwt-fab):not(.pwt-button-text):not(.pwt-button-outline):not(.pwt-button-elevated) {
-    &.pressed:not(:disabled):not(.disabled),
-    &:active:not(:disabled):not(.disabled) {
+    &.pressed:not(:disabled):not(.disabled):not([aria-disabled=true]),
+    &:active:not(:disabled):not(.disabled):not([aria-disabled=true]) {
         @include state-layer-background(press);
         box-shadow: none;
     }
 
-    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+    &:focus-within:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
         @include state-layer-background(hover);
         @include elevation-box-shadow(0);
     }
 
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
         @include state-layer-background(hover);
         @include elevation-box-shadow(1);
     }
@@ -99,18 +101,18 @@ button {
 }
 
 .pwt-segmented-button.pwt-button-elevated > .pwt-button:not(.pwt-fab):not(.pwt-button-text):not(.pwt-button-outline):not(.pwt-button-elevated) {
-    &.pressed:not(:disabled):not(.disabled),
-    &:active:not(:disabled):not(.disabled) {
+    &.pressed:not(:disabled):not(.disabled):not([aria-disabled=true]),
+    &:active:not(:disabled):not(.disabled):not([aria-disabled=true]) {
         @include state-layer-background(press);
         @include elevation-box-shadow(1);
     }
 
-    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+    &:focus-within:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
         @include state-layer-background(hover);
         @include elevation-box-shadow(1);
     }
 
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
         @include state-layer-background(hover);
         @include elevation-box-shadow(2);
     }
@@ -140,13 +142,13 @@ button {
     // Note: outline buttons must have same size as filled buttons
     padding: calc(var(--pwt-spacer-1) - 2px) calc(var(--pwt-spacer-2) - 2px);
 
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
         @include elevation-box-shadow(0);
     }
 }
 
-.pwt-button.pwt-button-outline:not(:disabled):not(.disabled),
-.pwt-button.pwt-button-elevated:not(:disabled):not(.disabled) {
+.pwt-button.pwt-button-outline:not(:disabled):not(.disabled):not([aria-disabled=true]),
+.pwt-button.pwt-button-elevated:not(:disabled):not(.disabled):not([aria-disabled=true]) {
     @include color-scheme-vars($default-accent-color);
 
     color: var(--pwt-color-background);
@@ -164,12 +166,12 @@ button {
     // Note: outline buttons must have same size as filled buttons
     padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
 
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
         @include elevation-box-shadow(0);
     }
 }
 
-.pwt-segmented-button.pwt-button-outline:not(:disabled):not(.disabled) > .pwt-button {
+.pwt-segmented-button.pwt-button-outline:not(:disabled):not(.disabled):not([aria-disabled=true]) > .pwt-button {
     color: var(--pwt-color-background);
     background-color: var(--pwt-color-neutral);
 
@@ -178,18 +180,18 @@ button {
 
 .pwt-segmented-button.pwt-button-elevated > .pwt-button,
 .pwt-button.pwt-button-elevated {
-    &:not(:disabled):not(.disabled) {
+    &:not(:disabled):not(.disabled):not([aria-disabled=true]) {
         @include elevation-box-shadow(1);
     }
 
-    &.pressed:not(:disabled):not(.disabled),
-    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
-    &:active:not(:disabled):not(.disabled) {
+    &.pressed:not(:disabled):not(.disabled):not([aria-disabled=true]),
+    &:focus-within:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed),
+    &:active:not(:disabled):not(.disabled):not([aria-disabled=true]) {
         @include elevation-box-shadow(1);
         z-index: 1; // correctly show shadows
     }
 
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
         @include elevation-box-shadow(2);
         z-index: 1; // correctly show shadows
     }
@@ -201,19 +203,19 @@ button {
     @include elevation-background-color($base: var(--pwt-color-background), $level: 0, $state: none);
 
     // fixme: defazult state layer
-    &:not(:disabled):not(.disabled) {
+    &:not(:disabled):not(.disabled):not([aria-disabled=true]) {
         @include elevation-box-shadow(3);
     }
 
-    &.pressed:not(:disabled):not(.disabled),
-    &:focus-within:not(:disabled):not(.disabled):not(:active):not(.pressed),
-    &:active:not(:disabled):not(.disabled) {
+    &.pressed:not(:disabled):not(.disabled):not([aria-disabled=true]),
+    &:focus-within:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed),
+    &:active:not(:disabled):not(.disabled):not([aria-disabled=true]) {
         @include elevation-box-shadow(2);
         //@include elevation-background-color(0, press);
         @include elevation-background-color($base: var(--pwt-color-background), $level: 0, $state: press);
     }
 
-    &:hover:not(:disabled):not(.disabled):not(:active):not(.pressed) {
+    &:hover:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
         @include elevation-box-shadow(4);
         //@include elevation-background-color(0, hover);
         @include elevation-background-color($base: var(--pwt-color-background), $level: 0, $state: hover);

@@ -32,7 +32,7 @@ ul.pwt-menubar {
 		@include state-layer-background(focus);
 	}
 
-	& > li:hover {
+	& > li:hover:not([aria-disabled=true]) {
 		@include state-layer-background(hover);
 	}
 
@@ -52,9 +52,11 @@ ul.pwt-menubar {
 		outline-offset: -2px;
 	}
 
-	.pwt-menubar-item[disabled] {
-		cursor: auto;
-		opacity: 0.5;
+	.pwt-menubar-item{
+		&[disabled], &[aria-disabled=true] {
+			cursor: auto;
+			opacity: 0.5;
+		}
 	}
 
 	.pwt-menubar-item-icon {
@@ -76,7 +78,7 @@ ul.pwt-menu {
 		width: 100%;
 	}
 
-	& > li.active:focus-within {
+	& > li.active:focus-within > :not([aria-disabled=true]) {
 		@include state-layer-background(focus);
 	}
 
@@ -95,9 +97,11 @@ ul.pwt-menu {
 		user-select: none;
 	}
 
-	.pwt-menu-item[disabled] {
-		cursor: auto;
-		opacity: 0.5;
+	.pwt-menu-item {
+		&[disabled], &[aria-disabled=true] {
+			cursor: auto;
+			opacity: 0.5;
+		}
 	}
 
 	.pwt-menu-item:focus-visible {
