@@ -107,6 +107,10 @@
     text-align: start;
     border-inline-end: 1px solid var(--pwt-color-border) !important;
 
+    &.sorted {
+        color: var(--pwt-color-primary)
+    }
+
     .pwt-datatable-header-content {
         overflow: hidden;
         text-overflow: ellipsis;
