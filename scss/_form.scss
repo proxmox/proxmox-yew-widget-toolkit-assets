@@ -4,16 +4,26 @@
 
 .pwt-form-grid-col2 {
     display: grid;
-    grid-template-columns: minmax(100px, 7fr) 10fr;
+    grid-template-columns: minmax(100px, 150px) minmax(150px, 1fr);
     grid-gap: var(--pwt-spacer-2);
     align-items: baseline;
+
+    input {
+	min-width: 100px;
+	width: 0;
+    }
 }
 
 .pwt-form-grid-col4 {
     display: grid;
-    grid-template-columns: minmax(100px, 7fr) 10fr minmax(100px, 7fr) 10fr;
+    grid-template-columns: minmax(100px, 150px) minmax(150px, 1fr) minmax(100px, 150px) minmax(150px, 1fr);
     grid-gap: var(--pwt-spacer-2);
     align-items: baseline;
+
+    input {
+	min-width: 100px;
+	width: 0;
+    }
 }
 
 .pwt-single-grid-row {
