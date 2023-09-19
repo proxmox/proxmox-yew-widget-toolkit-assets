@@ -4,14 +4,14 @@
 
 .pwt-form-grid-col2 {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: minmax(100px, 7fr) 10fr;
     grid-gap: var(--pwt-spacer-2);
     align-items: baseline;
 }
 
 .pwt-form-grid-col4 {
     display: grid;
-    grid-template-columns: auto auto minmax(100px, auto) auto;
+    grid-template-columns: minmax(100px, 7fr) 10fr minmax(100px, 7fr) 10fr;
     grid-gap: var(--pwt-spacer-2);
     align-items: baseline;
 }
