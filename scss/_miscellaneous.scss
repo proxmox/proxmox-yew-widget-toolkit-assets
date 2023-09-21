@@ -78,13 +78,12 @@ hr,
 
 a,
 a:visited {
-    color: var(--pwt-color-on-neutral);
-    text-decoration: underline dotted;
+    color: var(--pwt-color-secondary);
+    text-decoration: none;
     outline: 0;
 }
 
-a:focus {
-    text-shadow: 0px 0px 0.5em var(--pwt-color-#{$default-accent-color});
+a:focus-within, a:hover {
     text-decoration: underline solid;
 }
 
