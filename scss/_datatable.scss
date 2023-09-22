@@ -198,3 +198,8 @@
     bottom: 2px;
     left: -4px;
 }
+
+.pwt-tree-expander {
+    line-height: map-get($line-height , "body-medium");
+    cursor: pointer;
+}
