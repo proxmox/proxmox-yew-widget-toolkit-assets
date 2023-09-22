@@ -255,6 +255,13 @@ input {
     }
 }
 
+.pwt-textarea {
+    font-family: $pwt-font-monospace;
+    font-size: map-get($font-size, "label-large");
+    line-height: map-get($line-height, "label-large");
+    resize: none;
+}
+
 // Removing spin buttons for <input type=number> (styling them is too clumsy)
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
