@@ -261,6 +261,10 @@ input {
     line-height: map-get($line-height, "label-large");
     resize: none;
 
+    padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
+    border: 1px solid var(--pwt-color-border);
+    border-radius: var(--pwt-input-corner-shape);
+
     outline: 0;
 
     &:focus-visible {
@@ -268,6 +272,17 @@ input {
         outline-offset: -2px;
     }
 
+    &:not(.disabled):not(:disabled):not([aria-disabled=true]).is-invalid {
+        border-color: var(--pwt-color-error-container) !important;
+        outline-color: var(--pwt-color-error-container) !important;
+    }
+
+    &.disabled,
+    &:disabled,
+    {
+        cursor: auto;
+        opacity: 0.5;
+    }
 }
 
 // Removing spin buttons for <input type=number> (styling them is too clumsy)
