@@ -5,6 +5,7 @@
     /* panel body is always neutral */
     color: var(--pwt-color-on-neutral);
     background-color: var(--pwt-color-neutral);
+    border: 1px solid var(--pwt-color-border);
 }
 
 .pwt-panel-header-text {
@@ -22,7 +23,7 @@
 }
 
 .pwt-panel.pwt-rounded > .pwt-panel-header {
-    border-radius: 0.25rem 0.25rem 0 0 !important;
+    border-radius: 0.25rem 0.25rem 0 0;
 }
 
 .pwt-panel > .pwt-draggable {
