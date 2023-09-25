@@ -31,4 +31,12 @@
         background-color: var(--pwt-color-surface);
         font-family: $pwt-font-monospace;
     }
+
+    strong {
+	font-variation-settings: "wght" 700; // works with Roboto Flex
+    }
+
+    em {
+	font-variation-settings: "slnt" -10; // works with Roboto Flex
+    }
 }
