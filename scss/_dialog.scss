@@ -1,3 +1,17 @@
+dialog.pwt-outer-dialog {
+    overflow: visible;
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+    outline: 0px;
+
+    & > .pwt-dialog {
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+    }
+}
+
 .pwt-dialog {
     padding: 0;
     color: var(--pwt-color-on-neutral);
@@ -22,7 +36,8 @@
 
 // Note: css var() does not work here
 // see: https://bugs.chromium.org/p/chromium/issues/detail?id=996467
-.pwt-dialog:not(.pwt-dropdown)::backdrop {
+.pwt-dialog:not(.pwt-dropdown)::backdrop,
+.pwt-outer-dialog:not(.pwt-dropdown)::backdrop {
     background-color: $modal-backdrop-bg-color;
 }
 
