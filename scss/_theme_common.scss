@@ -33,7 +33,7 @@ $shape-corner: (
 );
 
 $button-corner-shape: map-get($shape-corner, extra-small);
-$fab-corner-shape: map-get($shape-corner, large);
+$fab-corner-shape: map-get($shape-corner, medium);
 $progress-corner-shape: map-get($shape-corner, extra-small);
 $nav-link-corner-shape: map-get($shape-corner, extra-small);
 $nav-pills-corner-shape: map-get($shape-corner, extra-small);
