@@ -101,9 +101,12 @@ a:focus-within, a:hover {
 
 .pwt-loading-icon {
     display: inline-block;
-    width: 1.2em;
     height: 1.2em;
     contain: layout;
+
+    &:not(.fa-fw) {
+        width: 1.2em;
+    }
 
     &.fa {
         vertical-align: top;
