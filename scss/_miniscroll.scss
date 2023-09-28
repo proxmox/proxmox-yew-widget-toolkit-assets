@@ -22,11 +22,6 @@
         width: 4px;
         height: 4px;
         background-color: #00000000;
-        display: none;
-    }
-
-    &:hover::-webkit-scrollbar {
-        display: block;
     }
 
     &::-webkit-scrollbar-thumb {
