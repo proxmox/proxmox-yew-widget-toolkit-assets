@@ -26,7 +26,7 @@ ul.pwt-menubar {
 	color: var(--pwt-color);
 
 	display: flex;
-	align-items: stretch;
+	align-items: baseline;
 
 	& > li.active:focus-within {
 		@include state-layer-background(focus);
