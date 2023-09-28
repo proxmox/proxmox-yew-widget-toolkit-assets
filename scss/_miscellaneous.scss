@@ -101,29 +101,35 @@ a:focus-within, a:hover {
 
 .pwt-loading-icon {
     display: inline-block;
-    // same as font-awesome
-    width: 1.28571429em;
-    height: 1.28571429em;
+    width: 1.2em;
+    height: 1.2em;
     contain: layout;
+
+    &.fa {
+        vertical-align: top;
+    }
+
+    box-sizing: border-box;
+
     &:before {
-	position: absolute;
-	content: '';
-	box-sizing: border-box;
-	inset: 0px 0px 0px 0px;
-	border-radius: 50%;
-	border: 0.2em solid var(--pwt-color-neutral-container);
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        inset: 0px 0px 0px 0px;
+        border-radius: 50%;
+        border: 0.15em solid var(--pwt-color-neutral-container);
     }
 
     &:after {
-	position: absolute;
-	content: '';
-	box-sizing: border-box;
-	inset: 0px 0px 0px 0px;
-	border-radius: 50%;
-	border: 0.2em solid transparent;
-	border-top: 0.2em solid var(--pwt-color-primary);
-	animation: pwt-spin 0.8s linear;
-	animation-iteration-count:infinite;
+        position: absolute;
+        content: '';
+        box-sizing: border-box;
+        inset: 0px 0px 0px 0px;
+        border-radius: 50%;
+        border: 0.15em solid transparent;
+        border-top: 0.15em solid var(--pwt-color-primary);
+        animation: pwt-spin 0.8s linear;
+        animation-iteration-count:infinite;
     }
 }
 
