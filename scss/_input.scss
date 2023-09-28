@@ -25,7 +25,7 @@ input {
 }
 
 .pwt-input {
-    @include color-scheme-vars(surface);
+    @include color-scheme-vars(neutral);
     @include accent-color-scheme-vars($default-accent-color);
 
     accent-color: var(--pwt-accent-color);
