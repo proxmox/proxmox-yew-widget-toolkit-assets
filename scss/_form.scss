@@ -4,9 +4,10 @@
 
 .pwt-form-grid-col2 {
     display: grid;
-    grid-template-columns: minmax(100px, 150px) minmax(150px, 1fr);
+    grid-template-columns: minmax(130px, 0.65fr) minmax(200px, 1fr);
     grid-gap: var(--pwt-spacer-2);
     align-items: baseline;
+    width: min-content;
 
     input {
 	min-width: 100px;
@@ -16,9 +17,10 @@
 
 .pwt-form-grid-col4 {
     display: grid;
-    grid-template-columns: minmax(100px, 150px) minmax(150px, 1fr) minmax(100px, 150px) minmax(150px, 1fr);
+    grid-template-columns: minmax(130px, 0.65fr) minmax(200px, 1fr) minmax(130px, 0.65fr) minmax(200px, 1fr);
     grid-gap: var(--pwt-spacer-2);
     align-items: baseline;
+    width: min-content;
 
     input {
 	min-width: 100px;
