@@ -11,6 +11,9 @@
     cursor: initial;
     color: var(--pwt-color);
     @include font_and_line_height("headline-small");
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
 }
 
 .pwt-panel-header {
