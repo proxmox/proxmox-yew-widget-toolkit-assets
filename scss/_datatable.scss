@@ -169,6 +169,11 @@
     right: 0px;
 }
 
+html[dir=rtl] .pwt-datatable-header-menu-trigger {
+    right: auto;
+    left: 0px;
+}
+
 .pwt-datatable-header-anchor {
     position: relative;
     flex: 0 0 auto;
