@@ -18,6 +18,10 @@
 }
 
 @each $name in (display, headline, title, label, body) {
+    .pwt-font-monospace {
+	font-family: $pwt-font-monospace;
+    }
+
     @each $size in (large, medium, small) {
         .pwt-font-#{$name}-#{$size} {
             @include font_and_line_height("#{$name}-#{$size}", $important: true);
@@ -25,6 +29,10 @@
 
         .pwt-font-size-#{$name}-#{$size} {
             font-size: map-get($font-size, "#{$name}-#{$size}");
+        }
+
+        .pwt-line-height-#{$name}-#{$size} {
+            line-height: map-get($line-height, "#{$name}-#{$size}");
         }
     }
 }
