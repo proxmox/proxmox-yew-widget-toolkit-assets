@@ -2,11 +2,11 @@
 	@include color-scheme-vars(surface);
 	@include accent-color-scheme-vars(#{$default-accent-color}-container);
 
-	@include font_and_line_height("label-large");
+	@include font_and_line_height("label-medium");
 
 	position: relative;
 	background: var(--pwt-color-background);
-	min-height: calc(map-get($line-height, "label-large") + 2 * var(--pwt-spacer-1));
+	min-height: calc(map-get($line-height, "label-medium") + 2 * var(--pwt-spacer-1));
 	border-radius: var(--pwt-progress-corner-shape);
 	overflow: hidden;
 
