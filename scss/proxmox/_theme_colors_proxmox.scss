@@ -8,6 +8,7 @@ $color-seed-neutral: #fff;
 
 $color-seed-error: #E01B24;
 $color-seed-warning: #FF7800;
+$color-seed-warning: #FC0;
 
 // use primary with 5% saturation for neutral-alt
 $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
