@@ -4,12 +4,13 @@
 // libadwaita colors: https://en.wikipedia.org/wiki/Adwaita_(design_language)
 $color-seed-primary: #3584E4;   // Blue3
 $color-seed-secondary: #33D17A; // Green3
-//$color-seed-secondary: #9141ac; // Purple3
-$color-seed-tertiary: #F6D32D;  // Yellow3
+$color-seed-tertiary: #9141ac;  // Purple3
 $color-seed-neutral: #fff;
 
 $color-seed-error: #E01B24;     // Red3
 $color-seed-warning: #FF7800;   // Orange3
+$color-seed-warning: #F6D32D;   // Yellow3
+
 
 // use primary with 5% saturation for neutral-alt
 $color-seed-neutral-alt: change-color($color-seed-primary, $saturation: 5%);
