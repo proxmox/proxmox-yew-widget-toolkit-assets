@@ -36,3 +36,24 @@
 		z-index: 1;
 	}
 }
+
+.pwt-meter-small {
+	@include accent-color-scheme-vars(#{$default-accent-color});
+
+	height: 4px;
+	min-height: 4px;
+
+	.pwt-meter-bar {
+		&.pwt-meter-distance-1 {
+			background: var(--pwt-color-warning);
+		}
+
+		&.pwt-meter-distance-2 {
+			background: var(--pwt-color-error);
+		}
+	}
+
+	.pwt-meter-text {
+		display: none;
+	}
+}
