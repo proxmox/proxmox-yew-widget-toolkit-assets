@@ -81,6 +81,7 @@ $pwt-font-monospace: monospace;
 @include color-percentages("primary");
 @include color-percentages("secondary");
 @include color-percentages("tertiary");
+@include color-percentages("success");
 @include color-percentages("error");
 @include color-percentages("warning");
 @include color-percentages("neutral");
