@@ -35,6 +35,7 @@ button {
     &.disabled,
     &:disabled,
     &[aria-disabled=true] {
+	@include color-scheme-vars("inverse-surface");
         cursor: auto;
         opacity: 0.5;
     }
