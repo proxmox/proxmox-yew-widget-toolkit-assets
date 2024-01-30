@@ -151,6 +151,10 @@ input {
         background-color: var(--pwt-high-contrast-border);
     }
 
+    &.is-invalid {
+        background-color: var(--pwt-color-error-container) !important;
+    }
+
     &:focus {
         border: 2px solid var(--pwt-color-focus) !important;
     }
@@ -194,6 +198,14 @@ input {
     &.checked {
         color: var(--pwt-accent-color);
         background-color: var(--pwt-accent-color-background);
+    }
+
+    &.is-invalid {
+        background-color: var(--pwt-color-error-container) !important;
+    }
+
+    &.checked.is-invalid {
+        color: var(--pwt-color-error) !important;
     }
 
     &:focus {
