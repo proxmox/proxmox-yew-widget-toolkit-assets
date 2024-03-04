@@ -1,4 +1,5 @@
-button {
+button,
+pwt-button {
     @include font_and_line_height("label-large");
 }
 
