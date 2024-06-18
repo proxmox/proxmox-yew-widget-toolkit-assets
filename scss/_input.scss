@@ -185,7 +185,7 @@ input {
     line-height: map-get($line-height, "label-large");
     width: calc(1em);
     height: calc(1em);
-    border: 2px solid var(--pwt-color-border) !important;
+    border: 1px solid var(--pwt-color-border) !important;
     color: #ffffff00; // invisible
     background-color: var(--pwt-color-background);
 
@@ -209,7 +209,7 @@ input {
     }
 
     &:focus {
-        border: 2px solid var(--pwt-color-focus) !important;
+        border: 1px solid var(--pwt-color-focus) !important;
     }
 
     &.disabled {
