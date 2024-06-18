@@ -2,6 +2,7 @@
 	@include color-scheme-vars(surface);
 	background: var(--pwt-color-background);
 	color: var(--pwt-color);
+	position: fixed;
 
 	z-index: $zindex-dropdown;
 
