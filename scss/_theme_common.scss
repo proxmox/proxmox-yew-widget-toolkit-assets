@@ -40,7 +40,7 @@ $nav-pills-corner-shape: map-get($shape-corner, extra-small);
 $tooltip-corner-shape: map-get($shape-corner, extra-small);
 $input-corner-shape: map-get($shape-corner, extra-small);
 $card-corner-shape: map-get($shape-corner, small);
-$dialog-corner-shape: map-get($shape-corner, small);
+$dialog-corner-shape: map-get($shape-corner, extra-small);
 
 $elevation-levels: (
     0: 0px,
