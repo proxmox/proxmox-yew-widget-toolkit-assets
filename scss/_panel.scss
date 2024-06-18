@@ -1,5 +1,6 @@
 .pwt-panel {
     @include color-scheme-vars("surface");
+    --pwt-color: var(--pwt-color-primary);
     display: flex;
     flex-direction: column;
     /* panel body is always neutral */
@@ -22,6 +23,7 @@
     padding: var(--pwt-spacer-2);
     color: var(--pwt-color);
     background: var(--pwt-color-background);
+    min-height: 20px;
 }
 
 .pwt-panel.pwt-rounded > .pwt-panel-header {
