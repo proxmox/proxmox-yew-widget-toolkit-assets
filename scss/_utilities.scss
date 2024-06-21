@@ -1,64 +1,62 @@
+.pwt-m {
+    margin: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-factor)) !important;
+}
+
+.pwt-ms {
+    margin-inline-start: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-start-factor)) !important;
+}
+
+.pwt-me {
+    margin-inline-end: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-end-factor)) !important;
+}
+
+.pwt-mt {
+    margin-top: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-top-factor)) !important;
+}
+
+.pwt-mb {
+    margin-bottom: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-bottom-factor)) !important;
+}
+
+.pwt-mx {
+    margin-inline: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-x-factor)) !important;
+}
+
+.pwt-my {
+    margin-top: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-y-factor)) !important;
+    margin-bottom: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-y-factor)) !important;
+}
+
+.pwt-p {
+    padding: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-factor)) !important;
+}
+
+.pwt-ps {
+    padding-inline-start: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-start-factor)) !important;
+}
+
+.pwt-pe {
+    padding-inline-end: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-end-factor)) !important;
+}
+
+.pwt-pt {
+    padding-top: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-top-factor)) !important;
+}
+
+.pwt-pb {
+    padding-bottom: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-bottom-factor)) !important;
+}
+
+.pwt-px {
+    padding-inline: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-x-factor)) !important;
+}
+
+.pwt-py {
+    padding-top: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-y-factor)) !important;
+    padding-bottom: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-y-factor)) !important;
+}
+
 @each $name in (0, 1, 2, 3, 4) {
-    .pwt-p-#{$name} {
-        padding: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-ps-#{$name} {
-        padding-inline-start: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-pe-#{$name} {
-        padding-inline-end: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-pt-#{$name} {
-        padding-top: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-pb-#{$name} {
-        padding-bottom: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-px-#{$name} {
-        padding-left: var(--pwt-spacer-#{$name}) !important;
-        padding-right: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-py-#{$name} {
-        padding-top: var(--pwt-spacer-#{$name}) !important;
-        padding-bottom: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-m-#{$name} {
-        margin: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-ms-#{$name} {
-        margin-inline-start: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-me-#{$name} {
-        margin-inline-end: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-mt-#{$name} {
-        margin-top: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-mb-#{$name} {
-        margin-bottom: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-mx-#{$name} {
-        margin-left: var(--pwt-spacer-#{$name}) !important;
-        margin-right: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-my-#{$name} {
-        margin-top: var(--pwt-spacer-#{$name}) !important;
-        margin-bottom: var(--pwt-spacer-#{$name}) !important;
-    }
-
     .pwt-gap-#{$name} {
         gap: var(--pwt-spacer-#{$name}) !important;
     }
