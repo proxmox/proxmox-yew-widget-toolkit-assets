@@ -297,6 +297,20 @@ input {
     }
 }
 
+.pwt-input-display {
+    font-size: map-get($font-size, "label-large");
+    line-height: map-get($line-height, "label-large");
+    hyphens: auto;
+    text-wrap: pretty;
+    border-radius: var(--pwt-input-corner-shape);
+    padding: var(--pwt-spacer-1);
+
+    &:focus-within {
+        outline: 2px solid var(--pwt-color-focus) !important;
+        outline-offset: -2px;
+    }
+}
+
 // Removing spin buttons for <input type=number> (styling them is too clumsy)
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
