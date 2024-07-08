@@ -1,7 +1,5 @@
 /* light theme color scheme */
-$modal-backdrop-bg-color: #00000050;
-
-:root {
+:root.pwt-dark-mode {
     color-scheme: dark;
 
     --pwt-color-primary: var(--pwt-color-primary-80);
@@ -72,4 +70,6 @@ $modal-backdrop-bg-color: #00000050;
 
     color: var(--pwt-color-on-neutral);
     background: var(--pwt-color-neutral);
+
+    --pwt-backdrop-color: #00000050;
 }

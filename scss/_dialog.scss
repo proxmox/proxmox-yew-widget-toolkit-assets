@@ -36,11 +36,9 @@ dialog.pwt-outer-dialog {
     }
 }
 
-// Note: css var() does not work here
-// see: https://bugs.chromium.org/p/chromium/issues/detail?id=996467
 .pwt-dialog:not(.pwt-dropdown)::backdrop,
 .pwt-outer-dialog:not(.pwt-dropdown)::backdrop {
-    background-color: $modal-backdrop-bg-color;
+    background-color: var(--pwt-backdrop-color);
 }
 
 .pwt-dialog.pwt-dropdown::backdrop {
@@ -160,7 +158,7 @@ dialog.pwt-outer-dialog {
 
 @keyframes backdrop-fade-out {
     from {
-        background: $modal-backdrop-bg-color;
+        background: var(--pwt-backdrop-color);
     }
     to {
         background: transparent;
@@ -172,7 +170,7 @@ dialog.pwt-outer-dialog {
         background: transparent;
     }
     to {
-        background: $modal-backdrop-bg-color;
+        background: var(--pwt-backdrop-color);
     }
 }
 
