@@ -246,6 +246,14 @@ $align-self-values: (auto, normal, flex-start, flex-end, center, baseline, stret
     }
 }
 
+$align-content-values: (start, center, end, space-between, space-around, stretch);
+
+@each $value in $align-items-values {
+    .pwt-align-content-#{$value} {
+        align-content: $value !important;
+    }
+}
+
 $overflow-values: auto hidden visible scroll;
 
 @each $value in $overflow-values {
