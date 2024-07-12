@@ -59,7 +59,7 @@ input {
         }
     }
 
-    &:not(.pwt-input-type-range):focus-within {
+    &:not(.pwt-input-type-range):focus-within, &.picker-open {
         outline: 2px solid var(--pwt-color-focus) !important;
         outline-offset: -2px;
     }
