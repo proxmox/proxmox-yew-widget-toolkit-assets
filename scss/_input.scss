@@ -52,6 +52,11 @@ input {
         border: 0 !important;
         padding: 0 !important;
         margin: 0 !important;
+
+        &.non-editable {
+          caret-color: transparent;
+          cursor: pointer;
+        }
     }
 
     &:not(.pwt-input-type-range):focus-within {
