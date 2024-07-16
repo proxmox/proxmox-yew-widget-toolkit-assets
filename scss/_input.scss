@@ -306,8 +306,8 @@ input {
 }
 
 .pwt-input-display {
-    font-size: map-get($font-size, "label-large");
-    line-height: map-get($line-height, "label-large");
+    font-size: map-get($font-size, "body-medium");
+    line-height: map-get($line-height, "body-medium");
     hyphens: auto;
     text-wrap: pretty;
     border-radius: var(--pwt-input-corner-shape);

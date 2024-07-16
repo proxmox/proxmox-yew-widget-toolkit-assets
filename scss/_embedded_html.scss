@@ -7,8 +7,8 @@
     color: var(--pwt-color-on-neutral);
     background-color: var(--pwt-color-neutral);
 
-    font-size: map-get($font-size, "body-large");
-    line-height: map-get($line-height, "body-large");
+    font-size: map-get($font-size, "body-medium");
+    line-height: map-get($line-height, "body-medium");
 
     p {
         padding: revert;

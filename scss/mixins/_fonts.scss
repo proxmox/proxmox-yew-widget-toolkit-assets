@@ -39,8 +39,8 @@
 
 @mixin font_classes() {
     p {
-        font-size: map-get($font-size, "body-large");
-        line-height: map-get($line-height, "body-large");
+        font-size: map-get($font-size, "body-medium");
+        line-height: map-get($line-height, "body-medium");
     }
 
     h1,
