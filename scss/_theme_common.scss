@@ -42,6 +42,8 @@ $input-corner-shape: map-get($shape-corner, extra-small);
 $card-corner-shape: map-get($shape-corner, small);
 $dialog-corner-shape: map-get($shape-corner, extra-small);
 
+$field-outline-size: 2px;
+
 $elevation-levels: (
     0: 0px,
     1: 2px,
