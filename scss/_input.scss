@@ -88,6 +88,14 @@ input {
     }
 }
 
+.pwt-input.pwt-input-type-number {
+    & .spinner i {
+        height: calc(map-get($line-height, "label-large") / 2);
+        line-height: calc(map-get($line-height, "label-large") / 2);
+        cursor: pointer;
+    }
+}
+
 .pwt-input.pwt-input-type-range {
     padding: 0;
     margin: 0;
