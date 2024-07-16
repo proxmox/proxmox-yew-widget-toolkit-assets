@@ -18,7 +18,7 @@
 
     td.cell-cursor:focus-visible {
         outline: 1px solid var(--pwt-color-on-neutral);
-        outline-offset: -2px;
+        outline-offset: -1px;
     }
 
     &:not(.table-borderless) tr {
