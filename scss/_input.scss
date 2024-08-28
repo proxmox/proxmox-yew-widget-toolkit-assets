@@ -46,6 +46,7 @@ input {
     /// disable border, padding, margin, outline for inputs inside
     input,
     .pwt-input-content {
+        min-height: map-get($line-height, "label-large");
         color: var(--pwt-color);
         background-color: var(--pwt-color-background);
         outline: 0 !important;
