@@ -123,6 +123,7 @@
     @include accent-color-scheme-vars(#{$default-accent-color}-container);
 
     background: var(--pwt-color-background);
+    color: var(--pwt-color);
 
     .pwt-nav-section {
         opacity: 0.8;
@@ -153,7 +154,7 @@
     a {
         text-decoration: none !important;
         text-shadow: none !important;
-        color: var(--pwt-color-on-surface);
+        color: var(--pwt-color);
     }
 }
 
