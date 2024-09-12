@@ -1,59 +1,69 @@
+@mixin padding-level($factor, $padding-side:  false) {
+    $property: #{if($padding-side, "padding-#{$padding-side}", "padding")};
+    #{$property}: calc(var(--pwt-spacer-base-width) * $factor) ! important;
+}
+
+@mixin margin-level($factor, $margin-side:  false) {
+    $property: #{if($margin-side, "margin-#{$margin-side}", "margin")};
+    #{$property}: calc(var(--pwt-spacer-base-width) * $factor) ! important;
+}
+
 .pwt-m {
-    margin: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-factor)) !important;
+    @include padding-level(var(--pwt-padding-factor));
 }
 
 .pwt-ms {
-    margin-inline-start: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-start-factor)) !important;
+    @include padding-level(var(--pwt-padding-start-factor), "inline-start");
 }
 
 .pwt-me {
-    margin-inline-end: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-end-factor)) !important;
+    @include padding-level(var(--pwt-padding-end-factor), "inline-end");
 }
 
 .pwt-mt {
-    margin-top: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-top-factor)) !important;
+    @include padding-level(var(--pwt-padding-top-factor), "top");
 }
 
 .pwt-mb {
-    margin-bottom: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-bottom-factor)) !important;
+    @include padding-level(var(--pwt-padding-bottom-factor), "bottom");
 }
 
 .pwt-mx {
-    margin-inline: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-x-factor)) !important;
+    @include padding-level(var(--pwt-padding-x-factor), "inline");
 }
 
 .pwt-my {
-    margin-top: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-y-factor)) !important;
-    margin-bottom: calc(var(--pwt-spacer-base-width) * var(--pwt-margin-y-factor)) !important;
+    @include padding-level(var(--pwt-padding-y-factor), "top");
+    @include padding-level(var(--pwt-padding-y-factor), "bottom");
 }
 
 .pwt-p {
-    padding: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-factor)) !important;
+    @include padding-level(var(--pwt-padding-factor));
 }
 
 .pwt-ps {
-    padding-inline-start: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-start-factor)) !important;
+    @include padding-level(var(--pwt-padding-start-factor), "inline-start");
 }
 
 .pwt-pe {
-    padding-inline-end: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-end-factor)) !important;
+    @include padding-level(var(--pwt-padding-end-factor), "inline-end");
 }
 
 .pwt-pt {
-    padding-top: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-top-factor)) !important;
+    @include padding-level(var(--pwt-padding-top-factor), "top");
 }
 
 .pwt-pb {
-    padding-bottom: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-bottom-factor)) !important;
+    @include padding-level(var(--pwt-padding-bottom-factor), "bottom");
 }
 
 .pwt-px {
-    padding-inline: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-x-factor)) !important;
+    @include padding-level(var(--pwt-padding-x-factor), "inline");
 }
 
 .pwt-py {
-    padding-top: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-y-factor)) !important;
-    padding-bottom: calc(var(--pwt-spacer-base-width)* var(--pwt-padding-y-factor)) !important;
+    @include padding-level(var(--pwt-padding-y-factor), "top");
+    @include padding-level(var(--pwt-padding-y-factor), "bottom");
 }
 
 @each $name in (0, 1, 2, 3, 4) {
