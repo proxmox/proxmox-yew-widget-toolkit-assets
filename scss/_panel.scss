@@ -1,16 +1,16 @@
 .pwt-panel {
-    @include color-scheme-vars("surface");
-    --pwt-color: var(--pwt-color-primary);
+    @include color-scheme-vars("neutral");
+    @include accent-color-scheme-vars("primary");
     display: flex;
     flex-direction: column;
     /* panel body is always neutral */
-    color: var(--pwt-color-on-neutral);
-    background-color: var(--pwt-color-neutral);
+    color: var(--pwt-color);
+    background-color: var(--pwt-color-background);
 }
 
 .pwt-panel-header-text {
     cursor: initial;
-    color: var(--pwt-color);
+    color: var(--pwt-accent-color-background);
     @include font_and_line_height("headline-small");
     overflow: hidden;
     text-overflow: ellipsis;
@@ -18,6 +18,7 @@
 }
 
 .pwt-panel-header {
+    @include color-scheme-vars("surface");
     overflow: hidden; // avoid scrollbars
     flex: none;
     padding: var(--pwt-spacer-2);
