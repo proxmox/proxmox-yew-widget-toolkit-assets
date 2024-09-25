@@ -1,9 +1,8 @@
 /* Visible resize handle (vertical) */
 .row-split-handle, .column-split-handle {
-    @include color-scheme-vars(neutral-container);
     @include state-layer();
 
-    background: var(--pwt-color-background);
+    background: color-mix(in srgb, var(--pwt-color-background) 95%, var(--pwt-color));
 
     position: relative;
     outline: 0;
