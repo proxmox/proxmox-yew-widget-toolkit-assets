@@ -5,7 +5,7 @@
 .pwt-form-grid-col2 {
     display: grid;
     grid-template-columns: minmax(130px, 0.65fr) minmax(200px, 1fr);
-    grid-gap: var(--pwt-spacer-2);
+    grid-gap: var(--pwt-spacer-2) 0;
     align-items: baseline;
     width: min-content;
 
@@ -17,8 +17,8 @@
 
 .pwt-form-grid-col4 {
     display: grid;
-    grid-template-columns: minmax(130px, 0.65fr) minmax(200px, 1fr) minmax(130px, 0.65fr) minmax(200px, 1fr);
-    grid-gap: var(--pwt-spacer-2);
+    grid-template-columns: minmax(130px, 0.65fr) minmax(200px, 1fr) calc(var(--pwt-spacer-4) * 2) minmax(130px, 0.65fr) minmax(200px, 1fr);
+    grid-gap: var(--pwt-spacer-2) 0;
     align-items: baseline;
     width: min-content;
 
@@ -26,6 +26,13 @@
 	min-width: 100px;
 	width: 0;
     }
+}
+
+// spacing between label + field
+label.pwt-grid-column-1,
+label.pwt-grid-column-3 {
+    @include padding-level(2, "inline-end");
+    word-wrap: break-word; // otherwise label can overlap with the field
 }
 
 .pwt-single-grid-row {
@@ -47,9 +54,9 @@
 }
 
 .pwt-grid-column-3 {
-    grid-column-start: 3;
+    grid-column-start: 4;
 }
 
 .pwt-grid-column-4 {
-    grid-column-start: 4;
+    grid-column-start: 5;
 }
