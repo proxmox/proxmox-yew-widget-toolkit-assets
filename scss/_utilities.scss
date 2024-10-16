@@ -397,7 +397,7 @@ $position-values: absolute fixed relative sticky static;
     }
 }
 
-@each $opacity in (0, 25, 50, 75) {
+@each $opacity in (0, 25, 50, 75, 100) {
     .pwt-opacity-#{$opacity} {
         $opacity: $opacity + '%';
         opacity: #{$opacity};
