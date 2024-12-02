@@ -5,6 +5,7 @@
     @include color-scheme-vars("neutral");
     @include elevation-background-color($level: 0, $state: none);
 
+    box-sizing: border-box !important;
     min-height: var(--pwt-list-tile-min-height) !important;
 
     display: grid;
