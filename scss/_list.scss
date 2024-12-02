@@ -43,7 +43,7 @@
 .pwt-list {
     --pwt-list-tile-min-height: 100px;
 
-    /// Avoid unlimted height
+    /// Avoid unlimited height
     max-height: calc(var(--pwt-list-tile-min-height) * 100);
 }
 
