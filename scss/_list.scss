@@ -42,6 +42,9 @@
 /// Toplevel list container
 .pwt-list {
     --pwt-list-tile-min-height: 100px;
+
+    /// Avoid unlimted height
+    max-height: calc(var(--pwt-list-tile-min-height) * 100);
 }
 
 /// Virtually scrolled list content
