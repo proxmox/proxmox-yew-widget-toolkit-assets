@@ -26,3 +26,27 @@
     color: var(--pwt-color);
     background-color: var(--pwt-color-background);
 }
+
+h1, .h1 {
+    @include font_and_line_height(headline-large);
+}
+
+h2, .h2 {
+    @include font_and_line_height(headline-medium);
+}
+
+h3, .h3 {
+    @include font_and_line_height(title-large);
+}
+
+h4, .h4 {
+    @include font_and_line_height(headline-small);
+}
+
+h5, .h5 {
+    @include font_and_line_height(title-medium);
+}
+
+h6, .h6 {
+    @include font_and_line_height(title-small);
+}
