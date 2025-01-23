@@ -1,11 +1,13 @@
-@mixin padding-level($factor, $padding-side:  false) {
+/// ## Common CSS Utility classes
+
+@mixin padding-level($factor, $padding-side: false) {
     $property: #{if($padding-side, "padding-#{$padding-side}", "padding")};
-    #{$property}: calc(var(--pwt-spacer-base-width) * $factor) ! important;
+    #{$property}: calc(var(--pwt-spacer-base-width) * $factor) !important;
 }
 
-@mixin margin-level($factor, $margin-side:  false) {
+@mixin margin-level($factor, $margin-side: false) {
     $property: #{if($margin-side, "margin-#{$margin-side}", "margin")};
-    #{$property}: calc(var(--pwt-spacer-base-width) * $factor) ! important;
+    #{$property}: calc(var(--pwt-spacer-base-width) * $factor) !important;
 }
 
 .pwt-m {
@@ -130,7 +132,7 @@ $height-width-values: (
     50: 50%,
     75: 75%,
     100: 100%,
-    auto: auto,
+    auto: auto
 );
 
 @each $name, $value in $height-width-values {
@@ -191,15 +193,16 @@ $display-values: inline inline-block block grid table table-row table-cell flex 
 }
 
 $flex-values: (
-    fill: 1 1 auto, // same aus auto
+    fill: 1 1 auto,
+    // same aus auto
     initial: 0 1 auto,
     auto: 1 1 auto,
-    none: 0 0 auto,
+    none: 0 0 auto
 );
 
 @each $name, $value in $flex-values {
     .pwt-flex-#{$name} {
-	    flex: $value !important;
+        flex: $value !important;
     }
 }
 
@@ -399,7 +402,7 @@ $position-values: absolute fixed relative sticky static;
 
 @each $opacity in (0, 25, 50, 75, 100) {
     .pwt-opacity-#{$opacity} {
-        $opacity: $opacity + '%';
+        $opacity: $opacity + "%";
         opacity: #{$opacity};
     }
 }

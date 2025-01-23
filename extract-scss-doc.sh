@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Experimental, super simple script to generate useful doc
+
+add_doc () {
+    cat $1
+    echo ""
+
+}
+
+extract_doc () {
+    sed -n  '/^\/\/\// p' $1 | sed -e 's/^\/\/\/\s\?//'
+    echo ""
+
+}
+
+# General introduction, explain themes
+add_doc "scss/introduction.md"
+
+# Explain desktop theme
+extract_doc "scss/desktop/_theme_config_desktop.scss"
+extract_doc "scss/desktop/_theme_colors_adwaita.scss"
+extract_doc "scss/desktop/_theme_post_desktop.scss"
+
+
+# Explain common utility classes
+extract_doc "scss/_utilities.scss"
+
+# Explain individual widget classes
+extract_doc "scss/_panel.scss"
