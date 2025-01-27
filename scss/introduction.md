@@ -62,7 +62,7 @@ good contrast). CSS variables are used to store those color pairs:
 - `--pwt-color-<name>`
 - `--pwt-color-on-<name>`
 
-We also call this a color scheme. As second pair, the `-container`
+We also call this a color scheme. A second pair, the `-container`
 variant, uses lighter colors.
 
 - `--pwt-color-<name>-container`
@@ -108,7 +108,7 @@ changes the colors of the widget. The `pwt-scheme-<name>` and
 `pwt-scheme-<name>-container` helper classes can be used to set
 those variables.
 
-A similar scheme is used for widgets with an associate accent color, using
+A similar scheme is used for widgets with an associated accent color, using
 the following CSS variables:
 
 - `--pwt-accent-color`
@@ -131,7 +131,6 @@ We define the following font usage categories:
 - `body`:
 
 Each category provides three font scales, named `large`, `medium` and `small`.
-
 
 The following classes are available to set fonts size and/or line height:
 
