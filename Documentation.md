@@ -250,6 +250,47 @@ Use proxmox company colors, as described in the [Proxmox Brand Guidelines](https
 
 ## Common CSS Utility classes
 
+We provide CSS utility classes for commonly used styles.
+The goal is to style widgets primarily through the application
+of those CSS classes. Setting the CSS “style” directly is still possible
+and is recommended if no appropriate utility class is available.
+
+### Padding
+
+Padding classes comes at 5 different sizes, using a multiple
+of the spacer base width (`size` in 0, 1, 2, 3, 4):
+
+- `pwt-p-<size>`: set `padding` to `size*spacer_width`
+- `pwt-ps-<size>`: set `padding-inline-start` to `size*spacer_width`
+- `pwt-pe-<size>`: set `padding-inline-end` to `size*spacer_width`
+- `pwt-pt-<size>`: set `padding-top` to `size*spacer_width`
+- `pwt-pb-<size>`: set `padding-bottom` to `size*spacer_width`
+- `pwt-px-<size>`: set `padding-inline` to `size*spacer_width`
+- `pwt-py-<size>`: set `padding-block` to `size*spacer_width`
+
+### Margin
+
+Margin classes comes at 5 different sizes, using a multiple
+of the spacer base width (`size` in 0, 1, 2, 3, 4):
+
+- `pwt-m-<size>`: set `margin` to `size*spacer_width`
+- `pwt-ms-<size>`: set `margin-inline-start` to `size*spacer_width`
+- `pwt-me-<size>`: set `margin-inline-end` to `size*spacer_width`
+- `pwt-mt-<size>`: set `margin-top` to `size*spacer_width`
+- `pwt-mb-<size>`: set `margin-bottom` to `size*spacer_width`
+- `pwt-mx-<size>`: set `margin-inline` to `size*spacer_width`
+- `pwt-my-<size>`: set `margin-block` to `size*spacer_width`
+
+### Flex and Grid Gap
+
+Gap classes comes at 5 different sizes, using a multiple
+of the spacer base width (`size` in 0, 1, 2, 3, 4):
+
+- `pwt-gap-<size>`: set `gap` to `size*spacer_width`
+- `pwt-column-gap-<size>`: set `column-gap` to `size*spacer_width`
+- `pwt-row-gap-<size>`: set `row-gap` to `size*spacer_width`
+
+
 ## Panel Widget
 
 Class `pwt-panel`

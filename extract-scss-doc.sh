@@ -9,7 +9,7 @@ add_doc () {
 }
 
 extract_doc () {
-    sed -n  '/^\/\/\// p' $1 | sed -e 's/^\/\/\/\s\?//'
+    sed -n  '/\s*\/\/\// p' $1 | sed -e 's/\s*\/\/\/\s\?//'
     echo ""
 
 }
