@@ -22,6 +22,11 @@ extract_doc "scss/desktop/_theme_config_desktop.scss"
 extract_doc "scss/desktop/_theme_colors_adwaita.scss"
 extract_doc "scss/desktop/_theme_post_desktop.scss"
 
+# Explain material theme
+extract_doc "scss/material/_theme_config_material.scss"
+extract_doc "scss/material/_theme_colors_material.scss"
+extract_doc "scss/material/_theme_post_material.scss"
+
 
 # Explain common utility classes
 extract_doc "scss/_utilities.scss"

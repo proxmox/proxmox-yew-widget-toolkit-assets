@@ -62,7 +62,7 @@ good contrast). CSS variables are used to store those color pairs:
 - `--pwt-color-<name>`
 - `--pwt-color-on-<name>`
 
-We also call this a color scheme. As second pair, the `-container`
+We also call this a color scheme. A second pair, the `-container`
 variant, uses lighter colors.
 
 - `--pwt-color-<name>-container`
@@ -108,7 +108,7 @@ changes the colors of the widget. The `pwt-scheme-<name>` and
 `pwt-scheme-<name>-container` helper classes can be used to set
 those variables.
 
-A similar scheme is used for widgets with an associate accent color, using
+A similar scheme is used for widgets with an associated accent color, using
 the following CSS variables:
 
 - `--pwt-accent-color`
@@ -131,7 +131,6 @@ We define the following font usage categories:
 - `body`:
 
 Each category provides three font scales, named `large`, `medium` and `small`.
-
 
 The following classes are available to set fonts size and/or line height:
 
@@ -199,6 +198,35 @@ Base colors are from <https://en.wikipedia.org/wiki/Adwaita_(design_language)>.
 
 `h6`
 : use `title-small` font
+
+
+### The "Material" Theme
+
+This theme is intended for use on mobile/touch devices and uses a very
+large “10px” spacer. It is broadly similar to material design as
+described in <https://m3.material.io/>.
+
+
+#### Color setup
+
+This theme uses the [material design baseline colors](https://m3.material.io/styles/color/static/baseline>).
+
+
+### Fine Tuning
+
+`pwt-panel-header`, `pwt-menubar`
+: use `neutral` color scheme (instead of `surface`)
+
+`pwt-nav-menu`
+: add padding
+
+`pwt-tab-material`
+: add padding
+
+`pwt-content-spacer`
+: overwrite content spacer layout
+
+- use elevated box with box-shadow
 
 
 ## Common CSS Utility classes
