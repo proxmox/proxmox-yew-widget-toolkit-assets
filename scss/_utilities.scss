@@ -97,22 +97,6 @@
     .pwt-row-gap-#{$name} {
         row-gap: var(--pwt-spacer-#{$name}) !important;
     }
-
-    .pwt-top-#{$name} {
-        top: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-bottom-#{$name} {
-        bottom: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-left-#{$name} {
-        left: var(--pwt-spacer-#{$name}) !important;
-    }
-
-    .pwt-right-#{$name} {
-        right: var(--pwt-spacer-#{$name}) !important;
-    }
 }
 
 $white-space-values: (normal, nowrap, pre, pre-wrap, pre-line, break-spaces);
