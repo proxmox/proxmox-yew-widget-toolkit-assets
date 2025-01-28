@@ -28,6 +28,12 @@ extract_doc "scss/material/_theme_colors_material.scss"
 extract_doc "scss/material/_theme_post_material.scss"
 
 
+# Explain crisp theme
+extract_doc "scss/crisp/_theme_config_crisp.scss"
+extract_doc "scss/crisp/_theme_colors_crisp.scss"
+extract_doc "scss/crisp/_theme_post_crisp.scss"
+
+
 # Explain common utility classes
 extract_doc "scss/_utilities.scss"
 

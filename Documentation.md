@@ -160,7 +160,7 @@ This theme is meant to be used on standard desktops with large
 screen sizes. The default spacer width is `5px`, and it uses a
 relatively small corner radius.
 
-The primary color is also used as default accent color.
+The primary color is used as default accent color.
 
 #### Color setup
 
@@ -203,7 +203,7 @@ Base colors are from <https://en.wikipedia.org/wiki/Adwaita_(design_language)>.
 ### The "Material" Theme
 
 This theme is intended for use on mobile/touch devices and uses a very
-large “10px” spacer. It is broadly similar to material design as
+large `10px` spacer. It is broadly similar to material design as
 described in <https://m3.material.io/>.
 
 
@@ -227,6 +227,25 @@ This theme uses the [material design baseline colors](https://m3.material.io/sty
 : overwrite content spacer layout
 
 - use elevated box with box-shadow
+
+
+### The "Crisp" Theme
+
+This theme is similar to what we currently use for our products.
+The `3px` spacing is very dense, allowing to pack as much info
+as possible onto a single page.
+
+The primary color is used as default accent color.
+
+#### Color setup
+
+Use proxmox company colors, as described in the [Proxmox Brand Guidelines](https://www.proxmox.com/images/proxmox/Proxmox-Corporate-Brandguideline-2021.pdf).
+
+
+### Fine Tuning
+
+`pwt-content-spacer`
+: use neutral color scheme instead of surface.
 
 
 ## Common CSS Utility classes
