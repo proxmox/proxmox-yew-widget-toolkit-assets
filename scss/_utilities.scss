@@ -234,7 +234,10 @@ $flex-values: (
 
 @each $name, $value in $flex-values {
     .pwt-flex-#{$name} {
-        flex: $value !importa wrap nowrap wrap-reverse;
+        flex: $value !important;
+    }
+}
+
 $flex-direction-values: row column row-reverse column-reverse;
 /// - `pwt-flex-directzion-<value>`: set `flex-direction` property to one of
 ///   - `row`, `column`, `row-reverse`, `column-reverse`
@@ -276,7 +279,7 @@ $justify-content-values: (
     }
 }
 
-$align-items-values: ( start, end, flex-start, flex-end, normal, center, baseline, stretch);
+$align-items-values: (start, end, flex-start, flex-end, normal, center, baseline, stretch);
 /// - `pwt-align-items-<value>`: set `align-items` property to one of
 ///   -  `start`, `end`, `flex-start`, `flex-end`, `normal`, `center`, `baseline`, `stretch`
 @each $value in $align-items-values {
