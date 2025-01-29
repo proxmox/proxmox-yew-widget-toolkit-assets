@@ -452,8 +452,8 @@ $position-values: absolute fixed relative sticky static;
 ///
 /// For the following elevation levels: 0, 1, 2, 3, 4, 5
 @each $level, $distance in $elevation-levels {
-    /// - `pwt-shadow<level>`: add box shadow as defined in the theme
-    .pwt-shadow#{$level} {
+    /// - `pwt-shadow-<level>`: add box shadow as defined in the theme
+    .pwt-shadow-#{$level} {
         @include elevation-box-shadow($level);
     }
 }
