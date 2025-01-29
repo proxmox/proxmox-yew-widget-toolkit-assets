@@ -290,6 +290,104 @@ of the spacer base width (`size` in 0, 1, 2, 3, 4):
 - `pwt-column-gap-<size>`: set `column-gap` to `size*spacer_width`
 - `pwt-row-gap-<size>`: set `row-gap` to `size*spacer_width`
 
+### Text related classes
+* `.pwt-white-space-<value>`: set `white-space` property to one of
+  - `normal`, `nowrap`, `pre`, `pre-wrap`, `pre-line` or `break-spaces`.
+* `pwt-text-truncate`: truncate text if too long using ellipsis.
+* `.pwt-user-select-<value>`: set `user-select` property to one of
+  - `auto`, `none`, `text`, `all`
+* `.pwt-text-align-<value>`: set `text-align` property to one of
+  - `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`
+
+### Width and Height
+
+For the following values: `25`, `50`, `75`, `100`, `auto`,
+`min-content`, `max-content`, `fit-content`, `stretch`
+
+- `pwt-h-<value>`: set `height` to value.
+- `pwt-w-<value>`: set `width` to value.
+- `pwt-size-<value>`: set `width` and `height` to value.
+- `pwt-fit`: fit container into partent container using 100% width and height.
+  This can be used for non-flexbox layouts (also set `overflow: auto`).
+- `pwt-viewport`: set dimensions and position to use the whole
+  viewport (also set `overflow: auto`).
+
+Additionally, all those classes sets `box-sizing` to `border-box`.
+
+### Layout and Flexbox
+
+- `pwt-d-<value>`: set `display` property to one of
+  - `inline`, `inline-block`, `block`, `grid`, `table`, `table-row`
+    `table-cell`, `flex`, `inline-flex`, `contents`, `none`
+- `pwt-flex-fit`: use available space inside flexbox (`flex: 1 1 auto;overflow: auto;`)
+- `pwt-flex-fill-first-child`: Apply `flex: 1 1 auto;` to the first child of a container
+- `pwt-flex-fill` or `pwt-flex-auto`: set `flex: 1 1 auto;`
+- `pwt-flex-initial`: set `flex: 0 1 auto;`
+- `pwt-flex-none`: set `flex: 0 0 auto;`
+- `pwt-flex-directzion-<value>`: set `flex-direction` property to one of
+  - `row`, `column`, `row-reverse`, `column-reverse`
+- `pwt-flex-wrap-<value>`: set `flex-wrap` property to one of
+  - `wrap`, `nowrap`, `wrap-reverse`
+- `pwt-justify-content-<value>`: set `justify-content` property to one of
+  - `start`, `end`, `flex-start`, `flex-end`, `center`, `left`, `right`,
+    `normal`, `space-between`, `space-around`, `space-evenly`, `stretch`
+- `pwt-align-items-<value>`: set `align-items` property to one of
+  -  `start`, `end`, `flex-start`, `flex-end`, `normal`, `center`, `baseline`, `stretch`
+- `pwt-align-self-<value>`: set `align-self` property to one of
+  - `auto`, `normal`, `flex-start`, `flex-end`, `center`, `baseline`, `stretch`
+- `pwt-align-content-<value>`: set `align-content` property to one of
+  - `start`, `center`, `end`, `space-between`, `space-around`, `stretch`
+### Overflow (Scrollbars)
+
+For the following values: `auto`, `hidden`, `visible`, `scroll`
+
+- `pwt-overflow-<value>`: set `overflow` property to value
+- `pwt-overflow-x-<value>`: set `overflow-x` property to value
+- `pwt-overflow-y-<value>`: set `overflow-y` property to value
+### Position
+
+For the following values: `absolute`, `fixed`, `relative`, `sticky`, `static`;
+- `pwt-position-<value>`: set `position` property to value
+### Borders
+
+- `pwt-border`: add border on all sides
+- `pwt-no-border`: remove all borders
+- `pwt-border-top`: add border on top
+- `pwt-no-border-top`: remove top border
+- `pwt-border-left`: add border on the left side
+- `pwt-no-border-left`: remove left border
+- `pwt-border-start`: add border on start side
+- `pwt-no-border-start`: remove start border
+- `pwt-border-right`: add border on the right side
+- `pwt-no-border-right`: remove right border
+- `pwt-border-end`: add border on end side
+- `pwt-no-border-end`: remove end border
+- `pwt-border-bottom`: add border on bottom
+- `pwt-no-border-bottom`: remove bottom border
+### Shapes
+
+- `pwt-shape-circle`: make it a circle (fully rounded corners)
+
+For the following values: `none`, `extra-small`, `small`, `medium`, `large`,
+`extra-large`, `full`
+
+- `pwt-shape-<value>`: set `border-radius` to the value defined for the theme
+- `pwt-shape-top-<value>`: set `border-top-left-radius` and `border-top-right-radius`
+- `pwt-shape-bottom-<value>`: set `border-bottom-left-radius` and `border-bottom-right-radius`
+- `pwt-shape-start-<value>`: set `border-start-start-radius` and `border-end-start-radius`
+- `pwt-shape-end-<value>`: set `border-start-end-radius` and `border-end-end-radius`
+- `pwt-shape-top-start-<value>`: set `border-start-start-radius`
+- `pwt-shape-top-end-<value>`: set `border-start-end-radius`
+- `pwt-shape-bottom-start-<value>`: set `border-end-start-radius`
+- `pwt-shape-bottom-end-<value>`: set `border-end-end-radius`
+### Box Shadows
+
+For the following elevation levels: 0, 1, 2, 3, 4, 5
+- `pwt-shadow<level>`: add box shadow as defined in the theme
+### Rendering
+
+- `pwt-opacity-<value>`: set `opacity` property to percentage for values in
+  - 0, 25, 50, 75, 100
 
 ## Panel Widget
 
