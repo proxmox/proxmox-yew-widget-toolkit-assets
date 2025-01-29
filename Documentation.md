@@ -302,7 +302,7 @@ of the spacer base width (`size` in 0, 1, 2, 3, 4):
 ### Width and Height
 
 For the following values: `25`, `50`, `75`, `100`, `auto`,
-`min-content`, `max-content`, `fit-content`, `stretch`
+`min-content`, `max-content`, `fit-content`
 
 - `pwt-h-<value>`: set `height` to value.
 - `pwt-w-<value>`: set `width` to value.
@@ -383,7 +383,7 @@ For the following values: `none`, `extra-small`, `small`, `medium`, `large`,
 ### Box Shadows
 
 For the following elevation levels: 0, 1, 2, 3, 4, 5
-- `pwt-shadow<level>`: add box shadow as defined in the theme
+- `pwt-shadow-<level>`: add box shadow as defined in the theme
 ### Rendering
 
 - `pwt-opacity-<value>`: set `opacity` property to percentage for values in

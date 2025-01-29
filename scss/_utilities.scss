@@ -144,13 +144,12 @@ $height-width-values: (
     auto: auto,
     min-content: min-content,
     max-content: max-content,
-    fit-content: fit-content,
-    stretch: stretch
+    fit-content: fit-content
 );
 /// ### Width and Height
 ///
 /// For the following values: `25`, `50`, `75`, `100`, `auto`,
-/// `min-content`, `max-content`, `fit-content`, `stretch`
+/// `min-content`, `max-content`, `fit-content`
 ///
 /// - `pwt-h-<value>`: set `height` to value.
 /// - `pwt-w-<value>`: set `width` to value.
