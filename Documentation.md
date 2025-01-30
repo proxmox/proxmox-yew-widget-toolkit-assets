@@ -181,6 +181,9 @@ Base colors are from <https://en.wikipedia.org/wiki/Adwaita_(design_language)>.
   - use elevated box with box-shadow
   - use bigger spacing
 
+`pwt-datatable-content tr`
+: make horizontal table borders invisible
+
 `h1`
 : use `headline-large` font
 
@@ -240,6 +243,9 @@ The primary color is used as default accent color.
 #### Color setup
 
 Use proxmox company colors, as described in the [Proxmox Brand Guidelines](https://www.proxmox.com/images/proxmox/Proxmox-Corporate-Brandguideline-2021.pdf).
+
+Note: For light mode, This theme uses hardcoded colors for `primary`
+and `primary-container` to match the original theme.
 
 
 ### Fine Tuning
