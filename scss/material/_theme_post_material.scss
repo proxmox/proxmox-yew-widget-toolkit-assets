@@ -46,6 +46,15 @@ ul.pwt-menubar {
     }
 }
 
+/// `pwt-datatable-content tr`
+/// : make horizontal table borders invisible
+///
+.pwt-datatable-content {
+    &:not(.table-borderless) tr {
+        border-color: var(--pwt-elevated-background-color);
+    }
+}
+
 /// `pwt-content-spacer`
 /// : overwrite content spacer layout
 ///

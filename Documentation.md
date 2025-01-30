@@ -226,6 +226,9 @@ This theme uses the [material design baseline colors](https://m3.material.io/sty
 `pwt-tab-material`
 : add padding
 
+`pwt-datatable-content tr`
+: make horizontal table borders invisible
+
 `pwt-content-spacer`
 : overwrite content spacer layout
 
