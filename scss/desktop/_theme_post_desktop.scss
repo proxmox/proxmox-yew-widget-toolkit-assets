@@ -51,7 +51,7 @@ ul.pwt-menubar {
 ///
 .pwt-datatable-content {
     &:not(.table-borderless) tr {
-        border-color: transparent;
+        border-color: var(--pwt-elevated-background-color);
     }
 }
 
