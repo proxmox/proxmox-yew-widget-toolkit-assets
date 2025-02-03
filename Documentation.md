@@ -400,22 +400,65 @@ For the following elevation levels: 0, 1, 2, 3, 4, 5
 
 ## Content Spacer Class
 
+Class `pwt-content-spacer`
+
 This is a special class for laying out containers with one or more children.
 The purpose is that you can adopt these styles for different themes to give
 the theme a unique look in terms of container nesting. The default
 implementation uses different styles depending on the number of children.
 
-* `pwt-content-spacer` with single child:
+* with single child:
   - no padding
   - no border on child
   - neutral color on children
-* `pwt-content-spacer` with more than one child:
+* with more than one child:
   - two spacer padding/gap on container
   - one pixel border on children
   - surface color on container
   - neutral color on children
-* `pwt-content-spacer-padding`: Infer the padding used by the content spacer. This
-  is useful to create components using the same padding as the content spacer.
+
+Class `pwt-content-spacer-padding`
+
+Infer the padding used by the content spacer. This is useful to create components
+using the same padding as the content spacer.
+
+
+## Button Widget
+
+Class `pwt-button`
+
+This is the top level class for the button widget. Buttons have the
+following features:
+
+- use color scheme variables
+- font `label-large`
+- use elevation and ripple effect
+
+The following classes can be used to adopt the button style:
+
+- `pwt-button-text`: text only button with transparent background and accent colored text.
+- `pwt-button-outline`: like text button, but with border.
+- `pwt-button-elevated`: like text button, but with border and elevation.
+
+It is also possible to set the color and accent color scheme.
+
+Class `pwt-segmented-button`
+
+This container class is used to implement segmented buttons.
+
+#### Button styles for mobile/touch devices
+
+The following classes can be used to adopt the button style for mobile/touch devices:
+
+- `pwt-fab`:  Floating action button (FAB)
+- `pwt-fab.pwt-fab-small`:  small FAB variant
+- `pwt-fab.pwt-fab-large`:  large FAB variant
+
+##### FAB Menus
+
+Class `pwt-fab-menu-container`
+
+This class is used to arrange FABs as a menu.
 
 
 ## Panel Widget
