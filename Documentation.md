@@ -398,6 +398,26 @@ For the following elevation levels: 0, 1, 2, 3, 4, 5
 - `pwt-opacity-<value>`: set `opacity` property to percentage for values in
   - 0, 25, 50, 75, 100
 
+## Content Spacer Class
+
+This is a special class for laying out containers with one or more children.
+The purpose is that you can adopt these styles for different themes to give
+the theme a unique look in terms of container nesting. The default
+implementation uses different styles depending on the number of children.
+
+* `pwt-content-spacer` with single child:
+  - no padding
+  - no border on child
+  - neutral color on children
+* `pwt-content-spacer` with more than one child:
+  - two spacer padding/gap on container
+  - one pixel border on children
+  - surface color on container
+  - neutral color on children
+* `pwt-content-spacer-padding`: Infer the padding used by the content spacer. This
+  is useful to create components using the same padding as the content spacer.
+
+
 ## Panel Widget
 
 Class `pwt-panel`
