@@ -4,7 +4,7 @@ FONT_DIR = ./assets/fonts
 all:
 
 roboto_base_url = "https://github.com/googlefonts/roboto-flex/raw/main/fonts"
-roboto_flex_src = "RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].ttf"
+roboto_flex_src = "RobotoFlex%5BGRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght%5D.ttf"
 roboto_flex_filename = "RobotoFlexVariableFont.ttf"
 
 update-roboto-flex:
