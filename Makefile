@@ -8,9 +8,8 @@ roboto_flex_src = "RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,
 roboto_flex_filename = "RobotoFlexVariableFont.ttf"
 
 update-roboto-flex:
-	wget "${roboto_base_url}/${roboto_flex_src}" -O "${FONT_DIR}/${roboto_flex_filename}"
-	woff2_compress "${FONT_DIR}/${roboto_flex_filename}"
-
+	wget "$(roboto_base_url)/$(roboto_flex_src)" -O "$(FONT_DIR)/$(roboto_flex_filename)"
+	woff2_compress "$(FONT_DIR)/$(roboto_flex_filename)"
 
 .PHONY: Documentation.md
 Documentation.md:
