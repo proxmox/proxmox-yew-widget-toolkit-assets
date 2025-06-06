@@ -51,3 +51,9 @@
 .pwt-content-spacer-padding {
     padding: var(--pwt-spacer-2);
 }
+
+.pwt-content-spacer-colors {
+    @include color-scheme-vars("surface");
+    color: var(--pwt-color);
+    background-color: var(--pwt-color-background);
+}
