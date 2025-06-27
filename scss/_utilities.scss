@@ -188,8 +188,8 @@ $height-width-values: (
     left: 0;
     position: absolute;
     display: flex !important;
-    width: 100vw !important;
-    height: 100vh !important;
+    width: 100dvw !important;
+    height: 100dvh !important;
     overflow: hidden !important;
     box-sizing: border-box;
 }
