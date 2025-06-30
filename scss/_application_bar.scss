@@ -10,4 +10,9 @@
         padding: var(--pwt-spacer-1);
         gap: var(--pwt-spacer-2);
     }
+
+    /* change arrow icon direction */
+    .pwt-application-bar-back:dir(rtl) {
+        transform: scaleX(-1);
+    }
 }
