@@ -4,6 +4,10 @@
     --page-animation-out: page-animation-push-out var(--page-animation-time) ease-out;
 }
 
+.pwt-page-outer {
+    perspective: 1000px;
+}
+
 .pwt-page-container {
     top: 0;
     left: 0;
@@ -57,6 +61,72 @@
     }
 }
 
+@keyframes page-animation-fade-from-right-in {
+    from {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes page-animation-fade-from-bottom-in {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes page-animation-flip-in {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+
+  50% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+
+  51% {
+    opacity: 1;
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes page-animation-flip-out {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotateY(-90deg);
+  }
+
+  51% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+}
+
 @keyframes page-animation-cover-in {
     from {
         transform: translateX(100%);
@@ -106,6 +176,22 @@
 .pwt-page-animation-fade {
     --page-animation-in: page-animation-fade-in var(--page-animation-time) ease-out;
     --page-animation-out: page-animation-fade-out var(--page-animation-time) ease-out;
+}
+
+.pwt-page-animation-fade-from-right {
+    --page-animation-in: page-animation-fade-from-right-in var(--page-animation-time) ease-out;
+    --page-animation-out: page-animation-fade-out var(--page-animation-time) ease-out;
+}
+
+.pwt-page-animation-fade-from-bottom {
+    --page-animation-in: page-animation-fade-from-bottom-in var(--page-animation-time) ease-out;
+    --page-animation-out: page-animation-fade-out var(--page-animation-time) ease-out;
+}
+
+.pwt-page-animation-flip {
+    transform-style: preserve-3d;
+    --page-animation-in: page-animation-flip-in var(--page-animation-time) ease-out;
+    --page-animation-out: page-animation-flip-out var(--page-animation-time) ease-out;
 }
 
 .pwt-page-animation-cover {
