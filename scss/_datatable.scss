@@ -168,14 +168,8 @@
     opacity: var(--pwt-tmp-trigger-opacity);
     transition: opacity 0.2s ease-in-out;
 
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-}
-
-html[dir="rtl"] .pwt-datatable-header-menu-trigger {
-    right: auto;
-    left: 0px;
+    inset-block: 0px;
+    inset-inline-end: 0px;
 }
 
 .pwt-datatable-header-anchor {
