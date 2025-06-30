@@ -2,6 +2,11 @@
     --page-animation-time: 0.3s;
     --page-animation-in: page-animation-push-in var(--page-animation-time) ease-out;
     --page-animation-out: page-animation-push-out var(--page-animation-time) ease-out;
+    --page-animation-rtl-factor: 1;
+}
+
+html[dir="rtl"] {
+  --page-animation-rtl-factor: -1;
 }
 
 .pwt-page-outer {
@@ -23,7 +28,7 @@
 
 @keyframes page-animation-push-in {
     from {
-        transform: translateX(100%);
+        transform: translateX(calc(100% * var(--page-animation-rtl-factor)));
         transform-origin: left;
     }
     to {
@@ -38,7 +43,7 @@
         transform-origin: left;
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(calc(-100% * var(--page-animation-rtl-factor)));
         transform-origin: left;
     }
 }
@@ -64,7 +69,7 @@
 @keyframes page-animation-fade-from-right-in {
     from {
         opacity: 0;
-        transform: translateX(10%);
+        transform: translateX(calc(10% *var(--page-animation-rtl-factor)));
     }
     to {
         opacity: 1;
