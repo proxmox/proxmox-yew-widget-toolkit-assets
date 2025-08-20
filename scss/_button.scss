@@ -84,8 +84,14 @@ button,
     &[aria-disabled="true"] {
         cursor: auto;
         opacity: 0.5;
-        @include color-scheme-vars("surface", $important: true);
         @include elevation-box-shadow(0);
+
+        &:not(.pwt-button-text) {
+            @include color-scheme-vars("surface", $important: true);
+        }
+        &.pwt-button-text {
+            @include color-scheme-vars("inverse-surface", $important: true);
+        }
     }
 
     &.medium {
