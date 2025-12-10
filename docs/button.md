@@ -162,3 +162,36 @@ Buttons can include icons.
         <i class="fa fa-trash-o"></i> Remove
     </button>
 </div>
+
+## Color Schemes
+
+Buttons support theme-based color schemes using `pwt-scheme-<name>` classes. This determines the background and foreground colors.
+
+Available schemes:
+- `pwt-scheme-primary`
+- `pwt-scheme-secondary`
+- `pwt-scheme-success`
+- `pwt-scheme-error`
+- `pwt-scheme-warning`
+
+### Button Color Schemes
+
+```html
+<div class="pwt-d-flex pwt-gap-2 pwt-flex-wrap">
+    <button class="pwt-button pwt-scheme-primary">Primary</button>
+    <button class="pwt-button pwt-scheme-secondary">Secondary</button>
+    <button class="pwt-button pwt-scheme-success">Success</button>
+    <button class="pwt-button pwt-scheme-error">Error</button>
+    <button class="pwt-button pwt-scheme-warning">Warning</button>
+</div>
+```
+
+<div class="doc-example">
+    <div class="pwt-d-flex pwt-gap-2 pwt-flex-wrap">
+        <button class="pwt-button pwt-scheme-primary">Primary</button>
+        <button class="pwt-button pwt-scheme-secondary">Secondary</button>
+        <button class="pwt-button pwt-scheme-success">Success</button>
+        <button class="pwt-button pwt-scheme-error">Error</button>
+        <button class="pwt-button pwt-scheme-warning">Warning</button>
+    </div>
+</div>
