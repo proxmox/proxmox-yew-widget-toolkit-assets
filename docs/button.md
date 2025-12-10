@@ -170,6 +170,7 @@ Buttons support theme-based color schemes using `pwt-scheme-<name>` classes. Thi
 Available schemes:
 - `pwt-scheme-primary`
 - `pwt-scheme-secondary`
+- `pwt-scheme-tertiary`
 - `pwt-scheme-success`
 - `pwt-scheme-error`
 - `pwt-scheme-warning`
@@ -180,6 +181,7 @@ Available schemes:
 <div class="pwt-d-flex pwt-gap-2 pwt-flex-wrap">
     <button class="pwt-button pwt-scheme-primary">Primary</button>
     <button class="pwt-button pwt-scheme-secondary">Secondary</button>
+    <button class="pwt-button pwt-scheme-tertiary">Tertiary</button>
     <button class="pwt-button pwt-scheme-success">Success</button>
     <button class="pwt-button pwt-scheme-error">Error</button>
     <button class="pwt-button pwt-scheme-warning">Warning</button>
@@ -190,8 +192,35 @@ Available schemes:
     <div class="pwt-d-flex pwt-gap-2 pwt-flex-wrap">
         <button class="pwt-button pwt-scheme-primary">Primary</button>
         <button class="pwt-button pwt-scheme-secondary">Secondary</button>
+        <button class="pwt-button pwt-scheme-tertiary">Tertiary</button>
         <button class="pwt-button pwt-scheme-success">Success</button>
         <button class="pwt-button pwt-scheme-error">Error</button>
         <button class="pwt-button pwt-scheme-warning">Warning</button>
+    </div>
+</div>
+
+### Button Container Color Schemes
+
+You can also use the `-container` variants (e.g., `pwt-scheme-primary-container`) for lighter/alternative styling within the same color family.
+
+```html
+<div class="pwt-d-flex pwt-gap-2 pwt-flex-wrap">
+    <button class="pwt-button pwt-scheme-primary-container">Primary Container</button>
+    <button class="pwt-button pwt-scheme-secondary-container">Secondary Container</button>
+    <button class="pwt-button pwt-scheme-tertiary-container">Tertiary Container</button>
+    <button class="pwt-button pwt-scheme-success-container">Success Container</button>
+    <button class="pwt-button pwt-scheme-error-container">Error Container</button>
+    <button class="pwt-button pwt-scheme-warning-container">Warning Container</button>
+</div>
+```
+
+<div class="doc-example">
+    <div class="pwt-d-flex pwt-gap-2 pwt-flex-wrap">
+        <button class="pwt-button pwt-scheme-primary-container">Primary Container</button>
+        <button class="pwt-button pwt-scheme-secondary-container">Secondary Container</button>
+        <button class="pwt-button pwt-scheme-tertiary-container">Tertiary Container</button>
+        <button class="pwt-button pwt-scheme-success-container">Success Container</button>
+        <button class="pwt-button pwt-scheme-error-container">Error Container</button>
+        <button class="pwt-button pwt-scheme-warning-container">Warning Container</button>
     </div>
 </div>
