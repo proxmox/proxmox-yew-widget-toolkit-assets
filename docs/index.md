@@ -13,3 +13,7 @@ Welcome to the documentation for the Proxmox Widget CSS Styles. Below you will f
 - [**Form Inputs**](inputs.md) - Text fields, number inputs, and text areas.
 - [**Panels & Containers**](panels.md) - General purpose panels and grid layouts.
 - [**Selection Controls**](selection.md) - Checkboxes, Radio Buttons, Toggle Switches, and Comboboxes.
+
+## Resources
+
+- [**CSS Class Cheatsheet**](cheatsheet.html) - A dense, printable reference for all CSS classes.
