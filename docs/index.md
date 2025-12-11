@@ -11,6 +11,7 @@ Welcome to the documentation for the Proxmox Widget CSS Styles. Below you will f
 - [**Buttons**](button.md) - Standard, Outlined, Elevated, and Segmented buttons.
 - [**Cards**](cards.md) - Flexible containers with various layout and elevation options.
 - [**Form Inputs**](inputs.md) - Text fields, number inputs, and text areas.
+- [**Floating Action Button**](fab.md) - FAB and FAB Menu.
 - [**Panels & Containers**](panels.md) - General purpose panels and grid layouts.
 - [**Selection Controls**](selection.md) - Checkboxes, Radio Buttons, Toggle Switches, and Comboboxes.
 
