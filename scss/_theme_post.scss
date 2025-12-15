@@ -62,9 +62,10 @@
 @font-face {
     font-family: "Roboto Flex";
     src:
-      url("../fonts/RobotoFlexVariableFont.woff2") format("woff2"),
-      url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
+        url("../fonts/RobotoFlexVariableFont.woff2") format("woff2"),
+        url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
 }
+
 $pwt-font-sans-serif: "Roboto Flex";
 $pwt-font-monospace: monospace;
 
@@ -97,6 +98,7 @@ $pwt-font-monospace: monospace;
 @import "card";
 @import "content_spacer";
 @import "datatable";
+@import "date_selector";
 @import "dialog";
 @import "dropdown";
 @import "form";
