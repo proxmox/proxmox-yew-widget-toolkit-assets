@@ -47,7 +47,7 @@
         }
 
         &.disabled {
-            opacity: 0.5;
+            opacity: var(--pwt-disabled-opacity);
             cursor: auto;
         }
     }
@@ -107,7 +107,7 @@
         }
 
         &.disabled {
-            opacity: 0.5;
+            opacity: var(--pwt-disabled-opacity);
             cursor: auto;
         }
     }

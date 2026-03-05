@@ -58,6 +58,13 @@
     }
 }
 
+/* Opacity of elements in certain states. */
+:root {
+    @each $level, $value in $element-state-opacity {
+        --pwt-#{$level}-opacity: #{$value};
+    }
+}
+
 /* Font setup */
 @font-face {
     font-family: "Roboto Flex";
