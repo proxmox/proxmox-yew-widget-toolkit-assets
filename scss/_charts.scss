@@ -1,0 +1,10 @@
+/// ## Helper classes for the `pie chart`
+
+
+/// Class `pwt-legend-color`
+///
+/// This class uses the variable `--pwt-legend-color` to set
+/// the correct text color. Used for the icon in the legend.
+.pwt-legend-color {
+    color: var(--pwt-legend-color)
+}
