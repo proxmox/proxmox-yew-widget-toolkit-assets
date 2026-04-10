@@ -5,6 +5,10 @@
 ///
 /// This class uses the variable `--pwt-legend-color` to set
 /// the correct text color. Used for the icon in the legend.
+///
+/// This is necessary since we can't access the style of the icon in a `Button`
+/// directly, and with this, we can set the variable on the button instead,
+/// and give only the icon this class.
 .pwt-legend-color {
     color: var(--pwt-legend-color)
 }
