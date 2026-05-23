@@ -35,16 +35,16 @@
 /// Class `pwt-map-location`
 ///
 /// Used for a location displayed on a `Map`. Its color can be overridden via the
-/// `--pwt-location-color` custom property.
+/// `--pwt-map-location-color` custom property.
 .pwt-map-location {
-    --pwt-location-color: var(--pwt-color-primary);
+    --pwt-map-location-color: var(--pwt-color-primary);
     cursor: pointer;
 
     & > circle {
-        fill: color-mix(in lab, var(--pwt-location-color), transparent 80%);
-        stroke: var(--pwt-location-color);
+        fill: color-mix(in srgb, var(--pwt-map-location-color), transparent 80%);
+        stroke: var(--pwt-map-location-color);
         stroke-width: 2px;
-        r: calc(var(--pwt-location-radius) - 2px);
+        r: calc(var(--pwt-map-location-radius) - 2px);
         vector-effect: non-scaling-stroke;
     }
 }
@@ -62,16 +62,16 @@
 ///
 /// Used to animate a selected location with a pulsing ring.
 .pwt-map-location-animated {
-    animation: pwt-location-pulse 1.2s infinite;
+    animation: pwt-map-location-pulse 1.2s infinite;
 }
 
-@keyframes pwt-location-pulse {
+@keyframes pwt-map-location-pulse {
     from {
-        r: var(--pwt-location-radius);
-        opacity:100%;
+        r: var(--pwt-map-location-radius);
+        opacity: 100%;
     }
     to {
-        r: calc(var(--pwt-location-radius) * 1.5);
-        opacity:0%;
+        r: calc(var(--pwt-map-location-radius) * 1.5);
+        opacity: 0%;
     }
 }
