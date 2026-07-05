@@ -40,6 +40,9 @@
             .pwt-navigation-rail-icon-container {
                 cursor: pointer;
 
+                // anchor for the corner badge
+                position: relative;
+
                 //background: red;
                 border-radius: 10rem;
                 padding: 4px;
@@ -67,6 +70,14 @@
                     color: var(--pwt-accent-color);
                     background-color: var(--pwt-accent-color-background);
                     @include state-layer($base: var(--pwt-accent-color-background), $color: var(--pwt-accent-color));
+                }
+
+                // the icon stays centered, so anchoring past the midpoint tracks its corner
+                // even while the container pill changes width
+                .pwt-navigation-rail-badge {
+                    position: absolute;
+                    inset-block-start: -4px;
+                    inset-inline-start: calc(50% + 4px);
                 }
             }
 
@@ -121,6 +132,11 @@
 
                 .pwt-navigation-rail-label {
                     font-size: map-get($font-size, "label-large");
+                }
+
+                // the expanded layout places the badge after the label, at the pill's end
+                .pwt-navigation-rail-badge {
+                    margin-inline-start: auto;
                 }
             }
         }
