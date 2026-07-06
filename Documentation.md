@@ -508,3 +508,14 @@ Class `pwt-panel-header-text`
 Header text uses font `headline-small` and the accent color from the panel.
 
 
+## SegmentedBar
+
+A stacked proportional bar: one horizontal track split into colored
+segments whose widths are proportional to their values - quota usage,
+batch pass / fail / pending, resource pools, and the like. An optional
+inline legend below the track labels the segments.
+
+The legend swatch geometry is exposed as `--pwt-segmented-bar-legend-*`
+custom properties so a consumer can retune it per density without editing
+this partial. The legend wraps left-aligned under the track.
+
