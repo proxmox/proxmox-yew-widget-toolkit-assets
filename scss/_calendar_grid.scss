@@ -233,6 +233,7 @@
         var(--pwt-color-on-surface, #10151c)
     );
     border: 1px solid var(--pwt-calendar-span-border);
+    cursor: pointer;
 }
 
 // Dark surfaces need a deeper fill under a lighter label, and a border lifted off
@@ -275,9 +276,15 @@
     outline-offset: -1px;
 }
 
-.pwt-calendar-span-selected {
-    outline: 2px solid var(--pwt-color-primary);
-    outline-offset: -2px;
+// The picked bar, every segment: fill it solid in its own colour so the whole multi-day run reads as
+// one highlighted stripe, clearly apart from the pale unselected bars (a per-segment inset outline
+// broke at each cell edge and barely showed on a bar whose colour sat near the accent). The shadowed
+// white label stays legible on any bar colour. The compound selector wins over an app bar-variant
+// class (`.tempo-span-event` and the like).
+.pwt-calendar-span.pwt-calendar-span-selected {
+    background: var(--pwt-calendar-span-color);
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     font-weight: 600;
 }
 
