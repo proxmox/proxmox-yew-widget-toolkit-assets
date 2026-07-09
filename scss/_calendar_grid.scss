@@ -175,6 +175,24 @@
     margin-inline: calc(-1 * var(--pwt-spacer-1) - 1px);
 }
 
+// The pinned zone above the scroll box: it holds its height (never scrolls) so a pinned bar stays
+// in view while the lanes below it scroll. The same inline bleed as the scroll box, so a multi-day
+// pinned bar fuses across cells too.
+.pwt-calendar-span-pinned {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    margin-inline: calc(-1 * var(--pwt-spacer-1) - 1px);
+}
+
+// An empty lane holder in the pinned zone, matching a bar's full vertical footprint (height plus its
+// margins), so a pinned bar keeps its lane on the days of its row it does not cover.
+.pwt-calendar-span-spacer {
+    flex: 0 0 auto;
+    height: var(--pwt-calendar-span-height);
+    margin: 1.5px 0;
+}
+
 // One continuous bar over the days it covers. Square by default so a
 // week-boundary continuation fuses into one bar; only the true ends round.
 // `flex: 0 0 auto` keeps its height fixed - as a flex item it would otherwise
