@@ -130,9 +130,14 @@
 }
 
 // Weekend tint as a background-image overlay so it stacks over any scheme
-// background-color (holiday, leave, ...) instead of fighting it.
+// background-color (holiday, leave, ...) instead of fighting it. A 5% black wash reads on light
+// cells; on a dark cell it is imperceptible, so dark mode washes with white instead.
 .pwt-calendar-day-weekend {
     background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05));
+}
+
+:root.pwt-dark-mode .pwt-calendar-day-weekend {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06));
 }
 
 .pwt-calendar-daynum {
