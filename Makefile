@@ -37,11 +37,11 @@ refresh:
 	rm -f ${PRECOMPILED_CSS}
 	make Documentation.md ${PRECOMPILED_CSS}
 
-docs/css/crisp-yew-style.css: scss/crisp-yew-style.scss
+docs/css/crisp-yew-style.css: scss/crisp-yew-style.scss $(wildcard scss/_*.scss scss/*/*.scss)
 	rust-grass $< $@
 
-docs/css/desktop-yew-style.css: scss/desktop-yew-style.scss
+docs/css/desktop-yew-style.css: scss/desktop-yew-style.scss $(wildcard scss/_*.scss scss/*/*.scss)
 	rust-grass $< $@
 
-docs/css/material-yew-style.css: scss/material-yew-style.scss
+docs/css/material-yew-style.css: scss/material-yew-style.scss $(wildcard scss/_*.scss scss/*/*.scss)
 	rust-grass $< $@
