@@ -5848,6 +5848,9 @@ ul.pwt-menubar > li:hover:not([aria-disabled=true]) {
   background-color: var(--pwt-elevated-background-color);
 }
 ul.pwt-menubar .pwt-menubar-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--pwt-icon-spacer);
   cursor: pointer;
   outline: 0;
   font-family: "Roboto Flex";
@@ -5871,7 +5874,6 @@ ul.pwt-menubar .pwt-menubar-item[disabled], ul.pwt-menubar .pwt-menubar-item[ari
 ul.pwt-menubar .pwt-menubar-item-icon {
   font-size: 16px;
   line-height: 20px;
-  margin-inline-end: var(--pwt-icon-spacer);
 }
 ul.pwt-menubar .pwt-menubar-item-arrow {
   display: none;
