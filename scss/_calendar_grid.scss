@@ -11,6 +11,8 @@
 ///   height; its grid then slices evenly instead of sizing on content.
 /// - `pwt-calendar-grid` / `-grid-header` - the seven-column day grid and its
 ///   weekday-label row; `pwt-calendar-weekday` is one header label.
+/// - `pwt-calendar-hide-weekends` - the root when the widget drops Saturday and
+///   Sunday (`hide_weekends`); both grids then narrow to five columns.
 /// - `pwt-calendar-day` - one day cell; `-outside` (not the anchored month),
 ///   `-today` and `-weekend` tint or mark it. `pwt-calendar-daynum` is the
 ///   day number.
@@ -81,6 +83,13 @@
     grid-template-columns: repeat(7, minmax(0, 1fr));
     padding-inline: 1px;
     width: 100%;
+}
+
+// The working week: the widget emits no cell at all for Saturday and Sunday, so
+// both grids drop to five columns and the remaining days share the full width.
+.pwt-calendar-hide-weekends .pwt-calendar-grid,
+.pwt-calendar-hide-weekends .pwt-calendar-grid-header {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .pwt-calendar-grid-header {
