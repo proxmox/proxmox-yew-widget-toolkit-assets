@@ -6497,6 +6497,26 @@ a:focus-within, a:hover {
   justify-content: center;
   min-width: 64px;
   min-height: 48px;
+  outline: 0;
+}
+.pwt-navigation-bar .pwt-navigation-bar-item:focus-visible {
+  border-radius: var(--pwt-nav-link-corner-shape);
+  outline: 2px solid var(--pwt-color-on-surface);
+  outline-offset: -2px;
+}
+.pwt-navigation-bar .pwt-navigation-bar-item:focus-visible .pwt-navigation-bar-icon-container {
+  width: 56px;
+  --pwt-tmp-elevation-color: color-mix(in srgb, var(--pwt-color-surface-tint) var(--pwt-state-layer-opacity-2), var(--pwt-color-background));
+  --pwt-elevated-background-color: color-mix( in srgb, var(--pwt-color) var(--pwt-state-layer-opacity-hover), var(--pwt-tmp-elevation-color) );
+  background-color: var(--pwt-elevated-background-color);
+}
+.pwt-navigation-bar .pwt-navigation-bar-item.disabled {
+  cursor: auto;
+  opacity: var(--pwt-disabled-opacity);
+}
+.pwt-navigation-bar .pwt-navigation-bar-item.disabled .pwt-navigation-bar-icon-container {
+  cursor: auto;
+  pointer-events: none;
 }
 .pwt-navigation-bar .pwt-navigation-bar-item .pwt-navigation-bar-icon-container {
   cursor: pointer;
@@ -6509,7 +6529,7 @@ a:focus-within, a:hover {
   width: 24px;
   transition: width 0.2s;
 }
-.pwt-navigation-bar .pwt-navigation-bar-item .pwt-navigation-bar-icon-container:focus-within, .pwt-navigation-bar .pwt-navigation-bar-item .pwt-navigation-bar-icon-container:hover {
+.pwt-navigation-bar .pwt-navigation-bar-item .pwt-navigation-bar-icon-container:hover {
   width: 56px;
   --pwt-tmp-elevation-color: color-mix(in srgb, var(--pwt-color-surface-tint) var(--pwt-state-layer-opacity-2), var(--pwt-color-background));
   --pwt-elevated-background-color: color-mix( in srgb, var(--pwt-color) var(--pwt-state-layer-opacity-hover), var(--pwt-tmp-elevation-color) );
@@ -6577,8 +6597,28 @@ a:focus-within, a:hover {
   justify-content: center;
   min-width: 64px;
   min-height: 48px;
+  outline: 0;
   display: flex;
   flex-direction: column;
+}
+.pwt-navigation-rail .pwt-navigation-rail-tabs .pwt-navigation-rail-item:focus-visible {
+  border-radius: var(--pwt-nav-link-corner-shape);
+  outline: 2px solid var(--pwt-color-on-surface);
+  outline-offset: -2px;
+}
+.pwt-navigation-rail .pwt-navigation-rail-tabs .pwt-navigation-rail-item:focus-visible .pwt-navigation-rail-icon-container {
+  width: 56px;
+  --pwt-tmp-elevation-color: color-mix(in srgb, var(--pwt-color-surface-tint) var(--pwt-state-layer-opacity-2), var(--pwt-color-background));
+  --pwt-elevated-background-color: color-mix( in srgb, var(--pwt-color) var(--pwt-state-layer-opacity-hover), var(--pwt-tmp-elevation-color) );
+  background-color: var(--pwt-elevated-background-color);
+}
+.pwt-navigation-rail .pwt-navigation-rail-tabs .pwt-navigation-rail-item.disabled {
+  cursor: auto;
+  opacity: var(--pwt-disabled-opacity);
+}
+.pwt-navigation-rail .pwt-navigation-rail-tabs .pwt-navigation-rail-item.disabled .pwt-navigation-rail-icon-container {
+  cursor: auto;
+  pointer-events: none;
 }
 .pwt-navigation-rail .pwt-navigation-rail-tabs .pwt-navigation-rail-item .pwt-navigation-rail-icon-container {
   cursor: pointer;
@@ -6591,7 +6631,7 @@ a:focus-within, a:hover {
   width: 24px;
   transition: width 0.2s;
 }
-.pwt-navigation-rail .pwt-navigation-rail-tabs .pwt-navigation-rail-item .pwt-navigation-rail-icon-container:focus-within, .pwt-navigation-rail .pwt-navigation-rail-tabs .pwt-navigation-rail-item .pwt-navigation-rail-icon-container:hover {
+.pwt-navigation-rail .pwt-navigation-rail-tabs .pwt-navigation-rail-item .pwt-navigation-rail-icon-container:hover {
   width: 56px;
   --pwt-tmp-elevation-color: color-mix(in srgb, var(--pwt-color-surface-tint) var(--pwt-state-layer-opacity-2), var(--pwt-color-background));
   --pwt-elevated-background-color: color-mix( in srgb, var(--pwt-color) var(--pwt-state-layer-opacity-hover), var(--pwt-tmp-elevation-color) );
@@ -6650,6 +6690,13 @@ a:focus-within, a:hover {
 .pwt-navigation-rail.pwt-navigation-rail-expanded .pwt-navigation-rail-tabs .pwt-navigation-rail-item.pressed:not(:disabled):not(.disabled):not([aria-disabled=true]), .pwt-navigation-rail.pwt-navigation-rail-expanded .pwt-navigation-rail-tabs .pwt-navigation-rail-item:active:not(:disabled):not(.disabled):not([aria-disabled=true]) {
   --pwt-elevated-background-color: color-mix( in srgb, var(--pwt-color) var(--pwt-state-layer-opacity-press), var(--pwt-color-background) );
   background-color: var(--pwt-elevated-background-color);
+}
+.pwt-navigation-rail.pwt-navigation-rail-expanded .pwt-navigation-rail-tabs .pwt-navigation-rail-item.disabled {
+  cursor: auto;
+}
+.pwt-navigation-rail.pwt-navigation-rail-expanded .pwt-navigation-rail-tabs .pwt-navigation-rail-item:focus-visible .pwt-navigation-rail-icon-container {
+  width: 24px;
+  background-color: transparent;
 }
 .pwt-navigation-rail.pwt-navigation-rail-expanded .pwt-navigation-rail-tabs .pwt-navigation-rail-item.active {
   color: var(--pwt-accent-color);
