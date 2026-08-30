@@ -17,6 +17,12 @@
 /// - `pwt-calendar-day-pinned` - a consumer-owned zone (via `render_day`) that
 ///   stays above the scrolling bars, for content that must never scroll out of
 ///   view (a holiday chip, a headcount).
+/// - `pwt-calendar-day-activate` / `pwt-calendar-gutter-activate` - the
+///   keyboard control the widget lays over a cell that has a click callback.
+///   It is transparent and takes no pointer events, so only its focus ring is
+///   ever seen. The widget places that ring, set in from the cell's edge to
+///   leave the edge to the application's own selection marker, so a theme sets
+///   only its color and width.
 /// - `pwt-calendar-span-lanes` - the per-cell scroll box holding a day's
 ///   segments; a busy day scrolls here instead of growing its row.
 ///
@@ -143,6 +149,14 @@
 .pwt-calendar-daynum {
     font-weight: 600;
     line-height: 1.1;
+}
+
+// The overlaid keyboard controls are transparent except for their focus rings. The widget places
+// each ring inside application-owned selection and current-day indicators; the theme supplies its
+// width and focus color so it remains distinct from those accent-colored indicators.
+.pwt-calendar-day-activate:focus-visible,
+.pwt-calendar-gutter-activate:focus-visible {
+    outline: 2px solid var(--pwt-color-focus);
 }
 
 // A consumer's own `render_day` content, pinned above the scrolling bars.
