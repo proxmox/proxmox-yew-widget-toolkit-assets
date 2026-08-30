@@ -4625,6 +4625,11 @@ button,
   line-height: 1.1;
 }
 
+.pwt-calendar-day-activate:focus-visible,
+.pwt-calendar-gutter-activate:focus-visible {
+  outline: 2px solid var(--pwt-color-focus);
+}
+
 .pwt-calendar-day-pinned {
   display: flex;
   flex-direction: column;
@@ -6590,6 +6595,17 @@ a:focus-within, a:hover {
   --pwt-elevated-background-color: color-mix( in srgb, var(--pwt-color) var(--pwt-state-layer-opacity-none), var(--pwt-color-background) );
   background-color: var(--pwt-elevated-background-color);
 }
+.pwt-navigation-rail .pwt-navigation-rail-expand-button .pwt-action-icon {
+  color: var(--pwt-color-on-surface);
+}
+.pwt-navigation-rail .pwt-navigation-rail-expand-button .pwt-action-icon:focus-within:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed), .pwt-navigation-rail .pwt-navigation-rail-expand-button .pwt-action-icon:hover:not(:disabled):not(.disabled):not([aria-disabled=true]):not(:active):not(.pressed) {
+  --pwt-elevated-background-color: color-mix( in srgb, transparent var(--pwt-state-layer-opacity-hover), transparent );
+  background-color: var(--pwt-elevated-background-color);
+}
+.pwt-navigation-rail .pwt-navigation-rail-expand-button .pwt-action-icon.pressed:not(:disabled):not(.disabled):not([aria-disabled=true]), .pwt-navigation-rail .pwt-navigation-rail-expand-button .pwt-action-icon:active:not(:disabled):not(.disabled):not([aria-disabled=true]) {
+  --pwt-elevated-background-color: color-mix( in srgb, transparent var(--pwt-state-layer-opacity-press), transparent );
+  background-color: var(--pwt-elevated-background-color);
+}
 .pwt-navigation-rail .pwt-navigation-rail-tabs {
   display: flex;
   flex-direction: column;
@@ -6677,6 +6693,10 @@ a:focus-within, a:hover {
 .pwt-navigation-rail.pwt-navigation-rail-expanded {
   min-width: 220px;
   max-width: 360px;
+}
+.pwt-navigation-rail.pwt-navigation-rail-expanded .pwt-navigation-rail-expand-button {
+  align-self: flex-start;
+  margin-inline-start: var(--pwt-spacer-2);
 }
 .pwt-navigation-rail.pwt-navigation-rail-expanded .pwt-navigation-rail-tabs {
   align-self: stretch;
