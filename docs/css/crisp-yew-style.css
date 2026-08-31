@@ -4558,8 +4558,10 @@ button,
 
 .pwt-calendar-grid,
 .pwt-calendar-grid-header {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
+  padding-inline: 1px;
   width: 100%;
 }
 
