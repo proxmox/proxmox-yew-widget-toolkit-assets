@@ -67,10 +67,19 @@
 
 // The header row reuses the grid template so weekday labels line up with the
 // columns below.
+//
+// Both keep their frame inside that 100%, so a scroll parent gains no horizontal scrollbar: the
+// grid's hairline border, and a pixel of inline padding for the span bars, which reach that far
+// past their cell so a run fuses across the gap and would otherwise hang outside the first and
+// last column. A consumer that scrolls the grid in one axis gets the other unless it says
+// otherwise, and either overhang is enough for a permanent scrollbar. The padding is on both
+// rather than the grid alone, or the labels would sit a pixel off their columns.
 .pwt-calendar-grid,
 .pwt-calendar-grid-header {
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
+    padding-inline: 1px;
     width: 100%;
 }
 
@@ -78,8 +87,8 @@
     gap: 0;
 }
 
-// A 1px collapsed border: the grid background bleeds through a 1px gap so every
-// cell carries a hairline frame without doubling up on shared edges.
+// A 1px collapsed border: the grid background bleeds through a 1px gap so every cell carries a
+// hairline frame without doubling up on shared edges.
 .pwt-calendar-grid {
     gap: 1px;
     background-color: var(--pwt-color-outline-variant, rgba(0, 0, 0, 0.12));
