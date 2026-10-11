@@ -4565,6 +4565,11 @@ button,
   width: 100%;
 }
 
+.pwt-calendar-hide-weekends .pwt-calendar-grid,
+.pwt-calendar-hide-weekends .pwt-calendar-grid-header {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .pwt-calendar-grid-header {
   gap: 0;
 }
