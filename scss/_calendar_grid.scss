@@ -13,6 +13,9 @@
 ///   weekday-label row; `pwt-calendar-weekday` is one header label.
 /// - `pwt-calendar-hide-weekends` - the root when the widget drops Saturday and
 ///   Sunday (`hide_weekends`); both grids then narrow to five columns.
+/// - `pwt-calendar-gutter` - the root when the widget draws a leading column
+///   (`render_gutter`), such as week numbers; both grids then gain that column.
+///   `pwt-calendar-gutter-cell` is one of its cells, the header corner included.
 /// - `pwt-calendar-day` - one day cell; `-outside` (not the anchored month),
 ///   `-today` and `-weekend` tint or mark it. `pwt-calendar-daynum` is the
 ///   day number.
@@ -92,6 +95,18 @@
     grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+// The gutter: a content-sized leading column in both grids, so each row's eight cells fill one row
+// and the weekday labels stay over their days.
+.pwt-calendar-gutter .pwt-calendar-grid,
+.pwt-calendar-gutter .pwt-calendar-grid-header {
+    grid-template-columns: minmax(2.75em, max-content) repeat(7, minmax(0, 1fr));
+}
+
+.pwt-calendar-gutter.pwt-calendar-hide-weekends .pwt-calendar-grid,
+.pwt-calendar-gutter.pwt-calendar-hide-weekends .pwt-calendar-grid-header {
+    grid-template-columns: minmax(2.75em, max-content) repeat(5, minmax(0, 1fr));
+}
+
 .pwt-calendar-grid-header {
     gap: 0;
 }
@@ -167,6 +182,28 @@
 .pwt-calendar-daynum {
     font-weight: 600;
     line-height: 1.1;
+}
+
+// A gutter cell is a quiet marker at the top of its row, level with the day numbers.
+.pwt-calendar-gutter-cell {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--pwt-spacer-1);
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--pwt-color-on-neutral-alt);
+    white-space: nowrap;
+}
+
+// With a click callback a gutter cell acts on its row, and shows that on hover.
+.pwt-calendar-grid .pwt-calendar-gutter-cell:has(.pwt-calendar-gutter-activate) {
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--pwt-color-neutral-alt);
+        color: var(--pwt-color-primary);
+    }
 }
 
 // The overlaid keyboard controls are transparent except for their focus rings. The widget places
