@@ -130,6 +130,12 @@
     grid-auto-rows: minmax(var(--pwt-calendar-day-min-height), 1fr);
 }
 
+// The row floor above is the fill grid's minimum. A cell keeps no minimum of its own there: with
+// its padding on top it would be taller than a floored row and paint over the row below.
+.pwt-calendar-fill .pwt-calendar-day {
+    min-height: 0;
+}
+
 .pwt-calendar-weekday {
     padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
     text-align: center;
