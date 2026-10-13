@@ -4603,6 +4603,10 @@ button,
   grid-auto-rows: minmax(var(--pwt-calendar-day-min-height), 1fr);
 }
 
+.pwt-calendar-fill .pwt-calendar-day {
+  min-height: 0;
+}
+
 .pwt-calendar-weekday {
   padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
   text-align: center;
