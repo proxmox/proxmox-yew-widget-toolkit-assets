@@ -4570,6 +4570,16 @@ button,
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
+.pwt-calendar-gutter .pwt-calendar-grid,
+.pwt-calendar-gutter .pwt-calendar-grid-header {
+  grid-template-columns: minmax(2.75em, max-content) repeat(7, minmax(0, 1fr));
+}
+
+.pwt-calendar-gutter.pwt-calendar-hide-weekends .pwt-calendar-grid,
+.pwt-calendar-gutter.pwt-calendar-hide-weekends .pwt-calendar-grid-header {
+  grid-template-columns: minmax(2.75em, max-content) repeat(5, minmax(0, 1fr));
+}
+
 .pwt-calendar-grid-header {
   gap: 0;
 }
@@ -4623,6 +4633,25 @@ button,
 .pwt-calendar-daynum {
   font-weight: 600;
   line-height: 1.1;
+}
+
+.pwt-calendar-gutter-cell {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--pwt-spacer-1);
+  font-size: 0.8em;
+  font-weight: 600;
+  color: var(--pwt-color-on-neutral-alt);
+  white-space: nowrap;
+}
+
+.pwt-calendar-grid .pwt-calendar-gutter-cell:has(.pwt-calendar-gutter-activate) {
+  cursor: pointer;
+}
+.pwt-calendar-grid .pwt-calendar-gutter-cell:has(.pwt-calendar-gutter-activate):hover {
+  background-color: var(--pwt-color-neutral-alt);
+  color: var(--pwt-color-primary);
 }
 
 .pwt-calendar-day-activate:focus-visible,
