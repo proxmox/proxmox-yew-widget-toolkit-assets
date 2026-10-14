@@ -7260,10 +7260,12 @@ html[dir=rtl] {
 .pwt-embedded-html ul {
   list-style: revert;
   padding: revert;
+  margin: revert;
 }
 .pwt-embedded-html ol {
   list-style: revert;
   padding: revert;
+  margin: revert;
 }
 .pwt-embedded-html li + li {
   margin-top: var(--pwt-spacer-2);
