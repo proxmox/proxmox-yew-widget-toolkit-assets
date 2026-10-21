@@ -39,6 +39,9 @@
 ///   drop the border on an internal edge so a run reads as one bar.
 /// - `pwt-calendar-span-label` / `-icon` - the label and its leading glyph,
 ///   carried once per week row on the leading cell.
+/// - `pwt-calendar-span-label-detail` - a label with a detail after its text
+///   (`pwt-calendar-span-text`, `pwt-calendar-span-detail`), the detail shown
+///   only while it fits.
 /// - `pwt-calendar-span-selected` - every segment of the highlighted bar.
 ///
 /// ### Color
@@ -331,6 +334,30 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+// A detail, such as an event's hours, follows the label only while both fit whole: text and detail
+// form a wrapping row one line high, so a detail without room wraps out of sight instead of being
+// cut, and the text still shortens with an ellipsis like a plain label.
+.pwt-calendar-span-label-detail {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 0.4em;
+    height: 1lh;
+}
+
+.pwt-calendar-span-text {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pwt-calendar-span-detail {
+    flex: 0 0 auto;
+    opacity: 0.8;
+    font-variant-numeric: tabular-nums;
 }
 
 .pwt-calendar-span-icon {
