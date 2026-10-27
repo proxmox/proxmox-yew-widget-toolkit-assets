@@ -4733,6 +4733,27 @@ button,
   white-space: nowrap;
 }
 
+.pwt-calendar-span-label-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.4em;
+  height: 1lh;
+}
+
+.pwt-calendar-span-text {
+  flex: 0 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pwt-calendar-span-detail {
+  flex: 0 0 auto;
+  opacity: 0.8;
+  font-variant-numeric: tabular-nums;
+}
+
 .pwt-calendar-span-icon {
   flex: 0 0 auto;
   margin-inline-end: 6px;
