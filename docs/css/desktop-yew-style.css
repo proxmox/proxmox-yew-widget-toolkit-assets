@@ -195,14 +195,14 @@ table {
   --pwt-color-on-success: var(--pwt-color-success-20);
   --pwt-color-success-container: var(--pwt-color-success-30);
   --pwt-color-on-success-container: var(--pwt-color-success-90);
-  --pwt-color-error: var(--pwt-color-error-70);
+  --pwt-color-error: var(--pwt-color-error-80);
   --pwt-color-on-error: var(--pwt-color-error-10);
   --pwt-color-error-container: var(--pwt-color-error-20);
   --pwt-color-on-error-container: var(--pwt-color-error-90);
   --pwt-color-warning: var(--pwt-color-warning-80);
   --pwt-color-on-warning: var(--pwt-color-warning-20);
-  --pwt-color-warning-container: var(--pwt-color-warning-60);
-  --pwt-color-on-warning-container: var(--pwt-color-warning-100);
+  --pwt-color-warning-container: var(--pwt-color-warning-30);
+  --pwt-color-on-warning-container: var(--pwt-color-warning-90);
   --pwt-color-neutral: var(--pwt-color-neutral-30);
   --pwt-color-on-neutral: var(--pwt-color-neutral-90);
   --pwt-color-neutral-container: var(--pwt-color-neutral-20);
@@ -376,6 +376,7 @@ table {
 @font-face {
   font-family: "Roboto Flex";
   src: url("../fonts/RobotoFlexVariableFont.woff2") format("woff2"), url("../fonts/RobotoFlexVariableFont.ttf") format("truetype");
+  font-weight: 100 1000;
 }
 .pwt-font-monospace {
   font-family: monospace;
@@ -385,7 +386,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 50px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 50, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 50, "wdth" 100 !important;
   line-height: 64px !important;
 }
 
@@ -401,7 +402,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 45px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 45, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 45, "wdth" 100 !important;
   line-height: 52px !important;
 }
 
@@ -417,7 +418,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 36px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 36, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 36, "wdth" 100 !important;
   line-height: 44px !important;
 }
 
@@ -433,7 +434,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 32px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 32, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 32, "wdth" 100 !important;
   line-height: 40px !important;
 }
 
@@ -449,7 +450,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 28px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 28, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 28, "wdth" 100 !important;
   line-height: 36px !important;
 }
 
@@ -465,7 +466,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 20px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 20, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 20, "wdth" 100 !important;
   line-height: 24px !important;
 }
 
@@ -481,7 +482,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 22px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 22, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 22, "wdth" 100 !important;
   line-height: 28px !important;
 }
 
@@ -497,7 +498,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 16px !important;
   font-weight: 500 !important;
-  font-variation-settings: "opsz" 16, "wdth" 110, "wght" 500 !important;
+  font-variation-settings: "opsz" 16, "wdth" 110 !important;
   line-height: 24px !important;
 }
 
@@ -513,7 +514,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 14px !important;
   font-weight: 500 !important;
-  font-variation-settings: "opsz" 14, "wdth" 110, "wght" 500 !important;
+  font-variation-settings: "opsz" 14, "wdth" 110 !important;
   line-height: 20px !important;
 }
 
@@ -529,7 +530,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 14px !important;
   font-weight: 350 !important;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350 !important;
+  font-variation-settings: "opsz" 14, "wdth" 100 !important;
   line-height: 20px !important;
 }
 
@@ -545,7 +546,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 12px !important;
   font-weight: 500 !important;
-  font-variation-settings: "opsz" 12, "wdth" 100, "wght" 500 !important;
+  font-variation-settings: "opsz" 12, "wdth" 100 !important;
   line-height: 16px !important;
 }
 
@@ -561,7 +562,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 11px !important;
   font-weight: 500 !important;
-  font-variation-settings: "opsz" 11, "wdth" 130, "wght" 500 !important;
+  font-variation-settings: "opsz" 11, "wdth" 130 !important;
   line-height: 16px !important;
 }
 
@@ -577,7 +578,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 16px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 16, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 16, "wdth" 100 !important;
   line-height: 24px !important;
 }
 
@@ -593,7 +594,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 14px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 14, "wdth" 100 !important;
   line-height: 20px !important;
 }
 
@@ -609,7 +610,7 @@ table {
   font-family: "Roboto Flex" !important;
   font-size: 12px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 12, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 12, "wdth" 100 !important;
   line-height: 16px !important;
 }
 
@@ -625,7 +626,7 @@ table {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 400;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 14, "wdth" 100;
 }
 
 p {
@@ -654,7 +655,7 @@ h1,
   font-family: "Roboto Flex";
   font-size: 50px;
   font-weight: 400;
-  font-variation-settings: "opsz" 50, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 50, "wdth" 100;
   line-height: 64px;
 }
 
@@ -663,7 +664,7 @@ h2,
   font-family: "Roboto Flex";
   font-size: 45px;
   font-weight: 400;
-  font-variation-settings: "opsz" 45, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 45, "wdth" 100;
   line-height: 52px;
 }
 
@@ -672,7 +673,7 @@ h3,
   font-family: "Roboto Flex";
   font-size: 36px;
   font-weight: 400;
-  font-variation-settings: "opsz" 36, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 36, "wdth" 100;
   line-height: 44px;
 }
 
@@ -681,7 +682,7 @@ h4,
   font-family: "Roboto Flex";
   font-size: 32px;
   font-weight: 400;
-  font-variation-settings: "opsz" 32, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 32, "wdth" 100;
   line-height: 40px;
 }
 
@@ -690,7 +691,7 @@ h5,
   font-family: "Roboto Flex";
   font-size: 28px;
   font-weight: 400;
-  font-variation-settings: "opsz" 28, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 28, "wdth" 100;
   line-height: 36px;
 }
 
@@ -699,7 +700,7 @@ h6,
   font-family: "Roboto Flex";
   font-size: 20px;
   font-weight: 400;
-  font-variation-settings: "opsz" 20, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 20, "wdth" 100;
   line-height: 24px;
 }
 
@@ -4003,7 +4004,7 @@ h6,
   font-family: "Roboto Flex";
   font-size: 11px;
   font-weight: 500;
-  font-variation-settings: "opsz" 11, "wdth" 130, "wght" 500;
+  font-variation-settings: "opsz" 11, "wdth" 130;
   line-height: 16px;
   --pwt-badge-gap: var(--pwt-spacer-1);
   --pwt-badge-padding-x: var(--pwt-spacer-2);
@@ -4067,7 +4068,7 @@ button,
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 350;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 20px;
 }
 
@@ -4106,11 +4107,14 @@ button,
   --pwt-color-background: var(--pwt-color-inverse-surface) !important;
   --pwt-color: var(--pwt-color-on-inverse-surface)  !important;
 }
+.pwt-button.disabled:has(.fa-spin), .pwt-button:disabled:has(.fa-spin), .pwt-button[aria-disabled=true]:has(.fa-spin) {
+  opacity: 1;
+}
 .pwt-button.medium {
   font-family: "Roboto Flex";
   font-size: 16px;
   font-weight: 500;
-  font-variation-settings: "opsz" 16, "wdth" 110, "wght" 500;
+  font-variation-settings: "opsz" 16, "wdth" 110;
   line-height: 24px;
   padding: 16px 24px;
 }
@@ -4990,7 +4994,7 @@ button,
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 400;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 20px;
   border-collapse: collapse;
   /* disbale row corsor for now (cell cursor is enough)
@@ -5067,7 +5071,7 @@ tr.row-cursor {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 350;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 20px;
   display: flex;
   align-items: baseline;
@@ -5101,7 +5105,7 @@ tr.row-cursor {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 350;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 20px;
   position: relative;
   padding: var(--pwt-spacer-2);
@@ -5180,7 +5184,7 @@ tr.row-cursor {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 500;
-  font-variation-settings: "opsz" 14, "wdth" 110, "wght" 500;
+  font-variation-settings: "opsz" 14, "wdth" 110;
   line-height: 20px;
   --pwt-color-background: var(--pwt-color-neutral) ;
   --pwt-color: var(--pwt-color-on-neutral)  ;
@@ -5218,7 +5222,7 @@ tr.row-cursor {
   font-family: "Roboto Flex";
   font-size: 11px;
   font-weight: 500;
-  font-variation-settings: "opsz" 11, "wdth" 130, "wght" 500;
+  font-variation-settings: "opsz" 11, "wdth" 130;
   line-height: 16px;
   opacity: var(--pwt-dimmed-opacity);
   padding: var(--pwt-spacer-1);
@@ -5227,7 +5231,7 @@ tr.row-cursor {
   font-family: "Roboto Flex";
   font-size: 11px;
   font-weight: 500;
-  font-variation-settings: "opsz" 11, "wdth" 130, "wght" 500;
+  font-variation-settings: "opsz" 11, "wdth" 130;
   line-height: 16px;
   opacity: var(--pwt-dimmed-opacity);
   padding: var(--pwt-spacer-1);
@@ -5779,6 +5783,11 @@ input[aria-disabled=true] {
   opacity: var(--pwt-disabled-opacity);
 }
 
+:root.pwt-dark-mode ::placeholder {
+  color: var(--pwt-color-neutral-alt-80);
+  opacity: 1;
+}
+
 .pwt-input-display {
   font-size: 14px;
   line-height: 20px;
@@ -5884,7 +5893,7 @@ ul.pwt-menubar .pwt-menubar-item {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 350;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 24px;
   padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
   border: 0;
@@ -5926,7 +5935,7 @@ ul.pwt-menu .pwt-menu-item {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 350;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 24px;
   border: 0;
   white-space: nowrap;
@@ -5964,7 +5973,7 @@ ul.pwt-menu .pwt-menu-item-arrow:dir(rtl) {
   font-family: "Roboto Flex";
   font-size: 12px;
   font-weight: 500;
-  font-variation-settings: "opsz" 12, "wdth" 100, "wght" 500;
+  font-variation-settings: "opsz" 12, "wdth" 100;
   line-height: 16px;
   position: relative;
   background: var(--pwt-color-background);
@@ -6018,7 +6027,7 @@ ul.pwt-menu .pwt-menu-item-arrow:dir(rtl) {
   font-family: "Roboto Flex";
   font-size: 12px;
   font-weight: 500;
-  font-variation-settings: "opsz" 12, "wdth" 100, "wght" 500;
+  font-variation-settings: "opsz" 12, "wdth" 100;
   line-height: 16px;
   --pwt-segmented-bar-legend-gap: var(--pwt-spacer-3);
   --pwt-segmented-bar-legend-margin-top: var(--pwt-spacer-1);
@@ -6350,7 +6359,7 @@ a:focus-within, a:hover {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 350;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 20px;
 }
 .pwt-nav-link span {
@@ -7031,7 +7040,7 @@ html[dir=rtl] {
   font-family: "Roboto Flex";
   font-size: 20px;
   font-weight: 400;
-  font-variation-settings: "opsz" 20, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 20, "wdth" 100;
   line-height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -7053,7 +7062,7 @@ html[dir=rtl] {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 350;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 20px;
   position: relative;
   background: var(--pwt-color-border);
@@ -7131,7 +7140,7 @@ html[dir=rtl] {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 350;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 350;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 20px;
   --pwt-color-background: var(--pwt-color-surface) ;
   --pwt-color: var(--pwt-color-on-surface)  ;
@@ -7173,7 +7182,7 @@ html[dir=rtl] {
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 400;
-  font-variation-settings: "opsz" 14, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 14, "wdth" 100;
   line-height: 20px;
   border-radius: var(--pwt-shape-corner-extra-small);
   position: fixed;
@@ -7250,7 +7259,7 @@ html[dir=rtl] {
   font-family: "Roboto Flex" !important;
   font-size: 16px !important;
   font-weight: 400 !important;
-  font-variation-settings: "opsz" 16, "wdth" 100, "wght" 400 !important;
+  font-variation-settings: "opsz" 16, "wdth" 100 !important;
   line-height: 24px !important;
 }
 
@@ -7303,7 +7312,7 @@ html[dir=rtl] {
   border-left: var(--pwt-spacer-1) solid var(--pwt-color-primary);
 }
 .pwt-embedded-html strong {
-  font-variation-settings: "wght" 700;
+  font-weight: bold;
 }
 .pwt-embedded-html em {
   font-variation-settings: "slnt" -10;
@@ -7425,7 +7434,7 @@ h1,
   font-family: "Roboto Flex";
   font-size: 32px;
   font-weight: 400;
-  font-variation-settings: "opsz" 32, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 32, "wdth" 100;
   line-height: 40px;
 }
 
@@ -7434,7 +7443,7 @@ h2,
   font-family: "Roboto Flex";
   font-size: 28px;
   font-weight: 400;
-  font-variation-settings: "opsz" 28, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 28, "wdth" 100;
   line-height: 36px;
 }
 
@@ -7443,7 +7452,7 @@ h3,
   font-family: "Roboto Flex";
   font-size: 22px;
   font-weight: 400;
-  font-variation-settings: "opsz" 22, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 22, "wdth" 100;
   line-height: 28px;
 }
 
@@ -7452,7 +7461,7 @@ h4,
   font-family: "Roboto Flex";
   font-size: 20px;
   font-weight: 400;
-  font-variation-settings: "opsz" 20, "wdth" 100, "wght" 400;
+  font-variation-settings: "opsz" 20, "wdth" 100;
   line-height: 24px;
 }
 
@@ -7461,7 +7470,7 @@ h5,
   font-family: "Roboto Flex";
   font-size: 16px;
   font-weight: 500;
-  font-variation-settings: "opsz" 16, "wdth" 110, "wght" 500;
+  font-variation-settings: "opsz" 16, "wdth" 110;
   line-height: 24px;
 }
 
@@ -7470,6 +7479,6 @@ h6,
   font-family: "Roboto Flex";
   font-size: 14px;
   font-weight: 500;
-  font-variation-settings: "opsz" 14, "wdth" 110, "wght" 500;
+  font-variation-settings: "opsz" 14, "wdth" 110;
   line-height: 20px;
 }
