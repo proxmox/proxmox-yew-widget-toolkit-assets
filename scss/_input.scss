@@ -349,3 +349,8 @@ input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+// Firefox has no pseudo-elements for the spin buttons, only the text field appearance hides them.
+input[type="number"] {
+    appearance: textfield;
+}
