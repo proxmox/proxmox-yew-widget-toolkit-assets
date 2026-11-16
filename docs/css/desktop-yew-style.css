@@ -5810,6 +5810,10 @@ input::-webkit-outer-spin-button {
   margin: 0;
 }
 
+input[type=number] {
+  appearance: textfield;
+}
+
 .pwt-list-tile {
   --pwt-color-background: var(--pwt-color-neutral) ;
   --pwt-color: var(--pwt-color-on-neutral)  ;
