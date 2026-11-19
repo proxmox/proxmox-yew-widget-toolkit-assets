@@ -370,3 +370,14 @@ html[dir="rtl"] {
     --page-animation-in: page-animation-zoom-in var(--page-animation-time) ease-out;
     --page-animation-out: page-animation-zoom-out var(--page-animation-time) ease-out;
 }
+
+// Users who asked their system for less motion get a plain cross-fade. The animation itself must
+// stay, as the page stack waits for its end.
+@media (prefers-reduced-motion: reduce) {
+    .pwt-page-outer .pwt-page-container {
+        --page-animation-in: page-animation-fade-in var(--page-animation-time) ease-out;
+        --page-animation-out: page-animation-fade-out var(--page-animation-time) ease-out;
+        --page-animation-in-reverse: initial;
+        --page-animation-out-reverse: initial;
+    }
+}
