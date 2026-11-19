@@ -3,6 +3,8 @@
     --page-animation-in: page-animation-push-in var(--page-animation-time) ease-out;
     --page-animation-out: page-animation-push-out var(--page-animation-time) ease-out;
     --page-animation-rtl-factor: 1;
+    // Material's emphasized easing, as used by the Android page transition
+    --page-animation-emphasized-easing: cubic-bezier(0.2, 0, 0, 1);
 }
 
 html[dir="rtl"] {
@@ -71,14 +73,62 @@ html[dir="rtl"] {
     }
 }
 
+// Like the Android page transition: both pages move by a quarter of the width, the page that goes
+// away fades out quickly and the page that appears fades in over most of the animation, in either
+// direction.
 @keyframes page-animation-fade-from-right-in {
     from {
         opacity: 0;
-        transform: translateX(calc(10% *var(--page-animation-rtl-factor)));
+        transform: translateX(calc(25% * var(--page-animation-rtl-factor)));
+    }
+    75% {
+        opacity: 1;
     }
     to {
         opacity: 1;
-        transform: translateX(0%);
+        transform: translateX(0);
+    }
+}
+
+@keyframes page-animation-fade-from-right-out {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+        transform: translateX(calc(-25% * var(--page-animation-rtl-factor)));
+    }
+}
+
+@keyframes page-animation-fade-from-right-in-reverse {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+        transform: translateX(calc(25% * var(--page-animation-rtl-factor)));
+    }
+}
+
+@keyframes page-animation-fade-from-right-out-reverse {
+    from {
+        opacity: 0;
+        transform: translateX(calc(-25% * var(--page-animation-rtl-factor)));
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -232,8 +282,14 @@ html[dir="rtl"] {
 }
 
 .pwt-page-animation-fade-from-right {
-    --page-animation-in: page-animation-fade-from-right-in var(--page-animation-time) ease-out;
-    --page-animation-out: page-animation-fade-out var(--page-animation-time) ease-out;
+    --page-animation-in: page-animation-fade-from-right-in var(--page-animation-time)
+        var(--page-animation-emphasized-easing);
+    --page-animation-out: page-animation-fade-from-right-out var(--page-animation-time)
+        var(--page-animation-emphasized-easing);
+    --page-animation-in-reverse: page-animation-fade-from-right-in-reverse
+        var(--page-animation-time) var(--page-animation-emphasized-easing);
+    --page-animation-out-reverse: page-animation-fade-from-right-out-reverse
+        var(--page-animation-time) var(--page-animation-emphasized-easing);
 }
 
 .pwt-page-animation-fade-from-bottom {
