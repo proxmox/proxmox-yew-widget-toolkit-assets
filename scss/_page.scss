@@ -132,14 +132,61 @@ html[dir="rtl"] {
     }
 }
 
+// The vertical counterpart of fade from right: both pages move up by a tenth of the height, which
+// is about as far as fade from right moves sideways on a portrait screen.
 @keyframes page-animation-fade-from-bottom-in {
     from {
         opacity: 0;
         transform: translateY(10%);
     }
+    75% {
+        opacity: 1;
+    }
     to {
         opacity: 1;
-        transform: translateY(0%);
+        transform: translateY(0);
+    }
+}
+
+@keyframes page-animation-fade-from-bottom-out {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+}
+
+@keyframes page-animation-fade-from-bottom-in-reverse {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+}
+
+@keyframes page-animation-fade-from-bottom-out-reverse {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    75% {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -293,8 +340,14 @@ html[dir="rtl"] {
 }
 
 .pwt-page-animation-fade-from-bottom {
-    --page-animation-in: page-animation-fade-from-bottom-in var(--page-animation-time) ease-out;
-    --page-animation-out: page-animation-fade-out var(--page-animation-time) ease-out;
+    --page-animation-in: page-animation-fade-from-bottom-in var(--page-animation-time)
+        var(--page-animation-emphasized-easing);
+    --page-animation-out: page-animation-fade-from-bottom-out var(--page-animation-time)
+        var(--page-animation-emphasized-easing);
+    --page-animation-in-reverse: page-animation-fade-from-bottom-in-reverse
+        var(--page-animation-time) var(--page-animation-emphasized-easing);
+    --page-animation-out-reverse: page-animation-fade-from-bottom-out-reverse
+        var(--page-animation-time) var(--page-animation-emphasized-easing);
 }
 
 .pwt-page-animation-flip {
