@@ -175,6 +175,28 @@ html[dir="rtl"] {
     }
 }
 
+@keyframes page-animation-zoom-in {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes page-animation-zoom-out {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+}
+
 .pwt-page-container.pwt-page-visible {
     display: block !important;
 }
@@ -228,4 +250,9 @@ html[dir="rtl"] {
 .pwt-page-animation-parallax {
     --page-animation-in: page-animation-parallax-in var(--page-animation-time) ease-out;
     --page-animation-out: page-animation-parallax-out var(--page-animation-time) ease-out;
+}
+
+.pwt-page-animation-zoom {
+    --page-animation-in: page-animation-zoom-in var(--page-animation-time) ease-out;
+    --page-animation-out: page-animation-zoom-out var(--page-animation-time) ease-out;
 }
