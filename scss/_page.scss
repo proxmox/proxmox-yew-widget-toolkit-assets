@@ -134,7 +134,7 @@ html[dir="rtl"] {
 
 @keyframes page-animation-cover-in {
     from {
-        transform: translateX(100%);
+        transform: translateX(calc(100% * var(--page-animation-rtl-factor)));
         transform-origin: left;
     }
     to {
