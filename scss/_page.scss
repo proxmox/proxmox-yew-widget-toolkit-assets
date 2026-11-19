@@ -24,6 +24,11 @@ html[dir="rtl"] {
     box-sizing: border-box;
 
     display: none !important;
+
+    // Going back plays the animations in reverse, unless a style sets its own way back.
+    // Reset here so that a nested page stack does not inherit them.
+    --page-animation-in-reverse: initial;
+    --page-animation-out-reverse: initial;
 }
 
 @keyframes page-animation-push-in {
@@ -208,7 +213,7 @@ html[dir="rtl"] {
 
 .pwt-page-container.pwt-page-shrink-reverse {
     display: block !important;
-    animation: var(--page-animation-out) reverse;
+    animation: var(--page-animation-out-reverse, var(--page-animation-out) reverse);
 }
 
 .pwt-page-container.pwt-page-grow {
@@ -218,7 +223,7 @@ html[dir="rtl"] {
 
 .pwt-page-container.pwt-page-grow-reverse {
     display: block !important;
-    animation: var(--page-animation-in) reverse;
+    animation: var(--page-animation-in-reverse, var(--page-animation-in) reverse);
 }
 
 .pwt-page-animation-fade {
