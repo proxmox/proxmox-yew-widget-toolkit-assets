@@ -154,6 +154,27 @@ html[dir="rtl"] {
     }
 }
 
+// The page below moves slower and darkens, so the new page appears to slide over it.
+@keyframes page-animation-parallax-in {
+    from {
+        transform: translateX(calc(100% * var(--page-animation-rtl-factor)));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes page-animation-parallax-out {
+    from {
+        transform: translateX(0);
+        filter: brightness(1);
+    }
+    to {
+        transform: translateX(calc(-30% * var(--page-animation-rtl-factor)));
+        filter: brightness(0.8);
+    }
+}
+
 .pwt-page-container.pwt-page-visible {
     display: block !important;
 }
@@ -202,4 +223,9 @@ html[dir="rtl"] {
 .pwt-page-animation-cover {
     --page-animation-in: page-animation-cover-in var(--page-animation-time) ease-out;
     --page-animation-out: page-animation-cover-out var(--page-animation-time) ease-out;
+}
+
+.pwt-page-animation-parallax {
+    --page-animation-in: page-animation-parallax-in var(--page-animation-time) ease-out;
+    --page-animation-out: page-animation-parallax-out var(--page-animation-time) ease-out;
 }
