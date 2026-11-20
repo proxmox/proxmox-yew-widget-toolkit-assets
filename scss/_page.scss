@@ -394,9 +394,45 @@ html[dir="rtl"] {
     pointer-events: none;
 }
 
-.pwt-page-container.pwt-page-visible .pwt-scaffold-fab {
+// A button that flew to its place is already there.
+.pwt-page-container.pwt-page-visible .pwt-scaffold-fab:not(.pwt-hero-landed) {
     animation: page-fab-scale-in calc(var(--page-animation-time) / 2)
         var(--page-animation-emphasized-easing);
+}
+
+// Heroes fly from the old page to the new one in a layer above both pages. The page stack places
+// the flying copy at the target and sets the transform it starts from.
+.pwt-page-hero-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+@keyframes page-hero-flight {
+    from {
+        transform: var(--pwt-hero-from);
+    }
+    to {
+        transform: none;
+    }
+}
+
+.pwt-page-hero-layer .pwt-hero-flight {
+    transform-origin: 0 0;
+    animation: page-hero-flight var(--page-animation-time) var(--page-animation-emphasized-easing)
+        both;
+}
+
+// Not with visibility, see the floating action button above.
+.pwt-hero-hidden {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+// Set while the page stack measures where the heroes of the new page end up.
+.pwt-page-outer.pwt-page-measure > .pwt-page-container {
+    animation: none !important;
 }
 
 // Users who asked their system for less motion get a plain cross-fade. The animation itself must
@@ -409,7 +445,12 @@ html[dir="rtl"] {
         --page-animation-out-reverse: initial;
     }
 
-    .pwt-page-container.pwt-page-visible .pwt-scaffold-fab {
+    .pwt-page-container.pwt-page-visible .pwt-scaffold-fab:not(.pwt-hero-landed) {
         animation-name: page-animation-fade-in;
+    }
+
+    // The hero waits at its destination while the pages cross-fade.
+    .pwt-page-hero-layer .pwt-hero-flight {
+        animation: none;
     }
 }
