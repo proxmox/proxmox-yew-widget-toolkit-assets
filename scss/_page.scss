@@ -371,6 +371,34 @@ html[dir="rtl"] {
     --page-animation-out: page-animation-zoom-out var(--page-animation-time) ease-out;
 }
 
+// A floating action button does not move with the page content. It hides while its page animates
+// and appears in place once the page arrived. Not with visibility: buttons transition all their
+// properties, and a button that inherits visible again stays hidden for the first frame.
+@keyframes page-fab-scale-in {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.pwt-page-container:is(
+        .pwt-page-grow,
+        .pwt-page-shrink,
+        .pwt-page-grow-reverse,
+        .pwt-page-shrink-reverse
+    )
+    .pwt-scaffold-fab {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pwt-page-container.pwt-page-visible .pwt-scaffold-fab {
+    animation: page-fab-scale-in calc(var(--page-animation-time) / 2)
+        var(--page-animation-emphasized-easing);
+}
+
 // Users who asked their system for less motion get a plain cross-fade. The animation itself must
 // stay, as the page stack waits for its end.
 @media (prefers-reduced-motion: reduce) {
@@ -379,5 +407,9 @@ html[dir="rtl"] {
         --page-animation-out: page-animation-fade-out var(--page-animation-time) ease-out;
         --page-animation-in-reverse: initial;
         --page-animation-out-reverse: initial;
+    }
+
+    .pwt-page-container.pwt-page-visible .pwt-scaffold-fab {
+        animation-name: page-animation-fade-in;
     }
 }
