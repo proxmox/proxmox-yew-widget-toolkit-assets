@@ -122,6 +122,7 @@ $user-select-values: (auto, none, text, all);
 ///   - `auto`, `none`, `text`, `all`
 @each $value in $user-select-values {
     .pwt-user-select-#{$value} {
+        -webkit-user-select: $value !important;
         user-select: $value !important;
     }
 }

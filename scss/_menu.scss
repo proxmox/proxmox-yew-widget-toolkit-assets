@@ -52,6 +52,7 @@ ul.pwt-menubar {
 		padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
 		border: 0;
 		white-space: nowrap;
+		-webkit-user-select: none;
 		user-select: none;
 	}
 
@@ -101,6 +102,7 @@ ul.pwt-menu {
 		line-height: map-get($line-height, "title-medium");
 		border: 0;
 		white-space: nowrap;
+		-webkit-user-select: none;
 		user-select: none;
 	}
 

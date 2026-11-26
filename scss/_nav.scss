@@ -10,6 +10,7 @@
     gap: var(--pwt-icon-spacer);
     transition: 0.1s;
 
+    -webkit-user-select: none;
     user-select: none;
     cursor: pointer;
     white-space: nowrap !important;

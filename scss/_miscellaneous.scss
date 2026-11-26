@@ -52,6 +52,7 @@ hr,
     border-radius: 0.5em; // fixme
     padding: 10px;
     background: var(--pwt-color-neutral);
+    -webkit-user-select: none;
     user-select: none;
 }
 

@@ -71,6 +71,7 @@ button,
     vertical-align: middle;
     cursor: pointer;
     white-space: nowrap !important;
+    -webkit-user-select: none;
     user-select: none;
     border: 0;
     border-radius: var(--pwt-button-corner-shape);

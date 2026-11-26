@@ -48,6 +48,7 @@ dialog.pwt-outer-dialog {
 .pwt-dialog .dialog-resize-handle {
     position: absolute;
     opacity: 0;
+    -webkit-user-select: none;
     user-select: none;
     touch-action: none;
 
