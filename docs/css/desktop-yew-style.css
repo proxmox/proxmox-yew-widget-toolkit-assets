@@ -1075,18 +1075,22 @@ h6,
 }
 
 .pwt-user-select-auto {
+  -webkit-user-select: auto !important;
   user-select: auto !important;
 }
 
 .pwt-user-select-none {
+  -webkit-user-select: none !important;
   user-select: none !important;
 }
 
 .pwt-user-select-text {
+  -webkit-user-select: text !important;
   user-select: text !important;
 }
 
 .pwt-user-select-all {
+  -webkit-user-select: all !important;
   user-select: all !important;
 }
 
@@ -4087,6 +4091,7 @@ button,
   vertical-align: middle;
   cursor: pointer;
   white-space: nowrap !important;
+  -webkit-user-select: none;
   user-select: none;
   border: 0;
   border-radius: var(--pwt-button-corner-shape);
@@ -5280,6 +5285,7 @@ dialog.pwt-outer-dialog > .pwt-dialog {
 .pwt-dialog .dialog-resize-handle {
   position: absolute;
   opacity: 0;
+  -webkit-user-select: none;
   user-select: none;
   touch-action: none;
 }
@@ -5902,6 +5908,7 @@ ul.pwt-menubar .pwt-menubar-item {
   padding: var(--pwt-spacer-1) var(--pwt-spacer-2);
   border: 0;
   white-space: nowrap;
+  -webkit-user-select: none;
   user-select: none;
 }
 ul.pwt-menubar .pwt-menubar-item:focus-visible {
@@ -5943,6 +5950,7 @@ ul.pwt-menu .pwt-menu-item {
   line-height: 24px;
   border: 0;
   white-space: nowrap;
+  -webkit-user-select: none;
   user-select: none;
 }
 ul.pwt-menu .pwt-menu-item[disabled], ul.pwt-menu .pwt-menu-item[aria-disabled=true] {
@@ -6214,6 +6222,7 @@ hr,
   border-radius: 0.5em;
   padding: 10px;
   background: var(--pwt-color-neutral);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -6354,6 +6363,7 @@ a:focus-within, a:hover {
   align-items: baseline;
   gap: var(--pwt-icon-spacer);
   transition: 0.1s;
+  -webkit-user-select: none;
   user-select: none;
   cursor: pointer;
   white-space: nowrap !important;
@@ -7155,6 +7165,69 @@ html[dir=rtl] {
   --page-animation-out: page-animation-zoom-out var(--page-animation-time) ease-out;
 }
 
+@keyframes page-fab-scale-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.pwt-page-container:is(.pwt-page-grow,
+.pwt-page-shrink,
+.pwt-page-grow-reverse,
+.pwt-page-shrink-reverse) .pwt-scaffold-fab {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pwt-page-container.pwt-page-visible .pwt-scaffold-fab:not(.pwt-hero-landed) {
+  animation: page-fab-scale-in calc(var(--page-animation-time) / 2) var(--page-animation-emphasized-easing);
+}
+
+.pwt-page-hero-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+@keyframes page-hero-flight {
+  from {
+    transform: var(--pwt-hero-from);
+  }
+  to {
+    transform: none;
+  }
+}
+.pwt-page-hero-layer .pwt-hero-flight {
+  transform-origin: 0 0;
+  animation: page-hero-flight var(--page-animation-time) var(--page-animation-emphasized-easing) both;
+}
+
+.pwt-hero-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.pwt-page-outer.pwt-page-measure > .pwt-page-container {
+  animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pwt-page-outer .pwt-page-container {
+    --page-animation-in: page-animation-fade-in var(--page-animation-time) ease-out;
+    --page-animation-out: page-animation-fade-out var(--page-animation-time) ease-out;
+    --page-animation-in-reverse: initial;
+    --page-animation-out-reverse: initial;
+  }
+  .pwt-page-container.pwt-page-visible .pwt-scaffold-fab:not(.pwt-hero-landed) {
+    animation-name: page-animation-fade-in;
+  }
+  .pwt-page-hero-layer .pwt-hero-flight {
+    animation: none;
+  }
+}
 .pwt-panel {
   --pwt-color-background: var(--pwt-color-neutral) ;
   --pwt-color: var(--pwt-color-on-neutral)  ;
@@ -7289,6 +7362,7 @@ html[dir=rtl] {
   --pwt-color: var(--pwt-color-on-surface)  ;
   display: flex;
   flex-direction: column;
+  -webkit-user-select: none;
   user-select: none;
   overflow: hidden;
   height: 100%;
@@ -7470,6 +7544,7 @@ html[dir=rtl] {
 }
 
 .pwt-rrd-svg {
+  -webkit-user-select: none;
   user-select: none;
 }
 
